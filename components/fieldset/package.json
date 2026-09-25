@@ -58,9 +58,6 @@
     }
   },
   "devDependencies": {
-    "@not-govuk/input": "workspace:*",
-    "@not-govuk/label": "workspace:*",
-    "@not-govuk/visually-hidden": "workspace:*",
     "@react-foundry/component-test-helpers": "0.5.4",
     "@types/react": "19.3.0",
     "jest": "30.5.2",

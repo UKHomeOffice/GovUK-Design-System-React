@@ -73,25 +73,9 @@ const mainComponents = [
   'textarea',
   'warning-text'
 ];
-const unofficialComponents = [
-  'aside',
-  'form',
-  'form-field',
-  'navigation-menu',
-  'page',
-  'search-box',
-  'standalone-input'
-];
+const unofficialComponents: string[] = [];
 const internalComponents = [
-  'button-group',
-  'form-group',
-  'hint',
-  'input',
-  'label',
-  'link',
-  'summary-card',
-  'visually-hidden',
-  'width-container'
+  'button-group'
 ];
 
 const filterObject = (obj: Record<string, unknown>, fn: (v: unknown, i: string) => boolean): Record<string, unknown> => (

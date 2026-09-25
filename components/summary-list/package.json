@@ -40,7 +40,6 @@
     "react-components"
   ],
   "dependencies": {
-    "@not-govuk/link": "workspace:^",
     "@not-govuk/sass-base": "workspace:^",
     "@react-foundry/anchor-list": "^0.5.4",
     "@react-foundry/component-helpers": "^0.5.4",
@@ -60,8 +59,6 @@
     }
   },
   "devDependencies": {
-    "@not-govuk/summary-card": "workspace:*",
-    "@not-govuk/visually-hidden": "workspace:*",
     "@react-foundry/component-test-helpers": "0.5.4",
     "@types/react": "19.3.0",
     "jest": "30.5.2",

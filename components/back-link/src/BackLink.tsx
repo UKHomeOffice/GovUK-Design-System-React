@@ -1,55 +1,35 @@
 'use client';
 
-import { ComponentProps, FC, ReactNode, createElement as h } from 'react';
-import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { A } from '@not-govuk/link';
-import { useNavigate } from '@react-foundry/router';
-
 import '../assets/BackLink.scss';
+import {FC} from "react";
 
-export type BackLinkProps = ComponentProps<typeof A> & {
-  children?: ReactNode
-  /** The location to link to */
-  href?: string
-  /** The text of the link */
-  text?: string
-  /** The title of the link */
-  title?: string
+type BaseProps = {
+    id?: string;
+    text?: string;
+    inverse?: boolean;
 };
 
-export const BackLink: FC<BackLinkProps> = ({
-  children,
-  classBlock,
-  classModifiers,
-  className,
-  href,
-  text: _text,
-  ...attrs
-}) => {
-  const defaultClassBlock = 'govuk-back-link';
-  const classes = classBuilder(defaultClassBlock, classBlock, classModifiers, className);
-  const navigate = useNavigate();
-  const text = _text || children || 'Back';
-  const goBack = () => navigate && navigate(-1);
+type OnClickProps = BaseProps & {
+    onClick: () => void;
+    href?: never;
+};
 
-  return href ? (
-    <A {...attrs}
-      classBlock={classBlock || defaultClassBlock}
-      classModifiers={classModifiers}
-      className={className}
-      href={href}
-    >
-      {text}
-    </A>
-  ) : (
-    <a {...attrs}
-      className={classes()}
-      href="#"
-      onClick={goBack}
-    >
-      {text}
-    </a>
-  );
+type HrefProps = BaseProps & {
+    onClick?: never;
+    href: string;
+};
+
+export type BackLinkProps = OnClickProps | HrefProps;
+
+export const BackLink: FC<BackLinkProps> = ({id, href, text, onClick, inverse = false}) => {
+    const classes = [
+        "govuk-back-link",
+        inverse ? "govuk-back-link--inverse" : undefined
+    ].filter(Boolean).join(" ");
+
+    return(
+        <a id={id} href={href ? href : "#"} className={classes} onClick={onClick}>{text || "Back"}</a>
+    );
 };
 
 export default BackLink;
