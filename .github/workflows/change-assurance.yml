@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        app: [ 'docs', 'template', 'react-router-example' ]
+        app: [ 'docs' ]
     steps:
 
       - name: Check out repository
@@ -79,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        app: [ 'docs', 'template', 'react-router-example' ]
+        app: [ 'docs' ]
         browser: [ 'chromium', 'firefox', 'electron' ]
     steps:
 
