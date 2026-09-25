@@ -20,7 +20,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    text: 'Back',
     href: '#'
   }
 };
@@ -31,7 +30,7 @@ export const Standard: Story = {
 
 export const DarkBackgrounds: Story = {
   args: {
-    inverse: true
+    variant: "inverse"
   },
   render: ({...props}: BackLinkProps) => (
     <Panel classModifiers="interruption">
@@ -42,7 +41,7 @@ export const DarkBackgrounds: Story = {
 
 export const CustomText: Story = {
   args: {
-    text: 'Yn ôl'
+    children: 'Yn ôl'
   }
 };
 

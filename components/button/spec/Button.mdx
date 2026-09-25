@@ -10,10 +10,12 @@ export const meta = Stories.default;
 <Primary />
 <Controls />
 
+
 ## When to use this component
 
 Use the button component to help users carry out an action like starting an
 application or saving their information.
+
 
 ## How it works
 
@@ -39,6 +41,7 @@ For example, ‘Add another address’ and ‘Accept and claim a tax refund’.
 
 Align the primary action button to the left edge of your form.
 
+
 ### Default buttons
 
 Use a default button for the main call to action on a page.
@@ -49,6 +52,7 @@ to do next.
 
 <Canvas of={Stories.Standard} />
 
+
 ### Start buttons
 
 Use a start button for the main call to action on your service’s [start page].
@@ -56,6 +60,7 @@ Start buttons do not submit form data, so they use a link tag rather than a
 button tag.
 
 <Canvas of={Stories.Start} />
+
 
 ### Secondary buttons
 
@@ -68,6 +73,7 @@ the content down across multiple pages.
 <Canvas of={Stories.Secondary} />
 
 You can also [group default and secondary buttons together].
+
 
 ### Warning buttons
 
@@ -90,6 +96,7 @@ serious nature of the action. This is because not all users will be able to see
 the colour or will understand what it signifies. Make sure the context and
 button text make clear what will happen if the user selects it.
 
+
 ### Buttons on dark backgrounds
 
 Use the `govuk-button--inverse` modifier class to show white buttons on dark backgrounds – for example, in headers, custom components, and patterns with darker backgrounds.
@@ -97,6 +104,7 @@ Use the `govuk-button--inverse` modifier class to show white buttons on dark bac
 Make sure all users can see the button – the white button and background colour [must have a contrast ratio of at least 3:1].
 
 <Canvas of={Stories.DarkBackgrounds} />
+
 
 ### Disabled buttons
 
@@ -107,6 +115,7 @@ Only use disabled buttons if research shows it makes the user interface easier
 to understand.
 
 <Canvas of={Stories.Disabled} />
+
 
 ### Grouping buttons
 
@@ -119,7 +128,6 @@ Any links within a button group will automatically align with the buttons.
 <Canvas of={Stories.GroupWithLink} />
 
 ### Stop users from accidentally sending information more than once
-
 #### IMPLEMENTME
 
 Sometimes, users double click buttons because they:
@@ -151,25 +159,6 @@ In the case of slow connections, aim to give the user information about what’s
 happening, for example, by showing a loading spinner or a modal, before using
 `data-prevent-double-click`.
 
-### Submit buttons
-
-<p>
-  <Tag text="Unofficial" />
-</p>
-
-When your button is a part of a form you will probably want to use a submit button.
-
-<Canvas of={Stories.Submit} />
-
-### Hyperlinks
-
-<p>
-  <Tag text="Unofficial" />
-</p>
-
-When your button is not part of a form you will probably want it to be a hyperlink by providing a `href` prop.
-
-<Canvas of={Stories.Hyperlink} />
 
 [start of the service]: https://design-system.service.gov.uk/patterns/start-pages/
 [check answers]: https://design-system.service.gov.uk/patterns/check-answers/
