@@ -31,7 +31,7 @@ describe('BackLink', () => {
 
   describe('when NOT given a href', () => {
     beforeEach(async () => {
-      render(h(BackLink, { id: 'back' }));
+      render(h(BackLink, { id: 'back', href: '#' }));
     });
 
     it('is a link', async () => expect(screen.getByRole('link')).toBeInTheDocument());
