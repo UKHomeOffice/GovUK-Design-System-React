@@ -40,8 +40,6 @@
     "react-components"
   ],
   "dependencies": {
-    "@not-govuk/form-group": "workspace:^",
-    "@not-govuk/input": "workspace:^",
     "@not-govuk/sass-base": "workspace:^",
     "govuk-frontend": "^6.5.1"
   },

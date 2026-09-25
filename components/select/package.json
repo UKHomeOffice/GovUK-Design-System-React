@@ -40,7 +40,6 @@
     "react-components"
   ],
   "dependencies": {
-    "@not-govuk/form-group": "workspace:^",
     "@not-govuk/sass-base": "workspace:^",
     "@react-foundry/component-helpers": "^0.5.4",
     "govuk-frontend": "^6.5.1"
