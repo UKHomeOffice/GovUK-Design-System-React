@@ -40,8 +40,6 @@
     "react-components"
   ],
   "dependencies": {
-    "@not-govuk/form-group": "workspace:^",
-    "@not-govuk/input": "workspace:^"
   },
   "peerDependencies": {
     "@react-foundry/docs-components": "^0.5.4",
