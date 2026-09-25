@@ -19,10 +19,8 @@
     },
     {
       "matchPackageNames": [
-        "@types/babel-jest",
         "@types/jest",
         "@types/ts-jest",
-        "babel-jest",
         "jest",
         "jest-environment-jsdom",
         "ts-jest",

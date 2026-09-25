@@ -5,7 +5,7 @@ const path = require('path');
 /** @typedef {import('ts-jest')} */
 /** @type {import('@jest/types').Config.InitialOptions} */
 const config = {
-  preset: 'ts-jest/presets/js-with-babel',
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
   testEnvironmentOptions: {
     url: 'http://localhost/'
@@ -19,7 +19,6 @@ const config = {
     'node_modules'
   ],
   transform: {
-    "^.+\\.jsx?$": 'babel-jest',
     "^.+\\.tsx?$": ['ts-jest', {
       tsconfig: path.resolve(__dirname, 'tsconfig.jest.json'),
       useESM: true
