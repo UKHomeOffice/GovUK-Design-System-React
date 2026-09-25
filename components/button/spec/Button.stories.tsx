@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { ButtonGroup } from '@not-govuk/button-group';
-import { A } from '@not-govuk/link';
 import { Panel } from '@not-govuk/panel';
-import { Button, StartButton, SubmitButton } from '../src/Button';
+import { Button } from '../src/Button';
 
 const meta = {
   title: 'Button',
@@ -21,28 +20,35 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {}
+  args: {
+    children: 'Save and continue'
+  }
 };
 
 export const Standard: Story = {
-  args: {}
+  args: {
+    children: 'Save and continue',
+  }
 };
 
 export const Start: Story = {
-  args: { children: undefined },
-  render: ({ ...props }) => <StartButton href="#" />
+  args: {
+    variant: 'start',
+    href: '#',
+    children: 'Start now'
+  },
 };
 
 export const Secondary: Story = {
-  args: { children: 'Find address', classModifiers: 'secondary' }
+  args: { children: 'Find address', variant: 'secondary' }
 };
 
 export const Warning: Story = {
-  args: { children: 'Delete account', classModifiers: 'warning' }
+  args: { children: 'Delete account', variant: 'warning' }
 };
 
 export const DarkBackgrounds: Story = {
-  args: { children: 'Create an account', classModifiers: 'inverse' },
+  args: { children: 'Create an account', variant: 'inverse' },
   render: ({ ...props }) => (
     <Panel classModifiers="interruption">
       <Button {...props} />
@@ -60,7 +66,7 @@ export const Group: Story = {
   render: ({ ...props }) => (
     <ButtonGroup>
       <Button {...props} />
-      <Button classModifiers="secondary">Save as draft</Button>
+      <Button variant="secondary">Save as draft</Button>
     </ButtonGroup>
   )
 };
@@ -70,22 +76,13 @@ export const GroupWithLink: Story = {
   render: ({ ...props }) => (
     <ButtonGroup>
       <Button {...props} />
-      <A href="#">Cancel</A>
+      <a className="govuk-link" href="#">Cancel</a>
     </ButtonGroup>
   ),
   name: 'Group with link'
 };
 
 export const PreventDoubleClick: Story = {
-  args: { children: 'Confirm and send', 'data-prevent-double-click': 'true' },
+  args: { children: 'Confirm and send', preventDoubleClick: true },
   name: 'Prevent double click'
-};
-
-export const Submit: Story = {
-  args: { children: undefined },
-  render: ({ ...props }) => <SubmitButton>Save and continue</SubmitButton>
-};
-
-export const Hyperlink: Story = {
-  args: { children: 'New search', href: '#', classModifiers: 'secondary' }
 };

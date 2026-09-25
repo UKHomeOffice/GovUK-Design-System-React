@@ -1,12 +1,9 @@
-'use client';
-
 import '../assets/BackLink.scss';
-import {FC} from "react";
+import {FC, PropsWithChildren} from "react";
 
 type BaseProps = {
     id?: string;
-    text?: string;
-    inverse?: boolean;
+    variant?: 'default' | 'inverse';
 };
 
 type OnClickProps = BaseProps & {
@@ -21,14 +18,14 @@ type HrefProps = BaseProps & {
 
 export type BackLinkProps = OnClickProps | HrefProps;
 
-export const BackLink: FC<BackLinkProps> = ({id, href, text, onClick, inverse = false}) => {
+export const BackLink: FC<PropsWithChildren<BackLinkProps>> = ({children, id, href, onClick, variant = 'default'}) => {
     const classes = [
         "govuk-back-link",
-        inverse ? "govuk-back-link--inverse" : undefined
+        variant === 'inverse' ? "govuk-back-link--inverse" : undefined
     ].filter(Boolean).join(" ");
 
     return(
-        <a id={id} href={href ? href : "#"} className={classes} onClick={onClick}>{text || "Back"}</a>
+        <a id={id} href={href ? href : "#"} className={classes} onClick={onClick}>{children || "Back"}</a>
     );
 };
 
