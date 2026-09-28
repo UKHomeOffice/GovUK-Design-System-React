@@ -1,32 +1,47 @@
-import '../assets/BackLink.scss';
-import {FC, PropsWithChildren} from "react";
+import "../assets/BackLink.scss";
+import { forwardRef, MouseEventHandler, PropsWithChildren } from "react";
 
 type BaseProps = {
-    id?: string;
-    variant?: 'default' | 'inverse';
+  id?: string;
+  variant?: "default" | "inverse";
 };
 
-type OnClickProps = BaseProps & {
-    onClick: () => void;
-    href?: never;
+type ActionProps = BaseProps & {
+  onClick: MouseEventHandler<HTMLAnchorElement>;
+  href?: never;
 };
 
-type HrefProps = BaseProps & {
-    onClick?: never;
-    href: string;
+type LinkProps = BaseProps & {
+  onClick?: never;
+  href: string;
 };
 
-export type BackLinkProps = OnClickProps | HrefProps;
+export type BackLinkProps = ActionProps | LinkProps;
 
-export const BackLink: FC<PropsWithChildren<BackLinkProps>> = ({children, id, href, onClick, variant = 'default'}) => {
-    const classes = [
-        "govuk-back-link",
-        variant === 'inverse' ? "govuk-back-link--inverse" : undefined
-    ].filter(Boolean).join(" ");
+export const BackLink = forwardRef<
+  HTMLAnchorElement,
+  PropsWithChildren<BackLinkProps>
+>(({ children, id, href, onClick, variant = "default" }, ref) => {
+  const classes = [
+    "govuk-back-link",
+    variant === "inverse" ? "govuk-back-link--inverse" : undefined,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
-    return(
-        <a id={id} href={href ? href : "#"} className={classes} onClick={onClick}>{children || "Back"}</a>
-    );
-};
+  return (
+    <a
+      id={id}
+      href={href ? href : "#"}
+      className={classes}
+      onClick={onClick}
+      ref={ref}
+    >
+      {children ?? "Back"}
+    </a>
+  );
+});
+
+BackLink.displayName = "BackLink";
 
 export default BackLink;
