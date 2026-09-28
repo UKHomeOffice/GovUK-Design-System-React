@@ -1,113 +1,104 @@
 'use client';
 
-import { FC, InputHTMLAttributes, ReactNode, useState } from 'react';
-import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { FormGroup } from '@not-govuk/form-group';
-import { Radio } from './Radio';
+import {FC, InputHTMLAttributes, ReactNode, useState} from 'react';
+import {classBuilder, StandardProps} from '@react-foundry/component-helpers';
+import {Radio} from './Radio';
 
 import '../assets/Radios.scss';
 
 export type Option = {
-  /** Content to render only when the option is selected */
-  conditional?: ReactNode;
-  /** Whether the the option is disabled */
-  disabled?: boolean;
-  /** Hint for the option */
-  hint?: string;
-  /** Label for the option */
-  label: ReactNode;
-  /** Whether the option is selected */
-  selected?: boolean;
-  /** Value of the option */
-  value: string;
+    /** Content to render only when the option is selected */
+    conditional?: ReactNode
+    /** Whether the the option is disabled */
+    disabled?: boolean
+    /** Hint for the option */
+    hint?: string
+    /** Label for the option */
+    label: ReactNode
+    /** Whether the option is selected */
+    selected?: boolean
+    /** Value of the option */
+    value: string
 };
 
 export type OptionOrSeperator = string | Option;
 
-export const isSeperator = (v: OptionOrSeperator): v is string => typeof v === 'string';
+export const isSeperator = (v: OptionOrSeperator): v is string => (typeof v === 'string');
 
 export const isOption = (v: OptionOrSeperator): v is Option => !isSeperator(v);
 
-export type RadiosProps = StandardProps &
-  Omit<InputHTMLAttributes<HTMLInputElement>, 'label'> & {
+export type RadiosProps = StandardProps & Omit<InputHTMLAttributes<HTMLInputElement>, 'label'> & {
     /** Error message */
-    error?: string;
+    error?: string
     /** Hint */
-    hint?: string;
+    hint?: string
     /** HTML id (If not specified then the name will be used) */
-    id?: string;
+    id?: string
     /** Label */
-    label: ReactNode;
+    label: ReactNode
     /** HTML name */
-    name: string;
+    name: string
     /** List of options to select from */
-    options: OptionOrSeperator[];
-  };
+    options: OptionOrSeperator[]
+};
 
 export const Radios: FC<RadiosProps> = ({
-  classBlock,
-  classModifiers,
-  className,
-  defaultValue,
-  error,
-  hint,
-  id: _id,
-  label,
-  onChange: _onChange,
-  options,
-  value,
-  ...attrs
-}) => {
-  const classes = classBuilder('govuk-radios', classBlock, classModifiers, className);
-  const id = _id || attrs.name;
-  const hintId = `${id}-hint`;
-  const setState = useState({})[1];
-  const forceUpdate = () => setState({});
-  const withUpdate =
-    <A, B>(f?: (a: A) => B) =>
-    (e: A): B | undefined => {
-      forceUpdate();
-      return f && f(e);
+                                            classBlock,
+                                            classModifiers,
+                                            className,
+                                            defaultValue,
+                                            error,
+                                            hint,
+                                            id: _id,
+                                            label,
+                                            onChange: _onChange,
+                                            options,
+                                            value,
+                                            ...attrs
+                                        }) => {
+    const classes = classBuilder('govuk-radios', classBlock, classModifiers, className);
+    const id = _id || attrs.name;
+    const setState = useState({})[1];
+    const forceUpdate = () => setState({});
+    const withUpdate = <A, B>(f?: (a: A) => B) => (e: A): B | undefined => {
+        forceUpdate();
+        return f && f(e);
     };
 
-  const onChange = withUpdate(_onChange);
+    const onChange = withUpdate(_onChange);
 
-  return (
-    <FormGroup id={id} label={label} hint={hint} hintId={hintId} error={error}>
-      <div className={classes()}>
-        {options.map((v, i) => {
-          if (isOption(v)) {
-            const optionId = `${id}-radio-${i}`;
-            const { selected, ...rest } = v;
-            const defaultChecked =
-              defaultValue === undefined
-                ? selected
-                : Array.isArray(defaultValue)
-                  ? defaultValue.includes(v.value)
-                  : defaultValue === v.value;
+    return (<div className="govuk-form-group">
+            <fieldset className="govuk-fieldset">
+                <legend className="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 className="govuk-fieldset__heading">
+                        Where do you live?
+                    </h1>
+                </legend>
+                <div className={classes()}>
+                    {options.map((v, i) => {
+                        if (isOption(v)) {
+                            const optionId = `${id}-radio-${i}`;
+                            const {selected, ...rest} = v;
+                            const defaultChecked = (defaultValue === undefined ? selected : (Array.isArray(defaultValue) ? defaultValue.includes(v.value) : defaultValue === v.value));
 
-            return (
-              <Radio
-                {...rest}
-                {...attrs}
-                classes={classes}
-                defaultChecked={defaultChecked}
-                id={optionId}
-                key={i}
-                onChange={onChange}
-              />
-            );
-          } else {
-            return (
-              <div className={classes('divider')} key={i}>
-                {v}
-              </div>
-            );
-          }
-        })}
-      </div>
-    </FormGroup>
-  );
+                            return (<Radio
+                                    {...rest}
+                                    {...attrs}
+                                    classes={classes}
+                                    defaultChecked={defaultChecked}
+                                    id={optionId}
+                                    key={i}
+                                    onChange={onChange}
+                                />);
+                        } else {
+                            return (<div className={classes('divider')} key={i}>
+                                    {v}
+                                </div>);
+                        }
+                    })}
+                </div>
+            </fieldset>
+        </div>);
 };
 
 Radios.displayName = 'Radios';

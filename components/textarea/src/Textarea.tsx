@@ -1,6 +1,5 @@
 import { FC, TextareaHTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { FormGroup } from '@not-govuk/form-group';
 
 import '../assets/Textarea.scss';
 
@@ -50,14 +49,8 @@ export const Textarea: FC<TextareaProps> = ({
         };
 
   return (
-    <FormGroup
-      id={id}
-      fieldId={fieldId}
-      label={label}
-      hint={hint}
-      hintId={hintId}
-      error={error}
-      errorId={errorId}
+    <div
+      className="govuk-fieldset"
     >
       <textarea
         {...attrs}
@@ -67,7 +60,7 @@ export const Textarea: FC<TextareaProps> = ({
         rows={rows}
         style={style}
       />
-    </FormGroup>
+    </div>
   );
 };
 

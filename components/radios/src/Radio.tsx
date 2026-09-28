@@ -1,13 +1,11 @@
 import { FC, Fragment, InputHTMLAttributes, ReactNode, useRef } from 'react';
 import { ClassBuilder } from '@react-foundry/component-helpers';
-import { Hint } from '@not-govuk/hint';
-import { Label } from '@not-govuk/label';
 
 export type RadioProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'label'> & {
-  classes: ClassBuilder;
-  conditional?: ReactNode;
-  hint?: string;
-  label: ReactNode;
+  classes: ClassBuilder
+  conditional?: ReactNode
+  hint?: string
+  label: ReactNode
 };
 
 export const Radio: FC<RadioProps> = ({
@@ -22,10 +20,14 @@ export const Radio: FC<RadioProps> = ({
   const ref = useRef<HTMLInputElement>(null);
   const conditionalId = `conditional-${id}`;
 
-  const isChecked = () => (ref.current === null ? defaultChecked : ref.current.checked);
+  const isChecked = () => (
+    ref.current === null
+      ? defaultChecked
+      : ref.current.checked
+  );
 
   return (
-    <Fragment>
+    <>
       <div className={classes('item')}>
         <input
           {...attrs}
@@ -37,24 +39,18 @@ export const Radio: FC<RadioProps> = ({
           aria-controls={conditional ? conditionalId : undefined}
           aria-expanded={conditional ? !!isChecked() : undefined}
         />
-        <Label htmlFor={id} className={classes('label')}>
-          {label}
-        </Label>
-        {hint && (
-          <Hint id={`${id}-hint`} className={classes('hint')}>
-            {hint}
-          </Hint>
-        )}
+        <label htmlFor={id} className="govuk-label">{label}</label>
+        {hint && <div id={`${id}-hint`} className="govuk-hint">{hint}</div>}
       </div>
-      {!conditional ? null : (
-        <div
-          id={conditionalId}
-          className={classes('conditional', isChecked() ? undefined : 'hidden')}
-        >
-          {conditional}
-        </div>
-      )}
-    </Fragment>
+      { !conditional ? null : (
+          <div
+            id={conditionalId}
+            className={classes('conditional', isChecked() ? undefined : 'hidden')}
+          >
+            {conditional}
+          </div>
+      ) }
+    </>
   );
 };
 

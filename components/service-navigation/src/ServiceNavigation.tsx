@@ -1,8 +1,6 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { AnchorList, Anchor } from '@react-foundry/anchor-list';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { A } from '@not-govuk/link';
-import { WidthContainer } from '@not-govuk/width-container';
 
 import '../assets/ServiceNavigation.scss';
 
@@ -71,9 +69,9 @@ export const ServiceNavigation: FC<ServiceNavigationProps> = ({
 
   const serviceLink = !serviceName ? null : (
     <span className={classes('service-name')}>
-      <A href={serviceHref} className={classes('link')}>
+      <a href={serviceHref} className={classes('link')}>
         {serviceName}
-      </A>
+      </a>
     </span>
   );
   const nav = !items.length ? null : (
@@ -92,14 +90,14 @@ export const ServiceNavigation: FC<ServiceNavigationProps> = ({
     </nav>
   );
   const inner = (
-    <WidthContainer maxWidth={maxContentsWidth}>
+    <div className="govuk-width-container">
       {start}
       <div className={classes('container')}>
         {serviceLink}
         {nav}
       </div>
       {end}
-    </WidthContainer>
+    </div>
   );
 
   return serviceName ? (

@@ -1,6 +1,5 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { VisuallyHidden } from '@not-govuk/visually-hidden';
 
 import '../assets/WarningText.scss';
 
@@ -27,7 +26,7 @@ export const WarningText: FC<WarningTextProps> = ({
         !
       </span>
       <strong className={classes('text')}>
-        <VisuallyHidden>{iconFallbackText}</VisuallyHidden>
+        <span className="govuk-visually-hidden">{iconFallbackText}</span>
         {children}
       </strong>
     </div>
