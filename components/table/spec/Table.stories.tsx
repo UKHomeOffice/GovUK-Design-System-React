@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Table } from '../src/Table';
+import { Table, type TableProps } from '../src/Table';
 
 const meta = {
   title: 'Table',
@@ -15,7 +15,7 @@ const meta = {
 } satisfies Meta<typeof Table>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<TableProps>;
 
 export const Primary: Story = {
   args: { caption: 'Dates and amounts' },

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { A } from '../../link/src/Link';
-import { Footer } from '../src/Footer';
+import { Footer, type FooterProps } from '../src/Footer';
 
 const meta = {
   title: 'Footer',
@@ -17,7 +17,7 @@ const meta = {
 } satisfies Meta<typeof Footer>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<FooterProps>;
 
 export const Primary: Story = {
   args: { govUK: true },

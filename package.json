@@ -4,6 +4,7 @@
   "description": "A framework for quickly building digital services for government.",
   "type": "module",
   "scripts": {
+    "build": "tsc",
     "storybook": "storybook dev -p 6006",
     "test": "jest --coverage --json --outputFile=.jest-results.json"
   },

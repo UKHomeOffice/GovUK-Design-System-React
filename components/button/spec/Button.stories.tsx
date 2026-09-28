@@ -3,42 +3,42 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ButtonGroup } from '../../button-group/src/ButtonGroup';
 import { A } from '../../link/src/Link';
 import { Panel } from '../../panel/src/Panel';
-import { Button, StartButton, SubmitButton } from '../src/Button';
+import { Button, StartButton, SubmitButton, type ButtonProps } from '../src/Button';
 
 const meta = {
   title: 'Button',
   parameters: {
     chromatic: {
-      viewports: [640, 480],
+      viewports: [640, 480]
     },
-    description: 'A component to allow users to carry out an action.',
+    description: 'A component to allow users to carry out an action.'
   },
   component: Button,
-  args: { children: 'Save and continue' },
+  args: { children: 'Save and continue' }
 } satisfies Meta<typeof Button>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<ButtonProps>;
 
 export const Primary: Story = {
-  args: {},
+  args: {}
 };
 
 export const Standard: Story = {
-  args: {},
+  args: {}
 };
 
 export const Start: Story = {
   args: { children: undefined },
-  render: ({ ...props }) => <StartButton href="#" />,
+  render: ({ ...props }) => <StartButton href="#" />
 };
 
 export const Secondary: Story = {
-  args: { children: 'Find address', classModifiers: 'secondary' },
+  args: { children: 'Find address', classModifiers: 'secondary' }
 };
 
 export const Warning: Story = {
-  args: { children: 'Delete account', classModifiers: 'warning' },
+  args: { children: 'Delete account', classModifiers: 'warning' }
 };
 
 export const DarkBackgrounds: Story = {
@@ -48,11 +48,11 @@ export const DarkBackgrounds: Story = {
       <Button {...props} />
     </Panel>
   ),
-  name: 'Dark backgrounds',
+  name: 'Dark backgrounds'
 };
 
 export const Disabled: Story = {
-  args: { children: 'Disabled button', disabled: true },
+  args: { children: 'Disabled button', disabled: true }
 };
 
 export const Group: Story = {
@@ -62,7 +62,7 @@ export const Group: Story = {
       <Button {...props} />
       <Button classModifiers="secondary">Save as draft</Button>
     </ButtonGroup>
-  ),
+  )
 };
 
 export const GroupWithLink: Story = {
@@ -73,19 +73,19 @@ export const GroupWithLink: Story = {
       <A href="#">Cancel</A>
     </ButtonGroup>
   ),
-  name: 'Group with link',
+  name: 'Group with link'
 };
 
 export const PreventDoubleClick: Story = {
-  args: { children: 'Confirm and send', 'data-prevent-double-click': 'true' },
-  name: 'Prevent double click',
+  render: () => <Button data-prevent-double-click="true">Confirm and send</Button>,
+  name: 'Prevent double click'
 };
 
 export const Submit: Story = {
   args: { children: undefined },
-  render: ({ ...props }) => <SubmitButton>Save and continue</SubmitButton>,
+  render: ({ ...props }) => <SubmitButton>Save and continue</SubmitButton>
 };
 
 export const Hyperlink: Story = {
-  args: { children: 'New search', href: '#', classModifiers: 'secondary' },
+  args: { children: 'New search', href: '#', classModifiers: 'secondary' }
 };

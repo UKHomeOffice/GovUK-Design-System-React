@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { TextInput } from '../../text-input/src/TextInput';
-import { Radios } from '../src/Radios';
+import { Radios, type RadiosProps } from '../src/Radios';
 
 const meta = {
   title: 'Radios',
@@ -16,7 +16,7 @@ const meta = {
 } satisfies Meta<typeof Radios>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<RadiosProps>;
 
 export const Primary: Story = {
   args: {},

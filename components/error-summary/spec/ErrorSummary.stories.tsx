@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import { Checkboxes } from '../../checkboxes/src/Checkboxes';
 import { DateInput } from '../../date-input/src/DateInput';
 import { TextInput } from '../../text-input/src/TextInput';
-import { ErrorSummary } from '../src/ErrorSummary';
+import { ErrorSummary, type ErrorSummaryProps } from '../src/ErrorSummary';
 
 const meta = {
   title: 'Error summary',
@@ -19,7 +19,7 @@ const meta = {
 } satisfies Meta<typeof ErrorSummary>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<ErrorSummaryProps>;
 
 export const Primary: Story = {
   args: {},

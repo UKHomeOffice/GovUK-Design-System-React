@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Textarea } from '../src/Textarea';
+import { Textarea, type TextareaProps } from '../src/Textarea';
 
 const meta = {
   title: 'Textarea',
@@ -18,7 +18,7 @@ const meta = {
 } satisfies Meta<typeof Textarea>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<TextareaProps>;
 
 export const Primary: Story = {
   args: {},
@@ -41,7 +41,7 @@ export const Standard: Story = {
 };
 
 export const Sized: Story = {
-  args: { rows: '8' },
+  args: { rows: 8 },
   render: ({ ...props }) => (
     <Textarea
       {...props}

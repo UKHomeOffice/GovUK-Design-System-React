@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import { A } from '../../link/src/Link';
 import { SummaryCard } from '../../summary-card/src/SummaryCard';
 import { VisuallyHidden } from '../../visually-hidden/src/VisuallyHidden';
-import { SummaryList } from '../src/SummaryList';
+import { SummaryList, type SummaryListProps } from '../src/SummaryList';
 
 const meta = {
   title: 'Summary list',
@@ -20,7 +20,7 @@ const meta = {
 } satisfies Meta<typeof SummaryList>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<SummaryListProps>;
 
 export const Primary: Story = {
   args: {},

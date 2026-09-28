@@ -1,30 +1,32 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { TextInput } from '../src/TextInput';
+import { TextInput, type TextInputProps } from '../src/TextInput';
 
 const meta = {
   title: 'Text input',
   parameters: {
     chromatic: {
-      viewports: [640, 480],
+      viewports: [640, 480]
     },
-    description: 'A single line text field.',
+    description: 'A single line text field.'
   },
   component: TextInput,
-  args: { name: 'event-name' },
+  args: { name: 'event-name' }
 } satisfies Meta<typeof TextInput>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<TextInputProps>;
 
 export const Primary: Story = {
   args: {},
   render: ({ ...props }) => (
     <TextInput
       {...props}
-      label={<h1 className="govuk-heading-l">What is the name of the event?</h1>}
+      label={
+        <h1 className="govuk-heading-l">What is the name of the event?</h1>
+      }
     />
-  ),
+  )
 };
 
 export const Standard: Story = {
@@ -32,44 +34,62 @@ export const Standard: Story = {
   render: ({ ...props }) => (
     <TextInput
       {...props}
-      label={<h1 className="govuk-heading-l">What is the name of the event?</h1>}
+      label={
+        <h1 className="govuk-heading-l">What is the name of the event?</h1>
+      }
     />
-  ),
+  )
 };
 
 export const NoHeading: Story = {
   args: { label: 'What is the name of the event?' },
-  name: 'No heading',
+  name: 'No heading'
 };
 
 export const FixedWidth: Story = {
   args: {},
   render: ({ ...props }) => (
     <>
-      <TextInput {...props} label="20 character width" name="width-20" width="20" />
-      <TextInput label="10 character width" name="width-10" width="10" />
-      <TextInput label="5 character width" name="width-5" width="5" />
-      <TextInput label="4 character width" name="width-4" width="4" />
-      <TextInput label="3 character width" name="width-3" width="3" />
-      <TextInput label="2 character width" name="width-2" width="2" />
+      <TextInput {...props} label="20 character width" name="width-20" width={20} />
+      <TextInput label="10 character width" name="width-10" width={10} />
+      <TextInput label="5 character width" name="width-5" width={5} />
+      <TextInput label="4 character width" name="width-4" width={4} />
+      <TextInput label="3 character width" name="width-3" width={3} />
+      <TextInput label="2 character width" name="width-2" width={2} />
     </>
   ),
-  name: 'Fixed width',
+  name: 'Fixed width'
 };
 
 export const FluidWidth: Story = {
   args: {},
   render: ({ ...props }) => (
     <>
-      <TextInput {...props} label="Full width" name="full" className="govuk-!-width-full" />
+      <TextInput {...props}
+        label="Full width"
+        name="full"
+        className="govuk-!-width-full"
+      />
       <TextInput
         label="Three-quarters width"
         name="three-quarters"
         className="govuk-!-width-three-quarters"
       />
-      <TextInput label="Two-thirds width" name="two-thirds" className="govuk-!-width-two-thirds" />
-      <TextInput label="One-half width" name="one-half" className="govuk-!-width-one-half" />
-      <TextInput label="One-third width" name="one-third" className="govuk-!-width-one-third" />
+      <TextInput
+        label="Two-thirds width"
+        name="two-thirds"
+        className="govuk-!-width-two-thirds"
+      />
+      <TextInput
+        label="One-half width"
+        name="one-half"
+        className="govuk-!-width-one-half"
+      />
+      <TextInput
+        label="One-third width"
+        name="one-third"
+        className="govuk-!-width-one-third"
+      />
       <TextInput
         label="One-quarter width"
         name="one-quarter"
@@ -77,7 +97,7 @@ export const FluidWidth: Story = {
       />
     </>
   ),
-  name: 'Fluid width',
+  name: 'Fluid width'
 };
 
 export const Hints: Story = {
@@ -85,9 +105,11 @@ export const Hints: Story = {
   render: ({ ...props }) => (
     <TextInput
       {...props}
-      label={<h1 className="govuk-heading-l">What is the name of the event?</h1>}
+      label={
+        <h1 className="govuk-heading-l">What is the name of the event?</h1>
+      }
     />
-  ),
+  )
 };
 
 export const WholeNumbers: Story = {
@@ -96,7 +118,7 @@ export const WholeNumbers: Story = {
     hint: 'Must be between 6 and 8 digits long',
     inputMode: 'numeric',
     pattern: '[0-9]*',
-    width: 10,
+    width: 10
   },
   render: ({ ...props }) => (
     <TextInput
@@ -104,7 +126,7 @@ export const WholeNumbers: Story = {
       label={<h1 className="govuk-heading-l">What is your account number?</h1>}
     />
   ),
-  name: 'Whole numbers',
+  name: 'Whole numbers'
 };
 
 export const DecimalNumbers: Story = {
@@ -112,9 +134,9 @@ export const DecimalNumbers: Story = {
     name: 'weight',
     label: 'Weight, in kilograms',
     width: 5,
-    suffix: 'kg',
+    suffix: 'kg'
   },
-  name: 'Decimal numbers',
+  name: 'Decimal numbers'
 };
 
 export const PrefixAndSuffix: Story = {
@@ -122,15 +144,19 @@ export const PrefixAndSuffix: Story = {
     name: 'cost-per-item',
     width: 5,
     prefix: '£',
-    suffix: 'per item',
+    suffix: 'per item'
   },
   render: ({ ...props }) => (
     <TextInput
       {...props}
-      label={<h1 className="govuk-heading-l">What is the cost per item, in pounds?</h1>}
+      label={
+        <h1 className="govuk-heading-l">
+          What is the cost per item, in pounds?
+        </h1>
+      }
     />
   ),
-  name: 'Prefix and suffix',
+  name: 'Prefix and suffix'
 };
 
 export const Prefix: Story = {
@@ -140,7 +166,7 @@ export const Prefix: Story = {
       {...props}
       label={<h1 className="govuk-heading-l">What is the cost in pounds?</h1>}
     />
-  ),
+  )
 };
 
 export const Suffix: Story = {
@@ -148,41 +174,45 @@ export const Suffix: Story = {
   render: ({ ...props }) => (
     <TextInput
       {...props}
-      label={<h1 className="govuk-heading-l">What is the weight in kilograms?</h1>}
+      label={
+        <h1 className="govuk-heading-l">What is the weight in kilograms?</h1>
+      }
     />
-  ),
+  )
 };
 
 export const Autocomplete: Story = {
   args: {
     name: 'postcode',
     label: 'Postcode',
-    width: '10',
-    autoComplete: 'postal-code',
+    width: 10,
+    autoComplete: 'postal-code'
   },
-  name: 'Auto-complete',
+  name: 'Auto-complete'
 };
 
 export const NoSpellcheck: Story = {
   args: { name: 'name', label: 'Name', spellCheck: false },
-  name: 'No spellcheck',
+  name: 'No spellcheck'
 };
 
 export const Spellcheck: Story = {
-  args: { name: 'description', label: 'Description', spellCheck: true },
+  args: { name: 'description', label: 'Description', spellCheck: true }
 };
 
 export const Errors: Story = {
   args: {
     hint: 'The name you’ll use on promotional material.',
-    error: 'Enter an event name',
+    error: 'Enter an event name'
   },
   render: ({ ...props }) => (
     <TextInput
       {...props}
-      label={<h1 className="govuk-heading-l">What is the name of the event?</h1>}
+      label={
+        <h1 className="govuk-heading-l">What is the name of the event?</h1>
+      }
     />
-  ),
+  )
 };
 
 export const ErrorsWithPrefixAndSuffix: Story = {
@@ -191,13 +221,17 @@ export const ErrorsWithPrefixAndSuffix: Story = {
     width: 5,
     prefix: '£',
     suffix: 'per item',
-    error: 'Enter a cost per item, in pounds',
+    error: 'Enter a cost per item, in pounds'
   },
   render: ({ ...props }) => (
     <TextInput
       {...props}
-      label={<h1 className="govuk-heading-l">What is the cost per item, in pounds?</h1>}
+      label={
+        <h1 className="govuk-heading-l">
+          What is the cost per item, in pounds?
+        </h1>
+      }
     />
   ),
-  name: 'Errors with prefix and suffix',
+  name: 'Errors with prefix and suffix'
 };

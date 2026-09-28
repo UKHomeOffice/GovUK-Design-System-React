@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Panel } from '../../panel/src/Panel';
-import { Breadcrumbs } from '../src/Breadcrumbs';
+import { Breadcrumbs, type BreadcrumbsProps } from '../src/Breadcrumbs';
 
 const meta = {
   title: 'Breadcrumbs',
@@ -17,7 +17,7 @@ const meta = {
 } satisfies Meta<typeof Breadcrumbs>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<BreadcrumbsProps>;
 
 export const Primary: Story = {
   args: {},

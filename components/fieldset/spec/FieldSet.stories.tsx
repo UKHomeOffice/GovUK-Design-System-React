@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Input } from '../../input/src/Input';
 import { Label } from '../../label/src/Label';
 import { VisuallyHidden } from '../../visually-hidden/src/VisuallyHidden';
-import { FieldSet } from '../src/FieldSet';
+import { FieldSet, type FieldSetProps } from '../src/FieldSet';
 
 const meta = {
   title: 'FieldSet',
@@ -18,7 +18,7 @@ const meta = {
 } satisfies Meta<typeof FieldSet>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<FieldSetProps>;
 
 export const Primary: Story = {
   args: { legend: 'My fieldset', children: 'Content' },

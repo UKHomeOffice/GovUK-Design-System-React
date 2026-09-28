@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Fragment } from 'react';
 import { Table } from '../../table/src/Table';
-import { Tabs } from '../src/Tabs';
+import { Tabs, type TabsProps } from '../src/Tabs';
 
 const meta = {
   title: 'Tabs',
@@ -18,7 +18,7 @@ const meta = {
 } satisfies Meta<typeof Tabs>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<TabsProps>;
 
 export const Primary: Story = {
   args: {},
