@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { WidthContainer } from '../../width-container/src/WidthContainer';
 import { CrownLogo } from './CrownLogo';

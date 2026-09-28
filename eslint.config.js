@@ -15,6 +15,7 @@ export default defineConfig([
       '**/.jest-results.json',
       '**/pnpm-lock.yaml',
       '**/pnpm-lock-committed.yaml',
+      '**/package-lock.json',
       '.cypress/**',
       '**/*.spec.js',
       '**/*.e2e.js',

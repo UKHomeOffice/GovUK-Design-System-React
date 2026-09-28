@@ -1,4 +1,4 @@
-import { ComponentProps, FC, createElement as h } from 'react';
+import { ComponentProps, FC } from 'react';
 import { A } from '../../link/src/Link';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 

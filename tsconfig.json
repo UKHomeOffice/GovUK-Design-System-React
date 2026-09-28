@@ -20,7 +20,7 @@
     "sourceMap": true
   },
   "include": [
-    "components/**/src/*",
+    "components/**/src/*"
   ],
   "exclude": [
     "dist",

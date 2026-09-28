@@ -1,4 +1,4 @@
-import { ComponentProps, FC, HTMLAttributes, ReactNode, createElement as h } from 'react';
+import { ComponentProps, FC, HTMLAttributes, ReactNode } from 'react';
 import { ButtonGroup } from '../../button-group/src/ButtonGroup';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { WidthContainer } from '../../width-container/src/WidthContainer';
