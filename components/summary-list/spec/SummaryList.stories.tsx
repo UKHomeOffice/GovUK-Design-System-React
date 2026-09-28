@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Fragment } from 'react';
-import { A } from '@not-govuk/link';
-import { SummaryCard } from '@not-govuk/summary-card';
-import { VisuallyHidden } from '@not-govuk/visually-hidden';
-import { SummaryList } from '../src/SummaryList';
+import { A } from '../../link/src/Link';
+import { SummaryCard } from '../../summary-card/src/SummaryCard';
+import { VisuallyHidden } from '../../visually-hidden/src/VisuallyHidden';
+import { SummaryList, type SummaryListProps } from '../src/SummaryList';
 
 const meta = {
   title: 'Summary list',
@@ -20,7 +20,7 @@ const meta = {
 } satisfies Meta<typeof SummaryList>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<SummaryListProps>;
 
 export const Primary: Story = {
   args: {},

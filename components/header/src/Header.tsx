@@ -1,22 +1,20 @@
 import { FC, HTMLAttributes } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { A } from '@not-govuk/link';
-import { WidthContainer } from '@not-govuk/width-container';
+import { WidthContainer } from '../../width-container/src/WidthContainer';
 import { CrownLogo } from './CrownLogo';
 
-import '../assets/Header.scss';
+import 'govuk-frontend/dist/govuk/components/header/_index.scss'
 
-export type HeaderProps = StandardProps &
-  HTMLAttributes<HTMLDivElement> & {
-    /** Maximum width of the contents in px units (-1 for full width) */
-    maxContentsWidth?: number;
-    /** Organisation link URL */
-    organisationHref?: string;
-    /** Service link URL */
-    serviceHref?: string;
-    /** Service link text */
-    serviceName?: string;
-  };
+export type HeaderProps = StandardProps & HTMLAttributes<HTMLDivElement> & {
+  /** Maximum width of the contents in px units (-1 for full width) */
+  maxContentsWidth?: number
+  /** Organisation link URL */
+  organisationHref?: string
+  /** Service link URL */
+  serviceHref?: string
+  /** Service link text */
+  serviceName?: string
+};
 
 export const Header: FC<HeaderProps> = ({
   classBlock,
@@ -38,10 +36,12 @@ export const Header: FC<HeaderProps> = ({
     <div {...attrs} className={classes()}>
       <WidthContainer maxWidth={maxContentsWidth} className={classes('container')}>
         <div className={classes('logo')}>
-          <A href={logoHref} classBlock={classes('homepage-link')}>
+          <a href={logoHref} className={classes('homepage-link')}>
             {logo}
-            {!serviceName ? null : <span className={classes('product-name')}>{serviceName}</span>}
-          </A>
+            {!serviceName ? null : (
+              <span className={classes('product-name')}>{serviceName}</span>
+            )}
+          </a>
         </div>
       </WidthContainer>
     </div>

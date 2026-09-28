@@ -1,8 +1,8 @@
 import { FC, SelectHTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { FormGroup } from '@not-govuk/form-group';
+import { FormGroup } from '../../form-group/src/FormGroup';
 
-import '../assets/Select.scss';
+import 'govuk-frontend/dist/govuk/components/select/_index.scss'
 
 export type Option = {
   conditional?: ReactNode;

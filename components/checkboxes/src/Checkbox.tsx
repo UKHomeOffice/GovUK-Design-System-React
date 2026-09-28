@@ -2,8 +2,8 @@
 
 import { FC, Fragment, InputHTMLAttributes, ReactNode, useRef, useState } from 'react';
 import { ClassBuilder } from '@react-foundry/component-helpers';
-import { Hint } from '@not-govuk/hint';
-import { Label } from '@not-govuk/label';
+import { Hint } from '../../hint/src/Hint';
+import { Label } from '../../label/src/Label';
 
 export type CheckboxProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'label'> & {
   classes: ClassBuilder;

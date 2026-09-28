@@ -1,39 +1,39 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Panel } from '@not-govuk/panel';
+import { Panel } from '../../panel/src/Panel';
 import { A } from '../src/Link';
 
 const meta = {
   title: 'Internal/Link',
   parameters: {
     chromatic: {
-      viewports: [320, 320],
+      viewports: [320, 320]
     },
-    description: "A drop-in replacement for the 'a' element with GovUK styling.",
+    description: "A drop-in replacement for the 'a' element with GovUK styling."
   },
   component: A,
-  args: { href: '#', children: 'Text' },
+  args: { href: '#', children: 'Text' }
 } satisfies Meta<typeof A>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {},
+  args: {}
 };
 
 export const Standard: Story = {
-  args: {},
+  args: {}
 };
 
 export const NoVisitedState: Story = {
   args: { classModifiers: 'no-visited-state' },
-  name: 'No visited state',
+  name: 'No visited state'
 };
 
 export const OpenInNewTab: Story = {
   args: { rel: 'noreferrer noopener', target: '_blank' },
-  name: 'Open in new tab',
+  name: 'Open in new tab'
 };
 
 export const DarkBackgrounds: Story = {
@@ -45,10 +45,10 @@ export const DarkBackgrounds: Story = {
       </p>
     </Panel>
   ),
-  name: 'Dark backgrounds',
+  name: 'Dark backgrounds'
 };
 
 export const NoUnderline: Story = {
-  args: { classModifier: 'no-underline' },
-  name: 'No underline',
+  args: { classModifiers: 'no-underline' },
+  name: 'No underline'
 };

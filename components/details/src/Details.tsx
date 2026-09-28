@@ -1,7 +1,7 @@
 import { FC, HTMLProps, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/Details.scss';
+import 'govuk-frontend/dist/govuk/components/details/_index.scss'
 
 export type DetailsProps = StandardProps &
   HTMLProps<HTMLDetailsElement> & {

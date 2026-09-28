@@ -1,7 +1,7 @@
 import { FC, LabelHTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/Label.scss';
+import "govuk-frontend/dist/govuk/components/label/_index.scss";
 
 export type LabelProps = StandardProps &
   LabelHTMLAttributes<HTMLLabelElement> & {

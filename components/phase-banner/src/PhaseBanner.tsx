@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { classBuilder } from '@react-foundry/component-helpers';
-import { Tag } from '@not-govuk/tag';
-import { WidthContainer, WidthContainerProps } from '@not-govuk/width-container';
+import { Tag } from '../../tag/src/Tag';
+import { WidthContainer, WidthContainerProps } from '../../width-container/src/WidthContainer';
 
-import '../assets/PhaseBanner.scss';
+import 'govuk-frontend/dist/govuk/components/phase-banner/_index.scss'
 
 export type PhaseBannerProps = WidthContainerProps & {
   /** The phase the service is in */

@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/InsetText.scss';
+import 'govuk-frontend/dist/govuk/components/inset-text/_index.scss'
 
 export type InsetTextProps = StandardProps &
   HTMLAttributes<HTMLDivElement> & {

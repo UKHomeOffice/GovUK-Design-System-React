@@ -37,7 +37,7 @@ jobs:
           node: 24
 
       - name: Build libraries
-        run: npm run libs:build
+        run: npm run build
 
   build-app:
     name: Build application

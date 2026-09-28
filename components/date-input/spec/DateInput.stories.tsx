@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { DateInput } from '../src/DateInput';
+import { DateInput, type DateInputProps } from '../src/DateInput';
 
 const meta = {
   title: 'Date input',
@@ -15,7 +15,7 @@ const meta = {
 } satisfies Meta<typeof DateInput>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<DateInputProps>;
 
 export const Primary: Story = {
   args: {},

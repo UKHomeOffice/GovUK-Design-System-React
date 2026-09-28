@@ -1,7 +1,7 @@
 import { FC, Fragment, InputHTMLAttributes } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/Input.scss';
+import "govuk-frontend/dist/govuk/components/input/_index.scss";
 
 export type InputProps = StandardProps &
   InputHTMLAttributes<HTMLInputElement> & {

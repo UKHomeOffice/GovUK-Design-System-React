@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { SkipLink } from '../src/SkipLink';
+import { SkipLink, type SkipLinkProps } from '../src/SkipLink';
 
 const meta = {
   title: 'Skip link',
@@ -15,7 +15,7 @@ const meta = {
 } satisfies Meta<typeof SkipLink>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<SkipLinkProps>;
 
 export const Primary: Story = {
   args: {},

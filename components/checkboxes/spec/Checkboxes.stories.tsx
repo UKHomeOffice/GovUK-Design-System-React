@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { TextInput } from '@not-govuk/text-input';
-import { Checkboxes } from '../src/Checkboxes';
+import { TextInput } from '../../text-input/src/TextInput';
+import { Checkboxes, type CheckboxesProps } from '../src/Checkboxes';
 
 const meta = {
   title: 'Checkboxes',
@@ -16,7 +16,7 @@ const meta = {
 } satisfies Meta<typeof Checkboxes>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<CheckboxesProps>;
 
 export const Primary: Story = {
   args: {},

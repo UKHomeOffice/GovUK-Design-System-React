@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Fragment } from 'react';
-import { Button } from '@not-govuk/button';
-import { A } from '@not-govuk/link';
-import { CookieBanner } from '../src/CookieBanner';
+import { Button } from '../../button/src/Button';
+import { A } from '../../link/src/Link';
+import { CookieBanner, type CookieBannerProps } from '../src/CookieBanner';
 
 const meta = {
   title: 'Cookie banner',
@@ -19,7 +19,7 @@ const meta = {
 } satisfies Meta<typeof CookieBanner>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<CookieBannerProps>;
 
 export const Primary: Story = {
   args: {},

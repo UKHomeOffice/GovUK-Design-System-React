@@ -4,7 +4,7 @@ inputs:
   node:
     description: The version of Node.js to use.
     required: false
-    default: 24
+    default: '24'
   frozen-lockfile:
     description: Whether to require a frozen lock-file
     required: false
@@ -17,43 +17,26 @@ runs:
         sudo locale-gen ${{ env.LANG }}
         sudo update-locale LANG=${{ env.LANG }}
 
-    - name: Setup package lock-file
-      shell: bash
-      run: |
-        cp pnpm-lock-committed.yaml pnpm-lock.yaml
-
-    - name: Setup PNPM
-      uses: pnpm/action-setup@v6.1.0
-      with:
-        version: 12.5.1
-        run_install: false
-
     - name: Setup Node.js
       uses: actions/setup-node@v7
       with:
         node-version: ${{ inputs.node }}
-        cache: 'pnpm'
+        cache: 'npm'
 
     - name: Cache Cypress.io
       uses: actions/cache@v6
       env:
-        cache-hash: ${{ hashFiles('pnpm-lock.yaml') }}
+        cache-hash: ${{ hashFiles('package-lock.json') }}
       with:
         path: '~/.cache/Cypress'
         key: cypress-os_${{ runner.os }}-lock_${{ env.cache-hash }}
 
-    - name: Pull dependencies
+    - name: Install dependencies
       if: ${{ !inputs.frozen-lockfile || inputs.frozen-lockfile == 'false' }}
-      uses: pnpm/action-setup@v6.1.0
-      with:
-        version: 12.5.1
-        run_install: |
-          recursive: true
-          args: [--no-frozen-lockfile]
+      shell: bash
+      run: npm install
 
-    - name: Pull dependencies (frozen lock-file)
+    - name: Install dependencies (frozen lock-file)
       if: ${{ inputs.frozen-lockfile && inputs.frozen-lockfile != 'false' }}
-      uses: pnpm/action-setup@v6.1.0
-      with:
-        version: 12.5.1
-        run_install: true
+      shell: bash
+      run: npm ci

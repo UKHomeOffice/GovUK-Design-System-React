@@ -2,7 +2,8 @@ import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { Anchor, AnchorList } from '@react-foundry/anchor-list';
 
-import '../assets/SummaryCard.scss';
+import "govuk-frontend/dist/govuk/components/summary-list/_index.scss";
+import "govuk-frontend/dist/govuk/core/_links.scss";
 
 export type SummaryCardProps = StandardProps &
   HTMLAttributes<HTMLDivElement> & {

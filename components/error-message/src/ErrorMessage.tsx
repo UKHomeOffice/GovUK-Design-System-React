@@ -1,8 +1,8 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { VisuallyHidden } from '@not-govuk/visually-hidden';
+import { VisuallyHidden } from '../../visually-hidden/src/VisuallyHidden';
 
-import '../assets/ErrorMessage.scss';
+import 'govuk-frontend/dist/govuk/components/error-message/_index.scss'
 
 export type ErrorMessageProps = StandardProps &
   HTMLAttributes<HTMLParagraphElement> & {

@@ -1,9 +1,0 @@
-@use '@not-govuk/sass-base' as *;
-@use 'govuk-frontend/dist/govuk/components/error-message';
-@use 'govuk-frontend/dist/govuk/utilities/visually-hidden';
-
-.govuk-error-message {
-  &--hidden {
-    @extend .govuk-visually-hidden;
-  }
-}

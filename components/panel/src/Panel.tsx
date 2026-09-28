@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/Panel.scss';
+import 'govuk-frontend/dist/govuk/components/panel/_index.scss'
 
 export type PanelProps = StandardProps &
   HTMLAttributes<HTMLDivElement> & {

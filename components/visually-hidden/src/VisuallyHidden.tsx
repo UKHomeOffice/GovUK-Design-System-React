@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/VisuallyHidden.scss';
+import "govuk-frontend/dist/govuk/utilities/_visually-hidden.scss";
 
 export type VisuallyHiddenProps = StandardProps &
   HTMLAttributes<HTMLSpanElement> & {

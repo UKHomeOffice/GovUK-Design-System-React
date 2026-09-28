@@ -1,12 +1,12 @@
 import { ComponentProps, FC } from 'react';
 import { A as _A } from '@react-foundry/anchor';
 
-import '../assets/Link.scss';
+import "govuk-frontend/dist/govuk/core/_links.scss";
 
 export type LinkProps = ComponentProps<typeof _A>;
 
 export const Link: FC<LinkProps> = ({ classBlock, ...props }) => (
-  <_A {...props} classBlock={classBlock || 'govuk-link'} />
+  <a {...props} className={classBlock || 'govuk-link'} />
 );
 
 Link.displayName = 'A';

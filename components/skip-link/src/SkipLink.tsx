@@ -1,7 +1,7 @@
 import { HTMLProps, FC, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/SkipLink.scss';
+import 'govuk-frontend/dist/govuk/components/skip-link/_index.scss'
 
 export type SkipLinkProps = StandardProps &
   Omit<HTMLProps<HTMLAnchorElement>, 'href'> & {

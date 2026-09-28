@@ -1,10 +1,10 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { AnchorList, Anchor } from '@react-foundry/anchor-list';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { A } from '@not-govuk/link';
-import { WidthContainer } from '@not-govuk/width-container';
+import { A } from '../../link/src/Link';
+import { WidthContainer } from '../../width-container/src/WidthContainer';
 
-import '../assets/ServiceNavigation.scss';
+import 'govuk-frontend/dist/govuk/components/service-navigation/_index.scss'
 
 export type { Anchor } from '@react-foundry/anchor-list';
 export type Item = Anchor;

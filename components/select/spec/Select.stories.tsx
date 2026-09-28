@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Select } from '../src/Select';
+import { Select, type SelectProps } from '../src/Select';
 
 const meta = {
   title: 'Select',
@@ -15,7 +15,7 @@ const meta = {
 } satisfies Meta<typeof Select>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<SelectProps>;
 
 export const Primary: Story = {
   args: {},

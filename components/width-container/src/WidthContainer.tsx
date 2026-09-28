@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/WidthContainer.scss';
+import "govuk-frontend/dist/govuk/objects/_width-container.scss"
 
 export type WidthContainerProps = StandardProps &
   HTMLAttributes<HTMLDivElement> & {

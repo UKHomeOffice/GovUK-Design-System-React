@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { A } from '@not-govuk/link';
+import { A } from '../../link/src/Link';
 import { ButtonGroup } from '../src/ButtonGroup';
 
 const meta = {
