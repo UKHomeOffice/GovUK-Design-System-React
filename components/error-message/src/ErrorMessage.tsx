@@ -1,6 +1,5 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { VisuallyHidden } from '@not-govuk/visually-hidden';
 
 import '../assets/ErrorMessage.scss';
 
@@ -26,7 +25,7 @@ export const ErrorMessage: FC<ErrorMessageProps> = ({
 
   return (
     <p {...attrs} className={classes()} aria-hidden={hidden}>
-      <VisuallyHidden>Error:</VisuallyHidden> {children}
+      <span className="govuk-visually-hidden">Error:</span> {children}
     </p>
   );
 };

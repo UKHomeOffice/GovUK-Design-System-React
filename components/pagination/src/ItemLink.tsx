@@ -1,13 +1,13 @@
-import { ComponentProps, FC } from 'react';
-import { A } from '@not-govuk/link';
+import { FC } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-export type LinkProps = ComponentProps<typeof A>;
+export type LinkProps = {
+  children?: React.ReactNode
+};
 
-export type ItemLinkProps = LinkProps &
-  StandardProps & {
-    current?: boolean;
-  };
+export type ItemLinkProps = LinkProps & StandardProps & {
+  current?: boolean
+};
 
 export const ItemLink: FC<ItemLinkProps> = ({
   children,
@@ -20,12 +20,10 @@ export const ItemLink: FC<ItemLinkProps> = ({
   const classes = classBuilder('govuk-pagination', classBlock);
 
   return (
-    <li
-      className={classes('item', [...classModifiers, current ? 'current' : undefined], className)}
-    >
-      <A {...attrs} className={classes('link')}>
+    <li className={classes('item', [...classModifiers, current ? 'current' : undefined], className)}>
+      <a {...attrs} className={classes('link')}>
         {children}
-      </A>
+      </a>
     </li>
   );
 };
