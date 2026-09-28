@@ -1,5 +1,3 @@
-import type { StorybookConfig } from "@storybook/react-vite";
-import { createElement as h } from 'react';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import globalDecorator from './decorators';
 

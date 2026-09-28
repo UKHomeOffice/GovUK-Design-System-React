@@ -1,4 +1,4 @@
-import { ComponentProps, FC, createElement as h } from 'react';
+import { ComponentProps, FC } from 'react';
 import { A as _A } from '@react-foundry/anchor';
 
 import '../assets/Link.scss';

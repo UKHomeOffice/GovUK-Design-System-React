@@ -1,4 +1,4 @@
-import { FC, Fragment, InputHTMLAttributes, createElement as h } from 'react';
+import { FC, Fragment, InputHTMLAttributes } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/Input.scss';

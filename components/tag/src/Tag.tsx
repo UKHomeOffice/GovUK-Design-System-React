@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/Tag.scss';

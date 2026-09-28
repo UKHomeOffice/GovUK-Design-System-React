@@ -1,4 +1,4 @@
-import { FC, Fragment, HTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, Fragment, HTMLAttributes, ReactNode } from 'react';
 import { A } from '@not-govuk/link';
 import { VisuallyHidden } from '@not-govuk/visually-hidden';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';

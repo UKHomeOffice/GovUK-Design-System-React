@@ -1,4 +1,4 @@
-import { FC, SelectHTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, SelectHTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { FormGroup } from '@not-govuk/form-group';
 

@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import { Anchor, AnchorList } from '@react-foundry/anchor-list';
 import { A } from '@not-govuk/link';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';

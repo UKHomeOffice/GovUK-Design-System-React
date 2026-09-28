@@ -1,4 +1,4 @@
-import { FC, createElement as h } from 'react';
+import { FC } from 'react';
 import { SummaryListContainer, SummaryListContainerProps } from './SummaryListContainer';
 import { SummaryListItem, SummaryListItemProps } from './SummaryListItem';
 

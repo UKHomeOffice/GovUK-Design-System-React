@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, InputHTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { FormGroup } from '@not-govuk/form-group';
 import { Checkbox } from './Checkbox';

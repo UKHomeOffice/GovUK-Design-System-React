@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, HTMLAttributes, KeyboardEvent, ReactNode, SyntheticEvent, createElement as h, useRef, useState } from 'react';
+import { FC, HTMLAttributes, KeyboardEvent, ReactNode, SyntheticEvent, useRef, useState } from 'react';
 import { useIsMounted } from '@react-foundry/client-component-helpers';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 

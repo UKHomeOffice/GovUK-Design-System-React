@@ -1,4 +1,4 @@
-import { FC, Fragment, createElement as h } from 'react';
+import { FC, Fragment } from 'react';
 import { classBuilder } from '@react-foundry/component-helpers';
 import { StandaloneInput, StandaloneInputProps } from '@not-govuk/standalone-input';
 

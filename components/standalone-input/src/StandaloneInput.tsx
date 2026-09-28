@@ -1,4 +1,4 @@
-import { FC, ReactNode, createElement as h } from 'react';
+import { FC, ReactNode } from 'react';
 import { SubmitButton } from '@not-govuk/button';
 import { classBuilder } from '@react-foundry/component-helpers';
 import { FormGroup } from '@not-govuk/form-group';

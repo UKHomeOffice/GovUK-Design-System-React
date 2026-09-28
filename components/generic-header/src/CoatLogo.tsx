@@ -1,4 +1,4 @@
-import { FC, createElement as h } from 'react';
+import { FC } from 'react';
 import { LogoProps } from './LogoProps';
 
 export const CoatLogo: FC<LogoProps> = (props) => (

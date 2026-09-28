@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, HTMLAttributes, ReactNode, createElement as h, useEffect, useRef } from 'react';
+import { FC, HTMLAttributes, ReactNode, useEffect, useRef } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/NotificationBanner.scss';

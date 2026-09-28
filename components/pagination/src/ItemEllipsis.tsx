@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, createElement as h } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 export type ItemEllipsisProps = StandardProps & HTMLAttributes<HTMLElement>;

@@ -1,13 +1,13 @@
 'use client';
 
-import { FC, Fragment, HTMLProps, ReactNode, createElement as h } from 'react';
+import { FC, Fragment, HTMLProps, ReactNode } from 'react';
 import { BackLink } from '@not-govuk/back-link';
 import { Breadcrumb, Breadcrumbs } from '@not-govuk/breadcrumbs';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { useIsMounted } from '@react-foundry/client-component-helpers';
 import { Footer, FooterProps, NavMenu } from '@not-govuk/footer';
 import { GenericHeader, GenericHeaderProps } from '@not-govuk/generic-header';
-import { Header, HeaderProps } from '@not-govuk/header';
+import { Header } from '@not-govuk/header';
 import { A } from '@not-govuk/link';
 import { PhaseBanner, PhaseBannerProps } from '@not-govuk/phase-banner';
 import { ServiceNavigation, ServiceNavigationProps } from '@not-govuk/service-navigation';

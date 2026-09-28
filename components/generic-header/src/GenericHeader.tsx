@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { A } from '@not-govuk/link';
 import { WidthContainer } from '@not-govuk/width-container';

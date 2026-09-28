@@ -1,4 +1,4 @@
-import { FC, HTMLProps, ReactNode, createElement as h } from 'react';
+import { FC, HTMLProps, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/Details.scss';

@@ -1,4 +1,4 @@
-import { FC, LabelHTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, LabelHTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/Label.scss';

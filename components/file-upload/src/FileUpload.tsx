@@ -1,4 +1,4 @@
-import { FC, ReactNode, createElement as h } from 'react';
+import { FC, ReactNode } from 'react';
 import { FormGroup } from '@not-govuk/form-group';
 import { Input, InputProps } from '@not-govuk/input';
 

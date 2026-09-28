@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, Fragment, createElement as h } from 'react';
+import { FC } from 'react';
 import { queryString } from '@react-foundry/uri';
 import { NextPrevProps, PageList, PageListProps } from './PageList';
 import { EnhancedLinkProps } from './common';

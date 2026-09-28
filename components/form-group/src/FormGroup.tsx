@@ -1,4 +1,4 @@
-import { FC, Fragment, HTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, Fragment, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { ErrorMessage } from '@not-govuk/error-message';
 import { FieldSet } from '@not-govuk/fieldset';

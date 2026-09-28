@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, InputHTMLAttributes, ReactNode, createElement as h, useState } from 'react';
+import { FC, InputHTMLAttributes, ReactNode, useState } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { FormGroup } from '@not-govuk/form-group';
 import { Radio } from './Radio';

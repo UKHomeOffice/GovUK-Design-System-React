@@ -1,4 +1,4 @@
-import { HTMLProps, FC, ReactNode, createElement as h } from 'react';
+import { HTMLProps, FC, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/SkipLink.scss';

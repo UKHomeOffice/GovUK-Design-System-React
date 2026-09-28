@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, createElement as h } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { AnchorList, Item } from '@react-foundry/anchor-list';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
