@@ -1,4 +1,4 @@
-import { FC, Fragment, InputHTMLAttributes, ReactNode, useRef } from 'react';
+import { FC, InputHTMLAttributes, ReactNode, useRef } from 'react';
 import { ClassBuilder } from '@react-foundry/component-helpers';
 
 export type RadioProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'label'> & {
