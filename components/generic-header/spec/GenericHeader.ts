@@ -8,7 +8,8 @@ describe('GenericHeader', () => {
       render(h(GenericHeader, {}));
     });
 
-    it('renders an element', async () => expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
+    it('renders an element', async () =>
+      expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
   });
 
   describe('when given all valid props', () => {
@@ -19,14 +20,17 @@ describe('GenericHeader', () => {
       organisationHref: '#organisation',
       organisationText: 'Org',
       serviceName: 'Service name',
-      serviceHref: '#service'
+      serviceHref: '#service',
     };
     beforeEach(async () => {
       render(h(GenericHeader, props, 'Child'));
     });
 
-    it('renders an element', async () => expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
-    it('does NOT contain a logo', async () => expect(screen.queryByRole('img')).not.toBeInTheDocument());
-    it('contains the service name', async () => expect(screen.getAllByRole('generic')[0]).toHaveTextContent('Service name'));
+    it('renders an element', async () =>
+      expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
+    it('does NOT contain a logo', async () =>
+      expect(screen.queryByRole('img')).not.toBeInTheDocument());
+    it('contains the service name', async () =>
+      expect(screen.getAllByRole('generic')[0]).toHaveTextContent('Service name'));
   });
 });

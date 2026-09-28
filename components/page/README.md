@@ -3,7 +3,6 @@ NotGovUK - Page
 
 A fully branded page with content sandwiched between the header and footer.
 
-
 Using this package
 ------------------
 
@@ -19,7 +18,7 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import Page from '@not-govuk/page';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <NotGovUKPage
     breadcrumbs={[
       { href: '', text: 'Home' },
@@ -28,136 +27,140 @@ export const MyComponent = props => (
     ]}
     department="home-office"
     feedbackHref="#feedback"
-    footerContent={<p>Built by the <a href="https://www.gov.uk">Government Digital Service</a>.</p>}
+    footerContent={
+      <p>
+        Built by the <a href="https://www.gov.uk">Government Digital Service</a>.
+      </p>
+    }
     footerNavigation={[
       {
-        title: "Services and information",
+        title: 'Services and information',
         columns: 2,
         items: [
           {
-            href: "#",
-            text: "Benefits"
+            href: '#',
+            text: 'Benefits',
           },
           {
-            href: "#",
-            text: "Births, deaths, marriages and care"
+            href: '#',
+            text: 'Births, deaths, marriages and care',
           },
           {
-            href: "#",
-            text: "Business and self-employed"
+            href: '#',
+            text: 'Business and self-employed',
           },
           {
-            href: "#",
-            text: "Childcare and parenting"
+            href: '#',
+            text: 'Childcare and parenting',
           },
           {
-            href: "#",
-            text: "Citizenship and living in the UK"
+            href: '#',
+            text: 'Citizenship and living in the UK',
           },
           {
-            href: "#",
-            text: "Crime, justice and the law"
+            href: '#',
+            text: 'Crime, justice and the law',
           },
           {
-            href: "#",
-            text: "Disabled people"
+            href: '#',
+            text: 'Disabled people',
           },
           {
-            href: "#",
-            text: "Driving and transport"
+            href: '#',
+            text: 'Driving and transport',
           },
           {
-            href: "#",
-            text: "Education and learning"
+            href: '#',
+            text: 'Education and learning',
           },
           {
-            href: "#",
-            text: "Employing people"
+            href: '#',
+            text: 'Employing people',
           },
           {
-            href: "#",
-            text: "Environment and countryside"
+            href: '#',
+            text: 'Environment and countryside',
           },
           {
-            href: "#",
-            text: "Housing and local services"
+            href: '#',
+            text: 'Housing and local services',
           },
           {
-            href: "#",
-            text: "Money and tax"
+            href: '#',
+            text: 'Money and tax',
           },
           {
-            href: "#",
-            text: "Passports, travel and living abroad"
+            href: '#',
+            text: 'Passports, travel and living abroad',
           },
           {
-            href: "#",
-            text: "Visas and immigration"
+            href: '#',
+            text: 'Visas and immigration',
           },
           {
-            href: "#",
-            text: "Working, jobs and pensions"
-          }
-        ]
+            href: '#',
+            text: 'Working, jobs and pensions',
+          },
+        ],
       },
       {
-        title: "Departments and policy",
+        title: 'Departments and policy',
         items: [
           {
-            href: "#",
-            text: "How government works"
+            href: '#',
+            text: 'How government works',
           },
           {
-            href: "#",
-            text: "Departments"
+            href: '#',
+            text: 'Departments',
           },
           {
-            href: "#",
-            text: "Worldwide"
+            href: '#',
+            text: 'Worldwide',
           },
           {
-            href: "#",
-            text: "Policies"
+            href: '#',
+            text: 'Policies',
           },
           {
-            href: "#",
-            text: "Publications"
+            href: '#',
+            text: 'Publications',
           },
           {
-            href: "#",
-            text: "Announcements"
-          }
-        ]
-      }
+            href: '#',
+            text: 'Announcements',
+          },
+        ],
+      },
     ]}
     meta={[
       {
-        href: "#",
-        text: "Help"
+        href: '#',
+        text: 'Help',
       },
       {
-        href: "#",
-        text: "Cookies"
+        href: '#',
+        text: 'Cookies',
       },
       {
-        href: "#",
-        text: "Contact"
+        href: '#',
+        text: 'Contact',
       },
       {
-        href: "#",
-        text: "Terms and conditions"
+        href: '#',
+        text: 'Terms and conditions',
       },
       {
-        href: "#",
-        text: "Rhestr o Wasanaethau Cymraeg"
-      }
+        href: '#',
+        text: 'Rhestr o Wasanaethau Cymraeg',
+      },
     ]}
     phase="alpha"
     navigation={[
       { href: '#one', text: 'One', active: true },
       { href: 'two', text: 'Two' },
       { href: 'three', text: 'Three' },
-      { href: 'four', text: 'Four' }
+      { href: 'four', text: 'Four' },
     ]}
     organisationHref="#"
     phase="alpha"
@@ -171,7 +174,6 @@ export const MyComponent = props => (
 export default MyComponent;
 ```
 
-
 Working on this package
 -----------------------
 
@@ -182,20 +184,17 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
 
-
 ### Building
 
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

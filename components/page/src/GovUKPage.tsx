@@ -1,7 +1,7 @@
 /// <reference path='./bundler.d.ts' />
 'use client';
 
-import { FC, Fragment, createElement as h } from 'react';
+import { FC } from 'react';
 import { Page, PageProps } from './Page';
 import { unwrapImage } from './types';
 
@@ -24,7 +24,10 @@ export type GovUKPageProps = Omit<PageProps, 'govUK'>;
 export const GovUKPage: FC<GovUKPageProps> = ({ children, classModifiers, ...props }) => (
   <Page
     {...props}
-    classModifiers={[ ...(Array.isArray(classModifiers) ? classModifiers : [classModifiers]), 'govuk' ]}
+    classModifiers={[
+      ...(Array.isArray(classModifiers) ? classModifiers : [classModifiers]),
+      'govuk',
+    ]}
     govUK={true}
   >
     <meta name="theme-color" content={'#1d70b8'} />

@@ -6,13 +6,12 @@ const meta = {
   title: 'Phase banner',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description:
-      'A component to show users your service is still being worked on.'
+    description: 'A component to show users your service is still being worked on.',
   },
   component: PhaseBanner,
-  args: { phase: 'Alpha' }
+  args: { phase: 'Alpha' },
 } satisfies Meta<typeof PhaseBanner>;
 
 export default meta;
@@ -22,30 +21,27 @@ export const Primary: Story = {
   args: {},
   render: ({ ...props }) => (
     <PhaseBanner {...props}>
-      This is a new service – your <a href="#">feedback</a> will help us to
-      improve it.
+      This is a new service – your <a href="#">feedback</a> will help us to improve it.
     </PhaseBanner>
-  )
+  ),
 };
 
 export const Alpha: Story = {
   args: {},
   render: ({ ...props }) => (
     <PhaseBanner {...props}>
-      This is a new service – your <a href="#">feedback</a> will help us to
-      improve it.
+      This is a new service – your <a href="#">feedback</a> will help us to improve it.
     </PhaseBanner>
-  )
+  ),
 };
 
 export const Beta: Story = {
   args: { phase: 'Beta' },
   render: ({ ...props }) => (
     <PhaseBanner {...props}>
-      This is a new service – your <a href="#">feedback</a> will help us to
-      improve it.
+      This is a new service – your <a href="#">feedback</a> will help us to improve it.
     </PhaseBanner>
-  )
+  ),
 };
 
 export const Prototype: Story = {
@@ -54,5 +50,5 @@ export const Prototype: Story = {
     <PhaseBanner {...props}>
       This is <strong>NOT</strong> a real service!
     </PhaseBanner>
-  )
+  ),
 };

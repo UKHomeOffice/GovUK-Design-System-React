@@ -7,7 +7,6 @@ and other information about your service and department.
 This has been adapted to also support _not_ including the standard GOV.UK
 notices; making this also suitable for non-GOV.UK services.
 
-
 Using this package
 ------------------
 
@@ -23,13 +22,10 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import Footer from '@not-govuk/footer';
 
-export const MyComponent = props => (
-  <Footer govUK />
-);
+export const MyComponent = (props) => <Footer govUK />;
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -41,20 +37,17 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
 
-
 ### Building
 
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

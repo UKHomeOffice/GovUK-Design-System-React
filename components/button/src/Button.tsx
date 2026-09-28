@@ -1,23 +1,19 @@
-import { ButtonHTMLAttributes, ComponentProps, FC, Fragment, ReactNode, createElement as h } from 'react';
+import { ButtonHTMLAttributes, ComponentProps, FC, Fragment, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { A } from '@not-govuk/link';
 
 import '../assets/Button.scss';
 
 type CommonButtonProps = StandardProps & {
-  children?: ReactNode
-  start?: boolean
+  children?: ReactNode;
+  start?: boolean;
 };
 type AnchorButtonProps = CommonButtonProps & ComponentProps<typeof A>;
 type ButtonButtonProps = CommonButtonProps & ButtonHTMLAttributes<HTMLButtonElement>;
 export type ButtonProps = AnchorButtonProps | ButtonButtonProps;
 
-const isAnchorProps = (v: ButtonProps): v is AnchorButtonProps => (
-  'href' in v
-);
-const isButtonProps = (v: ButtonProps): v is ButtonButtonProps => (
-  !isAnchorProps(v)
-);
+const isAnchorProps = (v: ButtonProps): v is AnchorButtonProps => 'href' in v;
+const isButtonProps = (v: ButtonProps): v is ButtonButtonProps => !isAnchorProps(v);
 
 const defaultClassBlock = 'govuk-button';
 
@@ -32,7 +28,7 @@ export const AnchorButton: FC<AnchorButtonProps> = ({
 }) => {
   const classModifiers = [
     start ? 'start' : undefined,
-    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers])
+    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers]),
   ];
 
   return (
@@ -61,15 +57,15 @@ export const ButtonButton: FC<ButtonButtonProps> = ({
 }) => {
   const classModifiers = [
     start ? 'start' : undefined,
-    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers])
+    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers]),
   ];
   const classes = classBuilder(defaultClassBlock, classBlock, classModifiers, className);
 
   return (
     <button
-      aria-disabled={!!disabled ? 'true' : undefined}
+      aria-disabled={disabled ? 'true' : undefined}
       data-module={defaultClassBlock}
-      disabled={!!disabled}
+      disabled={disabled}
       type={type}
       {...attrs}
       className={classes()}
@@ -79,16 +75,16 @@ export const ButtonButton: FC<ButtonButtonProps> = ({
   );
 };
 
-export const Button: FC<ButtonProps> = ({
-  children: _children,
-  ...props
-}) => {
-  const classes = classBuilder(defaultClassBlock, props.classBlock, props.classModifiers, props.className);
+export const Button: FC<ButtonProps> = ({ children: _children, ...props }) => {
+  const classes = classBuilder(
+    defaultClassBlock,
+    props.classBlock,
+    props.classModifiers,
+    props.className,
+  );
   const children = (
     <Fragment>
-      {!(props.start && typeof _children !== 'string') ? _children : (
-        <span>{_children}</span>
-      )}
+      {!(props.start && typeof _children !== 'string') ? _children : <span>{_children}</span>}
       {!props.start ? null : (
         <svg
           className={classes('start-icon')}
@@ -101,48 +97,28 @@ export const Button: FC<ButtonProps> = ({
         >
           <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
         </svg>
-      ) }
+      )}
     </Fragment>
   );
 
   if (isAnchorProps(props)) {
-    return (
-      <AnchorButton {...props}>
-        {children}
-      </AnchorButton>
-    );
+    return <AnchorButton {...props}>{children}</AnchorButton>;
   } else if (isButtonProps(props)) {
-    return (
-      <ButtonButton {...props}>
-        {children}
-      </ButtonButton>
-    );
+    return <ButtonButton {...props}>{children}</ButtonButton>;
   } else {
     // This should be unreachable, but TypeScript requires it
-    return (<Fragment></Fragment>);
+    return <Fragment></Fragment>;
   }
 };
 
-export const StartButton: FC<AnchorButtonProps> = ({
-  children = 'Start now',
-  ...props
-}) => (
-  <Button
-    {...props}
-    start
-  >
+export const StartButton: FC<AnchorButtonProps> = ({ children = 'Start now', ...props }) => (
+  <Button {...props} start>
     {children}
   </Button>
 );
 
-export const SubmitButton: FC<ButtonButtonProps> = ({
-  children,
-  ...props
-}) => (
-  <Button
-    {...props}
-    type="submit"
-  >
+export const SubmitButton: FC<ButtonButtonProps> = ({ children, ...props }) => (
+  <Button {...props} type="submit">
     {children}
   </Button>
 );

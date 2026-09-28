@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Styles/Typography',
-  args: {}
+  args: {},
 } satisfies Meta<typeof undefined>;
 
 export default meta;
@@ -17,7 +17,7 @@ export const Headings: Story = {
       <h3>govuk-heading-m</h3>
       <h4>govuk-heading-s</h4>
     </>
-  )
+  ),
 };
 
 export const HeadingsWithCaptions: Story = {
@@ -25,36 +25,36 @@ export const HeadingsWithCaptions: Story = {
   render: ({ ...props }) => (
     <>
       <h1>
-          <span className="caption">govuk-caption-xl</span>govuk-heading-xl
+        <span className="caption">govuk-caption-xl</span>govuk-heading-xl
       </h1>
       <h2>
-          <span className="caption">govuk-caption-l</span>govuk-heading-l
+        <span className="caption">govuk-caption-l</span>govuk-heading-l
       </h2>
       <h3>
-          <span className="caption">govuk-caption-m</span>govuk-heading-m
+        <span className="caption">govuk-caption-m</span>govuk-heading-m
       </h3>
       <h4>
-          <span className="caption">govuk-caption-s</span>govuk-heading-s
+        <span className="caption">govuk-caption-s</span>govuk-heading-s
       </h4>
     </>
   ),
-  name: 'Headings with captions'
+  name: 'Headings with captions',
 };
 
 export const Paragraphs: Story = {
   args: {},
-  render: ({ ...props }) => <p>govuk-body</p>
+  render: ({ ...props }) => <p>govuk-body</p>,
 };
 
 export const LeadParagraphs: Story = {
   args: {},
   render: ({ ...props }) => <p className="lead">govuk-body-l</p>,
-  name: 'Lead paragraphs'
+  name: 'Lead paragraphs',
 };
 
 export const Links: Story = {
   args: {},
-  render: ({ ...props }) => <a href="#">govuk-link</a>
+  render: ({ ...props }) => <a href="#">govuk-link</a>,
 };
 
 export const Lists: Story = {
@@ -74,7 +74,7 @@ export const Lists: Story = {
         <a href="#">More</a>
       </li>
     </ul>
-  )
+  ),
 };
 
 export const BulletedLists: Story = {
@@ -89,7 +89,7 @@ export const BulletedLists: Story = {
       </ul>
     </>
   ),
-  name: 'Bulleted lists'
+  name: 'Bulleted lists',
 };
 
 export const NumberedLists: Story = {
@@ -101,11 +101,11 @@ export const NumberedLists: Story = {
       <li>Confirmation.</li>
     </ol>
   ),
-  name: 'Numbered lists'
+  name: 'Numbered lists',
 };
 
 export const SectionBreak: Story = {
   args: {},
   render: ({ ...props }) => <hr />,
-  name: 'Section break'
+  name: 'Section break',
 };

@@ -1,6 +1,6 @@
-@use "@not-govuk/sass-base" as *;
-@use "govuk-frontend/dist/govuk/components/hint";
-@use "govuk-frontend/dist/govuk/utilities/visually-hidden";
+@use '@not-govuk/sass-base' as *;
+@use 'govuk-frontend/dist/govuk/components/hint';
+@use 'govuk-frontend/dist/govuk/utilities/visually-hidden';
 
 .govuk-hint {
   &--hidden {

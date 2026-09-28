@@ -1,15 +1,15 @@
 'use client';
 
-import { FC, Fragment, InputHTMLAttributes, ReactNode, createElement as h, useRef, useState } from 'react';
+import { FC, Fragment, InputHTMLAttributes, ReactNode, useRef, useState } from 'react';
 import { ClassBuilder } from '@react-foundry/component-helpers';
 import { Hint } from '@not-govuk/hint';
 import { Label } from '@not-govuk/label';
 
 export type CheckboxProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'label'> & {
-  classes: ClassBuilder
-  conditional?: ReactNode
-  hint?: string
-  label: ReactNode
+  classes: ClassBuilder;
+  conditional?: ReactNode;
+  hint?: string;
+  label: ReactNode;
 };
 
 export const Checkbox: FC<CheckboxProps> = ({
@@ -24,20 +24,18 @@ export const Checkbox: FC<CheckboxProps> = ({
 }) => {
   const setState = useState({})[1];
   const forceUpdate = () => setState({});
-  const withUpdate = <A, B>(f?: (a: A) => B) => (e: A): B | undefined => {
-    forceUpdate();
-    return f && f(e);
-  };
+  const withUpdate =
+    <A, B>(f?: (a: A) => B) =>
+    (e: A): B | undefined => {
+      forceUpdate();
+      return f && f(e);
+    };
 
   const onChange = withUpdate(_onChange);
   const ref = useRef<HTMLInputElement>(null);
   const conditionalId = `conditional-${id}`;
 
-  const isChecked = () => (
-    ref.current === null
-      ? defaultChecked
-      : ref.current.checked
-  );
+  const isChecked = () => (ref.current === null ? defaultChecked : ref.current.checked);
 
   return (
     <Fragment>
@@ -53,17 +51,23 @@ export const Checkbox: FC<CheckboxProps> = ({
           aria-controls={conditional ? conditionalId : undefined}
           aria-expanded={conditional ? !!isChecked() : undefined}
         />
-        <Label htmlFor={id} className={classes('label')}>{label}</Label>
-        {hint && <Hint id={`${id}-hint`} className={classes('hint')}>{hint}</Hint>}
+        <Label htmlFor={id} className={classes('label')}>
+          {label}
+        </Label>
+        {hint && (
+          <Hint id={`${id}-hint`} className={classes('hint')}>
+            {hint}
+          </Hint>
+        )}
       </div>
-      { !conditional ? null : (
-          <div
-            id={conditionalId}
-            className={classes('conditional', isChecked() ? undefined : 'hidden')}
-          >
-            {conditional}
-          </div>
-      ) }
+      {!conditional ? null : (
+        <div
+          id={conditionalId}
+          className={classes('conditional', isChecked() ? undefined : 'hidden')}
+        >
+          {conditional}
+        </div>
+      )}
     </Fragment>
   );
 };

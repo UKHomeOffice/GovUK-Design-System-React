@@ -1,4 +1,4 @@
-@use "govuk-frontend/dist/govuk/core/typography";
+@use 'govuk-frontend/dist/govuk/core/typography';
 
 :where(.govuk-template__page) {
   h1 {
@@ -13,7 +13,10 @@
     @extend .govuk-heading-m;
   }
 
-  h4, h5, h6, h7 {
+  h4,
+  h5,
+  h6,
+  h7 {
     @extend .govuk-heading-s;
   }
 
@@ -38,5 +41,4 @@
   p.small {
     @extend .govuk-body-s;
   }
-
 }

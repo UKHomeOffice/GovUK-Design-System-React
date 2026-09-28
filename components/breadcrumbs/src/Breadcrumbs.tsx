@@ -1,4 +1,4 @@
-import { FC, createElement as h } from 'react';
+import { FC } from 'react';
 import { Anchor, AnchorList, AnchorListProps } from '@react-foundry/anchor-list';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
@@ -6,8 +6,7 @@ import '../assets/Breadcrumbs.scss';
 
 export type Breadcrumb = Anchor;
 
-export type BreadcrumbsProps = StandardProps & Pick<AnchorListProps, 'items'> & {
-};
+export type BreadcrumbsProps = StandardProps & Pick<AnchorListProps, 'items'> & {};
 
 export const Breadcrumbs: FC<BreadcrumbsProps> = ({
   classBlock,

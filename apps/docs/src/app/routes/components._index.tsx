@@ -1,4 +1,4 @@
-import type { Route } from "./+types/components._index";
+import type { Route } from './+types/components._index';
 import { siteTitle } from '../config';
 import Markdown from '../../../../../docs/components.md';
 
@@ -16,7 +16,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Components() {
-  return (
-    <Markdown />
-  );
+  return <Markdown />;
 }

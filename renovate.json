@@ -1,20 +1,13 @@
 {
-  "extends": [
-    "config:recommended"
-  ],
+  "extends": ["config:recommended"],
   "minimumReleaseAge": "2 days",
   "packageRules": [
     {
-      "matchDatasources": [
-        "npm"
-      ],
+      "matchDatasources": ["npm"],
       "minimumReleaseAge": "3 days"
     },
     {
-      "matchPackageNames": [
-        "cypress/included",
-        "cypress"
-      ],
+      "matchPackageNames": ["cypress/included", "cypress"],
       "groupName": "cypress"
     },
     {
@@ -29,28 +22,16 @@
       "groupName": "jest"
     },
     {
-      "matchPackageNames": [
-        "@types/node",
-        "node"
-      ],
+      "matchPackageNames": ["@types/node", "node"],
       "groupName": "node",
       "allowedVersions": "/^[0-9]*[02468][.\\-]/"
     },
     {
-      "matchPackageNames": [
-        "@types/react",
-        "@types/react-dom",
-        "react",
-        "react-dom",
-        "react-is"
-      ],
+      "matchPackageNames": ["@types/react", "@types/react-dom", "react", "react-dom", "react-is"],
       "groupName": "react"
     },
     {
-      "matchPackageNames": [
-        "react-foundry",
-        "@react-foundry/**"
-      ],
+      "matchPackageNames": ["react-foundry", "@react-foundry/**"],
       "groupName": "react-foundry"
     },
     {
@@ -64,19 +45,11 @@
       "groupName": "react-router"
     },
     {
-      "matchPackageNames": [
-        "sass",
-        "sass-embedded"
-      ],
+      "matchPackageNames": ["sass", "sass-embedded"],
       "groupName": "sass"
     },
     {
-      "matchPackageNames": [
-        "mdx-js",
-        "storybook",
-        "@mdx-js/**",
-        "@storybook/**"
-      ],
+      "matchPackageNames": ["mdx-js", "storybook", "@mdx-js/**", "@storybook/**"],
       "groupName": "storybook"
     },
     {
@@ -89,21 +62,14 @@
       "groupName": "testing-library"
     },
     {
-      "matchPackageNames": [
-        "vite",
-        "@vitejs/**"
-      ],
+      "matchPackageNames": ["vite", "@vitejs/**"],
       "groupName": "vite"
     },
     {
       "groupName": "zap",
-      "matchPackageNames": [
-        "zaproxy/**"
-      ]
+      "matchPackageNames": ["zaproxy/**"]
     }
   ],
   "rangeStrategy": "bump",
-  "schedule": [
-    "before 3am on Monday"
-  ]
+  "schedule": ["before 3am on Monday"]
 }

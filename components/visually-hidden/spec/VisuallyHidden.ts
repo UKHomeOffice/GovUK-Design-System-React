@@ -10,7 +10,9 @@ describe('VisuallyHidden', () => {
       render(h(VisuallyHidden, minimalProps, 'Text'));
     });
 
-    it('renders an element', async () => expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
-    it('contains the child provided', async () => expect(screen.getAllByRole('generic')[0]).toHaveTextContent('Text'));
+    it('renders an element', async () =>
+      expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
+    it('contains the child provided', async () =>
+      expect(screen.getAllByRole('generic')[0]).toHaveTextContent('Text'));
   });
 });

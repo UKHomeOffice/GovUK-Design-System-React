@@ -6,12 +6,12 @@ const meta = {
   title: 'Unofficial/Search box',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A single-line, form field for searching, with submit button.'
+    description: 'A single-line, form field for searching, with submit button.',
   },
   component: SearchBox,
-  args: { name: 'q' }
+  args: { name: 'q' },
 } satisfies Meta<typeof SearchBox>;
 
 export default meta;
@@ -23,45 +23,45 @@ export const Primary: Story = {
     <form method="get" action="https://www.google.co.uk/search">
       <SearchBox {...props} />
     </form>
-  )
+  ),
 };
 
 export const Standard: Story = {
-  args: {}
+  args: {},
 };
 
 export const CustomLabel: Story = {
   args: { label: 'Query' },
-  name: 'Custom label'
+  name: 'Custom label',
 };
 
 export const Hint: Story = {
-  args: { hint: 'What are you looking for?' }
+  args: { hint: 'What are you looking for?' },
 };
 
 export const CustomButton: Story = {
   args: { button: 'Query' },
-  name: 'Custom button'
+  name: 'Custom button',
 };
 
 export const FixedWidth: Story = {
   args: { width: '10' },
-  name: 'Fixed width'
+  name: 'Fixed width',
 };
 
 export const FluidWidth: Story = {
   args: { className: 'govuk-!-width-one-half' },
-  name: 'Fluid width'
+  name: 'Fluid width',
 };
 
 export const Error: Story = {
-  args: { error: 'Something went wrong' }
+  args: { error: 'Something went wrong' },
 };
 
 export const Disabled: Story = {
-  args: { disabled: true }
+  args: { disabled: true },
 };
 
 export const Secondary: Story = {
-  args: { classModifiers: 'secondary' }
+  args: { classModifiers: 'secondary' },
 };

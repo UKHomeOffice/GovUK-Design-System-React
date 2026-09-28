@@ -1,7 +1,8 @@
-@use "govuk-frontend/dist/govuk/core/lists";
+@use 'govuk-frontend/dist/govuk/core/lists';
 
 :where(.govuk-template__page) {
-  ol, ul {
+  ol,
+  ul {
     @extend .govuk-list;
   }
 

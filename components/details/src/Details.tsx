@@ -1,13 +1,14 @@
-import { FC, HTMLProps, ReactNode, createElement as h } from 'react';
+import { FC, HTMLProps, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/Details.scss';
 
-export type DetailsProps = StandardProps & HTMLProps<HTMLDetailsElement> & {
-  children?: ReactNode
-  /** The summary of the content */
-  summary: string
-};
+export type DetailsProps = StandardProps &
+  HTMLProps<HTMLDetailsElement> & {
+    children?: ReactNode;
+    /** The summary of the content */
+    summary: string;
+  };
 
 export const Details: FC<DetailsProps> = ({
   children,
@@ -22,13 +23,9 @@ export const Details: FC<DetailsProps> = ({
   return (
     <details {...attrs} className={classes()}>
       <summary className={classes('summary')}>
-        <span className={classes('summary-text')}>
-          {summary}
-        </span>
+        <span className={classes('summary-text')}>{summary}</span>
       </summary>
-      <div className={classes('text')}>
-        {children}
-      </div>
+      <div className={classes('text')}>{children}</div>
     </details>
   );
 };

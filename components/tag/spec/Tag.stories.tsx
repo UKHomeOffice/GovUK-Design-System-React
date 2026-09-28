@@ -7,23 +7,23 @@ const meta = {
   title: 'Tag',
   parameters: {
     chromatic: {
-      viewports: [320, 320]
+      viewports: [320, 320],
     },
-    description: 'A component to display the status of something.'
+    description: 'A component to display the status of something.',
   },
   component: Tag,
-  args: { children: 'Completed' }
+  args: { children: 'Completed' },
 } satisfies Meta<typeof Tag>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {}
+  args: {},
 };
 
 export const Standard: Story = {
-  args: {}
+  args: {},
 };
 
 export const OneOrTwo: Story = {
@@ -33,7 +33,7 @@ export const OneOrTwo: Story = {
       keys={['name', 'status']}
       headings={{
         name: 'Name of user',
-        status: 'Status'
+        status: 'Status',
       }}
       data={[
         {
@@ -42,36 +42,36 @@ export const OneOrTwo: Story = {
             <Tag {...props} classModifiers="grey">
               Inactive
             </Tag>
-          )
+          ),
         },
         {
           name: 'Jesse Smith',
-          status: <Tag classModifiers="grey">Inactive</Tag>
+          status: <Tag classModifiers="grey">Inactive</Tag>,
         },
         {
           name: 'Joshua Wessel',
-          status: <Tag>Active</Tag>
+          status: <Tag>Active</Tag>,
         },
         {
           name: 'Rachel Pepper',
-          status: <Tag>Active</Tag>
+          status: <Tag>Active</Tag>,
         },
         {
           name: 'Stuart Say',
-          status: <Tag classModifiers="grey">Inactive</Tag>
+          status: <Tag classModifiers="grey">Inactive</Tag>,
         },
         {
           name: 'Laura Frith',
-          status: <Tag>Active</Tag>
+          status: <Tag>Active</Tag>,
         },
         {
           name: 'Tim Harvey',
-          status: <Tag classModifiers="grey">Inactive</Tag>
-        }
+          status: <Tag classModifiers="grey">Inactive</Tag>,
+        },
       ]}
     />
   ),
-  name: 'One or two'
+  name: 'One or two',
 };
 
 export const Multiple: Story = {
@@ -81,7 +81,7 @@ export const Multiple: Story = {
       keys={['name', 'status']}
       headings={{
         name: 'Applicaton',
-        status: 'Status'
+        status: 'Status',
       }}
       data={[
         {
@@ -90,35 +90,35 @@ export const Multiple: Story = {
             <Tag {...props} classModifiers="red">
               Urgent
             </Tag>
-          )
+          ),
         },
         {
           name: 'Rachel Silver',
-          status: <Tag classModifiers="blue">New</Tag>
+          status: <Tag classModifiers="blue">New</Tag>,
         },
         {
           name: 'Laura Frith',
-          status: <Tag classModifiers="blue">New</Tag>
+          status: <Tag classModifiers="blue">New</Tag>,
         },
         {
           name: 'Paul French',
-          status: <Tag classModifiers="blue">New</Tag>
+          status: <Tag classModifiers="blue">New</Tag>,
         },
         {
           name: 'Jesse Smith',
-          status: <Tag classModifiers="blue">New</Tag>
+          status: <Tag classModifiers="blue">New</Tag>,
         },
         {
           name: 'Rachel Pepper',
-          status: <Tag classModifiers="green">Finished</Tag>
+          status: <Tag classModifiers="green">Finished</Tag>,
         },
         {
           name: 'Emma Tennant',
-          status: <Tag classModifiers="yellow">Waiting on</Tag>
-        }
+          status: <Tag classModifiers="yellow">Waiting on</Tag>,
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Colours: Story = {
@@ -128,7 +128,7 @@ export const Colours: Story = {
       keys={['modifier', 'result']}
       headings={{
         modifier: 'classModifier',
-        result: 'Tag'
+        result: 'Tag',
       }}
       data={[
         {
@@ -137,41 +137,41 @@ export const Colours: Story = {
             <Tag {...props} classModifiers="grey">
               Inactive
             </Tag>
-          )
+          ),
         },
         {
           modifier: <code>green</code>,
-          result: <Tag classModifiers="green">New</Tag>
+          result: <Tag classModifiers="green">New</Tag>,
         },
         {
           modifier: <code>turquoise</code>,
-          result: <Tag classModifiers="turquoise">Active</Tag>
+          result: <Tag classModifiers="turquoise">Active</Tag>,
         },
         {
           modifier: <code>blue</code>,
-          result: <Tag classModifiers="blue">Pending</Tag>
+          result: <Tag classModifiers="blue">Pending</Tag>,
         },
         {
           modifier: <code>purple</code>,
-          result: <Tag classModifiers="purple">Received</Tag>
+          result: <Tag classModifiers="purple">Received</Tag>,
         },
         {
           modifier: <code>pink</code>,
-          result: <Tag classModifiers="pink">Sent</Tag>
+          result: <Tag classModifiers="pink">Sent</Tag>,
         },
         {
           modifier: <code>red</code>,
-          result: <Tag classModifiers="red">Rejected</Tag>
+          result: <Tag classModifiers="red">Rejected</Tag>,
         },
         {
           modifier: <code>orange</code>,
-          result: <Tag classModifiers="orange">Declined</Tag>
+          result: <Tag classModifiers="orange">Declined</Tag>,
         },
         {
           modifier: <code>yellow</code>,
-          result: <Tag classModifiers="yellow">Delayed</Tag>
-        }
+          result: <Tag classModifiers="yellow">Delayed</Tag>,
+        },
       ]}
     />
-  )
+  ),
 };

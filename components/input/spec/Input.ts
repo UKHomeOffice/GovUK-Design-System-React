@@ -3,8 +3,7 @@ import { render, screen } from '@react-foundry/component-test-helpers';
 import Input from '../src/Input';
 
 describe('Input', () => {
-  const minimalProps = {
-  };
+  const minimalProps = {};
 
   describe('when given minimal valid props', () => {
     beforeEach(async () => {
@@ -18,7 +17,7 @@ describe('Input', () => {
     const props = {
       prefix: 'Prefix',
       suffix: 'Suffix',
-      width: 2
+      width: 2,
     };
     beforeEach(async () => {
       render(h(Input, props));

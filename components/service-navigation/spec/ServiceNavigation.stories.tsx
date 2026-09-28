@@ -6,13 +6,13 @@ const meta = {
   title: 'Service navigation',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
     description:
-      'A component to help users understand that they\u2019re using your service and lets them navigate around your service.'
+      'A component to help users understand that they\u2019re using your service and lets them navigate around your service.',
   },
   component: ServiceNavigation,
-  args: {}
+  args: {},
 } satisfies Meta<typeof ServiceNavigation>;
 
 export default meta;
@@ -26,24 +26,24 @@ export const Primary: Story = {
       items={[
         {
           href: '/styles',
-          text: 'Navigation item 1'
+          text: 'Navigation item 1',
         },
         {
           href: '#active',
-          text: 'Navigation item 2'
+          text: 'Navigation item 2',
         },
         {
           href: '/contributing',
-          text: 'Navigation item 3'
-        }
+          text: 'Navigation item 3',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const ServiceName: Story = {
   args: { serviceName: 'Service name', serviceHref: '#' },
-  name: 'Service name'
+  name: 'Service name',
 };
 
 export const Full: Story = {
@@ -54,26 +54,26 @@ export const Full: Story = {
       items={[
         {
           href: '/styles',
-          text: 'Navigation item 1'
+          text: 'Navigation item 1',
         },
         {
           href: '#active',
-          text: 'Navigation item 2'
+          text: 'Navigation item 2',
         },
         {
           href: '/contributing',
-          text: 'Navigation item 3'
-        }
+          text: 'Navigation item 3',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const SignOut: Story = {
   args: {
     serviceName: 'Service name',
     serviceHref: '#',
-    signOutHref: '?sign-out#sign-out'
+    signOutHref: '?sign-out#sign-out',
   },
-  name: 'Sign out'
+  name: 'Sign out',
 };

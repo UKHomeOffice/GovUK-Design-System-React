@@ -3,7 +3,6 @@ Components
 
 This directory contains our project's React components.
 
-
 Files in a typical component
 ----------------------------
 

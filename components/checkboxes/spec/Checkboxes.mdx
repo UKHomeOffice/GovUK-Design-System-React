@@ -11,7 +11,6 @@ Let users select one or more options by using the checkboxes component.
 <Primary />
 <Controls />
 
-
 ## When to use this component
 
 Use the checkboxes component when you need to help users:
@@ -19,12 +18,10 @@ Use the checkboxes component when you need to help users:
 - select multiple options from a list
 - toggle a single option on or off
 
-
 ## When not to use this component
 
 Do not use the checkboxes component if users can only choose one option from a
 selection. In this case, use the radios component.
-
 
 ## How it works
 
@@ -62,7 +59,6 @@ Group checkboxes together in a `<fieldset>` with a `<legend>` that describes
 them, as shown in the examples on this page. This is usually a question, like
 ‘How would you like to be contacted?’.
 
-
 ### If you’re asking one question on the page
 
 If you’re asking just [one question per page] as recommended, you can set the
@@ -73,7 +69,6 @@ Read more about [why and how to set legends as headings].
 
 <Canvas of={Stories.Standard} />
 
-
 ### If you’re asking more than one question on the page
 
 If you’re asking more than one question on the page, do not set the contents of
@@ -82,14 +77,12 @@ on question pages].
 
 <Canvas of={Stories.NoHeading} />
 
-
 ### Checkbox items with hints
 
 You can add hints to checkbox items to provide additional information about the
 options.
 
 <Canvas of={Stories.Hints} />
-
 
 ### Add an option for ‘none’
 
@@ -123,7 +116,6 @@ another checkbox, display an error message.
 
 <Canvas of={Stories.NoneError} />
 
-
 ### Conditionally revealing a related question
 
 You can ask the user a related question when they select a particular checkbox,
@@ -141,7 +133,6 @@ next page in the process instead.
 You should only conditionally reveal questions - do not show or hide anything
 that is not a question.
 
-
 #### Known issues
 
 Users are not always notified when a conditionally revealed question is shown or
@@ -153,7 +144,6 @@ test users when we conditionally revealed complicated questions to them.
 
 We’ll keep looking for opportunities to [learn more about how conditionally
 revealed questions should be used in services].
-
 
 ### Smaller checkboxes
 
@@ -172,7 +162,6 @@ for repeat use, like caseworking systems.
 In services like these, the risk that they will not be noticed is lower because
 users return to the screen multiple times.
 
-
 ### Error messages
 
 Error messages should be styled like this:
@@ -182,7 +171,6 @@ Error messages should be styled like this:
 Make sure errors follow the guidance in error message and have specific error
 messages for specific error states.
 
-
 #### If nothing is selected and the question has options in it
 
 Say ‘Select if [whatever it is]’.
@@ -190,13 +178,11 @@ Say ‘Select if [whatever it is]’.
 For example, ‘Select if you are British, Irish or a citizen of a different
 country’.
 
-
 #### If nothing is selected and the question does not have options in it
 
 Say ‘Select [whatever it is]’.
 
 For example, ‘Select your nationality or nationalities’.
-
 
 #### If users check both a ‘none’ checkbox and another checkbox
 
@@ -204,7 +190,6 @@ Say ‘Select [option label text] or select “[none of the above label text]”
 
 For example, ‘Select countries you will be travelling to, or select “No, I will
 not be travelling to any of these countries”’
-
 
 [one question per page]: https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page
 [why and how to set legends as headings]: https://design-system.service.gov.uk/get-started/labels-legends-headings

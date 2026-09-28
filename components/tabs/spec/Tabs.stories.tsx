@@ -8,13 +8,13 @@ const meta = {
   title: 'Tabs',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
     description:
-      'A component that lets users navigate between related sections of content, displaying one section at a time.'
+      'A component that lets users navigate between related sections of content, displaying one section at a time.',
   },
   component: Tabs,
-  args: {}
+  args: {},
 } satisfies Meta<typeof Tabs>;
 
 export default meta;
@@ -37,28 +37,28 @@ export const Primary: Story = {
                 headings={{
                   manager: 'Case manager',
                   opened: 'Cases opened',
-                  closed: 'Cases closed'
+                  closed: 'Cases closed',
                 }}
                 data={[
                   {
                     manager: 'David Francis',
                     opened: '3',
-                    closed: '0'
+                    closed: '0',
                   },
                   {
                     manager: 'Paul Farmer',
                     opened: '1',
-                    closed: '0'
+                    closed: '0',
                   },
                   {
                     manager: 'Rita Patel',
                     opened: '2',
-                    closed: '0'
-                  }
+                    closed: '0',
+                  },
                 ]}
               />
             </Fragment>
-          )
+          ),
         },
         {
           label: 'Past week',
@@ -71,28 +71,28 @@ export const Primary: Story = {
                 headings={{
                   manager: 'Case manager',
                   opened: 'Cases opened',
-                  closed: 'Cases closed'
+                  closed: 'Cases closed',
                 }}
                 data={[
                   {
                     manager: 'David Francis',
                     opened: '24',
-                    closed: '18'
+                    closed: '18',
                   },
                   {
                     manager: 'Paul Farmer',
                     opened: '16',
-                    closed: '20'
+                    closed: '20',
                   },
                   {
                     manager: 'Rita Patel',
                     opened: '24',
-                    closed: '27'
-                  }
+                    closed: '27',
+                  },
                 ]}
               />
             </Fragment>
-          )
+          ),
         },
         {
           label: 'Past month',
@@ -105,28 +105,28 @@ export const Primary: Story = {
                 headings={{
                   manager: 'Case manager',
                   opened: 'Cases opened',
-                  closed: 'Cases closed'
+                  closed: 'Cases closed',
                 }}
                 data={[
                   {
                     manager: 'David Francis',
                     opened: '98',
-                    closed: '95'
+                    closed: '95',
                   },
                   {
                     manager: 'Paul Farmer',
                     opened: '122',
-                    closed: '131'
+                    closed: '131',
                   },
                   {
                     manager: 'Rita Patel',
                     opened: '126',
-                    closed: '142'
-                  }
+                    closed: '142',
+                  },
                 ]}
               />
             </Fragment>
-          )
+          ),
         },
         {
           label: 'Past year',
@@ -139,32 +139,32 @@ export const Primary: Story = {
                 headings={{
                   manager: 'Case manager',
                   opened: 'Cases opened',
-                  closed: 'Cases closed'
+                  closed: 'Cases closed',
                 }}
                 data={[
                   {
                     manager: 'David Francis',
                     opened: '1380',
-                    closed: '1472'
+                    closed: '1472',
                   },
                   {
                     manager: 'Paul Farmer',
                     opened: '1129',
-                    closed: '1083'
+                    closed: '1083',
                   },
                   {
                     manager: 'Rita Patel',
                     opened: '1539',
-                    closed: '1265'
-                  }
+                    closed: '1265',
+                  },
                 ]}
               />
             </Fragment>
-          )
-        }
+          ),
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -184,28 +184,28 @@ export const Standard: Story = {
                 headings={{
                   manager: 'Case manager',
                   opened: 'Cases opened',
-                  closed: 'Cases closed'
+                  closed: 'Cases closed',
                 }}
                 data={[
                   {
                     manager: 'David Francis',
                     opened: '3',
-                    closed: '0'
+                    closed: '0',
                   },
                   {
                     manager: 'Paul Farmer',
                     opened: '1',
-                    closed: '0'
+                    closed: '0',
                   },
                   {
                     manager: 'Rita Patel',
                     opened: '2',
-                    closed: '0'
-                  }
+                    closed: '0',
+                  },
                 ]}
               />
             </Fragment>
-          )
+          ),
         },
         {
           label: 'Past week',
@@ -218,28 +218,28 @@ export const Standard: Story = {
                 headings={{
                   manager: 'Case manager',
                   opened: 'Cases opened',
-                  closed: 'Cases closed'
+                  closed: 'Cases closed',
                 }}
                 data={[
                   {
                     manager: 'David Francis',
                     opened: '24',
-                    closed: '18'
+                    closed: '18',
                   },
                   {
                     manager: 'Paul Farmer',
                     opened: '16',
-                    closed: '20'
+                    closed: '20',
                   },
                   {
                     manager: 'Rita Patel',
                     opened: '24',
-                    closed: '27'
-                  }
+                    closed: '27',
+                  },
                 ]}
               />
             </Fragment>
-          )
+          ),
         },
         {
           label: 'Past month',
@@ -252,28 +252,28 @@ export const Standard: Story = {
                 headings={{
                   manager: 'Case manager',
                   opened: 'Cases opened',
-                  closed: 'Cases closed'
+                  closed: 'Cases closed',
                 }}
                 data={[
                   {
                     manager: 'David Francis',
                     opened: '98',
-                    closed: '95'
+                    closed: '95',
                   },
                   {
                     manager: 'Paul Farmer',
                     opened: '122',
-                    closed: '131'
+                    closed: '131',
                   },
                   {
                     manager: 'Rita Patel',
                     opened: '126',
-                    closed: '142'
-                  }
+                    closed: '142',
+                  },
                 ]}
               />
             </Fragment>
-          )
+          ),
         },
         {
           label: 'Past year',
@@ -286,30 +286,30 @@ export const Standard: Story = {
                 headings={{
                   manager: 'Case manager',
                   opened: 'Cases opened',
-                  closed: 'Cases closed'
+                  closed: 'Cases closed',
                 }}
                 data={[
                   {
                     manager: 'David Francis',
                     opened: '1380',
-                    closed: '1472'
+                    closed: '1472',
                   },
                   {
                     manager: 'Paul Farmer',
                     opened: '1129',
-                    closed: '1083'
+                    closed: '1083',
                   },
                   {
                     manager: 'Rita Patel',
                     opened: '1539',
-                    closed: '1265'
-                  }
+                    closed: '1265',
+                  },
                 ]}
               />
             </Fragment>
-          )
-        }
+          ),
+        },
       ]}
     />
-  )
+  ),
 };

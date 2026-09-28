@@ -7,7 +7,9 @@ export const meta = Stories.default;
 
 # Standalone input
 
-<p><Tag text="Unofficial" />{' '}<Tag text="Experimental" /></p>
+<p>
+  <Tag text="Unofficial" /> <Tag text="Experimental" />
+</p>
 
 A single-line, form field with a submit button.
 
@@ -16,14 +18,13 @@ A single-line, form field with a submit button.
 <Primary />
 <Controls />
 
-
 ## Stories
+
 ### Standard
 
 A standard Standalone input.
 
 <Canvas of={Stories.Standard} />
-
 
 ### Hint
 
@@ -31,23 +32,19 @@ If you provide a hint, it will be displayed instead of the label.
 
 <Canvas of={Stories.Hint} />
 
-
 ### Custom submit button text
 
 The text of the submit button is visually hidden, but can be customised for screen-readers.
 
 <Canvas of={Stories.CustomButton} />
 
-
 ### Fixed width
 
 <Canvas of={Stories.FixedWidth} />
 
-
 ### Fluid width
 
 <Canvas of={Stories.FluidWidth} />
-
 
 ### Error
 
@@ -55,10 +52,8 @@ Currently errors are visually hidden, so it is best to avoid them. They will how
 
 <Canvas of={Stories.Error} />
 
-
 ### Disabled
 
 <Canvas of={Stories.Disabled} />
-
 
 [Search box component]: /components?name=Search%20box

@@ -8,7 +8,9 @@ describe('Aside', () => {
       render(h(Aside, {}, 'Child'));
     });
 
-    it('renders an element', async () => expect(screen.getByRole('complementary')).toBeInTheDocument());
-    it('renders the children', async () => expect(screen.getByRole('complementary')).toHaveTextContent('Child'));
+    it('renders an element', async () =>
+      expect(screen.getByRole('complementary')).toBeInTheDocument());
+    it('renders the children', async () =>
+      expect(screen.getByRole('complementary')).toHaveTextContent('Child'));
   });
 });

@@ -1,5 +1,5 @@
-@use "@not-govuk/sass-base" as *;
-@use "govuk-frontend/dist/govuk/core/lists";
+@use '@not-govuk/sass-base' as *;
+@use 'govuk-frontend/dist/govuk/core/lists';
 
 .not-govuk-navigation-menu {
   border-color: $govuk-link-colour;
@@ -31,8 +31,8 @@
       /* font-size: 0.875rem; */
       /* line-height: 1.4285714286; */
       /* @include govuk-font(14); */
-      @include govuk-responsive-margin(2, "top");
-      @include govuk-responsive-padding(4, "left");
+      @include govuk-responsive-margin(2, 'top');
+      @include govuk-responsive-padding(4, 'left');
 
       :last-child {
         margin-bottom: 0;
@@ -44,24 +44,24 @@
       border-style: inherit;
       border-width: 0;
       color: inherit;
-      @include govuk-responsive-padding(0, "left");
-      @include govuk-responsive-padding(1, "bottom");
-      @include govuk-responsive-padding(0, "right");
+      @include govuk-responsive-padding(0, 'left');
+      @include govuk-responsive-padding(1, 'bottom');
+      @include govuk-responsive-padding(0, 'right');
 
       &--active {
         font-weight: bold;
       }
 
       &::before {
-        content: "— ";
-        color: govuk-colour("black", $variant: "tint-25");
+        content: '— ';
+        color: govuk-colour('black', $variant: 'tint-25');
         font-weight: normal;
         margin-left: -18px;
       }
     }
 
     > .not-govuk-navigation-menu__list__item {
-      @include govuk-responsive-padding(1, "top");
+      @include govuk-responsive-padding(1, 'top');
 
       &--active {
         border-left-width: $border-width;

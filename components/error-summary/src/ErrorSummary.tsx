@@ -1,4 +1,4 @@
-import { FC, ReactNode, createElement as h } from 'react';
+import { FC, ReactNode } from 'react';
 import { Anchor, AnchorList, AnchorListProps } from '@react-foundry/anchor-list';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
@@ -6,10 +6,11 @@ import '../assets/ErrorSummary.scss';
 
 export type Error = Anchor;
 
-export type ErrorSummaryProps = StandardProps & Pick<AnchorListProps, 'items'> & {
-  /** The heading of the error summary block. */
-  title?: ReactNode[] | string
-};
+export type ErrorSummaryProps = StandardProps &
+  Pick<AnchorListProps, 'items'> & {
+    /** The heading of the error summary block. */
+    title?: ReactNode[] | string;
+  };
 
 export const ErrorSummary: FC<ErrorSummaryProps> = ({
   classBlock,

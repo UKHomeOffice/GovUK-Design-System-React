@@ -3,7 +3,6 @@ Inset Text
 
 A block of text that is inset.
 
-
 Using this package
 ------------------
 
@@ -19,15 +18,15 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import InsetText from '@not-govuk/inset-text';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <InsetText>
-    It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+    It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in
+    the application.
   </InsetText>
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -39,20 +38,17 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
 
-
 ### Building
 
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

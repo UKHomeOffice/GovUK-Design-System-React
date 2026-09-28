@@ -16,18 +16,15 @@ const httpd = createServer();
 await httpd.register(fastifyReactRouter, {
   ...reactRouterOptions,
   assets,
-  serverBuild
+  serverBuild,
 });
 
-export const handler = (
-  config.mode !== Mode.Serverless
-    ? undefined
-    : serverless(httpd as unknown as Application)
-);
+export const handler =
+  config.mode !== Mode.Serverless ? undefined : serverless(httpd as unknown as Application);
 
 if (config.mode === Mode.Server) {
   await httpd.listen({
     host: config.httpd.host,
-    port: config.httpd.port
+    port: config.httpd.port,
   });
 }

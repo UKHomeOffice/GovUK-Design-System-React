@@ -7,29 +7,29 @@ const meta = {
   title: 'Footer',
   parameters: {
     chromatic: {
-      viewports: [1280, 360]
+      viewports: [1280, 360],
     },
     description:
-      'A page footer providing copyright, licensing and other information about your service and department.'
+      'A page footer providing copyright, licensing and other information about your service and department.',
   },
   component: Footer,
-  args: {}
+  args: {},
 } satisfies Meta<typeof Footer>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: { govUK: true }
+  args: { govUK: true },
 };
 
 export const Standard: Story = {
-  args: {}
+  args: {},
 };
 
 export const GOVUK: Story = {
   args: { govUK: true },
-  name: 'GOV.UK'
+  name: 'GOV.UK',
 };
 
 export const Navigation: Story = {
@@ -45,29 +45,29 @@ export const Navigation: Story = {
           items: [
             {
               href: '#1',
-              text: 'Navigation item 1'
+              text: 'Navigation item 1',
             },
             {
               href: '#2',
-              text: 'Navigation item 2'
+              text: 'Navigation item 2',
             },
             {
               href: '#3',
-              text: 'Navigation item 3'
+              text: 'Navigation item 3',
             },
             {
               href: '#4',
-              text: 'Navigation item 4'
+              text: 'Navigation item 4',
             },
             {
               href: '#5',
-              text: 'Navigation item 5'
+              text: 'Navigation item 5',
             },
             {
               href: '#6',
-              text: 'Navigation item 6'
-            }
-          ]
+              text: 'Navigation item 6',
+            },
+          ],
         },
         {
           title: 'Single column list',
@@ -75,21 +75,21 @@ export const Navigation: Story = {
           items: [
             {
               href: '#1',
-              text: 'Navigation item 1'
+              text: 'Navigation item 1',
             },
             {
               href: '#2',
-              text: 'Navigation item 2'
+              text: 'Navigation item 2',
             },
             {
               href: '#3',
-              text: 'Navigation item 3'
-            }
-          ]
-        }
+              text: 'Navigation item 3',
+            },
+          ],
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const MetaLinks: Story = {
@@ -100,20 +100,20 @@ export const MetaLinks: Story = {
       meta={[
         {
           href: '#1',
-          text: 'Item 1'
+          text: 'Item 1',
         },
         {
           href: '#2',
-          text: 'Item 2'
+          text: 'Item 2',
         },
         {
           href: '#3',
-          text: 'Item 3'
-        }
+          text: 'Item 3',
+        },
       ]}
     />
   ),
-  name: 'Meta links'
+  name: 'Meta links',
 };
 
 export const NavAndMeta: Story = {
@@ -129,69 +129,69 @@ export const NavAndMeta: Story = {
           items: [
             {
               href: '#',
-              text: 'Benefits'
+              text: 'Benefits',
             },
             {
               href: '#',
-              text: 'Births, deaths, marriages and care'
+              text: 'Births, deaths, marriages and care',
             },
             {
               href: '#',
-              text: 'Business and self-employed'
+              text: 'Business and self-employed',
             },
             {
               href: '#',
-              text: 'Childcare and parenting'
+              text: 'Childcare and parenting',
             },
             {
               href: '#',
-              text: 'Citizenship and living in the UK'
+              text: 'Citizenship and living in the UK',
             },
             {
               href: '#',
-              text: 'Crime, justice and the law'
+              text: 'Crime, justice and the law',
             },
             {
               href: '#',
-              text: 'Disabled people'
+              text: 'Disabled people',
             },
             {
               href: '#',
-              text: 'Driving and transport'
+              text: 'Driving and transport',
             },
             {
               href: '#',
-              text: 'Education and learning'
+              text: 'Education and learning',
             },
             {
               href: '#',
-              text: 'Employing people'
+              text: 'Employing people',
             },
             {
               href: '#',
-              text: 'Environment and countryside'
+              text: 'Environment and countryside',
             },
             {
               href: '#',
-              text: 'Housing and local services'
+              text: 'Housing and local services',
             },
             {
               href: '#',
-              text: 'Money and tax'
+              text: 'Money and tax',
             },
             {
               href: '#',
-              text: 'Passports, travel and living abroad'
+              text: 'Passports, travel and living abroad',
             },
             {
               href: '#',
-              text: 'Visas and immigration'
+              text: 'Visas and immigration',
             },
             {
               href: '#',
-              text: 'Working, jobs and pensions'
-            }
-          ]
+              text: 'Working, jobs and pensions',
+            },
+          ],
         },
         {
           title: 'Departments and policy',
@@ -199,52 +199,52 @@ export const NavAndMeta: Story = {
           items: [
             {
               href: '#',
-              text: 'How government works'
+              text: 'How government works',
             },
             {
               href: '#',
-              text: 'Departments'
+              text: 'Departments',
             },
             {
               href: '#',
-              text: 'Worldwide'
+              text: 'Worldwide',
             },
             {
               href: '#',
-              text: 'Policies'
+              text: 'Policies',
             },
             {
               href: '#',
-              text: 'Publications'
+              text: 'Publications',
             },
             {
               href: '#',
-              text: 'Announcements'
-            }
-          ]
-        }
+              text: 'Announcements',
+            },
+          ],
+        },
       ]}
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Cookies'
+          text: 'Cookies',
         },
         {
           href: '#',
-          text: 'Contact'
+          text: 'Contact',
         },
         {
           href: '#',
-          text: 'Terms and conditions'
+          text: 'Terms and conditions',
         },
         {
           href: '#',
-          text: 'Rhestr o Wasanaethau Cymraeg'
-        }
+          text: 'Rhestr o Wasanaethau Cymraeg',
+        },
       ]}
     >
       <p>
@@ -252,5 +252,5 @@ export const NavAndMeta: Story = {
       </p>
     </Footer>
   ),
-  name: 'Nav and meta'
+  name: 'Nav and meta',
 };

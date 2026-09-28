@@ -1,12 +1,13 @@
-import { FC, HTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/Hint.scss';
 
-export type HintProps = StandardProps & HTMLAttributes<HTMLDivElement> & {
-  children?: ReactNode
-  hidden?: boolean
-};
+export type HintProps = StandardProps &
+  HTMLAttributes<HTMLDivElement> & {
+    children?: ReactNode;
+    hidden?: boolean;
+  };
 
 export const Hint: FC<HintProps> = ({
   children,
@@ -18,12 +19,14 @@ export const Hint: FC<HintProps> = ({
 }) => {
   const classModifiers = [
     hidden ? 'hidden' : undefined,
-    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers])
+    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers]),
   ];
   const classes = classBuilder('govuk-hint', classBlock, classModifiers, className);
 
   return (
-    <div {...attrs} className={classes()} aria-hidden={hidden}>{children}</div>
+    <div {...attrs} className={classes()} aria-hidden={hidden}>
+      {children}
+    </div>
   );
 };
 

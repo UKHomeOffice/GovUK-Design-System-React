@@ -9,6 +9,7 @@ describe('Label', () => {
     });
 
     it('renders a label', async () => expect(screen.getByText('My label')).toBeInTheDocument());
-    it('that points to the provided ID', async () => expect(screen.getByText('My label')).toHaveAttribute('for', 'field-id'));
+    it('that points to the provided ID', async () =>
+      expect(screen.getByText('My label')).toHaveAttribute('for', 'field-id'));
   });
 });

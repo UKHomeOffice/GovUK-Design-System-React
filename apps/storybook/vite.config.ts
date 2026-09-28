@@ -5,18 +5,18 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   css: {
     lightningcss: {
-      errorRecovery: true // Required until govuk-frontend removes the '@media zero' hack
+      errorRecovery: true, // Required until govuk-frontend removes the '@media zero' hack
     },
     preprocessorOptions: {
       scss: {
-        api: 'modern-compiler'
-      }
-    }
+        api: 'modern-compiler',
+      },
+    },
   },
   plugins: [react()],
   resolve: {
     alias: {
-      '@not-govuk/sass-base': '@not-govuk/sass-base/vite' // Vite resolves url() differently from Turbo/webpack
-    }
-  }
+      '@not-govuk/sass-base': '@not-govuk/sass-base/vite', // Vite resolves url() differently from Turbo/webpack
+    },
+  },
 });

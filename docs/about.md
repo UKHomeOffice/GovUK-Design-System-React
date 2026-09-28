@@ -7,23 +7,24 @@ public ones. (See also: [Design decisions])
 
 In addition to the components themselves, a full framework is provided
 enabling you to:
+
 1. quickly prototype services
 2. quickly develop multiple, secure, accessible applications
 3. publish and share any components or libraries your team builds
 4. document your project
 5. quickly set-up Continuous Integration (CI)
 6. work to common standards
-(See also: [Getting started])
+   (See also: [Getting started])
 
 > **Warning:** Whilst the _components_ are fairly mature, the NotGovUK
 > _framework_ is a work in progress and should currently only be used in
 > production by those prepared to contribute bug-fixes.
 
-
 What is NotGovUK suitable for?
 ------------------------------
 
 NotGovUK is intended for:
+
 1. public government websites served on `service.gov.uk` (when you want
    to use React instead of Nunjucks)
 2. public government websites _not_ served on `service.gov.uk`
@@ -33,7 +34,6 @@ NotGovUK is intended for:
 6. design systems based on the [GOV.UK Design System]*
 
 (* Some adaptation required.)
-
 
 What does "support for internal applications" mean?
 ---------------------------------------------------
@@ -62,7 +62,6 @@ towards simple, linear workflows such as filling out forms. This is
 unsuitable for less linear workflows that one might find in case-working
 systems or dashboards.
 
-
 Why is it called 'NotGovUK'?
 ----------------------------
 
@@ -77,9 +76,7 @@ even provides extra features.
 'NotGovUK' is actually just a code-name; it might change. Then again,
 naming things is hard and it might not.
 
-
 -- Daniel Martin, December 2019 (updated February 2024).
-
 
 [NotGovUK]: https://not-gov.uk/
 [GOV.UK Design System]: https://design-system.service.gov.uk/

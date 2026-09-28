@@ -8,31 +8,26 @@ const config = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   testEnvironmentOptions: {
-    url: 'http://localhost/'
+    url: 'http://localhost/',
   },
   setupFilesAfterEnv: [path.resolve(__dirname, '.jest', 'setupAfterEnv.cjs')],
   moduleNameMapper: {
-    '\\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': path.resolve(__dirname, '.jest', 'mocks', 'file.cjs'),
-    '\\.(css|scss|sass|less)$': path.resolve(__dirname, '.jest', 'mocks', 'style.cjs')
+    '\\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      path.resolve(__dirname, '.jest', 'mocks', 'file.cjs'),
+    '\\.(css|scss|sass|less)$': path.resolve(__dirname, '.jest', 'mocks', 'style.cjs'),
   },
-  moduleDirectories: [
-    'node_modules'
-  ],
+  moduleDirectories: ['node_modules'],
   transform: {
-    "^.+\\.tsx?$": ['ts-jest', {
-      tsconfig: path.resolve(__dirname, 'tsconfig.jest.json'),
-      useESM: true
-    }]
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      {
+        tsconfig: path.resolve(__dirname, 'tsconfig.jest.json'),
+        useESM: true,
+      },
+    ],
   },
-  transformIgnorePatterns: [
-    'node_modules/\.pnpm/(?!@)'
-  ],
-  extensionsToTreatAsEsm: [
-    '.mts',
-    '.jsx',
-    '.ts',
-    '.tsx'
-  ]
+  transformIgnorePatterns: ['node_modules/\.pnpm/(?!@)'],
+  extensionsToTreatAsEsm: ['.mts', '.jsx', '.ts', '.tsx'],
 };
 
 module.exports = config;

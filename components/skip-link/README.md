@@ -5,7 +5,6 @@ The [GDS Skip link component].
 
 A component to help keyboard-only users skip to the main content on a page.
 
-
 Using this package
 ------------------
 
@@ -21,13 +20,10 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import SkipLink from '@not-govuk/skip-link';
 
-export const MyComponent = props => (
-  <SkipLink for="main-content" />
-);
+export const MyComponent = (props) => <SkipLink for="main-content" />;
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -39,13 +35,11 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
-
 
 ### Building
 
@@ -53,12 +47,10 @@ npm test
 npm run build
 ```
 
-
 ### Clean-up
 
 ```shell
 npm run clean
 ```
-
 
 [GDS Skip link component]: https://design-system.service.gov.uk/components/skip-link/

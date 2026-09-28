@@ -5,7 +5,7 @@ import Form, { FormProps } from '../src/Form';
 describe('Form', () => {
   const minimalProps: FormProps = {
     action: '.',
-    method: 'get'
+    method: 'get',
   };
 
   describe('when given valid props', () => {
@@ -14,6 +14,7 @@ describe('Form', () => {
     });
 
     it('renders an element', async () => expect(screen.getByRole('generic')).toBeInTheDocument());
-    it('with the children provided', async () => expect(screen.getByRole('generic')).toHaveTextContent('Child'));
+    it('with the children provided', async () =>
+      expect(screen.getByRole('generic')).toHaveTextContent('Child'));
   });
 });

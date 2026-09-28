@@ -6,13 +6,13 @@ Working on your project
 Your project is a monorepo managed via [pnpm]. You can build multiple
 packages from this one repository. Packages come in the following
 varieties:
+
 - [Applications] (found in `[apps/]`)
 - [Libraries] (found in `[lib/]`)
 - [Components] (found in `[components/]`)
 
 **Note:** If you would like add more varieties you can do so by modifying
 your `[pnpm-workspace.yaml]`.
-
 
 Getting started
 ---------------
@@ -26,7 +26,6 @@ entire project by running:
 pnpm install
 ```
 
-
 Creating a new package
 ----------------------
 
@@ -35,6 +34,7 @@ existing package of the same kind and then update its metadata, source,
 tests and any workspace dependencies.
 
 For example:
+
 - create a new application under `[apps/]`
 - create a new library under `[lib/]`
 - create a new component under `[components/]`
@@ -42,7 +42,6 @@ For example:
 After creating the directory, update the package name in its
 `package.json` and adjust any imports or documentation that refer to the
 original package.
-
 
 Installing your packages
 ------------------------
@@ -56,7 +55,6 @@ pnpm add --workspace @{{{ dashCase name }}}/your-new-package
 
 Under the hood, this will create a symlink so you need not worry about
 updates. This helps when working on mutliple packages at the same time.
-
 
 Your documentation
 ------------------
@@ -74,7 +72,6 @@ npm run dev
 We advise that you set up CI to publish your documentation site when pushing to
 the `master` branch.
 
-
 Continuous Integration
 ----------------------
 
@@ -85,7 +82,6 @@ Integration (CI) via [GitHub Actions]. These files are found in the
 If you add the required secrets to your GitHub repository, it is also
 possible to quickly set up Continuous Deployment (CD) for your
 documentation to [Netlify].
-
 
 [set up your project]: ./get-started
 [pnpm]: https://pnpm.io

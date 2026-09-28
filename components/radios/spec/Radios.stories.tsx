@@ -7,13 +7,12 @@ const meta = {
   title: 'Radios',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description:
-      'A component to allow users to choose between a small selection of options.'
+    description: 'A component to allow users to choose between a small selection of options.',
   },
   component: Radios,
-  args: { name: 'where-do-you-live' }
+  args: { name: 'where-do-you-live' },
 } satisfies Meta<typeof Radios>;
 
 export default meta;
@@ -28,23 +27,23 @@ export const Primary: Story = {
       options={[
         {
           value: 'england',
-          label: 'England'
+          label: 'England',
         },
         {
           value: 'scotland',
-          label: 'Scotland'
+          label: 'Scotland',
         },
         {
           value: 'wales',
-          label: 'Wales'
+          label: 'Wales',
         },
         {
           value: 'northern-ireland',
-          label: 'Northern Ireland'
-        }
+          label: 'Northern Ireland',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -56,23 +55,23 @@ export const Standard: Story = {
       options={[
         {
           value: 'england',
-          label: 'England'
+          label: 'England',
         },
         {
           value: 'scotland',
-          label: 'Scotland'
+          label: 'Scotland',
         },
         {
           value: 'wales',
-          label: 'Wales'
+          label: 'Wales',
         },
         {
           value: 'northern-ireland',
-          label: 'Northern Ireland'
-        }
+          label: 'Northern Ireland',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const NoHeading: Story = {
@@ -83,31 +82,31 @@ export const NoHeading: Story = {
       options={[
         {
           value: 'england',
-          label: 'England'
+          label: 'England',
         },
         {
           value: 'scotland',
-          label: 'Scotland'
+          label: 'Scotland',
         },
         {
           value: 'wales',
-          label: 'Wales'
+          label: 'Wales',
         },
         {
           value: 'northern-ireland',
-          label: 'Northern Ireland'
-        }
+          label: 'Northern Ireland',
+        },
       ]}
     />
   ),
-  name: 'No heading'
+  name: 'No heading',
 };
 
 export const Inline: Story = {
   args: {
     name: 'changed-name',
     classModifiers: 'inline',
-    hint: 'This includes changing your last name or spelling your name differently.'
+    hint: 'This includes changing your last name or spelling your name differently.',
   },
   render: ({ ...props }) => (
     <Radios
@@ -116,21 +115,21 @@ export const Inline: Story = {
       options={[
         {
           value: 'yes',
-          label: 'Yes'
+          label: 'Yes',
         },
         {
           value: 'no',
-          label: 'No'
-        }
+          label: 'No',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Hints: Story = {
   args: {
     name: 'sign-in',
-    hint: 'This includes changing your last name or spelling your name differently.'
+    hint: 'This includes changing your last name or spelling your name differently.',
   },
   render: ({ ...props }) => (
     <Radios
@@ -140,16 +139,16 @@ export const Hints: Story = {
         {
           value: 'government-gateway',
           label: 'Sign in with Government Gateway',
-          hint: 'You\u2019ll have a user ID if you\u2019ve registered for Self Assessment or filed a tax return online before.'
+          hint: 'You\u2019ll have a user ID if you\u2019ve registered for Self Assessment or filed a tax return online before.',
         },
         {
           value: 'govuk-verify',
           label: 'Sign in with GOV.UK Verify',
-          hint: 'You\u2019ll have an account if you\u2019ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity.'
-        }
+          hint: 'You\u2019ll have an account if you\u2019ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity.',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Divider: Story = {
@@ -161,28 +160,28 @@ export const Divider: Story = {
       options={[
         {
           value: 'england',
-          label: 'England'
+          label: 'England',
         },
         {
           value: 'scotland',
-          label: 'Scotland'
+          label: 'Scotland',
         },
         {
           value: 'wales',
-          label: 'Wales'
+          label: 'Wales',
         },
         {
           value: 'northern-ireland',
-          label: 'Northern Ireland'
+          label: 'Northern Ireland',
         },
         'or',
         {
           value: 'abroad',
-          label: 'I am a British citizen living abroad'
-        }
+          label: 'I am a British citizen living abroad',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Content: Story = {
@@ -190,11 +189,7 @@ export const Content: Story = {
   render: ({ ...props }) => (
     <Radios
       {...props}
-      label={
-        <h1 className="govuk-heading-l">
-          How would you prefer to be contacted?
-        </h1>
-      }
+      label={<h1 className="govuk-heading-l">How would you prefer to be contacted?</h1>}
       options={[
         {
           value: 'email',
@@ -209,7 +204,7 @@ export const Content: Story = {
               spellCheck={false}
               type="email"
             />
-          )
+          ),
         },
         {
           value: 'phone',
@@ -224,7 +219,7 @@ export const Content: Story = {
               spellCheck={false}
               type="tel"
             />
-          )
+          ),
         },
         {
           value: 'text message',
@@ -239,11 +234,11 @@ export const Content: Story = {
               spellCheck={false}
               type="tel"
             />
-          )
-        }
+          ),
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Small: Story = {
@@ -255,15 +250,15 @@ export const Small: Story = {
       options={[
         {
           value: 'month',
-          label: 'Monthly'
+          label: 'Monthly',
         },
         {
           value: 'year',
-          label: 'Yearly'
-        }
+          label: 'Yearly',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Errors: Story = {
@@ -275,39 +270,35 @@ export const Errors: Story = {
       options={[
         {
           value: 'england',
-          label: 'England'
+          label: 'England',
         },
         {
           value: 'scotland',
-          label: 'Scotland'
+          label: 'Scotland',
         },
         {
           value: 'wales',
-          label: 'Wales'
+          label: 'Wales',
         },
         {
           value: 'northern-ireland',
-          label: 'Northern Ireland'
-        }
+          label: 'Northern Ireland',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const ContentError: Story = {
   args: {
     name: 'how-contacted-error',
     defaultValue: 'email',
-    hint: 'Select one option.'
+    hint: 'Select one option.',
   },
   render: ({ ...props }) => (
     <Radios
       {...props}
-      label={
-        <h1 className="govuk-heading-l">
-          How would you prefer to be contacted?
-        </h1>
-      }
+      label={<h1 className="govuk-heading-l">How would you prefer to be contacted?</h1>}
       options={[
         {
           value: 'email',
@@ -323,7 +314,7 @@ export const ContentError: Story = {
               spellCheck={false}
               type="email"
             />
-          )
+          ),
         },
         {
           value: 'phone',
@@ -338,7 +329,7 @@ export const ContentError: Story = {
               spellCheck={false}
               type="tel"
             />
-          )
+          ),
         },
         {
           value: 'text message',
@@ -353,9 +344,9 @@ export const ContentError: Story = {
               spellCheck={false}
               type="tel"
             />
-          )
-        }
+          ),
+        },
       ]}
     />
-  )
+  ),
 };

@@ -6,13 +6,12 @@ const meta = {
   title: 'Unofficial/Navigation menu',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description:
-      'A component that provides users with a list of pages to choose from.'
+    description: 'A component that provides users with a list of pages to choose from.',
   },
   component: NavigationMenu,
-  args: {}
+  args: {},
 } satisfies Meta<typeof NavigationMenu>;
 
 export default meta;
@@ -26,19 +25,19 @@ export const Primary: Story = {
       items={[
         {
           href: '/styles',
-          text: 'Inactive 1'
+          text: 'Inactive 1',
         },
         {
           href: '#main-content',
-          text: 'Active'
+          text: 'Active',
         },
         {
           href: '/contributing',
-          text: 'Inactive 2'
-        }
+          text: 'Inactive 2',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -49,19 +48,19 @@ export const Standard: Story = {
       items={[
         {
           href: '/styles',
-          text: 'Inactive 1'
+          text: 'Inactive 1',
         },
         {
           href: '#main-content',
-          text: 'Active'
+          text: 'Active',
         },
         {
           href: '/contributing',
-          text: 'Inactive 2'
-        }
+          text: 'Inactive 2',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Subitems: Story = {
@@ -76,13 +75,13 @@ export const Subitems: Story = {
           items: [
             {
               href: '/styles?name=Forms',
-              text: 'One'
+              text: 'One',
             },
             {
               href: '/styles?name=Typography',
-              text: 'Two'
-            }
-          ]
+              text: 'Two',
+            },
+          ],
         },
         {
           href: '/components',
@@ -90,24 +89,24 @@ export const Subitems: Story = {
           items: [
             {
               href: '/components?name=Back%20link',
-              text: 'Inactive 1'
+              text: 'Inactive 1',
             },
             {
               href: '/components?name=Navigation%20menu',
-              text: 'Active'
+              text: 'Active',
             },
             {
               href: '/components?name=Button',
-              text: 'Inactive 2'
-            }
-          ]
+              text: 'Inactive 2',
+            },
+          ],
         },
         {
           href: '/contributing',
-          text: 'Inactive 2'
-        }
+          text: 'Inactive 2',
+        },
       ]}
     />
   ),
-  name: 'Sub-items'
+  name: 'Sub-items',
 };

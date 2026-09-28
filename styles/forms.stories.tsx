@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Styles/Forms',
-  args: {}
+  args: {},
 } satisfies Meta<typeof undefined>;
 
 export default meta;
@@ -10,43 +10,31 @@ type Story = StoryObj<typeof meta>;
 
 export const FormGroup: Story = {
   args: {},
-  render: ({ ...props }) => (
-    <div className="form-group">
-      This is a form group.
-    </div>
-  ),
-  name: 'Form group'
+  render: ({ ...props }) => <div className="form-group">This is a form group.</div>,
+  name: 'Form group',
 };
 
 export const FormGroupError: Story = {
   args: {},
   render: ({ ...props }) => (
-    <div className="form-group error">
-      This is a form group has an error.
-    </div>
+    <div className="form-group error">This is a form group has an error.</div>
   ),
-  name: 'Form group error'
+  name: 'Form group error',
 };
 
 export const ErrorMessage: Story = {
   args: {},
   render: ({ ...props }) => (
     <div className="error">
-      <div className="message">
-        This is an error message.
-      </div>
+      <div className="message">This is an error message.</div>
     </div>
   ),
-  name: 'Error message'
+  name: 'Error message',
 };
 
 export const Fieldset: Story = {
   args: {},
-  render: ({ ...props }) => (
-    <fieldset>
-      This is a fieldset.
-    </fieldset>
-  )
+  render: ({ ...props }) => <fieldset>This is a fieldset.</fieldset>,
 };
 
 export const Legend: Story = {
@@ -56,7 +44,7 @@ export const Legend: Story = {
       <legend>This is a legend</legend>
       This is a fieldset with a legend.
     </fieldset>
-  )
+  ),
 };
 
 export const Label: Story = {
@@ -65,7 +53,7 @@ export const Label: Story = {
     <label>
       <p>This is a label.</p>
     </label>
-  )
+  ),
 };
 
 export const Hint: Story = {
@@ -74,13 +62,13 @@ export const Hint: Story = {
     <span className="hint">
       <p>This is a hint.</p>
     </span>
-  )
+  ),
 };
 
 export const InputText: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="text" />,
-  name: 'Input Text'
+  name: 'Input Text',
 };
 
 export const InputTextError: Story = {
@@ -90,103 +78,103 @@ export const InputTextError: Story = {
       <input name="example" type="text" />
     </div>
   ),
-  name: 'Input Text Error'
+  name: 'Input Text Error',
 };
 
 export const InputEmail: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="email" />,
-  name: 'Input E-mail'
+  name: 'Input E-mail',
 };
 
 export const InputPassword: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="password" />,
-  name: 'Input Password'
+  name: 'Input Password',
 };
 
 export const InputNumber: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="number" />,
-  name: 'Input Number'
+  name: 'Input Number',
 };
 
 export const InputColour: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="color" />,
-  name: 'Input Colour'
+  name: 'Input Colour',
 };
 
 export const InputDate: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="date" />,
-  name: 'Input Date'
+  name: 'Input Date',
 };
 
 export const InputDatetimeLocal: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="datetime-local" />,
-  name: 'Input Datetime local'
+  name: 'Input Datetime local',
 };
 
 export const InputTime: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="time" />,
-  name: 'Input Time'
+  name: 'Input Time',
 };
 
 export const InputFile: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="file" />,
-  name: 'Input File'
+  name: 'Input File',
 };
 
 export const InputMonth: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="month" />,
-  name: 'Input Month'
+  name: 'Input Month',
 };
 
 export const InputWeek: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="week" />,
-  name: 'Input Week'
+  name: 'Input Week',
 };
 
 export const InputRange: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="range" />,
-  name: 'Input Range'
+  name: 'Input Range',
 };
 
 export const InputSearch: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="search" />,
-  name: 'Input Search'
+  name: 'Input Search',
 };
 
 export const InputTel: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="tel" />,
-  name: 'Input Tel'
+  name: 'Input Tel',
 };
 
 export const InputURL: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="url" />,
-  name: 'Input URL'
+  name: 'Input URL',
 };
 
 export const InputCheckbox: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="checkbox" />,
-  name: 'Input Checkbox'
+  name: 'Input Checkbox',
 };
 
 export const InputRadio: Story = {
   args: {},
   render: ({ ...props }) => <input name="example" type="radio" />,
-  name: 'Input Radio'
+  name: 'Input Radio',
 };
 
 export const Select: Story = {
@@ -197,7 +185,7 @@ export const Select: Story = {
       <option>Bar</option>
       <option>Baz</option>
     </select>
-  )
+  ),
 };
 
 export const SelectMulti: Story = {
@@ -209,10 +197,10 @@ export const SelectMulti: Story = {
       <option>Baz</option>
     </select>
   ),
-  name: 'Select Multi'
+  name: 'Select Multi',
 };
 
 export const Textarea: Story = {
   args: {},
-  render: ({ ...props }) => <textarea name="example" />
+  render: ({ ...props }) => <textarea name="example" />,
 };

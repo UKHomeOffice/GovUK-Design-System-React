@@ -6,13 +6,12 @@ const meta = {
   title: 'Skip link',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description:
-      'A component to help keyboard-only users skip to the main content on a page.'
+    description: 'A component to help keyboard-only users skip to the main content on a page.',
   },
   component: SkipLink,
-  args: {}
+  args: {},
 } satisfies Meta<typeof SkipLink>;
 
 export default meta;
@@ -23,12 +22,12 @@ export const Primary: Story = {
   render: ({ ...props }) => (
     <>
       <p>
-        To view the skip link component tab to this example, or click inside
-        this example and press tab.
+        To view the skip link component tab to this example, or click inside this example and press
+        tab.
       </p>
       <SkipLink {...props} for="content" />
     </>
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -36,12 +35,12 @@ export const Standard: Story = {
   render: ({ ...props }) => (
     <>
       <p>
-        To view the skip link component tab to this example, or click inside
-        this example and press tab.
+        To view the skip link component tab to this example, or click inside this example and press
+        tab.
       </p>
       <SkipLink {...props} for="content" />
     </>
-  )
+  ),
 };
 
 export const Custom: Story = {
@@ -49,12 +48,12 @@ export const Custom: Story = {
   render: ({ ...props }) => (
     <>
       <p>
-        To view the skip link component tab to this example, or click inside
-        this example and press tab.
+        To view the skip link component tab to this example, or click inside this example and press
+        tab.
       </p>
       <SkipLink {...props} for="content">
         Skip ahead
       </SkipLink>
     </>
-  )
+  ),
 };

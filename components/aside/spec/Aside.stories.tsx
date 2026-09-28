@@ -8,7 +8,8 @@ const meta = {
   parameters: {
     chromatic: { viewports: [640, 480] },
     description: 'A component for displaying indirectly related content.',
-    image: 'https://snapshots.chromatic.com/snapshots/5f1488148c817700223adb9a-5ff08dbae29b2700217b5333/capture.png',
+    image:
+      'https://snapshots.chromatic.com/snapshots/5f1488148c817700223adb9a-5ff08dbae29b2700217b5333/capture.png',
   },
   args: {
     heading: 'Did you know?',
@@ -19,12 +20,12 @@ const meta = {
       <h2>{heading}</h2>
       <p>{body}</p>
     </Aside>
-  )
+  ),
 } satisfies Meta<typeof Aside>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {}
+  args: {},
 };

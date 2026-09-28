@@ -27,7 +27,6 @@ inputs:
 runs:
   using: composite
   steps:
-
     - name: Setup Firefox
       uses: browser-actions/setup-firefox@latest
       if: inputs.browser == 'firefox'

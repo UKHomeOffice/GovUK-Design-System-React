@@ -1,13 +1,14 @@
-import { FC, HTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { VisuallyHidden } from '@not-govuk/visually-hidden';
 
 import '../assets/ErrorMessage.scss';
 
-export type ErrorMessageProps = StandardProps & HTMLAttributes<HTMLParagraphElement> & {
-  children?: ReactNode
-  hidden?: boolean
-};
+export type ErrorMessageProps = StandardProps &
+  HTMLAttributes<HTMLParagraphElement> & {
+    children?: ReactNode;
+    hidden?: boolean;
+  };
 
 export const ErrorMessage: FC<ErrorMessageProps> = ({
   children,
@@ -19,7 +20,7 @@ export const ErrorMessage: FC<ErrorMessageProps> = ({
 }) => {
   const classModifiers = [
     hidden ? 'hidden' : undefined,
-    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers])
+    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers]),
   ];
   const classes = classBuilder('govuk-error-message', classBlock, classModifiers, className);
 

@@ -4,7 +4,7 @@ import SkipLink from '../src/SkipLink';
 
 describe('SkipLink', () => {
   const minimalProps = {
-    for: 'content'
+    for: 'content',
   };
 
   describe('when given minimal valid props', () => {
@@ -13,8 +13,10 @@ describe('SkipLink', () => {
     });
 
     it('renders a link', async () => expect(screen.getByRole('link')).toBeInTheDocument());
-    it('to the provided ID', async () => expect(screen.getByRole('link')).toHaveAttribute('href', '#content'));
-    it('with appropriate text', async () => expect(screen.getByRole('link')).toHaveTextContent('Skip to main content'));
+    it('to the provided ID', async () =>
+      expect(screen.getByRole('link')).toHaveAttribute('href', '#content'));
+    it('with appropriate text', async () =>
+      expect(screen.getByRole('link')).toHaveTextContent('Skip to main content'));
   });
 
   describe('when given all valid props', () => {
@@ -23,7 +25,9 @@ describe('SkipLink', () => {
     });
 
     it('renders a link', async () => expect(screen.getByRole('link')).toBeInTheDocument());
-    it('to the provided ID', async () => expect(screen.getByRole('link')).toHaveAttribute('href', '#content'));
-    it('with children as the text', async () => expect(screen.getByRole('link')).toHaveTextContent('Skip ahead'));
+    it('to the provided ID', async () =>
+      expect(screen.getByRole('link')).toHaveAttribute('href', '#content'));
+    it('with children as the text', async () =>
+      expect(screen.getByRole('link')).toHaveTextContent('Skip ahead'));
   });
 });

@@ -9,19 +9,16 @@ export const meta = Stories.default;
 <Primary />
 <Controls />
 
-
 ## When to use this component
 
 Use the text input component when you need to let users enter text that’s no
 longer than a single line, such as their name or phone number.
-
 
 ## When not to use this component
 
 Do not use the text input component if you need to let users enter longer
 answers that might span multiple lines. In this case, you should use the
 textarea component.
-
 
 ## How it works
 
@@ -40,7 +37,6 @@ Read more about [why and how to set legends as headings].
 
 <Canvas of={Stories.Standard} />
 
-
 ### If you’re asking more than one question on the page
 
 If you’re asking more than one question on the page, do not set the contents of
@@ -48,7 +44,6 @@ the `<label>` as the page heading. Read more about [asking multiple questions on
 question pages].
 
 <Canvas of={Stories.NoHeading} />
-
 
 ### Use appropriately-sized text inputs
 
@@ -60,7 +55,6 @@ container they are placed into.
 
 If you want to make the input smaller, you can either use a fixed width input,
 or use the width override classes to create a smaller, fluid width input.
-
 
 #### Fixed width inputs
 
@@ -78,7 +72,6 @@ wider than the viewport, in which case it will shrink to fit.
 
 <Canvas of={Stories.FixedWidth} />
 
-
 #### Fluid width inputs
 
 Use the width override classes to reduce the width of an input in relation to
@@ -88,7 +81,6 @@ Fluid width inputs will resize with the viewport.
 
 <Canvas of={Stories.FluidWidth} />
 
-
 ### Hint text
 
 Use hint for help that’s relevant to the majority of users, like how their
@@ -96,13 +88,11 @@ information will be used, or where to find it.
 
 <Canvas of={Stories.Hints} />
 
-
 #### When not to use hint text
 
 Do not use long paragraphs and lists in hint text. Screen readers read out the
 entire text when users interact with the form element. This could frustrate
 users if the text is long.
-
 
 #### Avoid links
 
@@ -110,8 +100,8 @@ Do not include links within hint text. While screen readers will read out the
 link text when describing the field, they will not tell users that the text is a
 link.
 
-
 ### Numbers
+
 #### Asking for whole numbers
 
 If you’re asking the user to enter a whole number and you want to bring up the
@@ -129,7 +119,6 @@ There is specific guidance on how to ask for:
 - [dates]
 - [telephone numbers]
 
-
 #### Asking for decimal numbers
 
 If you’re asking the user to enter a number that might include decimal places,
@@ -139,7 +128,6 @@ Do not set the `inputMode` attribute to decimal as it causes some devices to
 bring up a keypad without a key for the `decimal` separator.
 
 <Canvas of={Stories.DecimalNumbers} />
-
 
 #### Avoid using inputs with a type of number
 
@@ -172,16 +160,13 @@ Some users may miss that the input already has a suffix or prefix, and enter a
 prefix or suffix into the input. Allow for this in your validation and do not
 show an error.
 
-
 #### Text inputs with a prefix
 
 <Canvas of={Stories.Prefix} />
 
-
 #### Text inputs with a suffix
 
 <Canvas of={Stories.Suffix} />
-
 
 ### Use the autoComplete prop
 
@@ -201,12 +186,10 @@ need to use the `autoComplete` attribute to meet [WCAG 2.1 Level AA].
 You will not normally need to use the `autoComplete` attribute in prototypes, as
 users will not generally be using their own devices.
 
-
 ### Do not disable copy and paste
 
 Users often need to copy and paste information into a text input, so do not stop
 them from doing this.
-
 
 ### How and when to spellcheck a user’s input
 
@@ -228,13 +211,11 @@ attribute to `true`.
 
 <Canvas of={Stories.Spellcheck} />
 
-
 ### Error messages
 
 Error messages should be styled like this:
 
 <Canvas of={Stories.Errors} />
-
 
 #### If the input has a prefix or a suffix
 
@@ -243,96 +224,80 @@ Error messages should be styled like this:
 Make sure errors follow the guidance in error message and have specific error
 messages for specific error states.
 
-
 #### If the input is empty
 
 Say ‘Enter [whatever it is]’.
 For example, ‘Enter your first name’.
-
 
 #### If the input is too long
 
 Say ‘[whatever it is] must be [number] characters or fewer’.
 For example, ‘Address line 1 must be 35 characters or fewer’.
 
-
 #### If the input is too short
 
 Say ‘[whatever it is] must be [number] characters or more’.
 For example, ‘Full name must be 2 characters or more’.
-
 
 #### If the input is too long or too short
 
 Say ‘[whatever it is] must be between [number] and [number] characters’.
 For example, ‘Last name must be between 2 and 35 characters’.
 
-
 #### If the input uses characters that are not allowed and you know what the characters are
 
 Say ‘[whatever it is] must not include [characters]’.
 For example, ‘Town or city must not include è and £’.
-
 
 #### If the input uses characters that are not allowed and you do not know what the characters are
 
 Say ‘[whatever it is] must only include [list of allowed characters]’.
 For example, ‘Full name must only include letters a to z, hyphens, spaces and apostrophes’.
 
-
 #### If the input is not a number
 
 Say ‘[whatever it is] must be a number [optional example]’.
 For example, ‘Hours worked a week must be a number, like 30’.
-
 
 #### If the input is not a whole number
 
 Say ‘[whatever it is] must be a whole number [optional example]’.
 For example, ‘Hours worked a week must be a whole number, like 30’.
 
-
 #### If the number is too low
 
 Say ‘[whatever it is] must be [lowest] or more’.
 For example, ‘Hours worked a week must be 16 or more’.
-
 
 #### If the number is too high
 
 Say ‘[whatever it is] must be [highest] or fewer’.
 For example, ‘Hours worked a week must be 99 or fewer’.
 
-
 #### If the input must be between 2 numbers
 
 Say ‘[whatever it is] must be between [lowest] and [highest]’.
 For example, ‘Hours worked a week must be between 16 and 99’.
-
 
 #### If the input is not an amount of money and the field allows decimals
 
 Say ‘[whatever it is] must be an amount of money [optional example that includes decimals and non-decimals]’.
 For example, ‘How much you earn an hour must be an amount of money, like 7.50 or 8’.
 
-
 #### If the input is not an amount of money and the field needs decimals
 
 Say ‘[whatever it is] must be an amount of money [optional example that includes decimals]’.
 For example, ‘How much you earn an hour must be an amount of money, like 7.50 or 8.00’.
-
 
 #### If the input is an amount of money that needs decimals
 
 Say ‘[whatever it is] must include pence, like 123.45 or 156.00’.
 For example, ‘How much you earn a week must include pence, like 123.45 or 156.00’.
 
-
 #### If the input is an amount of money that must not have decimals
 
 Say ‘[whatever it is] must not include pence, like 123 or 156’.
 For example, ‘How much you earn a week must not include pence, like 123 or 156’.
-
 
 [one question per page]: https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page
 [why and how to set legends as headings]: https://design-system.service.gov.uk/get-started/labels-legends-headings

@@ -7,15 +7,14 @@ const meta = {
   title: 'Unofficial/Page',
   parameters: {
     chromatic: {
-      viewports: [1280, 360]
+      viewports: [1280, 360],
     },
-    description:
-      'A fully branded page with content sandwiched between the header and footer.',
+    description: 'A fully branded page with content sandwiched between the header and footer.',
     image:
-      'https://snapshots.chromatic.com/snapshots/5f1488148c817700223adb9a-5ff08dbae29b2700217b538f/capture.png'
+      'https://snapshots.chromatic.com/snapshots/5f1488148c817700223adb9a-5ff08dbae29b2700217b538f/capture.png',
   },
   component: Page,
-  args: {}
+  args: {},
 } satisfies Meta<typeof Page>;
 
 export default meta;
@@ -29,20 +28,20 @@ export const Primary: Story = {
       meta={[
         {
           href: '#',
-          text: 'Cookies'
+          text: 'Cookies',
         },
         {
           href: '#',
-          text: 'Privacy policy'
+          text: 'Privacy policy',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       phase="Alpha"
       serviceName="My service"
@@ -64,7 +63,7 @@ export const Primary: Story = {
         </div>
       </div>
     </GovUKPage>
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -87,7 +86,7 @@ export const Standard: Story = {
         </div>
       </div>
     </NotGovUKPage>
-  )
+  ),
 };
 
 export const GovUK: Story = {
@@ -110,7 +109,7 @@ export const GovUK: Story = {
         </div>
       </div>
     </GovUKPage>
-  )
+  ),
 };
 
 export const FullWidth: Story = {
@@ -134,7 +133,7 @@ export const FullWidth: Story = {
       </div>
     </NotGovUKPage>
   ),
-  name: 'Full width'
+  name: 'Full width',
 };
 
 export const DarkMode: Story = {
@@ -144,16 +143,16 @@ export const DarkMode: Story = {
       breadcrumbs={[
         {
           href: '',
-          text: 'Home'
+          text: 'Home',
         },
         {
           href: '',
-          text: 'Passports, travel and living abroad'
+          text: 'Passports, travel and living abroad',
         },
         {
           href: '',
-          text: 'Travel abroad'
-        }
+          text: 'Travel abroad',
+        },
       ]}
       classModifiers="dark"
       department="home-office"
@@ -161,16 +160,16 @@ export const DarkMode: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       organisationText="HMPO"
@@ -191,15 +190,14 @@ export const DarkMode: Story = {
           <aside>
             <h2>Did you know?</h2>
             <p>
-              <a href="#">NotGovUK</a> can cater for both public and internal
-              websites.
+              <a href="#">NotGovUK</a> can cater for both public and internal websites.
             </p>
           </aside>
         </div>
       </div>
     </NotGovUKPage>
   ),
-  name: 'Dark mode'
+  name: 'Dark mode',
 };
 
 export const CustomLogo: Story = {
@@ -223,7 +221,7 @@ export const CustomLogo: Story = {
       </div>
     </NotGovUKPage>
   ),
-  name: 'Custom logo'
+  name: 'Custom logo',
 };
 
 export const DBT: Story = {
@@ -235,16 +233,16 @@ export const DBT: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -267,7 +265,7 @@ export const DBT: Story = {
         </div>
       </div>
     </NotGovUKPage>
-  )
+  ),
 };
 
 export const DCMS: Story = {
@@ -279,16 +277,16 @@ export const DCMS: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -311,7 +309,7 @@ export const DCMS: Story = {
         </div>
       </div>
     </NotGovUKPage>
-  )
+  ),
 };
 
 export const DEFRA: Story = {
@@ -323,16 +321,16 @@ export const DEFRA: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -355,7 +353,7 @@ export const DEFRA: Story = {
         </div>
       </div>
     </NotGovUKPage>
-  )
+  ),
 };
 
 export const DHSC: Story = {
@@ -367,16 +365,16 @@ export const DHSC: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -399,7 +397,7 @@ export const DHSC: Story = {
         </div>
       </div>
     </NotGovUKPage>
-  )
+  ),
 };
 
 export const DWP: Story = {
@@ -411,16 +409,16 @@ export const DWP: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -443,7 +441,7 @@ export const DWP: Story = {
         </div>
       </div>
     </NotGovUKPage>
-  )
+  ),
 };
 
 export const FCDO: Story = {
@@ -455,16 +453,16 @@ export const FCDO: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       organisationText="Foreign Office"
@@ -488,7 +486,7 @@ export const FCDO: Story = {
         </div>
       </div>
     </NotGovUKPage>
-  )
+  ),
 };
 
 export const HomeOffice: Story = {
@@ -500,16 +498,16 @@ export const HomeOffice: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -533,7 +531,7 @@ export const HomeOffice: Story = {
       </div>
     </NotGovUKPage>
   ),
-  name: 'Home Office'
+  name: 'Home Office',
 };
 
 export const HMRC: Story = {
@@ -545,16 +543,16 @@ export const HMRC: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -577,7 +575,7 @@ export const HMRC: Story = {
         </div>
       </div>
     </NotGovUKPage>
-  )
+  ),
 };
 
 export const HMTreasury: Story = {
@@ -589,16 +587,16 @@ export const HMTreasury: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -622,7 +620,7 @@ export const HMTreasury: Story = {
       </div>
     </NotGovUKPage>
   ),
-  name: 'HM treasury'
+  name: 'HM treasury',
 };
 
 export const MHCLG: Story = {
@@ -634,16 +632,16 @@ export const MHCLG: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -666,7 +664,7 @@ export const MHCLG: Story = {
         </div>
       </div>
     </NotGovUKPage>
-  )
+  ),
 };
 
 export const MoJ: Story = {
@@ -678,16 +676,16 @@ export const MoJ: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -710,7 +708,7 @@ export const MoJ: Story = {
         </div>
       </div>
     </NotGovUKPage>
-  )
+  ),
 };
 
 export const OfficeOfTheLeaderOfTheHouseOfLords: Story = {
@@ -722,16 +720,16 @@ export const OfficeOfTheLeaderOfTheHouseOfLords: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -755,7 +753,7 @@ export const OfficeOfTheLeaderOfTheHouseOfLords: Story = {
       </div>
     </NotGovUKPage>
   ),
-  name: 'Office of the leader of the House of lords'
+  name: 'Office of the leader of the House of lords',
 };
 
 export const ScotlandOffice: Story = {
@@ -767,16 +765,16 @@ export const ScotlandOffice: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -800,7 +798,7 @@ export const ScotlandOffice: Story = {
       </div>
     </NotGovUKPage>
   ),
-  name: 'Scotland office'
+  name: 'Scotland office',
 };
 
 export const WalesOffice: Story = {
@@ -812,16 +810,16 @@ export const WalesOffice: Story = {
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Accessibility statement'
+          text: 'Accessibility statement',
         },
         {
           href: '#',
-          text: 'Contact'
-        }
+          text: 'Contact',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -845,7 +843,7 @@ export const WalesOffice: Story = {
       </div>
     </NotGovUKPage>
   ),
-  name: 'Wales office'
+  name: 'Wales office',
 };
 
 export const Custom: Story = {
@@ -855,23 +853,22 @@ export const Custom: Story = {
       breadcrumbs={[
         {
           href: '',
-          text: 'Home'
+          text: 'Home',
         },
         {
           href: '',
-          text: 'Passports, travel and living abroad'
+          text: 'Passports, travel and living abroad',
         },
         {
           href: '',
-          text: 'Travel abroad'
-        }
+          text: 'Travel abroad',
+        },
       ]}
       department="home-office"
       feedbackHref="#feedback"
       footerContent={
         <p>
-          Built by the{' '}
-          <a href="https://www.gov.uk">Government Digital Service</a>.
+          Built by the <a href="https://www.gov.uk">Government Digital Service</a>.
         </p>
       }
       footerNavigation={[
@@ -881,139 +878,139 @@ export const Custom: Story = {
           items: [
             {
               href: '#',
-              text: 'Benefits'
+              text: 'Benefits',
             },
             {
               href: '#',
-              text: 'Births, deaths, marriages and care'
+              text: 'Births, deaths, marriages and care',
             },
             {
               href: '#',
-              text: 'Business and self-employed'
+              text: 'Business and self-employed',
             },
             {
               href: '#',
-              text: 'Childcare and parenting'
+              text: 'Childcare and parenting',
             },
             {
               href: '#',
-              text: 'Citizenship and living in the UK'
+              text: 'Citizenship and living in the UK',
             },
             {
               href: '#',
-              text: 'Crime, justice and the law'
+              text: 'Crime, justice and the law',
             },
             {
               href: '#',
-              text: 'Disabled people'
+              text: 'Disabled people',
             },
             {
               href: '#',
-              text: 'Driving and transport'
+              text: 'Driving and transport',
             },
             {
               href: '#',
-              text: 'Education and learning'
+              text: 'Education and learning',
             },
             {
               href: '#',
-              text: 'Employing people'
+              text: 'Employing people',
             },
             {
               href: '#',
-              text: 'Environment and countryside'
+              text: 'Environment and countryside',
             },
             {
               href: '#',
-              text: 'Housing and local services'
+              text: 'Housing and local services',
             },
             {
               href: '#',
-              text: 'Money and tax'
+              text: 'Money and tax',
             },
             {
               href: '#',
-              text: 'Passports, travel and living abroad'
+              text: 'Passports, travel and living abroad',
             },
             {
               href: '#',
-              text: 'Visas and immigration'
+              text: 'Visas and immigration',
             },
             {
               href: '#',
-              text: 'Working, jobs and pensions'
-            }
-          ]
+              text: 'Working, jobs and pensions',
+            },
+          ],
         },
         {
           title: 'Departments and policy',
           items: [
             {
               href: '#',
-              text: 'How government works'
+              text: 'How government works',
             },
             {
               href: '#',
-              text: 'Departments'
+              text: 'Departments',
             },
             {
               href: '#',
-              text: 'Worldwide'
+              text: 'Worldwide',
             },
             {
               href: '#',
-              text: 'Policies'
+              text: 'Policies',
             },
             {
               href: '#',
-              text: 'Publications'
+              text: 'Publications',
             },
             {
               href: '#',
-              text: 'Announcements'
-            }
-          ]
-        }
+              text: 'Announcements',
+            },
+          ],
+        },
       ]}
       meta={[
         {
           href: '#',
-          text: 'Help'
+          text: 'Help',
         },
         {
           href: '#',
-          text: 'Cookies'
+          text: 'Cookies',
         },
         {
           href: '#',
-          text: 'Contact'
+          text: 'Contact',
         },
         {
           href: '#',
-          text: 'Terms and conditions'
+          text: 'Terms and conditions',
         },
         {
           href: '#',
-          text: 'Rhestr o Wasanaethau Cymraeg'
-        }
+          text: 'Rhestr o Wasanaethau Cymraeg',
+        },
       ]}
       navigation={[
         {
           href: '#1',
-          text: 'One'
+          text: 'One',
         },
         {
           href: '?2',
-          text: 'Two'
+          text: 'Two',
         },
         {
           href: '?3',
-          text: 'Three'
+          text: 'Three',
         },
         {
           href: '?4',
-          text: 'Four'
-        }
+          text: 'Four',
+        },
       ]}
       organisationHref="#"
       phase="Alpha"
@@ -1037,5 +1034,5 @@ export const Custom: Story = {
         </div>
       </div>
     </NotGovUKPage>
-  )
+  ),
 };

@@ -3,12 +3,10 @@ Tag
 
 The [GDS Tag component] for displaying the status of something.
 
-
 Preview
 -------
 
 ![Preview][Preview]
-
 
 Using this package
 ------------------
@@ -25,13 +23,10 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import Tag from '@not-govuk/tag';
 
-export const MyComponent = props => (
-  <Tag text="example" />
-);
+export const MyComponent = (props) => <Tag text="example" />;
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -43,13 +38,11 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
-
 
 ### Building
 
@@ -57,13 +50,11 @@ npm test
 npm run build
 ```
 
-
 ### Clean-up
 
 ```shell
 npm run clean
 ```
-
 
 [GDS Tag component]: https://design-system.service.gov.uk/components/tag/
 [Preview]: ../../__image_snapshots__/storyshots-itest-ts-image-storyshots-components-tag-text-1-snap.png

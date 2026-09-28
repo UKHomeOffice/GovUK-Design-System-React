@@ -1,4 +1,4 @@
-import type { Route } from "./+types/styles.$id";
+import type { Route } from './+types/styles.$id';
 import { data } from 'react-router';
 import { DocsPage } from '@react-foundry/docs-components';
 import { styles as subpages } from '../stories';
@@ -29,7 +29,7 @@ export async function loader({ params }: Route.LoaderArgs) {
   const content = subpages[subPageName];
 
   if (!content) {
-    throw data({ id: subPageName }, 404)
+    throw data({ id: subPageName }, 404);
   }
 
   return subPageName;

@@ -7,9 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ '22', '24', '26' ]
+        node: ['22', '24', '26']
     steps:
-
       - name: Check out repository
         uses: actions/checkout@v7
 
@@ -29,7 +28,6 @@ jobs:
       - common
     runs-on: ubuntu-latest
     steps:
-
       - name: Check out repository
         uses: actions/checkout@v7
 
@@ -48,9 +46,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        app: [ 'docs' ]
+        app: ['docs']
     steps:
-
       - name: Check out repository
         uses: actions/checkout@v7
 
@@ -79,10 +76,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        app: [ 'docs' ]
-        browser: [ 'chromium', 'firefox', 'electron' ]
+        app: ['docs']
+        browser: ['chromium', 'firefox', 'electron']
     steps:
-
       - name: Check out repository
         uses: actions/checkout@v7
 

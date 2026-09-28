@@ -6,15 +6,15 @@ const meta = {
   title: 'Textarea',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A component to allow users to enter multiple lines of text.'
+    description: 'A component to allow users to enter multiple lines of text.',
   },
   component: Textarea,
   args: {
     hint: 'Do not include personal or financial information, like your National Insurance number or credit card details.',
-    name: 'more-detail'
-  }
+    name: 'more-detail',
+  },
 } satisfies Meta<typeof Textarea>;
 
 export default meta;
@@ -27,7 +27,7 @@ export const Primary: Story = {
       {...props}
       label={<h1 className="govuk-heading-l">Can you provide more detail?</h1>}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -37,7 +37,7 @@ export const Standard: Story = {
       {...props}
       label={<h1 className="govuk-heading-l">Can you provide more detail?</h1>}
     />
-  )
+  ),
 };
 
 export const Sized: Story = {
@@ -47,12 +47,12 @@ export const Sized: Story = {
       {...props}
       label={<h1 className="govuk-heading-l">Can you provide more detail?</h1>}
     />
-  )
+  ),
 };
 
 export const NoHeading: Story = {
   args: { hint: undefined, label: 'Can you provide more detail?' },
-  name: 'No heading'
+  name: 'No heading',
 };
 
 export const Errors: Story = {
@@ -62,5 +62,5 @@ export const Errors: Story = {
       {...props}
       label={<h1 className="govuk-heading-l">Can you provide more detail?</h1>}
     />
-  )
+  ),
 };

@@ -1,21 +1,30 @@
 'use client';
 
-import { FC, HTMLAttributes, KeyboardEvent, ReactNode, SyntheticEvent, createElement as h, useRef, useState } from 'react';
+import {
+  FC,
+  HTMLAttributes,
+  KeyboardEvent,
+  ReactNode,
+  SyntheticEvent,
+  useRef,
+  useState,
+} from 'react';
 import { useIsMounted } from '@react-foundry/client-component-helpers';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/Tabs.scss';
 
 type TabItem = {
-  id: string,
-  label: string,
-  content: ReactNode
+  id: string;
+  label: string;
+  content: ReactNode;
 };
 
-export type TabsProps = StandardProps & HTMLAttributes<HTMLDivElement> & {
-  items: TabItem[]
-  title?: string
-};
+export type TabsProps = StandardProps &
+  HTMLAttributes<HTMLDivElement> & {
+    items: TabItem[];
+    title?: string;
+  };
 
 export const Tabs: FC<TabsProps> = ({
   classBlock,
@@ -27,7 +36,7 @@ export const Tabs: FC<TabsProps> = ({
 }) => {
   const classes = classBuilder('govuk-tabs', classBlock, classModifiers, className);
   const initial = 0;
-  const [ selected, setSelected ] = useState(initial);
+  const [selected, setSelected] = useState(initial);
   const refs = items.map(() => useRef<HTMLAnchorElement>(null));
   const select = (i: number) => (e: SyntheticEvent) => {
     e.preventDefault();
@@ -61,10 +70,10 @@ export const Tabs: FC<TabsProps> = ({
     <div {...attrs} className={classes()}>
       <h2 className={classes('title')}>{title}</h2>
       <ul className={classes('list')} role="tablist">
-        { items.map(({ id, label }, i) => (
+        {items.map(({ id, label }, i) => (
           <li
             key={i}
-            className={classes('list-item', i === selected ? 'selected' : undefined )}
+            className={classes('list-item', i === selected ? 'selected' : undefined)}
             onClick={select(i)}
             role="presentation"
           >
@@ -77,25 +86,25 @@ export const Tabs: FC<TabsProps> = ({
               onKeyDown={keydown}
               ref={refs[i]}
               role="tab"
-              tabIndex={ssr ? undefined : (i === selected ? 0 : -1)}
+              tabIndex={ssr ? undefined : i === selected ? 0 : -1}
             >
               {label}
             </a>
           </li>
-        )) }
+        ))}
       </ul>
-      { items.map(({ content, id, label, ...attrs2 }, i) => (
+      {items.map(({ content, id, label, ...attrs2 }, i) => (
         <div
           key={i}
           {...attrs2}
           aria-labelledby={`tab_${id}`}
-          className={classes('panel', ssr || i === selected ? undefined : 'hidden' )}
+          className={classes('panel', ssr || i === selected ? undefined : 'hidden')}
           id={id}
           role="tabpanel"
         >
           {content}
         </div>
-      )) }
+      ))}
     </div>
   );
 };

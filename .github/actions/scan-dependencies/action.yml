@@ -7,7 +7,6 @@ inputs:
 runs:
   using: composite
   steps:
-
     - name: Cache vdb
       uses: actions/cache@v6
       with:

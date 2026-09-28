@@ -1,15 +1,16 @@
-import { FC, HTMLAttributes, createElement as h } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { AnchorList, Item } from '@react-foundry/anchor-list';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/NavigationMenu.scss';
 
-export type Anchor = Item
+export type Anchor = Item;
 
-export type NavigationMenuProps = StandardProps & HTMLAttributes<HTMLElement> & {
-  /** List of links to choose from */
-  items: Item[]
-};
+export type NavigationMenuProps = StandardProps &
+  HTMLAttributes<HTMLElement> & {
+    /** List of links to choose from */
+    items: Item[];
+  };
 
 export const NavigationMenu: FC<NavigationMenuProps> = ({
   classBlock,

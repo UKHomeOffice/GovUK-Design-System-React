@@ -9,7 +9,7 @@ const buildLookup = (v: Record<string, unknown>, regex: RegExp = standardRegex):
 
     return {
       ...acc,
-      [id]: v[cur]
+      [id]: v[cur],
     };
   };
 
@@ -22,24 +22,22 @@ export const styles = buildLookup(styleStories);
 export const components = buildLookup(componentStories, componentRegex);
 export const stories = {
   ...components,
-  ...styles
+  ...styles,
 };
 
 const buildLink = (page: string, lookup: SubpageLookup) => (v: string) => ({
   href: `/${page}/${encodeURIComponent(v)}`,
-  text: lookup[v].meta?.title.replace(/^.*\//, '') || v
+  text: lookup[v].meta?.title.replace(/^.*\//, '') || v,
 });
 
-const buildLinks = (page: string) => (v: SubpageLookup) => Object.keys(v).sort().map(buildLink(page, v));
+const buildLinks = (page: string) => (v: SubpageLookup) =>
+  Object.keys(v).sort().map(buildLink(page, v));
 const buildComponentLinks = buildLinks('components');
 const buildStyleLinks = buildLinks('styles');
 
 export const styleLinks = buildStyleLinks(styles);
 export const componentLinks = buildComponentLinks(components);
-export const links =[
-  ...componentLinks,
-  ...styleLinks
-];
+export const links = [...componentLinks, ...styleLinks];
 
 const mainComponents = [
   'back-link',
@@ -71,7 +69,7 @@ const mainComponents = [
   'tag',
   'text-input',
   'textarea',
-  'warning-text'
+  'warning-text',
 ];
 const unofficialComponents = [
   'aside',
@@ -80,7 +78,7 @@ const unofficialComponents = [
   'navigation-menu',
   'page',
   'search-box',
-  'standalone-input'
+  'standalone-input',
 ];
 const internalComponents = [
   'button-group',
@@ -91,21 +89,25 @@ const internalComponents = [
   'link',
   'summary-card',
   'visually-hidden',
-  'width-container'
+  'width-container',
 ];
 
-const filterObject = (obj: Record<string, unknown>, fn: (v: unknown, i: string) => boolean): Record<string, unknown> => (
-  Object.fromEntries(
-    Object.entries(obj).filter(
-      ([i, v]) => fn(v, i)
-    )
-  )
-);
+const filterObject = (
+  obj: Record<string, unknown>,
+  fn: (v: unknown, i: string) => boolean,
+): Record<string, unknown> => Object.fromEntries(Object.entries(obj).filter(([i, v]) => fn(v, i)));
 
-const keyIsIn = (arr: string[]) => (_v: unknown, i: string): boolean => (
-  arr.includes(i)
-);
+const keyIsIn =
+  (arr: string[]) =>
+  (_v: unknown, i: string): boolean =>
+    arr.includes(i);
 
-export const mainComponentLinks = buildComponentLinks(filterObject(components, keyIsIn(mainComponents)));
-export const unofficialComponentLinks = buildComponentLinks(filterObject(components, keyIsIn(unofficialComponents)));
-export const internalComponentLinks = buildComponentLinks(filterObject(components, keyIsIn(internalComponents)));
+export const mainComponentLinks = buildComponentLinks(
+  filterObject(components, keyIsIn(mainComponents)),
+);
+export const unofficialComponentLinks = buildComponentLinks(
+  filterObject(components, keyIsIn(unofficialComponents)),
+);
+export const internalComponentLinks = buildComponentLinks(
+  filterObject(components, keyIsIn(internalComponents)),
+);

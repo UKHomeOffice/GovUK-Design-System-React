@@ -17,7 +17,6 @@ Use a notification banner to tell the user about something they need to know abo
 <Primary />
 <Controls />
 
-
 ## When to use this component
 
 A notification banner lets you tell the user about something that’s not directly relevant to the thing they’re trying to do on that page of the service. For example:
@@ -25,7 +24,6 @@ A notification banner lets you tell the user about something that’s not direct
 - telling the user about a problem that’s affecting the service as a whole (for example, delays in processing applications because of an emergency)
 - telling the user about something that affects them in particular (for example, an approaching deadline they need to meet)
 - telling the user about the outcome of something they’ve just done on a previous page (for example, confirming that an email has been sent)
-
 
 ## When not to use this component
 
@@ -38,7 +36,6 @@ Do not:
 - use a notification banner to tell the user about validation errors - use an [error message] and [error summary] instead
 - show a notification banner and an [error summary] on the same page - just show the error summary
 
-
 ## How it works
 
 Position a notification banner immediately before the page `h1`. The notification banner should be the same width as the page’s other content, such as components, headings and body text. For example, if the other content takes up two-thirds of the screen on desktop devices, then the notification banner should also take up two-thirds. [Read about how to lay out pages].
@@ -47,13 +44,11 @@ Use `role="region"` and `aria-labelledby="govuk-notification-banner-title"` (wit
 
 Avoid showing more than one notification banner on the same page. Instead, combine the messages in a single notification banner. If the messages are too different to combine, only show the highest priority notification banner.
 
-
 ### Notification banner headings
 
 You can use `<h3>` headings in the `govuk-notification-banner__content` to help structure your content.
 
 Avoid using headings for single-line notifications that do not need them.
-
 
 ## Telling the user about a problem that affects the whole service
 
@@ -70,7 +65,6 @@ If your service is on GOV.UK and it’s affected by an emergency, ask your depar
 
 If your service is getting more demand than usual, check that you’ve set up [There is a problem with the service pages] and [Service unavailable pages], and the wording is up to date.
 
-
 ## Telling the user about something that’s happening elsewhere
 
 Use a ‘neutral’ notification banner if the user needs to know about something that’s happening elsewhere in the service. For example:
@@ -79,7 +73,6 @@ Use a ‘neutral’ notification banner if the user needs to know about somethin
 - in an account-type service, you might need to tell the user that there’s a deadline approaching or that a payment is overdue
 
 <Canvas of={Stories.Neutral} />
-
 
 ## Reacting to something the user has done
 
@@ -100,14 +93,12 @@ To make the green version of the notification banner accessible:
 - use headings like ‘Success’ - so that you’re [not relying on colour alone to convey meaning])
 - use the same heading for green notification banners within the same service - so that you’re [identifying components that work in the same way consistently]
 
-
 <h2 id="research-on-this-component">Research on this component</h2>
 
 We need more research to understand:
 
 - how common it is for users to miss important information in notification banners (including users of assistive technology, who might skip straight to the `h1`)
 - whether it’s sometimes helpful to allow users to dismiss notifications, and how to do this
-
 
 [more research]: #research-on-this-component
 [evidence that people often miss them]: https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/

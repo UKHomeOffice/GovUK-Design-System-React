@@ -9,28 +9,25 @@ const meta = {
   title: 'FieldSet',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A set of form fields.'
+    description: 'A set of form fields.',
   },
   component: FieldSet,
-  args: {}
+  args: {},
 } satisfies Meta<typeof FieldSet>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: { legend: 'My fieldset', children: 'Content' }
+  args: { legend: 'My fieldset', children: 'Content' },
 };
 
 export const Standard: Story = {
   args: {},
   render: ({ ...props }) => (
-    <FieldSet
-      {...props}
-      legend={<h1 className="govuk-heading-l">What is your address?</h1>}
-    >
+    <FieldSet {...props} legend={<h1 className="govuk-heading-l">What is your address?</h1>}>
       <div className="govuk-form-group">
         <Label>
           Building and street <VisuallyHidden>line 2 of 2</VisuallyHidden>
@@ -61,23 +58,16 @@ export const Standard: Story = {
       </div>
       <div className="govuk-form-group">
         <Label>Postcode</Label>
-        <Input
-          name="address-postcode"
-          autoComplete="address-postcode"
-          width={10}
-        />
+        <Input name="address-postcode" autoComplete="address-postcode" width={10} />
       </div>
     </FieldSet>
-  )
+  ),
 };
 
 export const LegendAsPageHeading: Story = {
   args: {},
   render: ({ ...props }) => (
-    <FieldSet
-      {...props}
-      legend={<h1 className="govuk-heading-l">Legend as page heading</h1>}
-    />
+    <FieldSet {...props} legend={<h1 className="govuk-heading-l">Legend as page heading</h1>} />
   ),
-  name: 'Legend as page heading'
+  name: 'Legend as page heading',
 };

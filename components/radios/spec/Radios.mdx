@@ -9,17 +9,14 @@ export const meta = Stories.default;
 <Primary />
 <Controls />
 
-
 ## When to use this component
 
 Use the radios component when users can only select one option from a list.
-
 
 ## When not to use this component
 
 Do not use the radios component if users might need to select more than one
 option. In this case, you should use the checkboxes component instead.
-
 
 ## How it works
 
@@ -64,7 +61,6 @@ Group radios together in a `<fieldset>` with a `<legend>` that describes them,
 as shown in the examples on this page. This is usually a question, like ‘Where
 do you live?’.
 
-
 ### If you’re asking one question on the page
 
 If you’re asking just [one question per page] as recommended, you can set the
@@ -75,7 +71,6 @@ Read more about [why and how to set legends as headings].
 
 <Canvas of={Stories.Standard} />
 
-
 ### If you’re asking more than one question on the page
 
 If you’re asking more than one question on the page, do not set the contents of
@@ -83,7 +78,6 @@ the `<legend>` as the page heading. Read more about [asking multiple questions
 on question pages].
 
 <Canvas of={Stories.NoHeading} />
-
 
 ### Inline radios
 
@@ -100,14 +94,12 @@ Remember that on small screens such as mobile devices, the radios will still be
 
 <Canvas of={Stories.Inline} />
 
-
 ### Radio items with hints
 
 You can add hints to radio items to provide additional information about the
 options.
 
 <Canvas of={Stories.Hints} />
-
 
 ### Radio items with a text divider
 
@@ -116,7 +108,6 @@ users if you separate them using a text divider. The text is usually the word
 ‘or’.
 
 <Canvas of={Stories.Divider} />
-
 
 ### Conditionally revealing content
 
@@ -128,7 +119,6 @@ be contacted by email.
 
 <Canvas of={Stories.Content} />
 
-
 Keep it simple. If the related question is complicated or has more than one
 part, show it on the next page in the process instead.
 
@@ -137,7 +127,6 @@ options placed next to each other.
 
 Conditionally reveal questions only - do not show or hide anything that is not a
 question.
-
 
 #### Known issues
 
@@ -151,7 +140,6 @@ test users when we conditionally revealed complicated questions to them.
 We’ll keep looking for opportunities to [learn more about how conditionally
 revealed questions should be used in services].
 
-
 ### Smaller radios
 
 Use standard-sized radios in nearly all cases. However, smaller versions work
@@ -163,13 +151,11 @@ distracting them from the main content.
 
 <Canvas of={Stories.Small} />
 
-
 Small radios can work well on information dense screens in services designed for
 repeat use, like caseworking systems.
 
 In services like these, the risk that they will not be noticed is lower because
 users return to the screen multiple times.
-
 
 ### Error messages
 
@@ -185,24 +171,20 @@ Error messages should be styled like this:
 Make sure errors follow the guidance in the [Error message component] and have
 specific error messages for specific error states.
 
-
 #### If it’s a ‘yes’ or ‘no’ question
 
 Say ‘Select yes if [whatever it is is true]’. For example, ‘Select yes if Sarah
 normally lives with you’.
-
 
 #### If there are two options which are not ‘yes’ and ‘no’
 
 Say ‘Select if [whatever it is]’. For example, ‘Select if you are employed or
 self-employed’.
 
-
 #### If there are more than two options
 
 Say ‘Select [whatever it is]’. For example, ‘Select the day of the week you pay
 your rent’.
-
 
 #### If it’s a conditionally revealed question
 
@@ -210,7 +192,6 @@ Include an [Error message component] that is clearly related to the initial
 question.
 
 <Canvas of={Stories.ContentError} />
-
 
 [one question per page]: https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page
 [why and how to set legends as headings]: https://design-system.service.gov.uk/get-started/labels-legends-headings

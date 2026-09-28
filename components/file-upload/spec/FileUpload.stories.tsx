@@ -6,26 +6,26 @@ const meta = {
   title: 'File upload',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A component to help users select and upload a file.'
+    description: 'A component to help users select and upload a file.',
   },
   component: FileUpload,
-  args: { id: 'file-upload-1', name: 'file-upload-1', label: 'Upload a file' }
+  args: { id: 'file-upload-1', name: 'file-upload-1', label: 'Upload a file' },
 } satisfies Meta<typeof FileUpload>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {}
+  args: {},
 };
 
 export const Standard: Story = {
-  args: {}
+  args: {},
 };
 
 export const ErrorMessages: Story = {
   args: { error: 'The CSV must be smaller than 2MB' },
-  name: 'Error messages'
+  name: 'Error messages',
 };

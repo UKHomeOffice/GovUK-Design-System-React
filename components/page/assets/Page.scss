@@ -1,28 +1,28 @@
-@use "sass:map";
-@use "@not-govuk/sass-base" as *;
-@use "govuk-frontend/dist/govuk/components/back-link";
-@use "govuk-frontend/dist/govuk/components/breadcrumbs";
-@use "govuk-frontend/dist/govuk/components/button";
-@use "govuk-frontend/dist/govuk/core/links";
-@use "govuk-frontend/dist/govuk/objects/template";
-@use "govuk-frontend/dist/govuk/objects/main-wrapper";
+@use 'sass:map';
+@use '@not-govuk/sass-base' as *;
+@use 'govuk-frontend/dist/govuk/components/back-link';
+@use 'govuk-frontend/dist/govuk/components/breadcrumbs';
+@use 'govuk-frontend/dist/govuk/components/button';
+@use 'govuk-frontend/dist/govuk/core/links';
+@use 'govuk-frontend/dist/govuk/objects/template';
+@use 'govuk-frontend/dist/govuk/objects/main-wrapper';
 
 // Core
-@use "core";
+@use 'core';
 
 // Custom properties
-@use "custom-properties";
+@use 'custom-properties';
 
 // Objects
-@use "objects";
+@use 'objects';
 
 // Overrides
-@use "overrides";
+@use 'overrides';
 
 // Code
-@use "code";
+@use 'code';
 
-$govuk-inverse-button-text-colour: govuk-functional-colour("brand") !default;
+$govuk-inverse-button-text-colour: govuk-functional-colour('brand') !default;
 
 .govuk-template {
   &__page {
@@ -44,16 +44,16 @@ $govuk-inverse-button-text-colour: govuk-functional-colour("brand") !default;
     color: var(--govuk-text-colour);
 
     &--govuk {
-      font-family: "GDS Transport", "Arial", sans-serif;
+      font-family: 'GDS Transport', 'Arial', sans-serif;
     }
 
     &--not-govuk {
-      --govuk-surface-text-colour: #{govuk-colour("black")};
-      --govuk-template-background-colour: #{govuk-colour("black", $variant: "tint-95")};
-      --govuk-surface-background-colour: #{govuk-colour("black", $variant: "tint-95")};
-      --govuk-surface-border-colour: #{govuk-colour("black", $variant: "tint-80")};
+      --govuk-surface-text-colour: #{govuk-colour('black')};
+      --govuk-template-background-colour: #{govuk-colour('black', $variant: 'tint-95')};
+      --govuk-surface-background-colour: #{govuk-colour('black', $variant: 'tint-95')};
+      --govuk-surface-border-colour: #{govuk-colour('black', $variant: 'tint-80')};
 
-      font-family: "Roboto", "Arial", sans-serif;
+      font-family: 'Roboto', 'Arial', sans-serif;
     }
 
     &--dark {
@@ -90,7 +90,8 @@ $govuk-inverse-button-text-colour: govuk-functional-colour("brand") !default;
         }
       }
 
-      a, .govuk-link {
+      a,
+      .govuk-link {
         @extend .govuk-link--inverse;
       }
     }
@@ -98,8 +99,8 @@ $govuk-inverse-button-text-colour: govuk-functional-colour("brand") !default;
     // Department colours
     @each $i, $v in $govuk-colours-organisations {
       &--#{$i} {
-        $contrast-safe: map.get($v, "contrast-safe");
-        $light-colour: map.get($v, "colour");
+        $contrast-safe: map.get($v, 'contrast-safe');
+        $light-colour: map.get($v, 'colour');
         $colour: if(sass($contrast-safe): $contrast-safe; else: $light-colour);
         --govuk-brand-colour: #{$colour};
       }
@@ -123,17 +124,24 @@ html {
   @extend .govuk-template;
 }
 
-body, #root, #story-root {
+body,
+#root,
+#story-root {
   @extend .govuk-template__body;
 }
 
-html, body, #root, #story-root {
-  background-color: govuk-colour("white");
-  color: govuk-colour("black");
+html,
+body,
+#root,
+#story-root {
+  background-color: govuk-colour('white');
+  color: govuk-colour('black');
   height: 100%;
 }
 
-body, #root, #story-root {
+body,
+#root,
+#story-root {
   > .govuk-template__page {
     height: 100%;
   }

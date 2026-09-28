@@ -4,7 +4,6 @@ Header
 The [GDS Header component] that shows users whether they are on GOV.UK
 and which service they are using.
 
-
 Using this package
 ------------------
 
@@ -20,26 +19,26 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import Header from '@not-govuk/header';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <Header
     govUK
     navigation={[
       {
-        href: "#1",
-        text: "Navigation item 1",
+        href: '#1',
+        text: 'Navigation item 1',
         active: true,
       },
       {
-        href: "#2",
-        text: "Navigation item 2",
+        href: '#2',
+        text: 'Navigation item 2',
       },
       {
-        href: "#3",
-        text: "Navigation item 3",
+        href: '#3',
+        text: 'Navigation item 3',
       },
       {
-        href: "#4",
-        text: "Navigation item 4",
+        href: '#4',
+        text: 'Navigation item 4',
       },
     ]}
     organisationHref="#"
@@ -51,7 +50,6 @@ export const MyComponent = props => (
 export default MyComponent;
 ```
 
-
 Working on this package
 -----------------------
 
@@ -62,13 +60,11 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
-
 
 ### Building
 
@@ -76,12 +72,10 @@ npm test
 npm run build
 ```
 
-
 ### Clean-up
 
 ```shell
 npm run clean
 ```
-
 
 [GDS Header component]: https://design-system.service.gov.uk/components/header/

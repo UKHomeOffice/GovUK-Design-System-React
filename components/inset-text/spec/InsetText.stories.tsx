@@ -6,12 +6,12 @@ const meta = {
   title: 'Inset text',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A block of text that is inset.'
+    description: 'A block of text that is inset.',
   },
   component: InsetText,
-  args: {}
+  args: {},
 } satisfies Meta<typeof InsetText>;
 
 export default meta;
@@ -22,11 +22,11 @@ export const Primary: Story = {
   render: ({ ...props }) => (
     <InsetText {...props}>
       <p>
-        It can take up to 8 weeks to register a lasting power of attorney if
-        there are no mistakes in the application.
+        It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes
+        in the application.
       </p>
     </InsetText>
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -34,9 +34,9 @@ export const Standard: Story = {
   render: ({ ...props }) => (
     <InsetText {...props}>
       <p>
-        It can take up to 8 weeks to register a lasting power of attorney if
-        there are no mistakes in the application.
+        It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes
+        in the application.
       </p>
     </InsetText>
-  )
+  ),
 };

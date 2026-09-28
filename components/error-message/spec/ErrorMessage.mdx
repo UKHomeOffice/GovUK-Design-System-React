@@ -13,14 +13,12 @@ it.
 <Primary />
 <Controls />
 
-
 ## When to use this component
 
 Show an error message next to the field and in the [error summary] when there is
 a validation error.
 
 Use standard messages for different components.
-
 
 ## When not to use this component
 
@@ -34,14 +32,15 @@ them why they’re not eligible) and provides useful information about what to d
 next.
 
 There are separate patterns for:
+
 - [‘there is a problem with the service’ pages]
 - [‘page not found’ pages]
 - [‘service unavailable’ pages]
 
-
 ## How it works
 
 For each error:
+
 - put the message in red after the question text and hint text
 - use a red border to visually connect the message and the question it belongs
   to
@@ -61,11 +60,9 @@ as needed, as shown in this example.
 Summarise all errors at the top of the page the user is on using an
 [error summary].
 
-
 ### Legend
 
 <Canvas of={Stories.Legend} />
-
 
 ### Label
 
@@ -77,6 +74,7 @@ Describe what has happened and tell them how to fix it. The message must be in
 plain English, use positive language and get to the point.
 
 Do not use:
+
 - technical jargon like ‘form post error’, ‘unspecified error’ and ‘error
   0x0000000643’
 - words like ‘forbidden’, ‘illegal’, ‘you forgot’ and ‘prohibited’
@@ -94,10 +92,10 @@ Above all, aim for clarity.
 
 Read the message out loud to see if it sounds like something you would say.
 
-
 ### Be consistent
 
 Use the same message next to the field and in the [error summary] so they:
+
 - look, sound and mean the same
 - make sense out of context
 - reduce the cognitive effort needed to understand what has happened
@@ -105,11 +103,11 @@ Use the same message next to the field and in the [error summary] so they:
 Use the question or form label in the error to provide context. For example,
 ‘Enter how many hours you work a week’ for ‘How many hours do you work a week?’
 
-
 ### Be specific
 
 General errors are not helpful to everyone. They do not make sense out of
 context. Avoid messages like:
+
 - ‘An error occurred’
 - ‘Answer the question’
 - ‘Select an option’
@@ -117,6 +115,7 @@ context. Avoid messages like:
 - ‘This field is required’
 
 Different errors need different messages. For example, text fields may be:
+
 - empty
 - too long
 - too short
@@ -126,11 +125,11 @@ Different errors need different messages. For example, text fields may be:
 An error for a specific situation is more helpful. It will tell someone what has
 happened and how to fix it.
 
-
 ### Use instructions and descriptions
 
 Some errors work better as instructions and some work better as descriptions.
 For example:
+
 - ‘Enter your first name’ is clearer, more direct and natural than ‘First name
   must have an entry’
 - ‘Enter a first name that is 35 characters or fewer’ is wordier, less direct
@@ -143,10 +142,10 @@ Use both instructions and descriptions, but use them consistently. For example,
 use an instruction for empty fields like ‘Enter your name’, but a description
 like ‘Name must be 35 characters or fewer’ for entries that are too long.
 
-
 ### Use error message templates
 
 Use template messages for common errors on:
+
 - [addresses]
 - [character count]
 - [checkboxes]
@@ -161,14 +160,13 @@ Use template messages for common errors on:
 - [text input]
 - [textarea]
 
-
 ### Track errors
 
 Find out how often people see them. This will let you:
+
 - improve content
 - A/B test variations
 - redesign a journey
-
 
 ## Research on this component
 
@@ -176,10 +174,10 @@ Error messages designed using this guidance have been tested with all types of
 users in live services, including tax credits.
 
 Research showed users:
+
 - understood what went wrong
 - knew how to fix the problem
 - were able to recover from the error
-
 
 [validation pattern]: https://design-system.service.gov.uk/patterns/validation/
 [error summary]: https://design-system.service.gov.uk/components/error-message/

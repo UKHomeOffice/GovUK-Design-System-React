@@ -3,7 +3,6 @@ NotGovUK - Text Input
 
 A single line text field.
 
-
 Using this package
 ------------------
 
@@ -19,7 +18,7 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import TextInput from '@not-govuk/text-input';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <TextInput
     label={<h1 className="govuk-heading-l">What is the name of the event?</h1>}
     name="event-name"
@@ -28,7 +27,6 @@ export const MyComponent = props => (
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -40,7 +38,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -49,7 +46,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -57,7 +53,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

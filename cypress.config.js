@@ -4,11 +4,11 @@ export default {
     baseUrl: 'http://localhost:8080',
     specPattern: 'feat/**/*.spec.*',
     supportFile: '../../.cypress/support/index.js',
-    testIsolation: false
+    testIsolation: false,
   },
   fixturesFolder: 'fixtures',
   requestTimeout: 7000,
   screenshotsFolder: '.cypress/screenshots',
   videosFolder: '.cypress/videos',
-  video: false
+  video: false,
 };

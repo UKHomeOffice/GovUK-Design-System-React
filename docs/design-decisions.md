@@ -5,14 +5,12 @@ Here, I will try to document the design decisions I have made in
 NotGovUK so that you can evaluate both whether NotGovUK is suitable for
 your project as well as the sanity of its author.
 
-
 Why React?
 ----------
 
 This implementation of the [GOV.UK Design System] uses [React] rather
 than [Nunjucks] as used in the original. This is because there are some
 considerable advantages to React over Nunjucks.
-
 
 ### Client-side applications
 
@@ -30,12 +28,10 @@ and the client-side. This allows us to do progressive enhancement and
 provide client-side rendering to modern clients whilst still providing
 server-side rendering as a fallback option.
 
-
 ### Popularity
 
 React is also looking to be far more popular than Nunjucks which should
 make it easier to resource projects in the long run.
-
 
 Why TypeScript?
 ---------------
@@ -63,12 +59,10 @@ consumes our libraries and components. Specifically they benefit from a
 IDE and editor features such as auto-completion. This is particularly
 helpful when working out what 'props' can be passed to a React component.
 
-
 Why monorepos?
 --------------
 
 WRITEME.
-
 
 Why pnpm?
 ---------
@@ -92,30 +86,25 @@ Without pnpm we would need to make use of both the
 _[project references]_ and _[path mapping]_ features of TypeScript,
 which would be [quite cumbersome].
 
-
 Why ReSTify?
 ------------
 
 WRITEME.
-
 
 Why Storybook?
 --------------
 
 WRITEME.
 
-
 Why Netlify?
 ------------
 
 WRITEME.
 
-
 Why GitHub Actions?
 -------------------
 
 WRITEME.
-
 
 [GOV.UK Design System]: https://design-system.service.gov.uk/
 [React]: https://reactjs.org/

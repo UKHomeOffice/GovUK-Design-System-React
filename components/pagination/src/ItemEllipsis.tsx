@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, createElement as h } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 export type ItemEllipsisProps = StandardProps & HTMLAttributes<HTMLElement>;
@@ -13,7 +13,9 @@ export const ItemEllipsis: FC<ItemEllipsisProps> = ({
 
   // Note: We should use &ctdot; really, to match GDS. - Does Babel not support it?
   return (
-    <li {...attrs} className={classes('item', classModifiers, className)}>⋯</li>
+    <li {...attrs} className={classes('item', classModifiers, className)}>
+      ⋯
+    </li>
   );
 };
 

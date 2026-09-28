@@ -6,12 +6,12 @@ const meta = {
   title: 'Warning text',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A component to warn the user of something important.'
+    description: 'A component to warn the user of something important.',
   },
   component: WarningText,
-  args: {}
+  args: {},
 } satisfies Meta<typeof WarningText>;
 
 export default meta;
@@ -23,7 +23,7 @@ export const Primary: Story = {
     <WarningText {...props}>
       <p>You can be fined up to £5,000 if you do not register.</p>
     </WarningText>
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -32,7 +32,7 @@ export const Standard: Story = {
     <WarningText {...props}>
       <p>You can be fined up to £5,000 if you do not register.</p>
     </WarningText>
-  )
+  ),
 };
 
 export const CustomAssistive: Story = {
@@ -41,5 +41,5 @@ export const CustomAssistive: Story = {
     <WarningText {...props}>
       <p>Floors may be slippery when wet.</p>
     </WarningText>
-  )
+  ),
 };

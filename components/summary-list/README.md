@@ -3,7 +3,6 @@ NotGovUK - Summary List
 
 A component to summarise information, for example, a user’s responses at the end of a form.
 
-
 Using this package
 ------------------
 
@@ -19,28 +18,77 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import SummaryList from '@not-govuk/summary-list';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <SummaryList
     items={[
       {
         name: 'Name',
-        actions: [ { href: '#', children: (<Fragment>Change<VisuallyHidden> name</VisuallyHidden></Fragment>) } ],
-        children: 'Sarah Philips'
+        actions: [
+          {
+            href: '#',
+            children: (
+              <Fragment>
+                Change<VisuallyHidden> name</VisuallyHidden>
+              </Fragment>
+            ),
+          },
+        ],
+        children: 'Sarah Philips',
       },
       {
         name: 'Date of birth',
-        actions: [ { href: '#', children: (<Fragment>Change<VisuallyHidden> date of birth</VisuallyHidden></Fragment>) } ],
-        children: '5 January 1978'
+        actions: [
+          {
+            href: '#',
+            children: (
+              <Fragment>
+                Change<VisuallyHidden> date of birth</VisuallyHidden>
+              </Fragment>
+            ),
+          },
+        ],
+        children: '5 January 1978',
       },
       {
         name: 'Address',
-        actions: [ { href: '#', children: (<Fragment>Change<VisuallyHidden> address</VisuallyHidden></Fragment>) } ],
-        children: (<Fragment>72 Guild Street<br />London<br />SE23 6FH</Fragment>)
+        actions: [
+          {
+            href: '#',
+            children: (
+              <Fragment>
+                Change<VisuallyHidden> address</VisuallyHidden>
+              </Fragment>
+            ),
+          },
+        ],
+        children: (
+          <Fragment>
+            72 Guild Street
+            <br />
+            London
+            <br />
+            SE23 6FH
+          </Fragment>
+        ),
       },
       {
         name: 'Contact details',
-        actions: [ { href: '#', children: (<Fragment>Change<VisuallyHidden> contact details</VisuallyHidden></Fragment>) } ],
-        children: (<Fragment><p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p></Fragment>)
+        actions: [
+          {
+            href: '#',
+            children: (
+              <Fragment>
+                Change<VisuallyHidden> contact details</VisuallyHidden>
+              </Fragment>
+            ),
+          },
+        ],
+        children: (
+          <Fragment>
+            <p class="govuk-body">07700 900457</p>
+            <p class="govuk-body">sarah.phillips@example.com</p>
+          </Fragment>
+        ),
       },
     ]}
   />
@@ -48,7 +96,6 @@ export const MyComponent = props => (
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -60,7 +107,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -69,7 +115,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -77,7 +122,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

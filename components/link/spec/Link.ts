@@ -9,7 +9,9 @@ describe('Link', () => {
     });
 
     it('renders a link', async () => expect(screen.getByRole('link')).toBeInTheDocument());
-    it('to the provided href', async () => expect(screen.getByRole('link')).toHaveAttribute('href', '#'));
-    it('with the provided text', async () => expect(screen.getByRole('link')).toHaveTextContent('Text'));
+    it('to the provided href', async () =>
+      expect(screen.getByRole('link')).toHaveAttribute('href', '#'));
+    it('with the provided text', async () =>
+      expect(screen.getByRole('link')).toHaveTextContent('Text'));
   });
 });

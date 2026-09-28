@@ -7,13 +7,13 @@ const meta = {
   title: 'Breadcrumbs',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
     description:
-      "A component to help users to understand where they are within a website's structure and move between levels."
+      "A component to help users to understand where they are within a website's structure and move between levels.",
   },
   component: Breadcrumbs,
-  args: {}
+  args: {},
 } satisfies Meta<typeof Breadcrumbs>;
 
 export default meta;
@@ -27,19 +27,19 @@ export const Primary: Story = {
       items={[
         {
           text: 'Home',
-          href: '#'
+          href: '#',
         },
         {
           text: 'Passports, travel and living abroad',
-          href: '#'
+          href: '#',
         },
         {
           text: 'Travel abroad',
-          href: '#'
-        }
+          href: '#',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -50,19 +50,19 @@ export const Standard: Story = {
       items={[
         {
           text: 'Home',
-          href: '#'
+          href: '#',
         },
         {
           text: 'Passports, travel and living abroad',
-          href: '#'
+          href: '#',
         },
         {
           text: 'Travel abroad',
-          href: '#'
-        }
+          href: '#',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Collapsing: Story = {
@@ -73,27 +73,27 @@ export const Collapsing: Story = {
       items={[
         {
           text: 'Home',
-          href: '#'
+          href: '#',
         },
         {
           text: 'Environment',
-          href: '#'
+          href: '#',
         },
         {
           text: 'Rural and countryside',
-          href: '#'
+          href: '#',
         },
         {
           text: 'Rural development and land management',
-          href: '#'
+          href: '#',
         },
         {
           text: 'Economic growth in rural areas',
-          href: '#'
-        }
+          href: '#',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const DarkBackgrounds: Story = {
@@ -105,19 +105,19 @@ export const DarkBackgrounds: Story = {
         items={[
           {
             text: 'Home',
-            href: '#'
+            href: '#',
           },
           {
             text: 'Passports, travel and living abroad',
-            href: '#'
+            href: '#',
           },
           {
             text: 'Travel abroad',
-            href: '#'
-          }
+            href: '#',
+          },
         ]}
       />
     </Panel>
   ),
-  name: 'Dark backgrounds'
+  name: 'Dark backgrounds',
 };

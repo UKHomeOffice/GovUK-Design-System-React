@@ -1,11 +1,12 @@
-import { FC, HTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/InsetText.scss';
 
-export type InsetTextProps = StandardProps & HTMLAttributes<HTMLDivElement> & {
-  children?: ReactNode
-};
+export type InsetTextProps = StandardProps &
+  HTMLAttributes<HTMLDivElement> & {
+    children?: ReactNode;
+  };
 
 export const InsetText: FC<InsetTextProps> = ({
   children,

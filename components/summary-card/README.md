@@ -3,7 +3,6 @@ NotGovUK - Summary Card
 
 A component to split multiple summary lists.
 
-
 Using this package
 ------------------
 
@@ -19,15 +18,10 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import SummaryCard from '@not-govuk/summary-card';
 
-export const MyComponent = props => (
-  <SummaryCard title="Lead tenant">
-    Content
-  </SummaryCard>
-);
+export const MyComponent = (props) => <SummaryCard title="Lead tenant">Content</SummaryCard>;
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -39,7 +33,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -48,7 +41,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -56,7 +48,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

@@ -3,7 +3,6 @@ NotGovUK - File Upload
 
 A component to help users select and upload a file.
 
-
 Using this package
 ------------------
 
@@ -19,17 +18,12 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import FileUpload from '@not-govuk/file-upload';
 
-export const MyComponent = props => (
-  <FileUpload
-    id="file-upload-1"
-    name="file-upload-1"
-    label="Upload a file"
-  />
+export const MyComponent = (props) => (
+  <FileUpload id="file-upload-1" name="file-upload-1" label="Upload a file" />
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -41,7 +35,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -50,7 +43,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -58,7 +50,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

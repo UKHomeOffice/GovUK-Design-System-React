@@ -6,13 +6,12 @@ const meta = {
   title: 'Internal/Visually hidden',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description:
-      'Invisible text that can be read by software such as screen-readers.'
+    description: 'Invisible text that can be read by software such as screen-readers.',
   },
   component: VisuallyHidden,
-  args: { children: 'Error:' }
+  args: { children: 'Error:' },
 } satisfies Meta<typeof VisuallyHidden>;
 
 export default meta;
@@ -24,7 +23,7 @@ export const Primary: Story = {
     <>
       <VisuallyHidden {...props} /> Something went wrong
     </>
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -33,5 +32,5 @@ export const Standard: Story = {
     <>
       <VisuallyHidden {...props} /> Something went wrong
     </>
-  )
+  ),
 };

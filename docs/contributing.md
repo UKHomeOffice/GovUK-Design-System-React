@@ -1,7 +1,6 @@
 Working on and contributing to NotGovUK
 =======================================
 
-
 Contributing
 ------------
 
@@ -14,7 +13,6 @@ clear please do let me know by raising an [issue] or a [pull request].
 
 Finally, this work is still at quite an early stage. If you run into any
 problems or have any questions, please do [get in touch].
-
 
 Working on this repository
 --------------------------
@@ -29,7 +27,6 @@ installed on your system:
 - [pnpm]
 - (GNU?) Make
 
-
 ### Pulling NPM dependencies
 
 You should first pull the NPM dependencies by running:
@@ -37,7 +34,6 @@ You should first pull the NPM dependencies by running:
 ```shell
 pnpm install
 ```
-
 
 ### Bringing up a local development environment:
 
@@ -48,7 +44,6 @@ This can be done by running the following command:
 npm run storybook
 ```
 
-
 ### Running the tests
 
 To run the tests use the following command:
@@ -56,7 +51,6 @@ To run the tests use the following command:
 ```shell
 npm test
 ```
-
 
 ### Running the documentation website
 
@@ -76,7 +70,6 @@ npm run dev
 The application will take a little while to build but when it is done,
 you will be able to access it at http://localhost:8080 .
 
-
 ### Adding a new component
 
 You can add a brand new component by copying an existing component as a
@@ -84,7 +77,6 @@ starting point and then updating its package metadata, implementation,
 tests and stories.
 
 See also: [Working on your project]
-
 
 [Pull requests]: https://github.com/daniel-ac-martin/NotGovUK/pulls
 [open an issue]: https://github.com/daniel-ac-martin/NotGovUK/issues/new

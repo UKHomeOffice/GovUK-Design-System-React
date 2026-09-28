@@ -3,7 +3,6 @@ NotGovUK - Error Summary
 
 A component to summarise any errors a user has made.
 
-
 Using this package
 ------------------
 
@@ -19,25 +18,24 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import ErrorSummary from '@not-govuk/error-summary';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <ErrorSummary
     title="There is a problem"
     items={[
       {
-        text: "The date your passport was issued must be in the past",
-        href: "#"
+        text: 'The date your passport was issued must be in the past',
+        href: '#',
       },
       {
-        text: "Enter a postcode, like AA1 1AA",
-        href: "#"
-      }
+        text: 'Enter a postcode, like AA1 1AA',
+        href: '#',
+      },
     ]}
   />
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -49,7 +47,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -58,7 +55,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -66,7 +62,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

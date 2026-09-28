@@ -6,12 +6,12 @@ const meta = {
   title: 'Internal/Label',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A label for a form field.'
+    description: 'A label for a form field.',
   },
   component: Label,
-  args: { htmlFor: 'my-field2', children: 'My label' }
+  args: { htmlFor: 'my-field2', children: 'My label' },
 } satisfies Meta<typeof Label>;
 
 export default meta;
@@ -24,7 +24,7 @@ export const Primary: Story = {
       <Label {...props} />
       <input type="text" id="my-field" name="my-field" />
     </form>
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -34,7 +34,7 @@ export const Standard: Story = {
       <Label {...props} />
       <input type="text" id="my-field2" name="my-field" />
     </form>
-  )
+  ),
 };
 
 export const Inline: Story = {
@@ -47,5 +47,5 @@ export const Inline: Story = {
       </Label>
     </form>
   ),
-  name: 'In-line'
+  name: 'In-line',
 };

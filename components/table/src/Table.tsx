@@ -1,4 +1,4 @@
-import { ComponentProps, FC, createElement as h } from 'react';
+import { ComponentProps, FC } from 'react';
 import { classBuilder } from '@react-foundry/component-helpers';
 import { SimpleTable as _Table } from '@react-foundry/simple-table';
 
@@ -15,16 +15,21 @@ export const Table: FC<TableProps> = ({
 }) => {
   const classBlock = _classBlock || 'govuk-table';
   const classes = classBuilder('govuk-table', _classBlock, classModifiers, className);
-  const caption = (
-    typeof _caption !== 'string'
-      ? _caption
-      : (
-        <caption className={classes('caption', 'm')}>{_caption}</caption>
-      )
-  );
+  const caption =
+    typeof _caption !== 'string' ? (
+      _caption
+    ) : (
+      <caption className={classes('caption', 'm')}>{_caption}</caption>
+    );
 
   return (
-    <_Table {...props} classBlock={classBlock} classModifiers={classModifiers} className={className} caption={caption} />
+    <_Table
+      {...props}
+      classBlock={classBlock}
+      classModifiers={classModifiers}
+      className={className}
+      caption={caption}
+    />
   );
 };
 

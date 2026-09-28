@@ -43,4 +43,3 @@ export { default as Header } from '@not-govuk/header';
 export { default as GenericHeader } from '@not-govuk/generic-header';
 
 export * from '@not-govuk/page';
-
