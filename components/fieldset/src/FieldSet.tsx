@@ -1,7 +1,7 @@
 import { FC, FieldsetHTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/FieldSet.scss';
+import 'govuk-frontend/dist/govuk/components/fieldset/_index.scss'
 
 export type FieldSetProps = StandardProps &
   FieldsetHTMLAttributes<HTMLFieldSetElement> & {

@@ -1,10 +1,10 @@
 import { FC, InputHTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { FormGroup } from '@not-govuk/form-group';
-import { Input } from '@not-govuk/input';
-import { Label } from '@not-govuk/label';
+import { FormGroup } from '../../form-group/src/FormGroup';
+import { Input } from '../../input/src/Input';
+import { Label } from '../../label/src/Label';
 
-import '../assets/DateInput.scss';
+import 'govuk-frontend/dist/govuk/components/date-input/_index.scss'
 
 export type DateInputValue = {
   day: string;

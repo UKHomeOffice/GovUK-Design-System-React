@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Fragment } from 'react';
-import { Table } from '@not-govuk/table';
+import { Table } from '../../table/src/Table';
 import { Tabs } from '../src/Tabs';
 
 const meta = {

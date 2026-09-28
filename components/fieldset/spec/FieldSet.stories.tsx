@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Input } from '@not-govuk/input';
-import { Label } from '@not-govuk/label';
-import { VisuallyHidden } from '@not-govuk/visually-hidden';
+import { Input } from '../../input/src/Input';
+import { Label } from '../../label/src/Label';
+import { VisuallyHidden } from '../../visually-hidden/src/VisuallyHidden';
 import { FieldSet } from '../src/FieldSet';
 
 const meta = {

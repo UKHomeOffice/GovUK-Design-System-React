@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { SummaryListContainer, SummaryListContainerProps } from './SummaryListContainer';
 import { SummaryListItem, SummaryListItemProps } from './SummaryListItem';
 
-import '../assets/SummaryList.scss';
+import 'govuk-frontend/dist/govuk/components/summary-list/_index.scss'
 
 export type SummaryListProps = SummaryListContainerProps & {
   /** Items to be summarised */

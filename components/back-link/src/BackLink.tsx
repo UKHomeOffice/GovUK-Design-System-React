@@ -1,20 +1,20 @@
 'use client';
 
-import { ComponentProps, FC, ReactNode } from 'react';
-import { classBuilder } from '@react-foundry/component-helpers';
-import { A } from '@not-govuk/link';
+import { ComponentProps, FC, ReactNode, createElement as h } from 'react';
+import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
+import { A } from '../../link/src/Link';
 import { useNavigate } from '@react-foundry/router';
 
-import '../assets/BackLink.scss';
+import 'govuk-frontend/dist/govuk/components/back-link/_index.scss'
 
 export type BackLinkProps = ComponentProps<typeof A> & {
-  children?: ReactNode;
+  children?: ReactNode
   /** The location to link to */
-  href?: string;
+  href?: string
   /** The text of the link */
-  text?: string;
+  text?: string
   /** The title of the link */
-  title?: string;
+  title?: string
 };
 
 export const BackLink: FC<BackLinkProps> = ({
@@ -33,8 +33,7 @@ export const BackLink: FC<BackLinkProps> = ({
   const goBack = () => navigate && navigate(-1);
 
   return href ? (
-    <A
-      {...attrs}
+    <A {...attrs}
       classBlock={classBlock || defaultClassBlock}
       classModifiers={classModifiers}
       className={className}
@@ -43,7 +42,10 @@ export const BackLink: FC<BackLinkProps> = ({
       {text}
     </A>
   ) : (
-    <a {...attrs} className={classes()} href="#" onClick={goBack}>
+    <a {...attrs}
+      className={classes()}
+      href="#"
+    >
       {text}
     </a>
   );

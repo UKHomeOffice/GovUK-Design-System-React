@@ -2,7 +2,7 @@ import { ComponentProps, FC } from 'react';
 import { classBuilder } from '@react-foundry/component-helpers';
 import { SimpleTable as _Table } from '@react-foundry/simple-table';
 
-import '../assets/Table.scss';
+import 'govuk-frontend/dist/govuk/components/table/_index.scss'
 
 export type TableProps = ComponentProps<typeof _Table>;
 

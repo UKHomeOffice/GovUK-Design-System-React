@@ -1,9 +1,9 @@
 import { FC, InputHTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { FormGroup } from '@not-govuk/form-group';
+import { FormGroup } from '../../form-group/src/FormGroup';
 import { Checkbox } from './Checkbox';
 
-import '../assets/Checkboxes.scss';
+import 'govuk-frontend/dist/govuk/components/checkboxes/_index.scss';
 
 export type Option = {
   /** Content to render only when the option is selected */

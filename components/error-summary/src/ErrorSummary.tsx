@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import { Anchor, AnchorList, AnchorListProps } from '@react-foundry/anchor-list';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/ErrorSummary.scss';
+import 'govuk-frontend/dist/govuk/components/error-summary/_index.scss'
 
 export type Error = Anchor;
 

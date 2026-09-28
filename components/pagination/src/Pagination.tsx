@@ -5,7 +5,7 @@ import { queryString } from '@react-foundry/uri';
 import { NextPrevProps, PageList, PageListProps } from './PageList';
 import { EnhancedLinkProps } from './common';
 
-import '../assets/Pagination.scss';
+import 'govuk-frontend/dist/govuk/components/pagination/_index.scss'
 
 type BackForthProps = {
   /** The current page being viewed */

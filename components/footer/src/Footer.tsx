@@ -1,11 +1,11 @@
 import { FC, Fragment, HTMLAttributes, ReactNode, createElement as h } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { Link, LinkProps } from '@not-govuk/link';
-import { WidthContainer } from '@not-govuk/width-container';
+import { Link, LinkProps } from '../../link/src/Link';
+import { WidthContainer } from '../../width-container/src/WidthContainer';
 import { CrownLogo } from './CrownLogo';
 import { OGLLogo } from './OGLLogo';
 
-import '../assets/Footer.scss';
+import 'govuk-frontend/dist/govuk/components/footer/_index.scss'
 
 type Link = LinkProps & {
   /** Text of the link */

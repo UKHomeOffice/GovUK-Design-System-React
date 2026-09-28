@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { ButtonGroup } from '@not-govuk/button-group';
-import { A } from '@not-govuk/link';
-import { Panel } from '@not-govuk/panel';
+import { ButtonGroup } from '../../button-group/src/ButtonGroup';
+import { A } from '../../link/src/Link';
+import { Panel } from '../../panel/src/Panel';
 import { Button, StartButton, SubmitButton } from '../src/Button';
 
 const meta = {

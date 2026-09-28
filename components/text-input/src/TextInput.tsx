@@ -1,18 +1,18 @@
-import { FC, ReactNode } from 'react';
-import { FormGroup } from '@not-govuk/form-group';
-import { Input, InputProps } from '@not-govuk/input';
+import { FC, ReactNode, createElement as h } from 'react';
+import { FormGroup } from '../../form-group/src/FormGroup';
+import { Input, InputProps } from '../../input/src/Input';
 
-import '../assets/TextInput.scss';
+import 'govuk-frontend/dist/govuk/components/input/_index.scss'
 
 export type TextInputProps = InputProps & {
   /** Error message */
-  error?: ReactNode;
+  error?: ReactNode
   /** Hint */
-  hint?: ReactNode;
+  hint?: ReactNode
   /** Label */
-  label: ReactNode;
+  label: ReactNode
   /** HTML name */
-  name: string;
+  name: string
 };
 
 export const TextInput: FC<TextInputProps> = ({
@@ -27,13 +27,19 @@ export const TextInput: FC<TextInputProps> = ({
 }) => {
   const classModifiers = [
     error ? 'error' : undefined,
-    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers]),
+    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers])
   ];
   const id = _id || attrs.name;
   const fieldId = `${id}-input`;
   const hintId = `${id}-hint`;
   const errorId = `${id}-error`;
-  const describedBy = [hint && hintId, error && errorId].filter((e) => e).join(' ') || undefined;
+  const describedBy = ([
+    hint && hintId,
+    error && errorId
+  ]
+    .filter(e => e)
+    .join(' ') || undefined
+  );
 
   return (
     <FormGroup

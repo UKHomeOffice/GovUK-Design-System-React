@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/Tag.scss';
+import 'govuk-frontend/dist/govuk/components/tag/_index.scss'
 
 export type TagProps = StandardProps &
   HTMLAttributes<HTMLElement> & {

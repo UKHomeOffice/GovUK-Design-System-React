@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Fragment } from 'react';
-import { A } from '@not-govuk/link';
-import { SummaryCard } from '@not-govuk/summary-card';
-import { VisuallyHidden } from '@not-govuk/visually-hidden';
+import { A } from '../../link/src/Link';
+import { SummaryCard } from '../../summary-card/src/SummaryCard';
+import { VisuallyHidden } from '../../visually-hidden/src/VisuallyHidden';
 import { SummaryList } from '../src/SummaryList';
 
 const meta = {

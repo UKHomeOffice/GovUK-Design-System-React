@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { TextInput } from '@not-govuk/text-input';
+import { TextInput } from '../../text-input/src/TextInput';
 import { Radios } from '../src/Radios';
 
 const meta = {

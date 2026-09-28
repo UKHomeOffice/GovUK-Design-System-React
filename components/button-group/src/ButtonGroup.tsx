@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/ButtonGroup.scss';
+import 'govuk-frontend/dist/govuk/objects/_button-group.scss';
 
 export type ButtonGroupProps = StandardProps &
   HTMLAttributes<HTMLDivElement> & {

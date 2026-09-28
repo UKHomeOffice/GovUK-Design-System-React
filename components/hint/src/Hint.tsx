@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/Hint.scss';
+import 'govuk-frontend/dist/govuk/components/hint/_index.scss'
 
 export type HintProps = StandardProps &
   HTMLAttributes<HTMLDivElement> & {

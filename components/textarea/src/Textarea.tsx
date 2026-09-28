@@ -1,8 +1,8 @@
 import { FC, TextareaHTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { FormGroup } from '@not-govuk/form-group';
+import { FormGroup } from '../../form-group/src/FormGroup';
 
-import '../assets/Textarea.scss';
+import 'govuk-frontend/dist/govuk/components/textarea/_index.scss'
 
 export type TextareaProps = StandardProps &
   TextareaHTMLAttributes<HTMLTextAreaElement> & {

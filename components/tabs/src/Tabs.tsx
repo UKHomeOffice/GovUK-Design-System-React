@@ -12,7 +12,7 @@ import {
 import { useIsMounted } from '@react-foundry/client-component-helpers';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/Tabs.scss';
+import 'govuk-frontend/dist/govuk/components/tabs/_index.scss'
 
 type TabItem = {
   id: string;

@@ -3,7 +3,7 @@
 import { FC, HTMLAttributes, ReactNode, useEffect, useRef } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-import '../assets/NotificationBanner.scss';
+import 'govuk-frontend/dist/govuk/components/notification-banner/_index.scss'
 
 export type NotificationBannerProps = StandardProps &
   HTMLAttributes<HTMLDivElement> & {

@@ -1,11 +1,11 @@
 import { FC, Fragment, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { ErrorMessage } from '@not-govuk/error-message';
-import { FieldSet } from '@not-govuk/fieldset';
-import { Hint } from '@not-govuk/hint';
-import { Label } from '@not-govuk/label';
+import { ErrorMessage } from '../../error-message/src/ErrorMessage';
+import { FieldSet } from '../../fieldset/src/FieldSet';
+import { Hint } from '../../hint/src/Hint';
+import { Label } from '../../label/src/Label';
 
-import '../assets/FormGroup.scss';
+import "govuk-frontend/dist/govuk/objects/_form-group.scss";
 
 export type FormGroupProps = StandardProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'id' | 'label'> & {

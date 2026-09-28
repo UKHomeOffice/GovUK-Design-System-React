@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Table } from '@not-govuk/table';
+import { Table } from '../../table/src/Table';
 import { Tag } from '../src/Tag';
 
 const meta = {

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Panel } from '@not-govuk/panel';
+import { Panel } from '../../panel/src/Panel';
 import { A } from '../src/Link';
 
 const meta = {

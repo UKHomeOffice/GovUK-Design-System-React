@@ -2,10 +2,10 @@
 
 import { FC, InputHTMLAttributes, ReactNode, useState } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { FormGroup } from '@not-govuk/form-group';
+import { FormGroup } from '../../form-group/src/FormGroup';
 import { Radio } from './Radio';
 
-import '../assets/Radios.scss';
+import 'govuk-frontend/dist/govuk/components/radios/_index.scss'
 
 export type Option = {
   /** Content to render only when the option is selected */
