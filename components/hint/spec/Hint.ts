@@ -8,6 +8,7 @@ describe('Hint', () => {
       render(h(Hint, { id: 'field-id-hint' }, 'Hint text'));
     });
 
-    it('renders the children', async () => expect(screen.getByText('Hint text')).toBeInTheDocument());
+    it('renders the children', async () =>
+      expect(screen.getByText('Hint text')).toBeInTheDocument());
   });
 });

@@ -6,8 +6,7 @@ import '../assets/Breadcrumbs.scss';
 
 export type Breadcrumb = Anchor;
 
-export type BreadcrumbsProps = StandardProps & Pick<AnchorListProps, 'items'> & {
-};
+export type BreadcrumbsProps = StandardProps & Pick<AnchorListProps, 'items'> & {};
 
 export const Breadcrumbs: FC<BreadcrumbsProps> = ({
   classBlock,

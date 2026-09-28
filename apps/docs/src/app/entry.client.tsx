@@ -11,7 +11,7 @@ startTransition(() => {
     {
       onRecoverableError: (error, errorInfo) => {
         console.warn(error, 'Component Stack:', errorInfo.componentStack);
-      }
-    }
+      },
+    },
   );
 });

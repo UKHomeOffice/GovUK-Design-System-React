@@ -8,5 +8,5 @@ await httpd.register(fastifyReactRouterDev, reactRouterOptions);
 
 await httpd.listen({
   host: '::1',
-  port: config.httpd.port
+  port: config.httpd.port,
 });

@@ -3,7 +3,6 @@ NotGovUK - Tabs
 
 A component that lets users navigate between related sections of content, displaying one section at a time.
 
-
 Using this package
 ------------------
 
@@ -19,31 +18,30 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import Tabs from '@not-govuk/tabs';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <Tabs
     items={[
       {
         id: 'a1',
         label: 'AAA',
-        content: (<p>A</p>)
+        content: <p>A</p>,
       },
       {
         id: 'b1',
         label: 'BBB',
-        content: (<p>B</p>)
+        content: <p>B</p>,
       },
       {
         id: 'c1',
         label: 'CCC',
-        content: (<p>C</p>)
-      }
+        content: <p>C</p>,
+      },
     ]}
   />
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -55,20 +53,17 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
 
-
 ### Building
 
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

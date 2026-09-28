@@ -4,7 +4,7 @@ import PhaseBanner from '../src/PhaseBanner';
 
 describe('PhaseBanner', () => {
   const minimalProps = {
-    phase: 'test'
+    phase: 'test',
   };
 
   describe('when given valid props', () => {
@@ -12,8 +12,11 @@ describe('PhaseBanner', () => {
       render(h(PhaseBanner, minimalProps, 'This is just a test.'));
     });
 
-    it('renders an element', async () => expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
-    it('declares the phase provided', async () => expect(screen.getAllByRole('generic')[0]).toHaveTextContent('test'))
-    it('displays the message provided', async () => expect(screen.getAllByRole('generic')[0]).toHaveTextContent('This is just a test.'))
+    it('renders an element', async () =>
+      expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
+    it('declares the phase provided', async () =>
+      expect(screen.getAllByRole('generic')[0]).toHaveTextContent('test'));
+    it('displays the message provided', async () =>
+      expect(screen.getAllByRole('generic')[0]).toHaveTextContent('This is just a test.'));
   });
 });

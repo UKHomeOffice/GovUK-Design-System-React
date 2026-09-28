@@ -8,13 +8,13 @@ import { useNavigate } from '@react-foundry/router';
 import '../assets/BackLink.scss';
 
 export type BackLinkProps = ComponentProps<typeof A> & {
-  children?: ReactNode
+  children?: ReactNode;
   /** The location to link to */
-  href?: string
+  href?: string;
   /** The text of the link */
-  text?: string
+  text?: string;
   /** The title of the link */
-  title?: string
+  title?: string;
 };
 
 export const BackLink: FC<BackLinkProps> = ({
@@ -33,7 +33,8 @@ export const BackLink: FC<BackLinkProps> = ({
   const goBack = () => navigate && navigate(-1);
 
   return href ? (
-    <A {...attrs}
+    <A
+      {...attrs}
       classBlock={classBlock || defaultClassBlock}
       classModifiers={classModifiers}
       className={className}
@@ -42,11 +43,7 @@ export const BackLink: FC<BackLinkProps> = ({
       {text}
     </A>
   ) : (
-    <a {...attrs}
-      className={classes()}
-      href="#"
-      onClick={goBack}
-    >
+    <a {...attrs} className={classes()} href="#" onClick={goBack}>
       {text}
     </a>
   );

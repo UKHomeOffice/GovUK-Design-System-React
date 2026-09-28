@@ -1,4 +1,4 @@
-import type { Route } from "./+types/styles";
+import type { Route } from './+types/styles';
 import { Outlet, redirect } from 'react-router';
 import { NavigationMenu } from '@not-govuk/components';
 import { styleLinks } from '../stories';

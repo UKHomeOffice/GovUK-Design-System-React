@@ -5,24 +5,20 @@ import globalDecorator from './decorators';
 import './app.scss';
 
 export const preview: Preview = {
-  decorators: [
-    globalDecorator,
-  ],
+  decorators: [globalDecorator],
   parameters: {
     a11y: {
-      context: "#storybook-root",
+      context: '#storybook-root',
       config: {},
       options: {},
       manual: true,
     },
     docs: {
       container: DocsContainer,
-      page: DocsPage
-    }
+      page: DocsPage,
+    },
   },
-  tags: [
-    'autodocs'
-  ]
+  tags: ['autodocs'],
 };
 
 export default preview;

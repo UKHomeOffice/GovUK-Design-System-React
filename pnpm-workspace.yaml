@@ -2,20 +2,20 @@ packages:
   - apps/**
   - components/**
   - lib/**
-dedupePeerDependents: true          # Default
-resolutionMode: highest             # Default
+dedupePeerDependents: true # Default
+resolutionMode: highest # Default
 resolvePeersFromWorkspaceRoot: true # Default
-autoInstallPeers: false             # Needed to avoid build errors
-ignoreWorkspaceCycles: true         # We have cycles due to docs
+autoInstallPeers: false # Needed to avoid build errors
+ignoreWorkspaceCycles: true # We have cycles due to docs
 minimumReleaseAgeExclude:
-- '@react-foundry/*'
+  - '@react-foundry/*'
 onlyBuiltDependencies:
-  - bun                             # Required in v10
-  - cypress                         # Required in v10
+  - bun # Required in v10
+  - cypress # Required in v10
 allowBuilds:
-  bun: true                         # Required in v11
-  cypress: true                     # Required in v11
-  "@parcel/watcher": false
+  bun: true # Required in v11
+  cypress: true # Required in v11
+  '@parcel/watcher': false
   esbuild: false
   sharp: false
   unrs-resolver: false

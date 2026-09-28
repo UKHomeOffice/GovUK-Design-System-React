@@ -8,11 +8,11 @@ const meta = {
   component: BackLink,
   parameters: {
     chromatic: { viewports: [320, 320] },
-    description: 'A component to help users navigate back one page.'
+    description: 'A component to help users navigate back one page.',
   },
   args: {
     href: '#',
-  }
+  },
 } satisfies Meta<typeof BackLink>;
 
 export default meta;
@@ -20,34 +20,34 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    text: 'Back'
-  }
+    text: 'Back',
+  },
 };
 
 export const Standard: Story = {
-  args: {}
+  args: {},
 };
 
 export const DarkBackgrounds: Story = {
   args: {
-    classModifiers: 'inverse'
+    classModifiers: 'inverse',
   },
-  render: ({...props}) => (
+  render: ({ ...props }) => (
     <Panel classModifiers="interruption">
       <BackLink {...props} />
     </Panel>
-  )
+  ),
 };
 
 export const CustomText: Story = {
   args: {
-    text: 'Yn ôl'
-  }
+    text: 'Yn ôl',
+  },
 };
 
 export const NoHRef: Story = {
   name: 'No HRef',
   args: {
-    href: undefined
-  }
+    href: undefined,
+  },
 };

@@ -1,7 +1,7 @@
-@use "@not-govuk/sass-base" as *;
-@use "govuk-frontend/dist/govuk/core/links";
+@use '@not-govuk/sass-base' as *;
+@use 'govuk-frontend/dist/govuk/core/links';
 
 // Global override
 a {
-  @extend .govuk-link
+  @extend .govuk-link;
 }

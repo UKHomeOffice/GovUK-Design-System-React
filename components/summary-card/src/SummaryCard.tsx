@@ -1,17 +1,18 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { Anchor, AnchorList } from "@react-foundry/anchor-list";
+import { Anchor, AnchorList } from '@react-foundry/anchor-list';
 
 import '../assets/SummaryCard.scss';
 
-export type SummaryCardProps = StandardProps & HTMLAttributes<HTMLDivElement> & {
-  /** Links to perform status related actions */
-  actions?: Anchor[]
-  /** Contents */
-  children?: ReactNode
-  /** Title of the summary card */
-  title: string
-};
+export type SummaryCardProps = StandardProps &
+  HTMLAttributes<HTMLDivElement> & {
+    /** Links to perform status related actions */
+    actions?: Anchor[];
+    /** Contents */
+    children?: ReactNode;
+    /** Title of the summary card */
+    title: string;
+  };
 
 export const SummaryCard: FC<SummaryCardProps> = ({
   actions,
@@ -32,9 +33,7 @@ export const SummaryCard: FC<SummaryCardProps> = ({
           <AnchorList items={actions} classBlock={classes('actions')} />
         )}
       </div>
-      <div className={classes('content')}>
-        {children}
-      </div>
+      <div className={classes('content')}>{children}</div>
     </div>
   );
 };

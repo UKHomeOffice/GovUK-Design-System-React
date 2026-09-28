@@ -1,11 +1,11 @@
-@use "@not-govuk/sass-base" as *;
-@use "govuk-frontend/dist/govuk/components/input";
+@use '@not-govuk/sass-base' as *;
+@use 'govuk-frontend/dist/govuk/components/input';
 
 .govuk-input {
-  &[type="checkbox"],
-  &[type="file"],
-  &[type="radio"],
-  &[type="range"] {
+  &[type='checkbox'],
+  &[type='file'],
+  &[type='radio'],
+  &[type='range'] {
     border: initial;
     box-sizing: initial;
     height: initial;
@@ -15,11 +15,11 @@
     appearance: auto;
   }
 
-  &[type="color"] {
+  &[type='color'] {
     width: 2.5em;
   }
 
-  &[type="range"] {
+  &[type='range'] {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -32,19 +32,19 @@
 
 // Overrides
 :where(.govuk-template__page) {
-  input[type="color"],
-  input[type="date"],
-  input[type="datetime-local"],
-  input[type="email"],
-  input[type="month"],
-  input[type="number"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="text"],
-  input[type="time"],
-  input[type="url"],
-  input[type="week"] {
+  input[type='color'],
+  input[type='date'],
+  input[type='datetime-local'],
+  input[type='email'],
+  input[type='month'],
+  input[type='number'],
+  input[type='password'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='time'],
+  input[type='url'],
+  input[type='week'] {
     @extend .govuk-input;
 
     &.govuk-input--error {
@@ -52,44 +52,44 @@
     }
   }
 
-  input[type="color"] {
+  input[type='color'] {
     width: 2.5em;
   }
 
-  input[type="number"] {
+  input[type='number'] {
     appearance: none;
     -moz-appearance: textfield;
   }
 
-  input[type="password"],
-  input[type="text"] {
+  input[type='password'],
+  input[type='text'] {
     appearance: none;
   }
 
-  input[type="range"] {
+  input[type='range'] {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
 
-  input[type="range"]:focus {
+  input[type='range']:focus {
     box-shadow: none;
   }
 
-  @include govuk-media-query($from: "tablet") {
-    input[type="date"],
-    input[type="datetime-local"],
-    input[type="month"],
-    input[type="tel"],
-    input[type="time"],
-    input[type="week"] {
+  @include govuk-media-query($from: 'tablet') {
+    input[type='date'],
+    input[type='datetime-local'],
+    input[type='month'],
+    input[type='tel'],
+    input[type='time'],
+    input[type='week'] {
       width: auto;
     }
   }
 
   input {
-    background-color: govuk-functional-colour("body-background");
-    color: govuk-functional-colour("text");
+    background-color: govuk-functional-colour('body-background');
+    color: govuk-functional-colour('text');
   }
 
   // FIXME: Do we still need these? - Use a react prop instead?

@@ -5,7 +5,7 @@ import FormGroup from '../src/FormGroup';
 describe('FormGroup', () => {
   const minimalProps = {
     id: 'my-field',
-    label: 'My field'
+    label: 'My field',
   };
 
   describe('when given minimal valid props', () => {
@@ -14,8 +14,10 @@ describe('FormGroup', () => {
     });
 
     it('renders a fieldset', async () => expect(screen.getByRole('group')).toBeInTheDocument());
-    it('renders the label (as a legend)', async () => expect(screen.getByText('My field')).toBeInTheDocument());
-    it('does NOT render a label', async () => expect(screen.queryByLabelText('My field')).toBeNull());
+    it('renders the label (as a legend)', async () =>
+      expect(screen.getByText('My field')).toBeInTheDocument());
+    it('does NOT render a label', async () =>
+      expect(screen.queryByLabelText('My field')).toBeNull());
   });
 
   describe('when given all valid props', () => {
@@ -31,9 +33,12 @@ describe('FormGroup', () => {
       });
 
       it('renders a fieldset', async () => expect(screen.getByRole('group')).toBeInTheDocument());
-      it('that is described by the error and the hint', async () => expect(screen.getByRole('group')).toHaveAccessibleDescription('My hint Error: My error'));
-      it('renders the label (as a legend)', async () => expect(screen.getByText('My field')).toBeInTheDocument());
-      it('does NOT render a label', async () => expect(screen.queryByLabelText('My field')).toBeNull());
+      it('that is described by the error and the hint', async () =>
+        expect(screen.getByRole('group')).toHaveAccessibleDescription('My hint Error: My error'));
+      it('renders the label (as a legend)', async () =>
+        expect(screen.getByText('My field')).toBeInTheDocument());
+      it('does NOT render a label', async () =>
+        expect(screen.queryByLabelText('My field')).toBeNull());
     });
 
     describe('including a fieldId', () => {
@@ -42,7 +47,7 @@ describe('FormGroup', () => {
         fieldId: 'my-field-input',
         hint: 'My hint',
         id: 'my-field',
-        label: 'My field'
+        label: 'My field',
       };
       beforeEach(async () => {
         render(h(FormGroup, props, 'Child'));

@@ -3,7 +3,6 @@ NotGovUK - Standalone Input
 
 A single-line, form field with a submit button.
 
-
 Using this package
 ------------------
 
@@ -19,17 +18,12 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import StandaloneInput from '@not-govuk/standalone-input';
 
-export const MyComponent = props => (
-  <StandaloneInput
-    label="Your message"
-    name="message"
-    button="Send"
-  />
+export const MyComponent = (props) => (
+  <StandaloneInput label="Your message" name="message" button="Send" />
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -41,7 +35,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -50,7 +43,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -58,7 +50,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

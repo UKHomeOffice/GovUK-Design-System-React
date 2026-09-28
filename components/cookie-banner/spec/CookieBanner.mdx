@@ -7,7 +7,9 @@ export const meta = Stories.default;
 
 # Cookie banner
 
-<p><Tag text="Experimental" /></p>
+<p>
+  <Tag text="Experimental" />
+</p>
 
 This component is currently experimental because [more research] is needed to validate it.
 
@@ -15,7 +17,6 @@ Allow users to accept or reject cookies which are not essential to making your s
 
 <Primary />
 <Controls />
-
 
 ## When to use this component
 
@@ -36,7 +37,6 @@ This cookie banner and the [cookies page pattern] are based on the approach to g
 
 This component page shows several options for using a cookie banner, based on the types of cookies you’re using in the service. We also tell you what to cover in your cookie banner, with some text examples.
 
-
 ### Before you start
 
 [Audit and categorise your cookies] as shown in the cookies page pattern to help you choose the best option for your service.
@@ -47,7 +47,6 @@ You must not take the information on this page as legal advice. Your organisatio
 - General Data Protection Regulation (GDPR)
 
 Check with your organisation’s privacy expert to see how data protection legislation affects your website and service.
-
 
 ## How it works
 
@@ -69,13 +68,11 @@ Make sure the cookie banner does not:
 
 Position the cookie banner after the opening `<body>` tag and before the ’skip to main content‘ link.
 
-
 ### Option 1: If you’re only using essential cookies
 
 You can choose not to have a cookie banner if the service only sets essential or ‘strictly necessary’ cookies, as these do not need user consent.
 
 However, you must tell users that you set essential cookies. You can do this with a cookies page — link to this page in the footer.
-
 
 ### Option 2: If you set non-essential cookies on the server
 
@@ -95,11 +92,9 @@ Here’s an example of a confirmation message inside a form:
 
 <Canvas of={Stories.Confirmation} />
 
-
 #### Show the same message to all users
 
 In the cookie banner, tell the user about all the cookies you’re using in the service — whether they’ve enabled JavaScript or not. This way, you will not need to ask the user to give their consent again on their next visit.
-
 
 #### Help users keep their place using progressive enhancement
 
@@ -116,7 +111,6 @@ Here’s an example of a progressively enhanced cookie banner that includes all 
 Here’s the same example of a progressively enhanced cookie banner, with the confirmation message shown instead:
 
 <Canvas of={Stories.ProgressiveEnhancementConfirmed} />
-
 
 ### Option 3: If you set non-essential cookies, but only on the client
 
@@ -149,7 +143,6 @@ Show a confirmation message confirming that the user has either accepted or reje
 
 <Canvas of={Stories.JSOnlyRejected} />
 
-
 ## What to cover in your cookie banner
 
 Include the name of the service in the banner heading to help users understand that the cookies you’re talking about are different from the ones set by the main GOV.UK platform.
@@ -163,13 +156,11 @@ Keep the text as short as possible while making sure it’s an accurate descript
 
 [See the cookies page for more advice on writing about cookies.]
 
-
 ### If you’re using essential cookies and analytics cookies
 
 You can use this example text for a service which sets essential and analytics cookies. Analytics cookies are those set by your organisation to collect information about how people are using your digital service.
 
 <Canvas of={Stories.EssentialAndAnalytics} />
-
 
 ### If you’re using more than one type of non-essential cookie
 
@@ -181,11 +172,9 @@ You can use this example text for a service that set:
 
 <Canvas of={Stories.EssentialAndOthers} />
 
-
 ## Creating a cookies page
 
 You’ll need a [cookies page] as well as a cookie banner.
-
 
 ## Research on this component
 
@@ -200,7 +189,6 @@ We decided to remove the visible focus indicator from the confirmation message f
 - it displays in place of the cookie message, which is the last thing the user interacted with
 
 In this scenario, we assume that a visible focus indicator would be more likely to confuse users than to help them. However, we need more research to prove this.
-
 
 [more research]: https://design-system.service.gov.uk/components/cookie-banner/#research-on-this-component
 [cookies page pattern]: https://design-system.service.gov.uk/patterns/cookies-page/

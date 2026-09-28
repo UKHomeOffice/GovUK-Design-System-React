@@ -11,12 +11,12 @@ const meta = {
   title: 'Error summary',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A component to summarise any errors a user has made.'
+    description: 'A component to summarise any errors a user has made.',
   },
   component: ErrorSummary,
-  args: { title: 'There is a problem' }
+  args: { title: 'There is a problem' },
 } satisfies Meta<typeof ErrorSummary>;
 
 export default meta;
@@ -30,15 +30,15 @@ export const Primary: Story = {
       items={[
         {
           text: 'The date your passport was issued must be in the past',
-          href: '#'
+          href: '#',
         },
         {
           text: 'Enter a postcode, like AA1 1AA',
-          href: '#'
-        }
+          href: '#',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -49,15 +49,15 @@ export const Standard: Story = {
       items={[
         {
           text: 'The date your passport was issued must be in the past',
-          href: '#'
+          href: '#',
         },
         {
           text: 'Enter a postcode, like AA1 1AA',
-          href: '#'
-        }
+          href: '#',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Linking: Story = {
@@ -69,8 +69,8 @@ export const Linking: Story = {
         items={[
           {
             text: 'Enter your full name',
-            href: '#full-name-input'
-          }
+            href: '#full-name-input',
+          },
         ]}
       />
       <h1>Your details</h1>
@@ -82,7 +82,7 @@ export const Linking: Story = {
         error="Enter your full name"
       />
     </Fragment>
-  )
+  ),
 };
 
 export const LinkingToDateInput: Story = {
@@ -94,23 +94,21 @@ export const LinkingToDateInput: Story = {
         items={[
           {
             text: 'The date your passport was issued must include a year',
-            href: '#passport-issued-year'
-          }
+            href: '#passport-issued-year',
+          },
         ]}
       />
       <DateInput
         id="passport-issued"
-        label={
-          <h1 className="govuk-heading-l">When was your passport issued?</h1>
-        }
+        label={<h1 className="govuk-heading-l">When was your passport issued?</h1>}
         name="passport-issued"
         hint="For example, 12 11 2007"
         error={{
-          year: 'The date your passport was issued must include a year'
+          year: 'The date your passport was issued must include a year',
         }}
       />
     </Fragment>
-  )
+  ),
 };
 
 export const LinkingToCheckboxes: Story = {
@@ -122,8 +120,8 @@ export const LinkingToCheckboxes: Story = {
         items={[
           {
             text: 'Select if you are British, Irish or a citizen of a different country',
-            href: '#nationality-checkbox-0'
-          }
+            href: '#nationality-checkbox-0',
+          },
         ]}
       />
       <Checkboxes
@@ -133,33 +131,28 @@ export const LinkingToCheckboxes: Story = {
           {
             value: 'british',
             label: 'British',
-            hint: 'including English, Scottish, Welsh and Northern Irish'
+            hint: 'including English, Scottish, Welsh and Northern Irish',
           },
           {
             value: 'irish',
-            label: 'Irish'
+            label: 'Irish',
           },
           {
             value: 'other',
-            label: 'Citizen of another country'
-          }
+            label: 'Citizen of another country',
+          },
         ]}
         hint="Select all that apply."
         error="Select if you are British, Irish or a citizen of a different country"
       />
     </Fragment>
-  )
+  ),
 };
 
 export const WhereToPut: Story = {
   args: {},
   render: ({ ...props }) => (
-    <GovUKPage
-      maxContentsWidth="690"
-      serviceName="Service name"
-      serviceHref="#"
-      backHref="#"
-    >
+    <GovUKPage maxContentsWidth="690" serviceName="Service name" serviceHref="#" backHref="#">
       <div className="govuk-grid-row">
         <div className="govuk-grid-column-two-thirds">
           <ErrorSummary
@@ -167,25 +160,21 @@ export const WhereToPut: Story = {
             items={[
               {
                 text: 'The date your passport was issued must include a year',
-                href: '#passport-issued-year'
-              }
+                href: '#passport-issued-year',
+              },
             ]}
           />
           <DateInput
             id="passport-issued"
-            label={
-              <h1 className="govuk-heading-l">
-                When was your passport issued?
-              </h1>
-            }
+            label={<h1 className="govuk-heading-l">When was your passport issued?</h1>}
             name="passport-issued"
             hint="For example, 12 11 2007"
             error={{
-              year: 'The date your passport was issued must include a year'
+              year: 'The date your passport was issued must include a year',
             }}
           />
         </div>
       </div>
     </GovUKPage>
-  )
+  ),
 };

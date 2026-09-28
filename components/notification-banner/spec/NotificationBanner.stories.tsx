@@ -6,16 +6,16 @@ const meta = {
   title: 'Notification banner',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
     description:
-      'A component to tell the user about something they need to know about, but that’s not directly related to the page content.'
+      'A component to tell the user about something they need to know about, but that’s not directly related to the page content.',
   },
   component: NotificationBanner,
   args: {
     children:
-      'There may be a delay in processing your application because of the coronavirus outbreak.'
-  }
+      'There may be a delay in processing your application because of the coronavirus outbreak.',
+  },
 } satisfies Meta<typeof NotificationBanner>;
 
 export default meta;
@@ -26,14 +26,18 @@ export const Primary: Story = {
   render: ({ ...props }) => (
     <NotificationBanner {...props}>
       <p className="govuk-notification-banner__heading">
-        You have 7 days left to send your application. <a className="govuk-notification-banner__link" href="#">View application</a>.
+        You have 7 days left to send your application.{' '}
+        <a className="govuk-notification-banner__link" href="#">
+          View application
+        </a>
+        .
       </p>
     </NotificationBanner>
-  )
+  ),
 };
 
 export const Standard: Story = {
-  args: {}
+  args: {},
 };
 
 export const Neutral: Story = {
@@ -41,10 +45,14 @@ export const Neutral: Story = {
   render: ({ ...props }) => (
     <NotificationBanner {...props}>
       <p className="govuk-notification-banner__heading">
-        You have 7 days left to send your application. <a className="govuk-notification-banner__link" href="#">View application</a>.
+        You have 7 days left to send your application.{' '}
+        <a className="govuk-notification-banner__link" href="#">
+          View application
+        </a>
+        .
       </p>
     </NotificationBanner>
-  )
+  ),
 };
 
 export const Success: Story = {
@@ -55,8 +63,12 @@ export const Success: Story = {
         Training outcome recorded and trainee withdrawn
       </h3>
       <p className="govuk-body">
-        Contact <a className="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.
+        Contact{' '}
+        <a className="govuk-notification-banner__link" href="#">
+          example@department.gov.uk
+        </a>{' '}
+        if you think there’s a problem.
       </p>
     </NotificationBanner>
-  )
+  ),
 };

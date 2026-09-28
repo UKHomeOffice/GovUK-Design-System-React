@@ -7,14 +7,14 @@ export default defineConfig({
     modulePreload: false,
     rolldownOptions: {
       output: {
-        codeSplitting: false
-      }
+        codeSplitting: false,
+      },
     },
     ssr: 'src/server/index.ts',
     outDir: 'dist/server',
-    target: 'node24'
+    target: 'node24',
   },
   ssr: {
-    noExternal: true
-  }
+    noExternal: true,
+  },
 });

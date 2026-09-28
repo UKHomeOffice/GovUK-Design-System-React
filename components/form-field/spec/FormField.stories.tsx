@@ -6,15 +6,15 @@ const meta = {
   title: 'Unofficial/Form field',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A component for colecting a piece of data from the user.'
+    description: 'A component for colecting a piece of data from the user.',
   },
   component: FormField,
   args: {
     name: 'name',
-    hint: 'The name you’ll use on promotional material.'
-  }
+    hint: 'The name you’ll use on promotional material.',
+  },
 } satisfies Meta<typeof FormField>;
 
 export default meta;
@@ -25,11 +25,9 @@ export const Primary: Story = {
   render: ({ ...props }) => (
     <FormField
       {...props}
-      label={
-        <h1 className="govuk-heading-l">What is the name of the event?</h1>
-      }
+      label={<h1 className="govuk-heading-l">What is the name of the event?</h1>}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -37,56 +35,46 @@ export const Standard: Story = {
   render: ({ ...props }) => (
     <FormField
       {...props}
-      label={
-        <h1 className="govuk-heading-l">What is the name of the event?</h1>
-      }
+      label={<h1 className="govuk-heading-l">What is the name of the event?</h1>}
     />
-  )
+  ),
 };
 
 export const Multiline: Story = {
   args: {
     name: 'desc',
     hint: 'This will be displayed on promotional material.',
-    rows: 3
+    rows: 3,
   },
   render: ({ ...props }) => (
     <FormField
       {...props}
-      label={
-        <h1 className="govuk-heading-l">How would you describe the event?</h1>
-      }
+      label={<h1 className="govuk-heading-l">How would you describe the event?</h1>}
     />
   ),
-  name: 'Multi-line'
+  name: 'Multi-line',
 };
 
 export const Date: Story = {
   args: { name: 'date', hint: undefined, type: 'date' },
   render: ({ ...props }) => (
-    <FormField
-      {...props}
-      label={<h1 className="govuk-heading-l">When is the event?</h1>}
-    />
-  )
+    <FormField {...props} label={<h1 className="govuk-heading-l">When is the event?</h1>} />
+  ),
 };
 
 export const Datepicker: Story = {
   args: { name: 'date', hint: undefined, type: 'native-date' },
   render: ({ ...props }) => (
-    <FormField
-      {...props}
-      label={<h1 className="govuk-heading-l">When is the event?</h1>}
-    />
+    <FormField {...props} label={<h1 className="govuk-heading-l">When is the event?</h1>} />
   ),
-  name: 'Date-picker'
+  name: 'Date-picker',
 };
 
 export const Singlechoicefew: Story = {
   args: {
     name: 'age-restricted',
     hint: "Select 'No' if there will be any explicit content.",
-    classModifiers: 'inline'
+    classModifiers: 'inline',
   },
   render: ({ ...props }) => (
     <FormField
@@ -95,214 +83,208 @@ export const Singlechoicefew: Story = {
       options={[
         {
           value: '1',
-          label: 'Yes'
+          label: 'Yes',
         },
         {
           value: '0',
-          label: 'No'
-        }
+          label: 'No',
+        },
       ]}
     />
   ),
-  name: 'Single-choice-few'
+  name: 'Single-choice-few',
 };
 
 export const Singlechoicesome: Story = {
   args: {
     name: 'location',
-    hint: 'Select the country in which the event will be held.'
+    hint: 'Select the country in which the event will be held.',
   },
   render: ({ ...props }) => (
     <FormField
       {...props}
-      label={
-        <h1 className="govuk-heading-l">Where will the event take place?</h1>
-      }
+      label={<h1 className="govuk-heading-l">Where will the event take place?</h1>}
       options={[
         {
           value: 'fr',
-          label: 'France'
+          label: 'France',
         },
         {
           value: 'de',
-          label: 'Germany'
+          label: 'Germany',
         },
         {
           value: 'ie',
-          label: 'Republic of Ireland'
+          label: 'Republic of Ireland',
         },
         {
           value: 'pt',
-          label: 'Portugal'
+          label: 'Portugal',
         },
         {
           value: 'es',
-          label: 'Spain'
+          label: 'Spain',
         },
         {
           value: 'nl',
-          label: 'The Netherlands'
+          label: 'The Netherlands',
         },
         {
           value: 'gb',
           label: 'United Kingdom',
-          selected: true
-        }
+          selected: true,
+        },
       ]}
     />
   ),
-  name: 'Single-choice-some'
+  name: 'Single-choice-some',
 };
 
 export const Singlechoicemany: Story = {
   args: {
     name: 'location',
-    hint: 'Select the country in which the event will be held.'
+    hint: 'Select the country in which the event will be held.',
   },
   render: ({ ...props }) => (
     <FormField
       {...props}
-      label={
-        <h1 className="govuk-heading-l">Where will the event take place?</h1>
-      }
+      label={<h1 className="govuk-heading-l">Where will the event take place?</h1>}
       options={[
         {
           value: 'bg',
-          label: 'Bulgaria'
+          label: 'Bulgaria',
         },
         {
           value: 'cz',
-          label: 'Czech Republic'
+          label: 'Czech Republic',
         },
         {
           value: 'fr',
-          label: 'France'
+          label: 'France',
         },
         {
           value: 'de',
-          label: 'Germany'
+          label: 'Germany',
         },
         {
           value: 'fi',
-          label: 'Finland'
+          label: 'Finland',
         },
         {
           value: 'hu',
-          label: 'Hungary'
+          label: 'Hungary',
         },
         {
           value: 'it',
-          label: 'Italy'
+          label: 'Italy',
         },
         {
           value: 'ie',
-          label: 'Republic of Ireland'
+          label: 'Republic of Ireland',
         },
         {
           value: 'ro',
-          label: 'Romania'
+          label: 'Romania',
         },
         {
           value: 'no',
-          label: 'Norway'
+          label: 'Norway',
         },
         {
           value: 'pl',
-          label: 'Poland'
+          label: 'Poland',
         },
         {
           value: 'pt',
-          label: 'Portugal'
+          label: 'Portugal',
         },
         {
           value: 'ru',
-          label: 'Russia'
+          label: 'Russia',
         },
         {
           value: 'sk',
-          label: 'Slovakia'
+          label: 'Slovakia',
         },
         {
           value: 'si',
-          label: 'Slovenia'
+          label: 'Slovenia',
         },
         {
           value: 'es',
-          label: 'Spain'
+          label: 'Spain',
         },
         {
           value: 'se',
-          label: 'Sweden'
+          label: 'Sweden',
         },
         {
           value: 'ch',
-          label: 'Switzerland'
+          label: 'Switzerland',
         },
         {
           value: 'nl',
-          label: 'The Netherlands'
+          label: 'The Netherlands',
         },
         {
           value: 'ua',
-          label: 'Ukraine'
+          label: 'Ukraine',
         },
         {
           value: 'gb',
           label: 'United Kingdom',
-          selected: true
-        }
+          selected: true,
+        },
       ]}
     />
   ),
-  name: 'Single-choice-many'
+  name: 'Single-choice-many',
 };
 
 export const Multiplechoicesome: Story = {
   args: {
     name: 'location',
     hint: 'Select all countries that will be hosting the event.',
-    multiple: true
+    multiple: true,
   },
   render: ({ ...props }) => (
     <FormField
       {...props}
-      label={
-        <h1 className="govuk-heading-l">Where will the event take place?</h1>
-      }
+      label={<h1 className="govuk-heading-l">Where will the event take place?</h1>}
       options={[
         {
           value: 'fr',
-          label: 'France'
+          label: 'France',
         },
         {
           value: 'de',
-          label: 'Germany'
+          label: 'Germany',
         },
         {
           value: 'ie',
-          label: 'Republic of Ireland'
+          label: 'Republic of Ireland',
         },
         {
           value: 'pt',
-          label: 'Portugal'
+          label: 'Portugal',
         },
         {
           value: 'es',
-          label: 'Spain'
+          label: 'Spain',
         },
         {
           value: 'nl',
-          label: 'The Netherlands'
+          label: 'The Netherlands',
         },
         {
           value: 'gb',
           label: 'United Kingdom',
-          selected: true
-        }
+          selected: true,
+        },
       ]}
     />
   ),
-  name: 'Multiple-choice-some'
+  name: 'Multiple-choice-some',
 };
 
 export const Multiplechoicemany: Story = {
@@ -310,102 +292,100 @@ export const Multiplechoicemany: Story = {
     name: 'location',
     hint: 'Select all countries that will be hosting the event.',
     multiple: true,
-    size: 8
+    size: 8,
   },
   render: ({ ...props }) => (
     <FormField
       {...props}
-      label={
-        <h1 className="govuk-heading-l">Where will the event take place?</h1>
-      }
+      label={<h1 className="govuk-heading-l">Where will the event take place?</h1>}
       options={[
         {
           value: 'bg',
-          label: 'Bulgaria'
+          label: 'Bulgaria',
         },
         {
           value: 'cz',
-          label: 'Czech Republic'
+          label: 'Czech Republic',
         },
         {
           value: 'fr',
-          label: 'France'
+          label: 'France',
         },
         {
           value: 'de',
-          label: 'Germany'
+          label: 'Germany',
         },
         {
           value: 'fi',
-          label: 'Finland'
+          label: 'Finland',
         },
         {
           value: 'hu',
-          label: 'Hungary'
+          label: 'Hungary',
         },
         {
           value: 'it',
-          label: 'Italy'
+          label: 'Italy',
         },
         {
           value: 'ie',
-          label: 'Republic of Ireland'
+          label: 'Republic of Ireland',
         },
         {
           value: 'ro',
-          label: 'Romania'
+          label: 'Romania',
         },
         {
           value: 'no',
-          label: 'Norway'
+          label: 'Norway',
         },
         {
           value: 'pl',
-          label: 'Poland'
+          label: 'Poland',
         },
         {
           value: 'pt',
-          label: 'Portugal'
+          label: 'Portugal',
         },
         {
           value: 'ru',
-          label: 'Russia'
+          label: 'Russia',
         },
         {
           value: 'sk',
-          label: 'Slovakia'
+          label: 'Slovakia',
         },
         {
           value: 'si',
-          label: 'Slovenia'
+          label: 'Slovenia',
         },
         {
           value: 'es',
-          label: 'Spain'
+          label: 'Spain',
         },
         {
           value: 'se',
-          label: 'Sweden'
+          label: 'Sweden',
         },
         {
           value: 'ch',
-          label: 'Switzerland'
+          label: 'Switzerland',
         },
         {
           value: 'nl',
-          label: 'The Netherlands'
+          label: 'The Netherlands',
         },
         {
           value: 'ua',
-          label: 'Ukraine'
+          label: 'Ukraine',
         },
         {
           value: 'gb',
           label: 'United Kingdom',
-          selected: true
-        }
+          selected: true,
+        },
       ]}
     />
   ),
-  name: 'Multiple-choice-many'
+  name: 'Multiple-choice-many',
 };

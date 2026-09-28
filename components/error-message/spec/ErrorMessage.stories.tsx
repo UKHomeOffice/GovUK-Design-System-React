@@ -6,12 +6,12 @@ const meta = {
   title: 'Error message',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'An error message associated with a form field.'
+    description: 'An error message associated with a form field.',
   },
   component: ErrorMessage,
-  args: { children: 'The date your passport was issued must be in the past' }
+  args: { children: 'The date your passport was issued must be in the past' },
 } satisfies Meta<typeof ErrorMessage>;
 
 export default meta;
@@ -23,23 +23,22 @@ export const Primary: Story = {
     <>
       <ErrorMessage {...props} />
     </>
-  )
+  ),
 };
 
 export const Standard: Story = {
-  args: {}
+  args: {},
 };
 
 export const Legend: Story = {
   args: {
-    children:
-      'Select if you are British, Irish or a citizen of a different country'
+    children: 'Select if you are British, Irish or a citizen of a different country',
   },
   render: ({ ...props }) => (
     <>
       <ErrorMessage {...props} />
     </>
-  )
+  ),
 };
 
 export const Label: Story = {
@@ -48,5 +47,5 @@ export const Label: Story = {
     <>
       <ErrorMessage {...props} />
     </>
-  )
+  ),
 };

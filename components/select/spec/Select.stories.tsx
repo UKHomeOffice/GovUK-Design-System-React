@@ -6,12 +6,12 @@ const meta = {
   title: 'Select',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A component to allow users to choose from many options.'
+    description: 'A component to allow users to choose from many options.',
   },
   component: Select,
-  args: { label: 'Sort by', name: 'sort' }
+  args: { label: 'Sort by', name: 'sort' },
 } satisfies Meta<typeof Select>;
 
 export default meta;
@@ -25,24 +25,24 @@ export const Primary: Story = {
       options={[
         {
           value: 'published',
-          label: 'Recently published'
+          label: 'Recently published',
         },
         {
           value: 'updated',
           label: 'Recently updated',
-          selected: true
+          selected: true,
         },
         {
           value: 'views',
-          label: 'Most views'
+          label: 'Most views',
         },
         {
           value: 'comments',
-          label: 'Most comments'
-        }
+          label: 'Most comments',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -53,22 +53,22 @@ export const Standard: Story = {
       options={[
         {
           value: 'published',
-          label: 'Recently published'
+          label: 'Recently published',
         },
         {
           value: 'updated',
           label: 'Recently updated',
-          selected: true
+          selected: true,
         },
         {
           value: 'views',
-          label: 'Most views'
+          label: 'Most views',
         },
         {
           value: 'comments',
-          label: 'Most comments'
-        }
+          label: 'Most comments',
+        },
       ]}
     />
-  )
+  ),
 };

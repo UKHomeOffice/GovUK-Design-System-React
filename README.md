@@ -13,7 +13,6 @@ The components are written in [Typescript] and documented in
 
 (See [our documentation site] and [our Storybook].)
 
-
 Consuming these components
 --------------------------
 
@@ -26,12 +25,10 @@ need to ensure that you provide an instance of [react-router].
 As such, we suggest that you use our specially designed tech stack for
 this purpose. See: [Getting started].
 
-
 Working on this repository
 --------------------------
 
 See: [Working on and contributing to NotGovUK]
-
 
 Navigating this repository
 --------------------------
@@ -52,7 +49,6 @@ broken down into libraries, components and applications.
 - `storybook-static/`
   A static version of the storybook that can be created by running `make docs`.
 
-
 Files in a typical component
 ----------------------------
 
@@ -72,7 +68,6 @@ Files in a typical component
    Typically this will just link to the [GOV.UK Design System] and include a
    screenshot of the component.
 
-
 Contributing
 ------------
 
@@ -87,7 +82,6 @@ Finally, this work is still at quite an early stage. If you run into any
 problems or have any questions, please do [get in touch].
 
 -- Daniel Martin, December 2019 (updated August 2020).
-
 
 [GOV.UK Design System]: https://design-system.service.gov.uk/
 [React]: https://reactjs.org/

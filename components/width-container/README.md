@@ -6,7 +6,6 @@ A simple container to limit the width of its contents.
 This is used by the page components to control the width of the page
 contents. Users will not typically need to use this.
 
-
 Using this package
 ------------------
 
@@ -24,15 +23,12 @@ import WidthContainer from '@not-govuk/width-container';
 
 const myMaxWidthInPixels = 300;
 
-export const MyComponent = props => (
-  <WidthContainer maxWidth={myMaxWidthInPixels}>
-    My contents
-  </WidthContainer>
+export const MyComponent = (props) => (
+  <WidthContainer maxWidth={myMaxWidthInPixels}>My contents</WidthContainer>
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -44,20 +40,17 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
 
-
 ### Building
 
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

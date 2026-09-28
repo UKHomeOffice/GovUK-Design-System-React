@@ -3,7 +3,6 @@ Not Govuk - Form
 
 A component to collect information from the user.
 
-
 Using this package
 ------------------
 
@@ -19,15 +18,13 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import Form from '@not-govuk/form';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <Form action="/result" method="get">
     <Form.TextInput
       name="fullName"
       label={<h2>What is your name?</h2>}
       hint="Write your firstname followed by your surname"
-      validators={[
-        required()
-      ]}
+      validators={[required()]}
     />
     <Form.Radios
       name="sex"
@@ -35,32 +32,24 @@ export const MyComponent = props => (
       options={[
         { value: 'male', label: 'Male' },
         { value: 'female', label: 'Female' },
-        { value: 'no', label: 'No thanks, we\'re British' }
+        { value: 'no', label: "No thanks, we're British" },
       ]}
-      validators={[
-        required('Provide your sex')
-      ]}
+      validators={[required('Provide your sex')]}
     />
     <Form.DateInput
       name="dob"
       prettyName="date of birth"
       label={<h2>What is your date of birth?</h2>}
-      validators={[
-        required('Provide your date of birth'),
-        past(),
-        after('1900-01-01')()
-      ]}
+      validators={[required('Provide your date of birth'), past(), after('1900-01-01')()]}
     />
     <Form.Radios
       name="married"
       label={<h2>Are you married?</h2>}
       options={[
         { value: 'Y', label: 'Yes' },
-        { value: 'N', label: 'No' }
+        { value: 'N', label: 'No' },
       ]}
-      validators={[
-        required('Provide your marital status')
-      ]}
+      validators={[required('Provide your marital status')]}
     />
     <Form.Submit value="Submit" />
   </Form>
@@ -68,7 +57,6 @@ export const MyComponent = props => (
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -80,20 +68,17 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
 
-
 ### Building
 
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

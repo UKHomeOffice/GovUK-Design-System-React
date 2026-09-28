@@ -7,12 +7,12 @@ const meta = {
   title: 'Internal/Button group',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A component for grouping buttons and links on a single line.'
+    description: 'A component for grouping buttons and links on a single line.',
   },
   component: ButtonGroup,
-  args: {}
+  args: {},
 } satisfies Meta<typeof ButtonGroup>;
 
 export default meta;
@@ -26,7 +26,7 @@ export const Primary: Story = {
       <A href="#">Two</A>
       <A href="#">Three</A>
     </ButtonGroup>
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -37,5 +37,5 @@ export const Standard: Story = {
       <A href="#">Two</A>
       <A href="#">Three</A>
     </ButtonGroup>
-  )
+  ),
 };

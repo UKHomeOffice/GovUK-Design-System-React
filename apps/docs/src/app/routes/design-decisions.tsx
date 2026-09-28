@@ -1,4 +1,4 @@
-import type { Route } from "./+types/design-decisions";
+import type { Route } from './+types/design-decisions';
 import { siteTitle } from '../config';
 
 import Markdown from '../../../../../docs/design-decisions.md';

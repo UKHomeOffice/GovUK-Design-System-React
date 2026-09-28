@@ -4,8 +4,7 @@ import { render, screen, userEvent } from '@react-foundry/component-test-helpers
 import Button from '../src/Button';
 
 describe('Button', () => {
-  const minimalProps = {
-  };
+  const minimalProps = {};
 
   describe('when given minimal valid props', () => {
     beforeEach(async () => {
@@ -21,7 +20,7 @@ describe('Button', () => {
       disabled: true,
       href: '/foo/bar',
       id: 'my-button',
-      start: true
+      start: true,
     };
 
     beforeEach(async () => {
@@ -29,9 +28,12 @@ describe('Button', () => {
     });
 
     it('renders a button', async () => expect(screen.getByRole('button')).toBeInTheDocument());
-    it('that contains the expected text', async () => expect(screen.getByRole('button')).toHaveTextContent('Go'));
-    it('that links to the href', async () => expect(screen.getByRole('button')).toHaveAttribute('href', '/foo/bar'));
-    it('that has the supplied id', async () => expect(screen.getByRole('button')).toHaveAttribute('id', 'my-button'));
+    it('that contains the expected text', async () =>
+      expect(screen.getByRole('button')).toHaveTextContent('Go'));
+    it('that links to the href', async () =>
+      expect(screen.getByRole('button')).toHaveAttribute('href', '/foo/bar'));
+    it('that has the supplied id', async () =>
+      expect(screen.getByRole('button')).toHaveAttribute('id', 'my-button'));
   });
 
   describe('when given all valid props besides a href', () => {
@@ -41,7 +43,7 @@ describe('Button', () => {
       disabled: true,
       id: 'my-button',
       onClick: spy,
-      start: true
+      start: true,
     };
 
     beforeEach(async () => {
@@ -49,7 +51,8 @@ describe('Button', () => {
     });
 
     it('renders a button', async () => expect(screen.getByRole('button')).toBeInTheDocument());
-    it('that contains the expected text', async () => expect(screen.getByRole('button')).toHaveTextContent('Go'));
+    it('that contains the expected text', async () =>
+      expect(screen.getByRole('button')).toHaveTextContent('Go'));
 
     describe.skip('when clicked', () => {
       beforeEach(async () => userEvent.click(screen.getByRole('button')));

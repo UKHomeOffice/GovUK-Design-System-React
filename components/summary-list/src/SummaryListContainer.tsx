@@ -1,9 +1,10 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-export type SummaryListContainerProps = StandardProps & HTMLAttributes<HTMLDListElement> & {
-  children?: ReactNode
-};
+export type SummaryListContainerProps = StandardProps &
+  HTMLAttributes<HTMLDListElement> & {
+    children?: ReactNode;
+  };
 
 export const SummaryListContainer: FC<SummaryListContainerProps> = ({
   children,

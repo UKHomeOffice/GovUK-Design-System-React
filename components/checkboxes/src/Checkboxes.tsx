@@ -7,43 +7,42 @@ import '../assets/Checkboxes.scss';
 
 export type Option = {
   /** Content to render only when the option is selected */
-  conditional?: ReactNode
+  conditional?: ReactNode;
   /** Whether the the option is disabled */
-  disabled?: boolean
+  disabled?: boolean;
   /** Whether the option can only be selected on its own */
-  exclusive?: boolean
+  exclusive?: boolean;
   /** Hint for the option */
-  hint?: string
+  hint?: string;
   /** Label for the option */
-  label: ReactNode
+  label: ReactNode;
   /** Whether the option is selected */
-  selected?: boolean
+  selected?: boolean;
   /** Value of the option */
-  value: string
+  value: string;
 };
 
 export type OptionOrSeperator = string | Option;
 
-export const isSeperator = (v: OptionOrSeperator): v is string => (
-  typeof v === 'string'
-);
+export const isSeperator = (v: OptionOrSeperator): v is string => typeof v === 'string';
 
 export const isOption = (v: OptionOrSeperator): v is Option => !isSeperator(v);
 
-export type CheckboxesProps = StandardProps & Omit<InputHTMLAttributes<HTMLInputElement>, 'label'> & {
-  /** Error message */
-  error?: string
-  /** Hint */
-  hint?: string
-  /** HTML id (If not specified then the name will be used) */
-  id?: string
-  /** Label */
-  label: ReactNode
-  /** HTML name */
-  name: string
-  /** List of options to select from */
-  options: OptionOrSeperator[]
-};
+export type CheckboxesProps = StandardProps &
+  Omit<InputHTMLAttributes<HTMLInputElement>, 'label'> & {
+    /** Error message */
+    error?: string;
+    /** Hint */
+    hint?: string;
+    /** HTML id (If not specified then the name will be used) */
+    id?: string;
+    /** Label */
+    label: ReactNode;
+    /** HTML name */
+    name: string;
+    /** List of options to select from */
+    options: OptionOrSeperator[];
+  };
 
 export const Checkboxes: FC<CheckboxesProps> = ({
   classBlock,
@@ -63,27 +62,18 @@ export const Checkboxes: FC<CheckboxesProps> = ({
   const hintId = `${id}-hint`;
 
   return (
-    <FormGroup
-      id={id}
-      label={label}
-      hint={hint}
-      hintId={hintId}
-      error={error}
-    >
+    <FormGroup id={id} label={label} hint={hint} hintId={hintId} error={error}>
       <div className={classes()}>
         {options.map((v, i) => {
           if (isOption(v)) {
             const optionId = `${id}-checkbox-${i}`;
             const { exclusive, selected, ...rest } = v;
-            const defaultChecked = (
+            const defaultChecked =
               defaultValue === undefined
-              ? selected
-              : (
-                Array.isArray(defaultValue)
+                ? selected
+                : Array.isArray(defaultValue)
                   ? defaultValue.includes(v.value)
-                  : defaultValue === v.value
-              )
-            );
+                  : defaultValue === v.value;
 
             return (
               <Checkbox
@@ -102,7 +92,7 @@ export const Checkboxes: FC<CheckboxesProps> = ({
               </div>
             );
           }
-        } ) }
+        })}
       </div>
     </FormGroup>
   );

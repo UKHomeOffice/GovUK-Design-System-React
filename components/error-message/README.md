@@ -3,7 +3,6 @@ NotGovUK - Error Message
 
 An error message associated with a form field.
 
-
 Using this package
 ------------------
 
@@ -19,13 +18,12 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import ErrorMessage from '@not-govuk/error-message';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <ErrorMessage>The date your passport was issued must be in the past</ErrorMessage>
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -37,7 +35,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -46,7 +43,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -54,7 +50,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

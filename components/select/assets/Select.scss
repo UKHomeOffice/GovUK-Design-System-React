@@ -1,5 +1,5 @@
-@use "@not-govuk/sass-base" as *;
-@use "govuk-frontend/dist/govuk/components/select";
+@use '@not-govuk/sass-base' as *;
+@use 'govuk-frontend/dist/govuk/components/select';
 
 .govuk-select {
   &[multiple] {
@@ -10,13 +10,13 @@
       padding: 0.3125em;
 
       &:nth-child(even) {
-        background-color: govuk-colour("black", $variant: "tint-95");
-        color: govuk-functional-colour("text");
+        background-color: govuk-colour('black', $variant: 'tint-95');
+        color: govuk-functional-colour('text');
       }
 
       &[disabled],
       &:nth-child(even)[disabled] {
-        color: govuk-colour("black", $variant: "tint-80");
+        color: govuk-colour('black', $variant: 'tint-80');
       }
     }
   }
@@ -32,7 +32,7 @@
     }
   }
 
-  @include govuk-media-query($from: "tablet") {
+  @include govuk-media-query($from: 'tablet') {
     select {
       width: auto;
     }
@@ -40,13 +40,13 @@
 
   option,
   select {
-    background-color: govuk-functional-colour("body-background");
-    color: govuk-functional-colour("text");
+    background-color: govuk-functional-colour('body-background');
+    color: govuk-functional-colour('text');
   }
 
   option[disabled],
   option:nth-child(even)[disabled] {
-    color: govuk-colour("black", $variant: "tint-80");
+    color: govuk-colour('black', $variant: 'tint-80');
   }
 
   select[multiple] {
@@ -59,16 +59,16 @@
   }
 
   option:nth-child(even) {
-    background-color: govuk-colour("black", $variant: "tint-95");
-    color: govuk-functional-colour("text");
+    background-color: govuk-colour('black', $variant: 'tint-95');
+    color: govuk-functional-colour('text');
   }
 
   &:where(.govuk-template__page--dark) {
     select[multiple] option:nth-child(even),
     select option:nth-child(even) {
       // Could/should this be done with a new CSS variable?
-      background-color: govuk-colour("black", $variant: "tint-25");
-      color: govuk-functional-colour("text");
+      background-color: govuk-colour('black', $variant: 'tint-25');
+      color: govuk-functional-colour('text');
     }
   }
 }

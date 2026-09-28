@@ -1,4 +1,4 @@
-import type { Route } from "./+types/working-on-your-project";
+import type { Route } from './+types/working-on-your-project';
 import { siteTitle } from '../config';
 
 import Markdown from '../../../../../docs/working-on-your-project.md';

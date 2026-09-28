@@ -32,13 +32,11 @@ replace parts of our framework with Remix.) One such example, may be our support
 for building 'child' design systems. You can start a brand new project or
 prototype using the following steps.
 
-
 ### 1. Set up your repository
 
 You should first set up a blank code repository in the provider of your
 choice. For the purposes of this document I will assume [GitHub] as we
 provide extra CI support through [GitHub Actions].
-
 
 ### 2. Create your project structure locally
 
@@ -64,7 +62,6 @@ directories, then install dependencies (you will first need to
 pnpm install
 ```
 
-
 ### 3. Commit and push your new project
 
 Run the following commands to push up the first version of your new
@@ -76,13 +73,11 @@ git commit -m 'Initial commit'
 git push -u origin master
 ```
 
-
 ### 4. Start working on your project
 
 Read the generated README for details on how to work on your project and
 the tools you will need to have installed. See also:
 [Working on your project]
-
 
 ### 5. Optional: Set up Continuous Integration
 
@@ -96,7 +91,6 @@ The unit tests and builds should run with no extra set-up if you are
 using GitHub. (You will need translate them into another CI system if you
 wish to use something else.) The others will require some work to set
 them up.
-
 
 #### 5.1. Chromatic
 
@@ -115,7 +109,6 @@ to your components.
 
 You should consider making these checks mandatory to prevent unauthorised
 changes being merged in to your `master` branch.
-
 
 ### 6. Optional: Set up Continuous Deployment
 
@@ -136,7 +129,6 @@ then commit and push those files to your repository.
 Depending on the deployment target you chose, you will need to set up some
 secrets in GitHub, before the deployments will succeed.
 
-
 #### [Heroku]
 
 1. Sign up and [log in to Heroku]
@@ -149,7 +141,6 @@ secrets in GitHub, before the deployments will succeed.
    the value of your API key as found here: https://dashboard.heroku.com/account
 5. Create a new repository secret in GitHub Actions called `HEROKU_APP_NAME_DOCS`
    with the name you chose for your app in Heroku.
-
 
 #### [Netlify]
 
@@ -171,7 +162,6 @@ secrets in GitHub, before the deployments will succeed.
    by following the information here:
    https://docs.netlify.com/cli/get-started/#obtain-a-token-in-the-netlify-ui
 
-
 ### 7. Optional: Protect the master branch
 
 You should consider protecting your `master` branch to gain the full
@@ -181,7 +171,6 @@ mandatory prior to merging:
 - 'Unit test'
 - 'Build' (which ensures your apps can be built)
 - 'UI Tests' & 'UI Review' (which protect you against visual regressions)
-
 
 [Webpack]: https://webpack.js.org/
 [Sass]: https://sass-lang.com/

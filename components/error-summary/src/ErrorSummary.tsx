@@ -6,10 +6,11 @@ import '../assets/ErrorSummary.scss';
 
 export type Error = Anchor;
 
-export type ErrorSummaryProps = StandardProps & Pick<AnchorListProps, 'items'> & {
-  /** The heading of the error summary block. */
-  title?: ReactNode[] | string
-};
+export type ErrorSummaryProps = StandardProps &
+  Pick<AnchorListProps, 'items'> & {
+    /** The heading of the error summary block. */
+    title?: ReactNode[] | string;
+  };
 
 export const ErrorSummary: FC<ErrorSummaryProps> = ({
   classBlock,

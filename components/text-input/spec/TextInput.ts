@@ -13,7 +13,8 @@ describe('TextInput', () => {
       render(h(TextInput, minimalProps));
     });
 
-    it('renders a text field', async () => expect(screen.getByRole('textbox')).toHaveAttribute('type', 'text'));
+    it('renders a text field', async () =>
+      expect(screen.getByRole('textbox')).toHaveAttribute('type', 'text'));
     it('renders the label', async () => expect(screen.getByLabelText('Name')).toBeInTheDocument());
   });
 
@@ -21,14 +22,18 @@ describe('TextInput', () => {
     const props = {
       ...minimalProps,
       error: 'Enter your full name',
-      hint: 'Your full name'
+      hint: 'Your full name',
     };
     beforeEach(async () => {
       render(h(TextInput, props));
     });
 
-    it('renders a text field', async () => expect(screen.getByRole('textbox')).toHaveAttribute('type', 'text'));
+    it('renders a text field', async () =>
+      expect(screen.getByRole('textbox')).toHaveAttribute('type', 'text'));
     it('renders the label', async () => expect(screen.getByLabelText('Name')).toBeInTheDocument());
-    it('is described by the error and the hint', async () => expect(screen.getByLabelText('Name')).toHaveAccessibleDescription('Your full name Error: Enter your full name'));
+    it('is described by the error and the hint', async () =>
+      expect(screen.getByLabelText('Name')).toHaveAccessibleDescription(
+        'Your full name Error: Enter your full name',
+      ));
   });
 });

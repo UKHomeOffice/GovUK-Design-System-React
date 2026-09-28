@@ -8,12 +8,12 @@ const meta = {
   title: 'Internal/Summary card',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A component to split multiple summary lists.'
+    description: 'A component to split multiple summary lists.',
   },
   component: SummaryCard,
-  args: { title: 'Lead tenant' }
+  args: { title: 'Lead tenant' },
 } satisfies Meta<typeof SummaryCard>;
 
 export default meta;
@@ -25,7 +25,7 @@ export const Primary: Story = {
     <SummaryCard {...props}>
       <p>Content</p>
     </SummaryCard>
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -34,7 +34,7 @@ export const Standard: Story = {
     <SummaryCard {...props}>
       <p>Content</p>
     </SummaryCard>
-  )
+  ),
 };
 
 export const Actions: Story = {
@@ -50,23 +50,20 @@ export const Actions: Story = {
               Delete choice
               <VisuallyHidden> of University of Gloucestershire</VisuallyHidden>
             </Fragment>
-          )
+          ),
         },
         {
           href: '#',
           children: (
             <Fragment>
               Withdraw
-              <VisuallyHidden>
-                {' '}
-                from University of Gloucestershire
-              </VisuallyHidden>
+              <VisuallyHidden> from University of Gloucestershire</VisuallyHidden>
             </Fragment>
-          )
-        }
+          ),
+        },
       ]}
     >
       <p>Content</p>
     </SummaryCard>
-  )
+  ),
 };

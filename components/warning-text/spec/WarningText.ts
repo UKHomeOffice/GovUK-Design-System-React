@@ -10,7 +10,9 @@ describe('WarningText', () => {
       render(h(WarningText, minimalProps, 'Child'));
     });
 
-    it('renders an element', async () => expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
-    it('contains the child provided', async () => expect(screen.getAllByRole('generic')[0]).toHaveTextContent('Child'));
+    it('renders an element', async () =>
+      expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
+    it('contains the child provided', async () =>
+      expect(screen.getAllByRole('generic')[0]).toHaveTextContent('Child'));
   });
 });

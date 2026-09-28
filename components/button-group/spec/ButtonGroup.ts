@@ -8,7 +8,9 @@ describe('ButtonGroup', () => {
       render(h(ButtonGroup, {}, 'Child'));
     });
 
-    it('renders an element', async () => expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
-    it('renders the children', async () => expect(screen.getAllByRole('generic')[0]).toHaveTextContent('Child'));
+    it('renders an element', async () =>
+      expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
+    it('renders the children', async () =>
+      expect(screen.getAllByRole('generic')[0]).toHaveTextContent('Child'));
   });
 });

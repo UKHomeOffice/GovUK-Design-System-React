@@ -8,7 +8,9 @@ describe('ErrorMessage', () => {
       render(h(ErrorMessage, {}, 'Invalid'));
     });
 
-    it('renders an element', async () => expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
-    it('includes the error message provided', async () => expect(screen.getAllByRole('generic')[0]).toHaveTextContent('Invalid'));
+    it('renders an element', async () =>
+      expect(screen.getAllByRole('generic')[0]).toBeInTheDocument());
+    it('includes the error message provided', async () =>
+      expect(screen.getAllByRole('generic')[0]).toHaveTextContent('Invalid'));
   });
 });

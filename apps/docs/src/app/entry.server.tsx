@@ -1,14 +1,14 @@
-import { PassThrough } from "node:stream";
+import { PassThrough } from 'node:stream';
 
-import type { EntryContext } from "react-router";
-import { createReadableStreamFromReadable } from "@react-router/node";
-import { ServerRouter } from "react-router";
-import { isbot } from "isbot";
-import type { RenderToPipeableStreamOptions } from "react-dom/server";
-import { renderToPipeableStream } from "react-dom/server";
-import type { Request } from "@react-foundry/fastify-react-router";
-import type { RouterContextProvider } from "@react-foundry/react-router-context";
-import { cspNonceContext } from "@react-foundry/react-router-context";
+import type { EntryContext } from 'react-router';
+import { createReadableStreamFromReadable } from '@react-router/node';
+import { ServerRouter } from 'react-router';
+import { isbot } from 'isbot';
+import type { RenderToPipeableStreamOptions } from 'react-dom/server';
+import { renderToPipeableStream } from 'react-dom/server';
+import type { Request } from '@react-foundry/fastify-react-router';
+import type { RouterContextProvider } from '@react-foundry/react-router-context';
+import { cspNonceContext } from '@react-foundry/react-router-context';
 
 export const streamTimeout = 5_000;
 const isServerless = process.env['MODE'] === 'serverless';
@@ -18,20 +18,20 @@ export default function handleRequest(
   responseStatusCode: number,
   responseHeaders: Headers,
   routerContext: EntryContext,
-  loadContext: RouterContextProvider
+  loadContext: RouterContextProvider,
 ) {
   const nonce = request.cspNonce || loadContext.cspNonce || loadContext.get(cspNonceContext);
 
   return new Promise((resolve, reject) => {
     let shellRendered = false;
-    const userAgent = request.headers.get("user-agent");
+    const userAgent = request.headers.get('user-agent');
 
     // Ensure requests from bots and SPA Mode renders wait for all content to load before responding
     // https://react.dev/reference/react-dom/server/renderToPipeableStream#waiting-for-all-content-to-load-for-crawlers-and-static-generation
     const readyOption: keyof RenderToPipeableStreamOptions =
       (userAgent && isbot(userAgent)) || routerContext.isSpaMode || isServerless
-        ? "onAllReady"
-        : "onShellReady";
+        ? 'onAllReady'
+        : 'onShellReady';
 
     // Abort the rendering stream after the `streamTimeout` so it has time to
     // flush down the rejected boundaries
@@ -55,7 +55,7 @@ export default function handleRequest(
           });
           const stream = createReadableStreamFromReadable(body);
 
-          responseHeaders.set("Content-Type", "text/html");
+          responseHeaders.set('Content-Type', 'text/html');
 
           pipe(body);
 

@@ -5,12 +5,10 @@ Components are reusable parts of the user interface that have been made to suppo
 
 Individual components can be used in multiple different patterns and contexts. For example, the text input component can be used to ask for an email address, a National Insurance number or someone’s name.
 
-
 How to use the components
 -------------------------
 
 The components are published in NPM packages, both individually and all altogether. The best way to consume the components depends on the context in which you use them; in an application you should usually import all of the components in one go, but in your own re-usable components you should try to only consume the individual packages that your component needs.
-
 
 ### Using the components in NotGovUK framework applications
 
@@ -53,7 +51,6 @@ Alternatively, if you are just building a prototype, you may wish to simply use 
 
 **Note:** Recent versions of the NotGovUK framework uses [react-foundry] which is just the [React Router] framework with some customisations, including a server based on [Fastify].
 
-
 ### Using the components in other components
 
 If you are publishing your own, individually packaged, re-usable components (as we facilitate in NotGovUK projects) you should import the components from their individual packages rather than the group packages.
@@ -70,19 +67,16 @@ You can then import them into your component.
 import React, { createElement as h } from 'react';
 import Panel from '@not-govuk/panel';
 
-export const MyComponent = props => (
-  <Panel
-    classModifiers="confirmation"
-    title="Application complete"
-  >
-    Your reference number<br />
+export const MyComponent = (props) => (
+  <Panel classModifiers="confirmation" title="Application complete">
+    Your reference number
+    <br />
     <strong>HDJ2123F</strong>
   </Panel>
 );
 
 export default MyComponent;
 ```
-
 
 ### Using the components in React Router Framework applications
 
@@ -103,7 +97,7 @@ import { Panel } from '@not-govuk/components';
 You can also override some global styles by importing `@not-govuk/components` into your SASS. e.g. `app/style.scss`
 
 ```scss
-@import "@not-govuk/components";
+@import '@not-govuk/components';
 ```
 
 You should also alter your `vite.config.js` to modify some of the modules to versions that are designed to work under React Router, and to silence some warnings.
@@ -142,7 +136,6 @@ You should ensure that you set the `govuk-frontend-supported` class on an elemen
 
 **See:** [Example React Router application using NotGovUK components]
 
-
 ### Using the components in Next.js applications
 
 If you are starting a brand new application, we recommend using our [GitHub template for a Next.js application with NotGovUK components] but full details are below.
@@ -179,18 +172,15 @@ export default nextConfig;
 
 You should ensure that you set the `govuk-frontend-supported` class on an element that encompasses all of your components (such as your `<body>` element), when and only when client-side JavaScript executes. Otherwise some components will not render correctly. If you make use of the `Page` component, this will be done for you.
 
-
 #### Pre-requisites on Next.js
 
 Your application will need to make use of Next.js' the newer '_App router_'.
-
 
 #### Limitations on Next.js
 
 - You will not be able to make use of the [Form] framework, as this does not currently support Next.js.
 
 **See:** [Example Next.js application using NotGovUK components]
-
 
 [Getting started]: https://not-gov.uk/get-started
 [react-foundry]: https://github.com/daniel-ac-martin/react-foundry/

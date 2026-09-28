@@ -4,14 +4,12 @@ export const meta = Stories.default;
 
 <Meta of={Stories} />
 
-
 # Pagination
 
 Help users navigate forwards and backwards through a series of pages. For example, search results or guidance that’s divided into multiple website pages — like [the GOV.UK mainstream guide format].
 
 <Primary />
 <Controls />
-
 
 ## When to use this component
 
@@ -28,7 +26,6 @@ Avoid using the ‘infinite scroll’ technique to automatically load content wh
 
 Do not use this Pagination component for linear journeys — for example, where you’re asking the user to complete a form. Instead, use the [Button component] (usually a ‘Continue’ button) to let the user move to the next page — and a [Back link] to let them move to the previous page.
 
-
 ## How it works
 
 Add the pagination component after the content on each page that you’re paginating.
@@ -39,13 +36,11 @@ Do not show pagination if there’s only one page of content.
 
 Redirect users to the first page if they enter a URL of a page that no longer exists.
 
-
 ## For smaller numbers of pages
 
 Use ‘Previous’ and ‘Next’ links to let users navigate through a small number of pages. Stack the links vertically, so they’re more obvious to screen magnifier users when they’re zoomed in:
 
 <Canvas of={Stories.Backandforth} />
-
 
 ### Add link labels to describe pages
 
@@ -53,11 +48,9 @@ You can use link labels to give more context:
 
 <Canvas of={Stories.Linklabels} />
 
-
 You can also do this through providing a list of links:
 
 <Canvas of={Stories.Linklabelsinlist} />
-
 
 ### For larger numbers of pages
 
@@ -92,7 +85,6 @@ Use ellipses (…) to replace any skipped pages. For example:
 - 1 … 98 **[99]** 100
 - 1 … 99 **[100]**
 
-
 ### First and last pages
 
 Do not show the previous page link on the first page — and do not show the next page link on the last page.
@@ -101,7 +93,6 @@ Do not show the previous page link on the first page — and do not show the nex
 
 <Canvas of={Stories.Lastpage} />
 
-
 ### Filtering and sorting
 
 Consider adding filtering or sorting options if it helps users to find what they need in a long list of pages. For example, [the business support finder on GOV.UK] has filtering options.
@@ -109,7 +100,6 @@ Consider adding filtering or sorting options if it helps users to find what they
 If the user filters or sorts the list of pages, apply this to the whole list (not just the current page) and redirect them back to the first page of the new results.
 
 Set defaults to minimise how many pages most users have to click through to find what they need.
-
 
 ## Research on this component
 

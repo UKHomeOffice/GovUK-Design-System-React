@@ -1,4 +1,4 @@
-import type { Route } from "./+types/contributing";
+import type { Route } from './+types/contributing';
 import { siteTitle } from '../config';
 
 import Markdown from '../../../../../docs/contributing.md';
@@ -17,7 +17,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Contributing() {
-  return (
-      <Markdown />
-  );
+  return <Markdown />;
 }

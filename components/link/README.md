@@ -3,7 +3,6 @@ NotGovUK - Link
 
 A drop-in replacement for the 'a' element with GovUK styling.
 
-
 Using this package
 ------------------
 
@@ -19,13 +18,10 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import { A } from '@not-govuk/link';
 
-export const MyComponent = props => (
-  <A href="#">My link</A>
-);
+export const MyComponent = (props) => <A href="#">My link</A>;
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -37,20 +33,17 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
 
-
 ### Building
 
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

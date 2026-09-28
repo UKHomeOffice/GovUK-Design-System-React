@@ -1,4 +1,4 @@
-import type { Route } from "./+types/components";
+import type { Route } from './+types/components';
 import { Outlet, redirect } from 'react-router';
 import { NavigationMenu } from '@not-govuk/components';
 import { internalComponentLinks, mainComponentLinks, unofficialComponentLinks } from '../stories';

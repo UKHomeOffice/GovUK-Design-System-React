@@ -7,15 +7,15 @@ const meta = {
   title: 'Panel',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
     description:
       'A visible container used on confirmation or results pages to highlight important content.',
     image:
-      'https://snapshots.chromatic.com/snapshots/5f1488148c817700223adb9a-5ff08dbae29b2700217b53b3/capture.png'
+      'https://snapshots.chromatic.com/snapshots/5f1488148c817700223adb9a-5ff08dbae29b2700217b53b3/capture.png',
   },
   component: Panel,
-  args: { classModifiers: 'confirmation', title: 'Application complete' }
+  args: { classModifiers: 'confirmation', title: 'Application complete' },
 } satisfies Meta<typeof Panel>;
 
 export default meta;
@@ -31,7 +31,7 @@ export const Primary: Story = {
         <strong>HDJ2123F</strong>
       </p>
     </Panel>
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -44,13 +44,13 @@ export const Standard: Story = {
         <strong>HDJ2123F</strong>
       </p>
     </Panel>
-  )
+  ),
 };
 
 export const Interruption: Story = {
   args: {
     classModifiers: 'interruption',
-    title: 'How to renew your passport online'
+    title: 'How to renew your passport online',
   },
   render: ({ ...props }) => (
     <Panel {...props}>
@@ -64,5 +64,5 @@ export const Interruption: Story = {
       </ol>
       <Button href="#">Continue</Button>
     </Panel>
-  )
+  ),
 };

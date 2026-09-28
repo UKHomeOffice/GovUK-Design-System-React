@@ -16,32 +16,29 @@ import { WidthContainer } from '@not-govuk/width-container';
 
 import '../assets/Page.scss';
 
-export type PageProps = (
-  StandardProps &
+export type PageProps = StandardProps &
   HTMLProps<HTMLDivElement> &
   GenericHeaderProps &
   Omit<ServiceNavigationProps, 'items'> &
   Omit<FooterProps, 'navigation'> &
-  Partial<PhaseBannerProps> &
-  {
+  Partial<PhaseBannerProps> & {
     /** Location for the Back link */
-    backHref?: string
+    backHref?: string;
     /** List of links to parent pages */
-    breadcrumbs?: Breadcrumb[]
+    breadcrumbs?: Breadcrumb[];
     /** The content that displays in the page. */
-    children?: ReactNode
+    children?: ReactNode;
     /** HRef for providing feedback on the service */
-    feedbackHref?: string
+    feedbackHref?: string;
     /** Content for the footer */
-    footerContent?: ReactNode
+    footerContent?: ReactNode;
     /** Content for the footer */
-    footerNavigation?: NavMenu[]
+    footerNavigation?: NavMenu[];
     /** Navigation items */
-    navigation?: ServiceNavigationProps['items']
+    navigation?: ServiceNavigationProps['items'];
     /** Content for the phase-banner */
-    phaseBannerContent?: ReactNode
-  }
-);
+    phaseBannerContent?: ReactNode;
+  };
 
 export const Page: FC<PageProps> = ({
   backHref,
@@ -70,16 +67,15 @@ export const Page: FC<PageProps> = ({
   signOutText,
   ...attrs
 }) => {
-  const classModifiers = [...(
-    Array.isArray(_classModifiers)
-      ? _classModifiers
-      : [_classModifiers]
-  ), department];
+  const classModifiers = [
+    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers]),
+    department,
+  ];
   const className = _className || '';
   const classes = classBuilder('govuk-template', classBlock, classModifiers, className);
   const commonHeaderProps = {
     maxContentsWidth,
-    organisationHref
+    organisationHref,
   };
   const navigationProps = {
     maxContentsWidth,
@@ -87,7 +83,7 @@ export const Page: FC<PageProps> = ({
     serviceHref,
     serviceName,
     signOutHref,
-    signOutText
+    signOutText,
   };
   const footerProps = {
     department,
@@ -95,54 +91,59 @@ export const Page: FC<PageProps> = ({
     maxContentsWidth,
     meta,
     metaTitle,
-    navigation: footerNavigation
+    navigation: footerNavigation,
   };
   const showNavigation = navigation?.length || serviceName;
   const mainId = 'main-content';
-  const header = (
-    govUK
-    ? (
-      <Header {...commonHeaderProps} />
-    )
-    : (
-      <GenericHeader {...commonHeaderProps} department={department} logo={logo} organisationText={organisationText} />
-    )
+  const header = govUK ? (
+    <Header {...commonHeaderProps} />
+  ) : (
+    <GenericHeader
+      {...commonHeaderProps}
+      department={department}
+      logo={logo}
+      organisationText={organisationText}
+    />
   );
   const isMounted = useIsMounted();
 
   return (
-    <div {...attrs} className={classes('page', classModifiers, className + (!isMounted ? '' : ' govuk-frontend-supported'))}>
+    <div
+      {...attrs}
+      className={classes(
+        'page',
+        classModifiers,
+        className + (!isMounted ? '' : ' govuk-frontend-supported'),
+      )}
+    >
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <SkipLink id="skip-link" for={mainId}>Skip to main content</SkipLink>
+      <SkipLink id="skip-link" for={mainId}>
+        Skip to main content
+      </SkipLink>
       <header className={classes('header')}>
         {header}
-        { !showNavigation ? null : (
+        {!showNavigation ? null : (
           <ServiceNavigation {...navigationProps} className={classes('navigation')} />
-        ) }
-        { !phase ? null : (
-            <PhaseBanner id="phase-banner" phase={phase} maxWidth={maxContentsWidth}>
-              { phaseBannerContent || (
-                  <Fragment>
-                    This is a new service - your {
-                      feedbackHref
-                      ? (<A href={feedbackHref}>feedback</A>)
-                      : 'feedback'
-                    } will help us to improve it.
-                  </Fragment>
-              ) }
-            </PhaseBanner>
-        ) }
+        )}
+        {!phase ? null : (
+          <PhaseBanner id="phase-banner" phase={phase} maxWidth={maxContentsWidth}>
+            {phaseBannerContent || (
+              <Fragment>
+                This is a new service - your{' '}
+                {feedbackHref ? <A href={feedbackHref}>feedback</A> : 'feedback'} will help us to
+                improve it.
+              </Fragment>
+            )}
+          </PhaseBanner>
+        )}
       </header>
       <div className={classes('middle')}>
         <WidthContainer maxWidth={maxContentsWidth} className={classes('container')}>
-          { breadcrumbs?.length
-            ? (
-              <Breadcrumbs id="breadcrumbs" items={breadcrumbs} />
-            )
-            : ( !backHref ? null : (
-              <BackLink id="back-link" href={backHref} />
-            ) )
-          }
+          {breadcrumbs?.length ? (
+            <Breadcrumbs id="breadcrumbs" items={breadcrumbs} />
+          ) : !backHref ? null : (
+            <BackLink id="back-link" href={backHref} />
+          )}
           <main id={mainId} className={classes('main')}>
             {children}
           </main>

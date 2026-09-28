@@ -3,7 +3,6 @@ Warning Text
 
 A component to warn the user of something important.
 
-
 Using this package
 ------------------
 
@@ -19,15 +18,12 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import WarningText from '@not-govuk/warning-text';
 
-export const MyComponent = props => (
-  <WarningText>
-    You can be fined up to £5,000 if you do not register.
-  </WarningText>
+export const MyComponent = (props) => (
+  <WarningText>You can be fined up to £5,000 if you do not register.</WarningText>
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -39,20 +35,17 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
 
-
 ### Building
 
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

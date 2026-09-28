@@ -7,12 +7,12 @@ const meta = {
   title: 'Checkboxes',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A component to allow users to select one or more options.'
+    description: 'A component to allow users to select one or more options.',
   },
   component: Checkboxes,
-  args: { name: 'waste', hint: 'Select all that apply.' }
+  args: { name: 'waste', hint: 'Select all that apply.' },
 } satisfies Meta<typeof Checkboxes>;
 
 export default meta;
@@ -23,27 +23,23 @@ export const Primary: Story = {
   render: ({ ...props }) => (
     <Checkboxes
       {...props}
-      label={
-        <h1 className="govuk-heading-l">
-          Which types of waste do you transport?
-        </h1>
-      }
+      label={<h1 className="govuk-heading-l">Which types of waste do you transport?</h1>}
       options={[
         {
           value: 'carcasses',
-          label: 'Waste from animal carcasses'
+          label: 'Waste from animal carcasses',
         },
         {
           value: 'mines',
-          label: 'Waste from mines or quarries'
+          label: 'Waste from mines or quarries',
         },
         {
           value: 'farm',
-          label: 'Farm or agricultural waste'
-        }
+          label: 'Farm or agricultural waste',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -51,27 +47,23 @@ export const Standard: Story = {
   render: ({ ...props }) => (
     <Checkboxes
       {...props}
-      label={
-        <h1 className="govuk-heading-l">
-          Which types of waste do you transport?
-        </h1>
-      }
+      label={<h1 className="govuk-heading-l">Which types of waste do you transport?</h1>}
       options={[
         {
           value: 'carcasses',
-          label: 'Waste from animal carcasses'
+          label: 'Waste from animal carcasses',
         },
         {
           value: 'mines',
-          label: 'Waste from mines or quarries'
+          label: 'Waste from mines or quarries',
         },
         {
           value: 'farm',
-          label: 'Farm or agricultural waste'
-        }
+          label: 'Farm or agricultural waste',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const NoHeading: Story = {
@@ -82,26 +74,26 @@ export const NoHeading: Story = {
       options={[
         {
           value: 'carcasses',
-          label: 'Waste from animal carcasses'
+          label: 'Waste from animal carcasses',
         },
         {
           value: 'mines',
-          label: 'Waste from mines or quarries'
+          label: 'Waste from mines or quarries',
         },
         {
           value: 'farm',
-          label: 'Farm or agricultural waste'
-        }
+          label: 'Farm or agricultural waste',
+        },
       ]}
     />
   ),
-  name: 'No heading'
+  name: 'No heading',
 };
 
 export const Hints: Story = {
   args: {
     name: 'nationality',
-    hint: 'If you have dual nationality, select all options that are relevant to you.'
+    hint: 'If you have dual nationality, select all options that are relevant to you.',
   },
   render: ({ ...props }) => (
     <Checkboxes
@@ -111,19 +103,19 @@ export const Hints: Story = {
         {
           value: 'british',
           label: 'British',
-          hint: 'including English, Scottish, Welsh and Northern Irish'
+          hint: 'including English, Scottish, Welsh and Northern Irish',
         },
         {
           value: 'irish',
-          label: 'Irish'
+          label: 'Irish',
         },
         {
           value: 'other',
-          label: 'Citizen of another country'
-        }
+          label: 'Citizen of another country',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const None: Story = {
@@ -131,32 +123,28 @@ export const None: Story = {
   render: ({ ...props }) => (
     <Checkboxes
       {...props}
-      label={
-        <h1 className="govuk-heading-l">
-          Will you be travelling to any of these countries?
-        </h1>
-      }
+      label={<h1 className="govuk-heading-l">Will you be travelling to any of these countries?</h1>}
       options={[
         {
           value: 'france',
-          label: 'France'
+          label: 'France',
         },
         {
           value: 'portugal',
-          label: 'Portugal'
+          label: 'Portugal',
         },
         {
           value: 'spain',
-          label: 'Spain'
+          label: 'Spain',
         },
         'or',
         {
           value: 'none',
-          label: 'No, I will not be travelling to any of these countries'
-        }
+          label: 'No, I will not be travelling to any of these countries',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const NoneError: Story = {
@@ -164,53 +152,47 @@ export const NoneError: Story = {
     name: 'contact',
     hint: undefined,
     error:
-      'Select countries you will be travelling to, or select “No, I will not be travelling to any of these countries”'
+      'Select countries you will be travelling to, or select “No, I will not be travelling to any of these countries”',
   },
   render: ({ ...props }) => (
     <Checkboxes
       {...props}
-      label={
-        <h1 className="govuk-heading-l">
-          Will you be travelling to any of these countries?
-        </h1>
-      }
+      label={<h1 className="govuk-heading-l">Will you be travelling to any of these countries?</h1>}
       options={[
         {
           value: 'france',
           label: 'France',
-          selected: true
+          selected: true,
         },
         {
           value: 'portugal',
-          label: 'Portugal'
+          label: 'Portugal',
         },
         {
           value: 'spain',
-          label: 'Spain'
+          label: 'Spain',
         },
         'or',
         {
           value: 'none',
           label: 'No, I will not be travelling to any of these countries',
           selected: true,
-          exclusive: true
-        }
+          exclusive: true,
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Content: Story = {
   args: {
     name: 'contact',
-    hint: 'Select all options that are relevant to you.'
+    hint: 'Select all options that are relevant to you.',
   },
   render: ({ ...props }) => (
     <Checkboxes
       {...props}
-      label={
-        <h1 className="govuk-heading-l">How would you like to be contacted?</h1>
-      }
+      label={<h1 className="govuk-heading-l">How would you like to be contacted?</h1>}
       options={[
         {
           value: 'email',
@@ -225,7 +207,7 @@ export const Content: Story = {
               spellCheck={false}
               type="email"
             />
-          )
+          ),
         },
         {
           value: 'phone',
@@ -240,7 +222,7 @@ export const Content: Story = {
               spellCheck={false}
               type="tel"
             />
-          )
+          ),
         },
         {
           value: 'text message',
@@ -255,11 +237,11 @@ export const Content: Story = {
               spellCheck={false}
               type="tel"
             />
-          )
-        }
+          ),
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Small: Story = {
@@ -271,30 +253,29 @@ export const Small: Story = {
       options={[
         {
           value: 'hmrc',
-          label: 'HM Revenue and Customs (HMRC)'
+          label: 'HM Revenue and Customs (HMRC)',
         },
         {
           value: 'employment-tribunal',
-          label: 'Employment Tribunal'
+          label: 'Employment Tribunal',
         },
         {
           value: 'MoD',
-          label: 'Ministry of Defence'
+          label: 'Ministry of Defence',
         },
         {
           value: 'DfT',
-          label: 'Department for Transport'
-        }
+          label: 'Department for Transport',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Errors: Story = {
   args: {
     name: 'nationality',
-    error:
-      'Select if you are British, Irish or a citizen of a different country '
+    error: 'Select if you are British, Irish or a citizen of a different country ',
   },
   render: ({ ...props }) => (
     <Checkboxes
@@ -304,17 +285,17 @@ export const Errors: Story = {
         {
           value: 'british',
           label: 'British',
-          hint: 'including English, Scottish, Welsh and Northern Irish'
+          hint: 'including English, Scottish, Welsh and Northern Irish',
         },
         {
           value: 'irish',
-          label: 'Irish'
+          label: 'Irish',
         },
         {
           value: 'other',
-          label: 'Citizen of another country'
-        }
+          label: 'Citizen of another country',
+        },
       ]}
     />
-  )
+  ),
 };

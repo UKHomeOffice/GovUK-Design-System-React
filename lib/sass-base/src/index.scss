@@ -2,16 +2,16 @@
 //      variables centrally
 
 // Set the default asset path to be relative to the SCSS components
-$assets-path: "../../assets/" !default;
+$assets-path: '../../assets/' !default;
 
-@forward "govuk-frontend/dist/govuk/_base" with (
+@forward 'govuk-frontend/dist/govuk/_base' with (
   $govuk-assets-path: $assets-path,
   // Let's have the font cascade from the body tag like a normal website.
   $govuk-font-family: inherit
 );
 
 // Dark mode variables
-$not-govuk-dark-mode-text-colour: #FFFFFF;
+$not-govuk-dark-mode-text-colour: #ffffff;
 $not-govuk-dark-mode-secondary-text-colour: #999999;
 $not-govuk-dark-mode-background-colour: #333333;
 $not-govuk-dark-mode-footer-colour: #222222;

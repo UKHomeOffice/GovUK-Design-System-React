@@ -9,32 +9,33 @@ import '../assets/ServiceNavigation.scss';
 export type { Anchor } from '@react-foundry/anchor-list';
 export type Item = Anchor;
 
-export type ServiceNavigationProps = StandardProps & HTMLAttributes<HTMLElement> & {
-  /** Elements to be injected at the end of the service header container */
-  end?: ReactNode
-  /** List of links to choose from */
-  items?: Item[]
-  /** Maximum width of the contents in px units (-1 for full width) */
-  maxContentsWidth?: number
-  /** The text of the mobile navigation menu toggle */
-  menuButtonText?: string
-  /** The screen reader label for the mobile navigation menu toggle */
-  menuButtonLabel?: string
-  /** The screen reader label for the mobile navigation menu. Defaults to the same value as menuButtonText if not specified. */
-  navigationLabel?: string
-  /** The ID used to associate the mobile navigation toggle with the navigation menu. */
-  navigationId?: string
-  /** Service link URL */
-  serviceHref?: string
-  /** Service link text */
-  serviceName?: string
-  /** Sign out link URL */
-  signOutHref?: string
-  /** Sign out link text */
-  signOutText?: string
-  /** Elements to be injected at the start of the service header container */
-  start?: ReactNode
-};
+export type ServiceNavigationProps = StandardProps &
+  HTMLAttributes<HTMLElement> & {
+    /** Elements to be injected at the end of the service header container */
+    end?: ReactNode;
+    /** List of links to choose from */
+    items?: Item[];
+    /** Maximum width of the contents in px units (-1 for full width) */
+    maxContentsWidth?: number;
+    /** The text of the mobile navigation menu toggle */
+    menuButtonText?: string;
+    /** The screen reader label for the mobile navigation menu toggle */
+    menuButtonLabel?: string;
+    /** The screen reader label for the mobile navigation menu. Defaults to the same value as menuButtonText if not specified. */
+    navigationLabel?: string;
+    /** The ID used to associate the mobile navigation toggle with the navigation menu. */
+    navigationId?: string;
+    /** Service link URL */
+    serviceHref?: string;
+    /** Service link text */
+    serviceName?: string;
+    /** Sign out link URL */
+    signOutHref?: string;
+    /** Sign out link text */
+    signOutText?: string;
+    /** Elements to be injected at the start of the service header container */
+    start?: ReactNode;
+  };
 
 export const ServiceNavigation: FC<ServiceNavigationProps> = ({
   'aria-label': ariaLabel = 'Service information',
@@ -57,11 +58,16 @@ export const ServiceNavigation: FC<ServiceNavigationProps> = ({
 }) => {
   const classes = classBuilder('govuk-service-navigation', classBlock, classModifiers, className);
   const navigationLabel = _navigationLabel || menuButtonText;
-  const items = !signOutHref ? _items : [..._items, {
-    href: signOutHref,
-    text: signOutText,
-    forceExternal: true
-  }];
+  const items = !signOutHref
+    ? _items
+    : [
+        ..._items,
+        {
+          href: signOutHref,
+          text: signOutText,
+          forceExternal: true,
+        },
+      ];
 
   const serviceLink = !serviceName ? null : (
     <span className={classes('service-name')}>
@@ -96,18 +102,19 @@ export const ServiceNavigation: FC<ServiceNavigationProps> = ({
     </WidthContainer>
   );
 
-  return (
-    serviceName
-      ? (
-        <section {...attrs} className={classes()} aria-label={ariaLabel} data-module="govuk-service_navigation" >
-          {inner}
-        </section>
-      )
-      : (
-        <div {...attrs} className={classes()} data-module="govuk-service_navigation" >
-          {inner}
-        </div>
-      )
+  return serviceName ? (
+    <section
+      {...attrs}
+      className={classes()}
+      aria-label={ariaLabel}
+      data-module="govuk-service_navigation"
+    >
+      {inner}
+    </section>
+  ) : (
+    <div {...attrs} className={classes()} data-module="govuk-service_navigation">
+      {inner}
+    </div>
   );
 };
 

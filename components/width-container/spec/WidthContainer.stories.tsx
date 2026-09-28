@@ -7,12 +7,12 @@ const meta = {
   title: 'Internal/Width container',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A simple container to limit the width of its contents.'
+    description: 'A simple container to limit the width of its contents.',
   },
   component: WidthContainer,
-  args: {}
+  args: {},
 } satisfies Meta<typeof WidthContainer>;
 
 export default meta;
@@ -24,7 +24,7 @@ export const Primary: Story = {
     <WidthContainer {...props}>
       <Panel classModifiers="confirmation" title="Contents" />
     </WidthContainer>
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -33,7 +33,7 @@ export const Standard: Story = {
     <WidthContainer {...props}>
       <Panel classModifiers="confirmation" title="Contents" />
     </WidthContainer>
-  )
+  ),
 };
 
 export const Custom: Story = {
@@ -42,7 +42,7 @@ export const Custom: Story = {
     <WidthContainer {...props}>
       <Panel classModifiers="confirmation" title="Contents" />
     </WidthContainer>
-  )
+  ),
 };
 
 export const Full: Story = {
@@ -51,5 +51,5 @@ export const Full: Story = {
     <WidthContainer {...props}>
       <Panel classModifiers="confirmation" title="Contents" />
     </WidthContainer>
-  )
+  ),
 };

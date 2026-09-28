@@ -3,9 +3,10 @@ import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/ButtonGroup.scss';
 
-export type ButtonGroupProps = StandardProps & HTMLAttributes<HTMLDivElement> & {
-  children?: ReactNode
-};
+export type ButtonGroupProps = StandardProps &
+  HTMLAttributes<HTMLDivElement> & {
+    children?: ReactNode;
+  };
 
 export const ButtonGroup: FC<ButtonGroupProps> = ({
   children,

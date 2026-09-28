@@ -6,12 +6,12 @@ const meta = {
   title: 'Unofficial/Form',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A component to collect information from the user.'
+    description: 'A component to collect information from the user.',
   },
   component: Form,
-  args: { action: '/result', method: 'get' }
+  args: { action: '/result', method: 'get' },
 } satisfies Meta<typeof Form>;
 
 export default meta;
@@ -38,16 +38,16 @@ export const Primary: Story = {
           options={[
             {
               value: 'male',
-              label: 'Male'
+              label: 'Male',
             },
             {
               value: 'female',
-              label: 'Female'
+              label: 'Female',
             },
             {
               value: 'no',
-              label: "No thanks, we're British"
-            }
+              label: "No thanks, we're British",
+            },
           ]}
           validators={[required('Provide your sex')]}
         />
@@ -61,11 +61,7 @@ export const Primary: Story = {
               name="dob"
               prettyName="date of birth"
               label={<h2>What is your date of birth?</h2>}
-              validators={[
-                required('Provide your date of birth'),
-                past(),
-                after('1900-01-01')()
-              ]}
+              validators={[required('Provide your date of birth'), past(), after('1900-01-01')()]}
             />
             <Form.Submit>Submit</Form.Submit>
           </Form.Page>
@@ -78,12 +74,12 @@ export const Primary: Story = {
               options={[
                 {
                   value: 'Y',
-                  label: 'Yes'
+                  label: 'Yes',
                 },
                 {
                   value: 'N',
-                  label: 'No'
-                }
+                  label: 'No',
+                },
               ]}
               validators={[required('Provide your marital status')]}
             />
@@ -92,7 +88,7 @@ export const Primary: Story = {
         }
       />
     </Form>
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -112,16 +108,16 @@ export const Standard: Story = {
         options={[
           {
             value: 'male',
-            label: 'Male'
+            label: 'Male',
           },
           {
             value: 'female',
-            label: 'Female'
+            label: 'Female',
           },
           {
             value: 'no',
-            label: "No thanks, we're British"
-          }
+            label: "No thanks, we're British",
+          },
         ]}
         validators={[required('Provide your sex')]}
       />
@@ -129,11 +125,7 @@ export const Standard: Story = {
         name="dob"
         prettyName="date of birth"
         label={<h2>What is your date of birth?</h2>}
-        validators={[
-          required('Provide your date of birth'),
-          past(),
-          after('1900-01-01')()
-        ]}
+        validators={[required('Provide your date of birth'), past(), after('1900-01-01')()]}
       />
       <Form.Radios
         name="married"
@@ -141,18 +133,18 @@ export const Standard: Story = {
         options={[
           {
             value: 'Y',
-            label: 'Yes'
+            label: 'Yes',
           },
           {
             value: 'N',
-            label: 'No'
-          }
+            label: 'No',
+          },
         ]}
         validators={[required('Provide your marital status')]}
       />
       <Form.Submit>Submit</Form.Submit>
     </Form>
-  )
+  ),
 };
 
 export const Steps: Story = {
@@ -176,16 +168,16 @@ export const Steps: Story = {
           options={[
             {
               value: 'male',
-              label: 'Male'
+              label: 'Male',
             },
             {
               value: 'female',
-              label: 'Female'
+              label: 'Female',
             },
             {
               value: 'no',
-              label: "No thanks, we're British"
-            }
+              label: "No thanks, we're British",
+            },
           ]}
           validators={[required('Provide your sex')]}
         />
@@ -196,11 +188,7 @@ export const Steps: Story = {
           name="dob"
           prettyName="date of birth"
           label={<h2>What is your date of birth?</h2>}
-          validators={[
-            required('Provide your date of birth'),
-            past(),
-            after('1900-01-01')()
-          ]}
+          validators={[required('Provide your date of birth'), past(), after('1900-01-01')()]}
         />
         <Form.Submit>Continue</Form.Submit>
       </Form.Page>
@@ -211,19 +199,19 @@ export const Steps: Story = {
           options={[
             {
               value: 'Y',
-              label: 'Yes'
+              label: 'Yes',
             },
             {
               value: 'N',
-              label: 'No'
-            }
+              label: 'No',
+            },
           ]}
           validators={[required('Provide your marital status')]}
         />
         <Form.Submit>Submit</Form.Submit>
       </Form.Page>
     </Form>
-  )
+  ),
 };
 
 export const Forks: Story = {
@@ -247,16 +235,16 @@ export const Forks: Story = {
           options={[
             {
               value: 'male',
-              label: 'Male'
+              label: 'Male',
             },
             {
               value: 'female',
-              label: 'Female'
+              label: 'Female',
             },
             {
               value: 'no',
-              label: "No thanks, we're British"
-            }
+              label: "No thanks, we're British",
+            },
           ]}
           validators={[required('Provide your sex')]}
         />
@@ -270,11 +258,7 @@ export const Forks: Story = {
               name="dob"
               prettyName="date of birth"
               label={<h2>What is your date of birth?</h2>}
-              validators={[
-                required('Provide your date of birth'),
-                past(),
-                after('1900-01-01')()
-              ]}
+              validators={[required('Provide your date of birth'), past(), after('1900-01-01')()]}
             />
             <Form.Submit>Submit</Form.Submit>
           </Form.Page>
@@ -287,12 +271,12 @@ export const Forks: Story = {
               options={[
                 {
                   value: 'Y',
-                  label: 'Yes'
+                  label: 'Yes',
                 },
                 {
                   value: 'N',
-                  label: 'No'
-                }
+                  label: 'No',
+                },
               ]}
               validators={[required('Provide your marital status')]}
             />
@@ -301,5 +285,5 @@ export const Forks: Story = {
         }
       />
     </Form>
-  )
+  ),
 };

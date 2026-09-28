@@ -6,12 +6,12 @@ const meta = {
   title: 'Date input',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description: 'A component to allow users to enter a date.'
+    description: 'A component to allow users to enter a date.',
   },
   component: DateInput,
-  args: { name: 'passport-issued', hint: 'For example, 12 11 2007' }
+  args: { name: 'passport-issued', hint: 'For example, 12 11 2007' },
 } satisfies Meta<typeof DateInput>;
 
 export default meta;
@@ -22,11 +22,9 @@ export const Primary: Story = {
   render: ({ ...props }) => (
     <DateInput
       {...props}
-      label={
-        <h1 className="govuk-heading-l">When was your passport issued?</h1>
-      }
+      label={<h1 className="govuk-heading-l">When was your passport issued?</h1>}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -34,16 +32,14 @@ export const Standard: Story = {
   render: ({ ...props }) => (
     <DateInput
       {...props}
-      label={
-        <h1 className="govuk-heading-l">When was your passport issued?</h1>
-      }
+      label={<h1 className="govuk-heading-l">When was your passport issued?</h1>}
     />
-  )
+  ),
 };
 
 export const NoHeading: Story = {
   args: { label: 'When was your passport issued?' },
-  name: 'No heading'
+  name: 'No heading',
 };
 
 export const Autocomplete: Story = {
@@ -54,7 +50,7 @@ export const Autocomplete: Story = {
       label={<h1 className="govuk-heading-l">What is your date of birth?</h1>}
     />
   ),
-  name: 'Auto-complete'
+  name: 'Auto-complete',
 };
 
 export const Errors: Story = {
@@ -62,11 +58,9 @@ export const Errors: Story = {
   render: ({ ...props }) => (
     <DateInput
       {...props}
-      label={
-        <h1 className="govuk-heading-l">When was your passport issued?</h1>
-      }
+      label={<h1 className="govuk-heading-l">When was your passport issued?</h1>}
     />
-  )
+  ),
 };
 
 export const SubErrors: Story = {
@@ -74,12 +68,10 @@ export const SubErrors: Story = {
   render: ({ ...props }) => (
     <DateInput
       {...props}
-      label={
-        <h1 className="govuk-heading-l">When was your passport issued?</h1>
-      }
+      label={<h1 className="govuk-heading-l">When was your passport issued?</h1>}
       error={{
-        year: 'The date your passport was issued must include a year'
+        year: 'The date your passport was issued must include a year',
       }}
     />
-  )
+  ),
 };

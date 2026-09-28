@@ -3,7 +3,6 @@ NotGovUK - Notification Banner
 
 A component to tell the user about something they need to know about, but that’s not directly related to the page content.
 
-
 Using this package
 ------------------
 
@@ -19,18 +18,20 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import NotificationBanner from '@not-govuk/notification-banner';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <NotificationBanner>
     <p class="govuk-notification-banner__heading">
       You have 7 days left to send your application.
-      <a class="govuk-notification-banner__link" href="#">View application</a>.
+      <a class="govuk-notification-banner__link" href="#">
+        View application
+      </a>
+      .
     </p>
   </NotificationBanner>
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -42,7 +43,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -51,7 +51,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -59,7 +58,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

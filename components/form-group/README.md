@@ -3,7 +3,6 @@ NotGovUK - Form Group
 
 A group of form fields.
 
-
 Using this package
 ------------------
 
@@ -19,19 +18,14 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import FormGroup from '@not-govuk/form-group';
 
-export const MyComponent = props => (
-  <FormGroup
-    hint="Enter your date of birth"
-    id="dob"
-    label="Birthday"
-  >
+export const MyComponent = (props) => (
+  <FormGroup hint="Enter your date of birth" id="dob" label="Birthday">
     Content
   </FormGroup>
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -43,7 +37,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -52,7 +45,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -60,7 +52,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

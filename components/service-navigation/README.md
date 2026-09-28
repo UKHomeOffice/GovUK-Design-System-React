@@ -3,7 +3,6 @@ NotGovUK - Service Navigation
 
 A component to help users understand that they’re using your service and lets them navigate around your service.
 
-
 Using this package
 ------------------
 
@@ -19,26 +18,27 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import ServiceNavigation from '@not-govuk/service-navigation';
 
-export const MyComponent = props => (
-  <ServiceNavigation items={[
-    {
-      href: "/#",
-      text: "Navigation item 1"
-    },
-    {
-      href: "#active",
-      text: "Navigation item 2",
-    },
-    {
-      href: "/#",
-      text: "Navigation item 3"
-    }
-  ]} />
+export const MyComponent = (props) => (
+  <ServiceNavigation
+    items={[
+      {
+        href: '/#',
+        text: 'Navigation item 1',
+      },
+      {
+        href: '#active',
+        text: 'Navigation item 2',
+      },
+      {
+        href: '/#',
+        text: 'Navigation item 3',
+      },
+    ]}
+  />
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -50,7 +50,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -59,7 +58,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -67,7 +65,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

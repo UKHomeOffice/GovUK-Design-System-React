@@ -3,11 +3,18 @@ import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/Aside.scss';
 
-export type AsideProps = StandardProps & HTMLProps<HTMLElement> & {
-  children?: ReactNode
-};
+export type AsideProps = StandardProps &
+  HTMLProps<HTMLElement> & {
+    children?: ReactNode;
+  };
 
-export const Aside: FC<AsideProps> = ({ children, classBlock, classModifiers, className, ...attrs }) => {
+export const Aside: FC<AsideProps> = ({
+  children,
+  classBlock,
+  classModifiers,
+  className,
+  ...attrs
+}) => {
   const classes = classBuilder('not-govuk-aside', classBlock, classModifiers, className);
 
   return (

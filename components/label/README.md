@@ -3,7 +3,6 @@ NotGovUK - Label
 
 A label for a form field.
 
-
 Using this package
 ------------------
 
@@ -27,7 +26,6 @@ export const MyComponent = props => (
 export default MyComponent;
 ```
 
-
 Working on this package
 -----------------------
 
@@ -38,7 +36,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -47,7 +44,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -55,7 +51,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

@@ -24,7 +24,10 @@ export type GovUKPageProps = Omit<PageProps, 'govUK'>;
 export const GovUKPage: FC<GovUKPageProps> = ({ children, classModifiers, ...props }) => (
   <Page
     {...props}
-    classModifiers={[ ...(Array.isArray(classModifiers) ? classModifiers : [classModifiers]), 'govuk' ]}
+    classModifiers={[
+      ...(Array.isArray(classModifiers) ? classModifiers : [classModifiers]),
+      'govuk',
+    ]}
     govUK={true}
   >
     <meta name="theme-color" content={'#1d70b8'} />

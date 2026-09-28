@@ -3,12 +3,10 @@ Back link
 
 The [GDS Back link component].
 
-
 Preview
 -------
 
 ![Preview][Preview]
-
 
 Using this package
 ------------------
@@ -25,13 +23,10 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import BackLink from '@not-govuk/back-link';
 
-export const MyComponent = props => (
-  <BackLink />
-);
+export const MyComponent = (props) => <BackLink />;
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -43,13 +38,11 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
-
 
 ### Building
 
@@ -57,13 +50,11 @@ npm test
 npm run build
 ```
 
-
 ### Clean-up
 
 ```shell
 npm run clean
 ```
-
 
 [GDS Back link component]: https://design-system.service.gov.uk/components/back-link/
 [Preview]: ../../__image_snapshots__/storyshots-itest-ts-image-storyshots-components-back-link-text-1-snap.png

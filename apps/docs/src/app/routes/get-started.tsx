@@ -1,4 +1,4 @@
-import type { Route } from "./+types/get-started";
+import type { Route } from './+types/get-started';
 import { siteTitle } from '../config';
 
 import Markdown from '../../../../../docs/get-started.md';
@@ -17,7 +17,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function GetStarted() {
-  return (
-      <Markdown />
-  );
+  return <Markdown />;
 }

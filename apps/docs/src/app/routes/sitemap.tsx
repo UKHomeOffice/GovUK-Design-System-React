@@ -1,4 +1,4 @@
-import type { Route } from "./+types/sitemap";
+import type { Route } from './+types/sitemap';
 import { AnchorList } from '@react-foundry/anchor-list';
 import { A } from '@not-govuk/components';
 import { componentLinks, styleLinks } from '../stories';
@@ -20,19 +20,31 @@ export default function GetStarted() {
   return (
     <>
       <h1>{title}</h1>
-      <h2><A href="/">About NotGovUK</A></h2>
-      <AnchorList classBlock="govuk-list" items={[
-        { href: '/design-decisions', text: 'Design decisions' }
-      ]} />
-      <h2><A href="/get-started">Get started</A></h2>
-      <AnchorList classBlock="govuk-list" items={[
-        { href: '/working-on-your-project', text: 'Working on your project' }
-      ]} />
-      <h2><A href="/styles">Styles</A></h2>
+      <h2>
+        <A href="/">About NotGovUK</A>
+      </h2>
+      <AnchorList
+        classBlock="govuk-list"
+        items={[{ href: '/design-decisions', text: 'Design decisions' }]}
+      />
+      <h2>
+        <A href="/get-started">Get started</A>
+      </h2>
+      <AnchorList
+        classBlock="govuk-list"
+        items={[{ href: '/working-on-your-project', text: 'Working on your project' }]}
+      />
+      <h2>
+        <A href="/styles">Styles</A>
+      </h2>
       <AnchorList classBlock="govuk-list" items={styleLinks} />
-      <h2><A href="/components">Components</A></h2>
+      <h2>
+        <A href="/components">Components</A>
+      </h2>
       <AnchorList classBlock="govuk-list" items={componentLinks} />
-      <h2><A href="/contributing">Contributing</A></h2>
+      <h2>
+        <A href="/contributing">Contributing</A>
+      </h2>
     </>
   );
 }

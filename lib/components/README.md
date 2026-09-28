@@ -4,7 +4,6 @@ NotGovUK - Components
 An implementation of the [GOV.UK Design System] in [React] that provides
 support for writing internal applications in addition to public ones.
 
-
 Using this package
 ------------------
 
@@ -20,15 +19,14 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import { Header, Footer } from '@not-govuk/components';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <Header
-    // WRITEME
+  // WRITEME
   />
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -40,20 +38,17 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
 
-
 ### Building
 
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

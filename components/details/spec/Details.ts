@@ -9,7 +9,9 @@ describe('Details', () => {
     });
 
     it('renders an element', async () => expect(screen.getByRole('group')).toBeInTheDocument());
-    it('includes the summary provided', async () => expect(screen.getByRole('group')).toHaveTextContent('Summary'));
-    it('includes the children provided', async () => expect(screen.getByRole('group')).toHaveTextContent('Content'));
+    it('includes the summary provided', async () =>
+      expect(screen.getByRole('group')).toHaveTextContent('Summary'));
+    it('includes the children provided', async () =>
+      expect(screen.getByRole('group')).toHaveTextContent('Content'));
   });
 });

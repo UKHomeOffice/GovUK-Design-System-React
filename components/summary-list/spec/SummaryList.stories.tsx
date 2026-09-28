@@ -10,13 +10,13 @@ const meta = {
   title: 'Summary list',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
     description:
-      'A component to summarise information, for example, a user\u2019s responses at the end of a form.'
+      'A component to summarise information, for example, a user\u2019s responses at the end of a form.',
   },
   component: SummaryList,
-  args: {}
+  args: {},
 } satisfies Meta<typeof SummaryList>;
 
 export default meta;
@@ -37,10 +37,10 @@ export const Primary: Story = {
                 <Fragment>
                   Change<VisuallyHidden> name</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
-          children: 'Sarah Philips'
+          children: 'Sarah Philips',
         },
         {
           name: 'Date of birth',
@@ -51,10 +51,10 @@ export const Primary: Story = {
                 <Fragment>
                   Change<VisuallyHidden> date of birth</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
-          children: '5 January 1978'
+          children: '5 January 1978',
         },
         {
           name: 'Address',
@@ -65,8 +65,8 @@ export const Primary: Story = {
                 <Fragment>
                   Change<VisuallyHidden> address</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
           children: (
             <Fragment>
@@ -76,7 +76,7 @@ export const Primary: Story = {
               <br />
               SE23 6FH
             </Fragment>
-          )
+          ),
         },
         {
           name: 'Contact details',
@@ -87,7 +87,7 @@ export const Primary: Story = {
                 <Fragment>
                   Add<VisuallyHidden> contact details</VisuallyHidden>
                 </Fragment>
-              )
+              ),
             },
             {
               href: '#',
@@ -95,19 +95,19 @@ export const Primary: Story = {
                 <Fragment>
                   Change<VisuallyHidden> contact details</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
           children: (
             <Fragment>
               <p className="govuk-body">07700 900457</p>
               <p className="govuk-body">sarah.phillips@example.com</p>
             </Fragment>
-          )
-        }
+          ),
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -118,11 +118,11 @@ export const Standard: Story = {
       items={[
         {
           name: 'Name',
-          children: 'Sarah Philips'
+          children: 'Sarah Philips',
         },
         {
           name: 'Date of birth',
-          children: '5 January 1978'
+          children: '5 January 1978',
         },
         {
           name: 'Address',
@@ -134,7 +134,7 @@ export const Standard: Story = {
               <br />
               SE23 6FH
             </Fragment>
-          )
+          ),
         },
         {
           name: 'Contact details',
@@ -143,11 +143,11 @@ export const Standard: Story = {
               <p className="govuk-body">07700 900457</p>
               <p className="govuk-body">sarah.phillips@example.com</p>
             </Fragment>
-          )
-        }
+          ),
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Actions: Story = {
@@ -165,10 +165,10 @@ export const Actions: Story = {
                 <Fragment>
                   Change<VisuallyHidden> name</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
-          children: 'Sarah Philips'
+          children: 'Sarah Philips',
         },
         {
           name: 'Date of birth',
@@ -179,10 +179,10 @@ export const Actions: Story = {
                 <Fragment>
                   Change<VisuallyHidden> date of birth</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
-          children: '5 January 1978'
+          children: '5 January 1978',
         },
         {
           name: 'Address',
@@ -193,8 +193,8 @@ export const Actions: Story = {
                 <Fragment>
                   Change<VisuallyHidden> address</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
           children: (
             <Fragment>
@@ -204,7 +204,7 @@ export const Actions: Story = {
               <br />
               SE23 6FH
             </Fragment>
-          )
+          ),
         },
         {
           name: 'Contact details',
@@ -215,7 +215,7 @@ export const Actions: Story = {
                 <Fragment>
                   Add<VisuallyHidden> contact details</VisuallyHidden>
                 </Fragment>
-              )
+              ),
             },
             {
               href: '#',
@@ -223,19 +223,19 @@ export const Actions: Story = {
                 <Fragment>
                   Change<VisuallyHidden> contact details</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
           children: (
             <Fragment>
               <p className="govuk-body">07700 900457</p>
               <p className="govuk-body">sarah.phillips@example.com</p>
             </Fragment>
-          )
-        }
+          ),
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const MixedActions: Story = {
@@ -246,7 +246,7 @@ export const MixedActions: Story = {
       items={[
         {
           name: 'Name',
-          children: 'Sarah Philips'
+          children: 'Sarah Philips',
         },
         {
           name: 'Date of birth',
@@ -257,10 +257,10 @@ export const MixedActions: Story = {
                 <Fragment>
                   Change<VisuallyHidden> date of birth</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
-          children: '5 January 1978'
+          children: '5 January 1978',
         },
         {
           name: 'Address',
@@ -271,8 +271,8 @@ export const MixedActions: Story = {
                 <Fragment>
                   Change<VisuallyHidden> address</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
           children: (
             <Fragment>
@@ -282,7 +282,7 @@ export const MixedActions: Story = {
               <br />
               SE23 6FH
             </Fragment>
-          )
+          ),
         },
         {
           name: 'Contact details',
@@ -293,7 +293,7 @@ export const MixedActions: Story = {
                 <Fragment>
                   Add<VisuallyHidden> contact details</VisuallyHidden>
                 </Fragment>
-              )
+              ),
             },
             {
               href: '#',
@@ -301,20 +301,20 @@ export const MixedActions: Story = {
                 <Fragment>
                   Change<VisuallyHidden> contact details</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
           children: (
             <Fragment>
               <p className="govuk-body">07700 900457</p>
               <p className="govuk-body">sarah.phillips@example.com</p>
             </Fragment>
-          )
-        }
+          ),
+        },
       ]}
     />
   ),
-  name: 'Mixed actions'
+  name: 'Mixed actions',
 };
 
 export const NoBorders: Story = {
@@ -325,11 +325,11 @@ export const NoBorders: Story = {
       items={[
         {
           name: 'Name',
-          children: 'Sarah Philips'
+          children: 'Sarah Philips',
         },
         {
           name: 'Date of birth',
-          children: '5 January 1978'
+          children: '5 January 1978',
         },
         {
           name: 'Address',
@@ -341,7 +341,7 @@ export const NoBorders: Story = {
               <br />
               SE23 6FH
             </Fragment>
-          )
+          ),
         },
         {
           name: 'Contact details',
@@ -350,12 +350,12 @@ export const NoBorders: Story = {
               <p className="govuk-body">07700 900457</p>
               <p className="govuk-body">sarah.phillips@example.com</p>
             </Fragment>
-          )
-        }
+          ),
+        },
       ]}
     />
   ),
-  name: 'No borders'
+  name: 'No borders',
 };
 
 export const MissingInfo: Story = {
@@ -373,10 +373,10 @@ export const MissingInfo: Story = {
                 <Fragment>
                   Change<VisuallyHidden> name</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
-          children: 'Sarah Philips'
+          children: 'Sarah Philips',
         },
         {
           name: 'Date of birth',
@@ -387,23 +387,23 @@ export const MissingInfo: Story = {
                 <Fragment>
                   Change<VisuallyHidden> date of birth</VisuallyHidden>
                 </Fragment>
-              )
-            }
+              ),
+            },
           ],
-          children: '5 January 1978'
+          children: '5 January 1978',
         },
         {
           name: 'Contact information',
-          children: <A href="#">Enter contact information</A>
+          children: <A href="#">Enter contact information</A>,
         },
         {
           name: 'Contact details',
-          children: <A href="#">Enter contact details</A>
-        }
+          children: <A href="#">Enter contact details</A>,
+        },
       ]}
     />
   ),
-  name: 'Missing info'
+  name: 'Missing info',
 };
 
 export const Cards: Story = {
@@ -423,10 +423,10 @@ export const Cards: Story = {
                     <Fragment>
                       Change<VisuallyHidden> age</VisuallyHidden>
                     </Fragment>
-                  )
-                }
+                  ),
+                },
               ],
-              children: '38'
+              children: '38',
             },
             {
               name: 'Nationality',
@@ -437,10 +437,10 @@ export const Cards: Story = {
                     <Fragment>
                       Change<VisuallyHidden> nationality</VisuallyHidden>
                     </Fragment>
-                  )
-                }
+                  ),
+                },
               ],
-              children: 'UK national resident in UK'
+              children: 'UK national resident in UK',
             },
             {
               name: 'Working situation',
@@ -451,11 +451,11 @@ export const Cards: Story = {
                     <Fragment>
                       Change<VisuallyHidden> working situation</VisuallyHidden>
                     </Fragment>
-                  )
-                }
+                  ),
+                },
               ],
-              children: 'Part time – less than 30 hours a week'
-            }
+              children: 'Part time – less than 30 hours a week',
+            },
           ]}
         />
       </SummaryCard>
@@ -470,15 +470,12 @@ export const Cards: Story = {
                   children: (
                     <Fragment>
                       Change
-                      <VisuallyHidden>
-                        {' '}
-                        whether details are known
-                      </VisuallyHidden>
+                      <VisuallyHidden> whether details are known</VisuallyHidden>
                     </Fragment>
-                  )
-                }
+                  ),
+                },
               ],
-              children: 'Yes'
+              children: 'Yes',
             },
             {
               name: 'Relationship to lead tenant',
@@ -490,10 +487,10 @@ export const Cards: Story = {
                       Change
                       <VisuallyHidden> relationship to tenant</VisuallyHidden>
                     </Fragment>
-                  )
-                }
+                  ),
+                },
               ],
-              children: 'Partner'
+              children: 'Partner',
             },
             {
               name: 'Age',
@@ -504,10 +501,10 @@ export const Cards: Story = {
                     <Fragment>
                       Change<VisuallyHidden> age</VisuallyHidden>
                     </Fragment>
-                  )
-                }
+                  ),
+                },
               ],
-              children: '42'
+              children: '42',
             },
             {
               name: 'Working situation',
@@ -518,12 +515,11 @@ export const Cards: Story = {
                     <Fragment>
                       Change<VisuallyHidden> working situation</VisuallyHidden>
                     </Fragment>
-                  )
-                }
+                  ),
+                },
               ],
-              children:
-                'Unable to work because of long-term sickness or disability'
-            }
+              children: 'Unable to work because of long-term sickness or disability',
+            },
           ]}
         />
       </SummaryCard>
@@ -538,15 +534,12 @@ export const Cards: Story = {
                   children: (
                     <Fragment>
                       Change
-                      <VisuallyHidden>
-                        {' '}
-                        whether details are known
-                      </VisuallyHidden>
+                      <VisuallyHidden> whether details are known</VisuallyHidden>
                     </Fragment>
-                  )
-                }
+                  ),
+                },
               ],
-              children: 'Yes'
+              children: 'Yes',
             },
             {
               name: 'Relationship to lead tenant',
@@ -558,10 +551,10 @@ export const Cards: Story = {
                       Change
                       <VisuallyHidden> relationship to tenant</VisuallyHidden>
                     </Fragment>
-                  )
-                }
+                  ),
+                },
               ],
-              children: 'Child'
+              children: 'Child',
             },
             {
               name: 'Age',
@@ -572,10 +565,10 @@ export const Cards: Story = {
                     <Fragment>
                       Change<VisuallyHidden> age</VisuallyHidden>
                     </Fragment>
-                  )
-                }
+                  ),
+                },
               ],
-              children: '7'
+              children: '7',
             },
             {
               name: 'Working situation',
@@ -586,16 +579,16 @@ export const Cards: Story = {
                     <Fragment>
                       Change<VisuallyHidden> working situation</VisuallyHidden>
                     </Fragment>
-                  )
-                }
+                  ),
+                },
               ],
-              children: 'Child under 16'
-            }
+              children: 'Child under 16',
+            },
           ]}
         />
       </SummaryCard>
     </>
-  )
+  ),
 };
 
 export const CardsWithActions: Story = {
@@ -610,25 +603,19 @@ export const CardsWithActions: Story = {
             children: (
               <Fragment>
                 Delete choice
-                <VisuallyHidden>
-                  {' '}
-                  of University of Gloucestershire
-                </VisuallyHidden>
+                <VisuallyHidden> of University of Gloucestershire</VisuallyHidden>
               </Fragment>
-            )
+            ),
           },
           {
             href: '#',
             children: (
               <Fragment>
                 Withdraw
-                <VisuallyHidden>
-                  {' '}
-                  from University of Gloucestershire
-                </VisuallyHidden>
+                <VisuallyHidden> from University of Gloucestershire</VisuallyHidden>
               </Fragment>
-            )
-          }
+            ),
+          },
         ]}
       >
         <SummaryList
@@ -642,7 +629,7 @@ export const CardsWithActions: Story = {
                   <br />
                   PGCE with QTS full time
                 </Fragment>
-              )
+              ),
             },
             {
               name: 'Location',
@@ -652,8 +639,8 @@ export const CardsWithActions: Story = {
                   <br />
                   Road, City, SW1 1AA
                 </Fragment>
-              )
-            }
+              ),
+            },
           ]}
         />
       </SummaryCard>
@@ -667,7 +654,7 @@ export const CardsWithActions: Story = {
                 Delete choice
                 <VisuallyHidden> of University of Bristol</VisuallyHidden>
               </Fragment>
-            )
+            ),
           },
           {
             href: '#',
@@ -676,8 +663,8 @@ export const CardsWithActions: Story = {
                 Withdraw
                 <VisuallyHidden> from University of Bristol</VisuallyHidden>
               </Fragment>
-            )
-          }
+            ),
+          },
         ]}
       >
         <SummaryList
@@ -690,7 +677,7 @@ export const CardsWithActions: Story = {
                   <br />
                   PGCE with QTS full time
                 </Fragment>
-              )
+              ),
             },
             {
               name: 'Location',
@@ -700,12 +687,12 @@ export const CardsWithActions: Story = {
                   <br />
                   Road, City, SW2 1AA
                 </Fragment>
-              )
-            }
+              ),
+            },
           ]}
         />
       </SummaryCard>
     </>
   ),
-  name: 'Cards with actions'
+  name: 'Cards with actions',
 };

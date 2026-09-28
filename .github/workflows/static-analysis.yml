@@ -2,7 +2,7 @@ name: Static analysis
 on:
   pull_request:
   push:
-    branches: [ 'master' ]
+    branches: ['master']
 jobs:
   analyse:
     name: Analyse
@@ -14,7 +14,6 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v7
 

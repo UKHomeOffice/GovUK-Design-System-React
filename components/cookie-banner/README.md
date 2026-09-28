@@ -3,7 +3,6 @@ NotGovUK - Cookie Banner
 
 A component to allow users to accept or reject cookies which are not essential to making your service work.
 
-
 Using this package
 ------------------
 
@@ -19,7 +18,7 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import CookieBanner from '@not-govuk/cookie-banner';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <CookieBanner
     aria-label="Cookies on [name of service]"
     messages={[
@@ -28,7 +27,10 @@ export const MyComponent = props => (
         content: (
           <Fragment>
             <p className="govuk-body">We use some essential cookies to make this service work.</p>
-            <p className="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+            <p className="govuk-body">
+              We’d also like to use analytics cookies so we can understand how you use the service
+              and make improvements.
+            </p>
           </Fragment>
         ),
         actions: (
@@ -41,15 +43,14 @@ export const MyComponent = props => (
             </Button>
             <A href="#">View cookies</A>
           </Fragment>
-        )
-      }
+        ),
+      },
     ]}
   />
 );
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -61,7 +62,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -70,7 +70,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -78,7 +77,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

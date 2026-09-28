@@ -8,15 +8,15 @@ import '../assets/StandaloneInput.scss';
 
 export type StandaloneInputProps = InputProps & {
   /** Submit button text */
-  button?: ReactNode
+  button?: ReactNode;
   /** Error message */
-  error?: ReactNode
+  error?: ReactNode;
   /** Hint */
-  hint?: string
+  hint?: string;
   /** Label */
-  label?: string
+  label?: string;
   /** HTML name */
-  name: string
+  name: string;
 };
 
 export const StandaloneInput: FC<StandaloneInputProps> = ({
@@ -35,20 +35,14 @@ export const StandaloneInput: FC<StandaloneInputProps> = ({
   const classModifiers = [
     error ? 'error' : undefined,
     width ? 'fixed-width' : undefined,
-    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers])
+    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers]),
   ];
   const classes = classBuilder('not-govuk-standalone-input', classBlock, classModifiers, className);
   const id = _id || attrs.name;
   const fieldId = `${id}-input`;
   const hintId = `${id}-hint`;
   const errorId = `${id}-error`;
-  const describedBy = ([
-    hint && hintId,
-    error && errorId
-  ]
-    .filter(e => e)
-    .join(' ') || undefined
-  );
+  const describedBy = [hint && hintId, error && errorId].filter((e) => e).join(' ') || undefined;
 
   return (
     <FormGroup
@@ -72,7 +66,9 @@ export const StandaloneInput: FC<StandaloneInputProps> = ({
         placeholder={hint || label}
         width={width}
       />
-      <SubmitButton className={classes('button')} disabled={disabled}>{button}</SubmitButton>
+      <SubmitButton className={classes('button')} disabled={disabled}>
+        {button}
+      </SubmitButton>
     </FormGroup>
   );
 };

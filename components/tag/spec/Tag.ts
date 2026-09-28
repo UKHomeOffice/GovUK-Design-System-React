@@ -16,7 +16,8 @@ describe('Tag', () => {
       render(h(Tag, { text: 'Alpha' }));
     });
 
-    it('contains the text provided', async () => expect(screen.getByRole('generic')).toHaveTextContent('Alpha'));
+    it('contains the text provided', async () =>
+      expect(screen.getByRole('generic')).toHaveTextContent('Alpha'));
   });
 
   describe('when given a child', () => {
@@ -24,6 +25,7 @@ describe('Tag', () => {
       render(h(Tag, {}, 'Alpha'));
     });
 
-    it('contains the child provided', async () => expect(screen.getByRole('generic')).toHaveTextContent('Alpha'));
+    it('contains the child provided', async () =>
+      expect(screen.getByRole('generic')).toHaveTextContent('Alpha'));
   });
 });

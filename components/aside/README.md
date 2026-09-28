@@ -3,7 +3,6 @@ NotGovUK - Aside
 
 A component for displaying indirectly related content.
 
-
 Using this package
 ------------------
 
@@ -19,7 +18,7 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import Aside from '@not-govuk/aside';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <Aside>
     <h2>Did you know?</h2>
     <p>You can put indirectly related content in an Aside component.</p>
@@ -28,7 +27,6 @@ export const MyComponent = props => (
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -40,20 +38,17 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 ```shell
 npm test
 ```
 
-
 ### Building
 
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

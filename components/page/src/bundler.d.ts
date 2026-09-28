@@ -1,8 +1,10 @@
 // Based on CRA's react-scripts
 
-type ImageData = string | {
-  src: string
-}
+type ImageData =
+  | string
+  | {
+      src: string;
+    };
 
 declare module '*.avif' {
   const src: ImageData;
@@ -47,9 +49,9 @@ declare module '*.webp' {
 declare module '*.svg' {
   import * as React from 'react';
 
-  export const ReactComponent: React.FunctionComponent<React.SVGProps<
-    SVGSVGElement
-  > & { title?: string }>;
+  export const ReactComponent: React.FunctionComponent<
+    React.SVGProps<SVGSVGElement> & { title?: string }
+  >;
 
   const src: string;
   export default src;

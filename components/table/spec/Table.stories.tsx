@@ -6,13 +6,12 @@ const meta = {
   title: 'Table',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
-    description:
-      'A component to make information easier to compare and scan for users.'
+    description: 'A component to make information easier to compare and scan for users.',
   },
   component: Table,
-  args: {}
+  args: {},
 } satisfies Meta<typeof Table>;
 
 export default meta;
@@ -26,24 +25,24 @@ export const Primary: Story = {
       keys={['date', 'amount']}
       headings={{
         amount: 'Amount',
-        date: 'Date'
+        date: 'Date',
       }}
       data={[
         {
           amount: '£109.80 per week',
-          date: 'First 6 weeks'
+          date: 'First 6 weeks',
         },
         {
           amount: '£109.80 per week',
-          date: 'Next 33 weeks'
+          date: 'Next 33 weeks',
         },
         {
           amount: '£4,282.20',
-          date: 'Total estimated pay'
-        }
+          date: 'Total estimated pay',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Captions: Story = {
@@ -52,31 +51,29 @@ export const Captions: Story = {
     <Table
       {...props}
       caption={
-        <caption className="govuk-table__caption govuk-table__caption--l">
-          Months and rates
-        </caption>
+        <caption className="govuk-table__caption govuk-table__caption--l">Months and rates</caption>
       }
       keys={['month', 'rate']}
       headings={{
         month: 'Month you apply',
-        rate: 'Rate for vehicles'
+        rate: 'Rate for vehicles',
       }}
       data={[
         {
           month: 'January',
-          rate: '£95'
+          rate: '£95',
         },
         {
           month: 'February',
-          rate: '£55'
+          rate: '£55',
         },
         {
           month: 'March',
-          rate: '£125'
-        }
+          rate: '£125',
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Standard: Story = {
@@ -87,22 +84,22 @@ export const Standard: Story = {
       keys={['date', 'amount']}
       headings={{
         amount: 'Amount',
-        date: 'Date'
+        date: 'Date',
       }}
       data={[
         {
           amount: '£109.80 per week',
-          date: 'First 6 weeks'
+          date: 'First 6 weeks',
         },
         {
           amount: '£109.80 per week',
-          date: 'Next 33 weeks'
+          date: 'Next 33 weeks',
         },
         {
           amount: '£4,282.20',
-          date: 'Total estimated pay'
-        }
+          date: 'Total estimated pay',
+        },
       ]}
     />
-  )
+  ),
 };

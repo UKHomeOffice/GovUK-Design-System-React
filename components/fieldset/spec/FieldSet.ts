@@ -9,7 +9,9 @@ describe('FieldSet', () => {
     });
 
     it('renders an element', async () => expect(screen.getByRole('generic')).toBeInTheDocument());
-    it('includes the legend provided', async () => expect(screen.getByRole('generic')).toHaveTextContent('My legend'));
-    it('includes the children provided', async () => expect(screen.getByRole('generic')).toHaveTextContent('Child'));
+    it('includes the legend provided', async () =>
+      expect(screen.getByRole('generic')).toHaveTextContent('My legend'));
+    it('includes the children provided', async () =>
+      expect(screen.getByRole('generic')).toHaveTextContent('Child'));
   });
 });

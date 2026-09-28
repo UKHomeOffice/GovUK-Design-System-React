@@ -1,24 +1,24 @@
-@use "sass:map";
-@use "@not-govuk/sass-base" as *;
-@use "govuk-frontend/dist/govuk/components/generic-header";
+@use 'sass:map';
+@use '@not-govuk/sass-base' as *;
+@use 'govuk-frontend/dist/govuk/components/generic-header';
 
 .govuk-generic-header {
-  border-color: govuk-functional-colour("brand");
+  border-color: govuk-functional-colour('brand');
   border-style: solid;
   border-width: 0;
 
   // Department colours
   @each $i, $v in $govuk-colours-organisations {
     &--#{$i} {
-      $contrast-safe: map.get($v, "contrast-safe");
-      $light-colour: map.get($v, "colour");
+      $contrast-safe: map.get($v, 'contrast-safe');
+      $light-colour: map.get($v, 'colour');
       $colour: if(sass($contrast-safe): $contrast-safe; else: $light-colour);
       --govuk-brand-colour: #{$colour};
       border-bottom-width: govuk-spacing(2);
 
       .govuk-generic-header__logo {
-        @include govuk-responsive-padding(2, "top");
-        @include govuk-responsive-padding(2, "bottom");
+        @include govuk-responsive-padding(2, 'top');
+        @include govuk-responsive-padding(2, 'bottom');
       }
     }
   }
@@ -27,8 +27,8 @@
     border-bottom-width: govuk-spacing(2);
 
     .govuk-generic-header__logo {
-      @include govuk-responsive-padding(2, "top");
-      @include govuk-responsive-padding(2, "bottom");
+      @include govuk-responsive-padding(2, 'top');
+      @include govuk-responsive-padding(2, 'bottom');
     }
   }
 

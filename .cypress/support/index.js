@@ -13,13 +13,9 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-Cypress.Commands.add('visitReady', (
-  url,
-  options,
-  selector = '.govuk-frontend-supported'
-) => {
+Cypress.Commands.add('visitReady', (url, options, selector = '.govuk-frontend-supported') => {
   cy.visit(url, options);
   cy.get(selector, {
-    timeout: Cypress.config('pageLoadTimeout')
+    timeout: Cypress.config('pageLoadTimeout'),
   }).should('exist');
 });

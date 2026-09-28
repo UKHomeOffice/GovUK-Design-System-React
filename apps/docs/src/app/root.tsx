@@ -5,18 +5,21 @@ import {
   Scripts,
   ScrollRestoration,
   isRouteErrorResponse,
-  useRouteLoaderData
+  useRouteLoaderData,
 } from 'react-router';
 import type { Route } from './+types/root';
 import { A, NotGovUKPage as Page } from '@not-govuk/components';
-import { cspNonceContext, sanitiseUserInfo, userInfoContext } from '@react-foundry/react-router-context';
+import {
+  cspNonceContext,
+  sanitiseUserInfo,
+  userInfoContext,
+} from '@react-foundry/react-router-context';
 import { UserInfoContext } from '@react-foundry/user-info';
 import { siteTitle } from './config';
 
 import './app.scss';
 
-export const links: Route.LinksFunction = () => [
-];
+export const links: Route.LinksFunction = () => [];
 
 export const loader = async ({ context }: Route.LoaderArgs) => {
   const nonce = context.get(cspNonceContext);
@@ -24,7 +27,7 @@ export const loader = async ({ context }: Route.LoaderArgs) => {
 
   return {
     nonce,
-    user: user && sanitiseUserInfo(user)
+    user: user && sanitiseUserInfo(user),
   };
 };
 
@@ -45,23 +48,27 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <Page
             department="not-govuk"
             feedbackHref="https://github.com/daniel-ac-martin/NotGovUK/issues/new"
-            footerContent={(
+            footerContent={
               <>
-                Copyright (C) 2019-2025 Crown Copyright<br />
-                Copyright (C) 2019-2025 <A href="https://github.com/daniel-ac-martin">Daniel A.C. Martin</A><br />
-                NotGovUK operates independently from <A href="https://gov.uk">GOV.UK</A> and is not affiliated, endorsed or supported by HM Government
+                Copyright (C) 2019-2025 Crown Copyright
+                <br />
+                Copyright (C) 2019-2025{' '}
+                <A href="https://github.com/daniel-ac-martin">Daniel A.C. Martin</A>
+                <br />
+                NotGovUK operates independently from <A href="https://gov.uk">GOV.UK</A> and is not
+                affiliated, endorsed or supported by HM Government
               </>
-            )}
+            }
             navigation={[
               { href: '/get-started', text: 'Get started' },
               { href: '/styles', text: 'Styles' },
               { href: '/components', text: 'Components' },
-              { href: '/contributing', text: 'Contributing' }
+              { href: '/contributing', text: 'Contributing' },
             ]}
             meta={[
-              { href: "https://github.com/daniel-ac-martin/NotGovUK", text: "GitHub" },
-              { href: "/sitemap", text: "Sitemap" },
-              { href: "https://github.com/daniel-ac-martin/NotGovUK/issues/new", text: "Contact" },
+              { href: 'https://github.com/daniel-ac-martin/NotGovUK', text: 'GitHub' },
+              { href: '/sitemap', text: 'Sitemap' },
+              { href: 'https://github.com/daniel-ac-martin/NotGovUK/issues/new', text: 'Contact' },
             ]}
             organisationHref="/"
             organisationText="!GOV.UK"
@@ -108,32 +115,25 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   const defaultMessage = 'Something went wrong';
   const defaultDetails = 'An unexpected error occurred.';
 
-  const { message, details, stack } = (
-    isRouteErrorResponse(error)
+  const { message, details, stack } = isRouteErrorResponse(error)
     ? {
-      message: statusToMessage[error.status] || error.statusText || defaultMessage,
-      details: (
-        error.status !== 404
-        ? error.statusText
-        : (
-          'If you typed the web address, check it is correct.\n' +
-          'If you pasted the web address, check you copied the entire address.'
-        )
-      )
-    }
-    : (
-      import.meta.env.DEV && error && error instanceof Error
+        message: statusToMessage[error.status] || error.statusText || defaultMessage,
+        details:
+          error.status !== 404
+            ? error.statusText
+            : 'If you typed the web address, check it is correct.\n' +
+              'If you pasted the web address, check you copied the entire address.',
+      }
+    : import.meta.env.DEV && error && error instanceof Error
       ? {
-        message: defaultMessage,
-        details: error.message,
-        stack: error.stack
-      }
+          message: defaultMessage,
+          details: error.message,
+          stack: error.stack,
+        }
       : {
-        message: defaultMessage,
-        details: defaultDetails
-      }
-    )
-  );
+          message: defaultMessage,
+          details: defaultDetails,
+        };
 
   return (
     <main>

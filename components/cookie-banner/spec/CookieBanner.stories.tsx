@@ -9,13 +9,13 @@ const meta = {
   title: 'Cookie banner',
   parameters: {
     chromatic: {
-      viewports: [640, 480]
+      viewports: [640, 480],
     },
     description:
-      'A component to allow users to accept or reject cookies which are not essential to making your service work.'
+      'A component to allow users to accept or reject cookies which are not essential to making your service work.',
   },
   component: CookieBanner,
-  args: { 'aria-label': 'Cookies on [name of service]' }
+  args: { 'aria-label': 'Cookies on [name of service]' },
 } satisfies Meta<typeof CookieBanner>;
 
 export default meta;
@@ -31,12 +31,10 @@ export const Primary: Story = {
           heading: 'Cookies on [name of service]',
           content: (
             <Fragment>
+              <p className="govuk-body">We use some essential cookies to make this service work.</p>
               <p className="govuk-body">
-                We use some essential cookies to make this service work.
-              </p>
-              <p className="govuk-body">
-                We’d also like to use analytics cookies so we can understand how
-                you use the service and make improvements.
+                We’d also like to use analytics cookies so we can understand how you use the service
+                and make improvements.
               </p>
             </Fragment>
           ),
@@ -50,11 +48,11 @@ export const Primary: Story = {
               </Button>
               <A href="#">View cookies</A>
             </Fragment>
-          )
-        }
+          ),
+        },
       ]}
     />
-  )
+  ),
 };
 
 export const Form: Story = {
@@ -72,8 +70,8 @@ export const Form: Story = {
                   We use some essential cookies to make this service work.
                 </p>
                 <p className="govuk-body">
-                  We’d also like to use analytics cookies so we can understand
-                  how you use the service and make improvements.
+                  We’d also like to use analytics cookies so we can understand how you use the
+                  service and make improvements.
                 </p>
               </Fragment>
             ),
@@ -87,12 +85,12 @@ export const Form: Story = {
                 </Button>
                 <A href="#">View cookies</A>
               </Fragment>
-            )
-          }
+            ),
+          },
         ]}
       />
     </form>
-  )
+  ),
 };
 
 export const Confirmation: Story = {
@@ -113,12 +111,12 @@ export const Confirmation: Story = {
                 at any time.
               </p>
             ),
-            actions: <Button href="#">Hide this message</Button>
-          }
+            actions: <Button href="#">Hide this message</Button>,
+          },
         ]}
       />
     </form>
-  )
+  ),
 };
 
 export const ProgressiveEnhancement: Story = {
@@ -136,8 +134,8 @@ export const ProgressiveEnhancement: Story = {
                   We use some essential cookies to make this service work.
                 </p>
                 <p className="govuk-body">
-                  We’d also like to use analytics cookies so we can understand
-                  how you use the service and make improvements.
+                  We’d also like to use analytics cookies so we can understand how you use the
+                  service and make improvements.
                 </p>
               </Fragment>
             ),
@@ -151,7 +149,7 @@ export const ProgressiveEnhancement: Story = {
                 </Button>
                 <A href="#">View cookies</A>
               </Fragment>
-            )
+            ),
           },
           {
             content: (
@@ -164,7 +162,7 @@ export const ProgressiveEnhancement: Story = {
               </p>
             ),
             actions: <Button href="#">Hide this message</Button>,
-            hidden: true
+            hidden: true,
           },
           {
             content: (
@@ -177,13 +175,13 @@ export const ProgressiveEnhancement: Story = {
               </p>
             ),
             actions: <Button href="#">Hide this message</Button>,
-            hidden: true
-          }
+            hidden: true,
+          },
         ]}
       />
     </form>
   ),
-  name: 'Progressive enhancement'
+  name: 'Progressive enhancement',
 };
 
 export const ProgressiveEnhancementConfirmed: Story = {
@@ -201,8 +199,8 @@ export const ProgressiveEnhancementConfirmed: Story = {
                   We use some essential cookies to make this service work.
                 </p>
                 <p className="govuk-body">
-                  We’d also like to use analytics cookies so we can understand
-                  how you use the service and make improvements.
+                  We’d also like to use analytics cookies so we can understand how you use the
+                  service and make improvements.
                 </p>
               </Fragment>
             ),
@@ -217,7 +215,7 @@ export const ProgressiveEnhancementConfirmed: Story = {
                 <A href="#">View cookies</A>
               </Fragment>
             ),
-            hidden: true
+            hidden: true,
           },
           {
             content: (
@@ -229,7 +227,7 @@ export const ProgressiveEnhancementConfirmed: Story = {
                 at any time.
               </p>
             ),
-            actions: <Button href="#">Hide this message</Button>
+            actions: <Button href="#">Hide this message</Button>,
           },
           {
             content: (
@@ -242,13 +240,13 @@ export const ProgressiveEnhancementConfirmed: Story = {
               </p>
             ),
             actions: <Button href="#">Hide this message</Button>,
-            hidden: true
-          }
+            hidden: true,
+          },
         ]}
       />
     </form>
   ),
-  name: 'Progressive enhancement confirmed'
+  name: 'Progressive enhancement confirmed',
 };
 
 export const JSOnly: Story = {
@@ -261,12 +259,10 @@ export const JSOnly: Story = {
           heading: 'Cookies on [name of service]',
           content: (
             <Fragment>
+              <p className="govuk-body">We use some essential cookies to make this service work.</p>
               <p className="govuk-body">
-                We use some essential cookies to make this service work.
-              </p>
-              <p className="govuk-body">
-                We’d also like to use analytics cookies so we can understand how
-                you use the service and make improvements.
+                We’d also like to use analytics cookies so we can understand how you use the service
+                and make improvements.
               </p>
             </Fragment>
           ),
@@ -276,7 +272,7 @@ export const JSOnly: Story = {
               <Button name="cookies">Reject analytics cookies</Button>
               <A href="#">View cookies</A>
             </Fragment>
-          )
+          ),
         },
         {
           content: (
@@ -290,7 +286,7 @@ export const JSOnly: Story = {
           ),
           actions: <Button href="#">Hide this message</Button>,
           hidden: true,
-          role: 'alert'
+          role: 'alert',
         },
         {
           content: (
@@ -304,12 +300,12 @@ export const JSOnly: Story = {
           ),
           actions: <Button href="#">Hide this message</Button>,
           hidden: true,
-          role: 'alert'
-        }
+          role: 'alert',
+        },
       ]}
     />
   ),
-  name: 'JS only'
+  name: 'JS only',
 };
 
 export const JSOnlyAccepted: Story = {
@@ -322,12 +318,10 @@ export const JSOnlyAccepted: Story = {
           heading: 'Cookies on [name of service]',
           content: (
             <Fragment>
+              <p className="govuk-body">We use some essential cookies to make this service work.</p>
               <p className="govuk-body">
-                We use some essential cookies to make this service work.
-              </p>
-              <p className="govuk-body">
-                We’d also like to use analytics cookies so we can understand how
-                you use the service and make improvements.
+                We’d also like to use analytics cookies so we can understand how you use the service
+                and make improvements.
               </p>
             </Fragment>
           ),
@@ -338,7 +332,7 @@ export const JSOnlyAccepted: Story = {
               <A href="#">View cookies</A>
             </Fragment>
           ),
-          hidden: true
+          hidden: true,
         },
         {
           content: (
@@ -351,7 +345,7 @@ export const JSOnlyAccepted: Story = {
             </p>
           ),
           actions: <Button href="#">Hide this message</Button>,
-          role: 'alert'
+          role: 'alert',
         },
         {
           content: (
@@ -365,12 +359,12 @@ export const JSOnlyAccepted: Story = {
           ),
           actions: <Button href="#">Hide this message</Button>,
           hidden: true,
-          role: 'alert'
-        }
+          role: 'alert',
+        },
       ]}
     />
   ),
-  name: 'JS only accepted'
+  name: 'JS only accepted',
 };
 
 export const JSOnlyRejected: Story = {
@@ -383,12 +377,10 @@ export const JSOnlyRejected: Story = {
           heading: 'Cookies on [name of service]',
           content: (
             <Fragment>
+              <p className="govuk-body">We use some essential cookies to make this service work.</p>
               <p className="govuk-body">
-                We use some essential cookies to make this service work.
-              </p>
-              <p className="govuk-body">
-                We’d also like to use analytics cookies so we can understand how
-                you use the service and make improvements.
+                We’d also like to use analytics cookies so we can understand how you use the service
+                and make improvements.
               </p>
             </Fragment>
           ),
@@ -399,7 +391,7 @@ export const JSOnlyRejected: Story = {
               <A href="#">View cookies</A>
             </Fragment>
           ),
-          hidden: true
+          hidden: true,
         },
         {
           content: (
@@ -413,7 +405,7 @@ export const JSOnlyRejected: Story = {
           ),
           actions: <Button href="#">Hide this message</Button>,
           hidden: true,
-          role: 'alert'
+          role: 'alert',
         },
         {
           content: (
@@ -426,12 +418,12 @@ export const JSOnlyRejected: Story = {
             </p>
           ),
           actions: <Button href="#">Hide this message</Button>,
-          role: 'alert'
-        }
+          role: 'alert',
+        },
       ]}
     />
   ),
-  name: 'JS only rejected'
+  name: 'JS only rejected',
 };
 
 export const EssentialAndAnalytics: Story = {
@@ -444,12 +436,10 @@ export const EssentialAndAnalytics: Story = {
           heading: 'Cookies on [name of service]',
           content: (
             <Fragment>
+              <p className="govuk-body">We use some essential cookies to make this service work.</p>
               <p className="govuk-body">
-                We use some essential cookies to make this service work.
-              </p>
-              <p className="govuk-body">
-                We’d also like to use analytics cookies so we can understand how
-                you use the service and make improvements.
+                We’d also like to use analytics cookies so we can understand how you use the service
+                and make improvements.
               </p>
             </Fragment>
           ),
@@ -463,12 +453,12 @@ export const EssentialAndAnalytics: Story = {
               </Button>
               <A href="#">View cookies</A>
             </Fragment>
-          )
-        }
+          ),
+        },
       ]}
     />
   ),
-  name: 'Essential and analytics'
+  name: 'Essential and analytics',
 };
 
 export const EssentialAndOthers: Story = {
@@ -481,13 +471,10 @@ export const EssentialAndOthers: Story = {
           heading: 'Cookies on [name of service]',
           content: (
             <Fragment>
+              <p className="govuk-body">We use some essential cookies to make this service work.</p>
               <p className="govuk-body">
-                We use some essential cookies to make this service work.
-              </p>
-              <p className="govuk-body">
-                We’d like to set additional cookies so we can remember your
-                settings, understand how people use the service and make
-                improvements.
+                We’d like to set additional cookies so we can remember your settings, understand how
+                people use the service and make improvements.
               </p>
             </Fragment>
           ),
@@ -501,10 +488,10 @@ export const EssentialAndOthers: Story = {
               </Button>
               <A href="#">View cookies</A>
             </Fragment>
-          )
-        }
+          ),
+        },
       ]}
     />
   ),
-  name: 'Essential and others'
+  name: 'Essential and others',
 };

@@ -3,10 +3,11 @@ import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 import '../assets/FieldSet.scss';
 
-export type FieldSetProps = StandardProps & FieldsetHTMLAttributes<HTMLFieldSetElement> & {
-  children?: ReactNode
-  legend: ReactNode
-};
+export type FieldSetProps = StandardProps &
+  FieldsetHTMLAttributes<HTMLFieldSetElement> & {
+    children?: ReactNode;
+    legend: ReactNode;
+  };
 
 export const FieldSet: FC<FieldSetProps> = ({
   children,

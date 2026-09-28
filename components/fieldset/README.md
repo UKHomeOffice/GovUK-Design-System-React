@@ -3,7 +3,6 @@ NotGovUK - FieldSet
 
 A set of form fields.
 
-
 Using this package
 ------------------
 
@@ -19,13 +18,10 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import FieldSet from '@not-govuk/fieldset';
 
-export const MyComponent = props => (
-  <FieldSet legend="My fieldset">Content</FieldSet>
-);
+export const MyComponent = (props) => <FieldSet legend="My fieldset">Content</FieldSet>;
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -37,7 +33,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -46,7 +41,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -54,7 +48,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

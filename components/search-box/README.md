@@ -20,7 +20,7 @@ Then use it in your code as follows:
 import React, { createElement as h } from 'react';
 import SearchBox from '@not-govuk/search-box';
 
-export const MyComponent = props => (
+export const MyComponent = (props) => (
   <form method="get" action="https://www.google.co.uk/search">
     <SearchBox name="q" label="Search Google" width={15} />
   </form>
@@ -28,7 +28,6 @@ export const MyComponent = props => (
 
 export default MyComponent;
 ```
-
 
 Working on this package
 -----------------------
@@ -40,7 +39,6 @@ the following command:
 pnpm install
 ```
 
-
 ### Testing
 
 Run the unit tests.
@@ -49,7 +47,6 @@ Run the unit tests.
 npm test
 ```
 
-
 ### Building
 
 Build the package by compiling the TypeScript source code.
@@ -57,7 +54,6 @@ Build the package by compiling the TypeScript source code.
 ```shell
 npm run build
 ```
-
 
 ### Clean-up
 

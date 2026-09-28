@@ -7,7 +7,7 @@ import WTForm, {
   alpha as localAlpha,
   alphanumeric as localAlphanumeric,
   mobileNumber as localMobileNumber,
-  postalCode as localPostalCode
+  postalCode as localPostalCode,
 } from '@react-foundry/forms';
 import { Submit } from './controls';
 import {
@@ -19,49 +19,47 @@ import {
   Select,
   StandaloneInput,
   TextInput,
-  Textarea
+  Textarea,
 } from './fields';
 
 import '../assets/Form.scss';
 
 export type FormProps = ComponentProps<typeof WTForm>;
 type TForm = ComponentType<FormProps> & {
-  Checkboxes: ComponentType<any>
-  DateInput: ComponentType<any>
-  Field: ComponentType<any>
-  Fork: ComponentType<any>
-  Page: ComponentType<any>
-  Radios: ComponentType<any>
-  SearchBox: ComponentType<any>
-  Select: ComponentType<any>
-  Submit: ComponentType<any>
-  StandaloneInput: ComponentType<any>
-  TextInput: ComponentType<any>
-  Textarea: ComponentType<any>
+  Checkboxes: ComponentType<any>;
+  DateInput: ComponentType<any>;
+  Field: ComponentType<any>;
+  Fork: ComponentType<any>;
+  Page: ComponentType<any>;
+  Radios: ComponentType<any>;
+  SearchBox: ComponentType<any>;
+  Select: ComponentType<any>;
+  Submit: ComponentType<any>;
+  StandaloneInput: ComponentType<any>;
+  TextInput: ComponentType<any>;
+  Textarea: ComponentType<any>;
 };
 
-export const FormComponent: FC<FormProps> = ({ classBlock, ...props }) => h(WTForm, {
-  ...props,
-  classBlock: classBlock || 'not-govuk-form'
-});
+export const FormComponent: FC<FormProps> = ({ classBlock, ...props }) =>
+  h(WTForm, {
+    ...props,
+    classBlock: classBlock || 'not-govuk-form',
+  });
 
-export const Form: TForm = Object.assign(
-  FormComponent,
-  {
-    Checkboxes,
-    DateInput,
-    Field,
-    Fork,
-    Page,
-    Radios,
-    SearchBox,
-    Select,
-    StandaloneInput,
-    Submit,
-    TextInput,
-    Textarea
-  }
-);
+export const Form: TForm = Object.assign(FormComponent, {
+  Checkboxes,
+  DateInput,
+  Field,
+  Fork,
+  Page,
+  Radios,
+  SearchBox,
+  Select,
+  StandaloneInput,
+  Submit,
+  TextInput,
+  Textarea,
+});
 
 const defaultLanguage = 'en';
 const defaultCountry = 'GB';
@@ -73,12 +71,7 @@ export const mobileNumber: Validator = localMobileNumber(defaultLocale as any);
 export const postcode: Validator = localPostalCode(defaultCountry as any);
 
 export default Form;
-export {
-  localAlpha,
-  localAlphanumeric,
-  localMobileNumber,
-  localPostalCode
-};
+export { localAlpha, localAlphanumeric, localMobileNumber, localPostalCode };
 export {
   after,
   before,
@@ -101,6 +94,6 @@ export {
   validator,
   withControl,
   withForm,
-  withField
+  withField,
 } from '@react-foundry/forms';
 export type { RawField } from '@react-foundry/forms';

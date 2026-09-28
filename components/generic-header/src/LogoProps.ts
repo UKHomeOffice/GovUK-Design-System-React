@@ -1,4 +1,3 @@
 import { SVGProps } from 'react';
 
-export type LogoProps = SVGProps<SVGSVGElement> & {
-};
+export type LogoProps = SVGProps<SVGSVGElement> & {};
