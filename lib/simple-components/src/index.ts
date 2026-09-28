@@ -29,5 +29,3 @@ export { default as WarningText } from '@not-govuk/warning-text';
 export { default as Footer } from '@not-govuk/footer';
 export { default as Header } from '@not-govuk/header';
 export { default as GenericHeader } from '@not-govuk/generic-header';
-
-

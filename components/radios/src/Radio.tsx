@@ -2,10 +2,10 @@ import { FC, Fragment, InputHTMLAttributes, ReactNode, useRef } from 'react';
 import { ClassBuilder } from '@react-foundry/component-helpers';
 
 export type RadioProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'label'> & {
-  classes: ClassBuilder
-  conditional?: ReactNode
-  hint?: string
-  label: ReactNode
+  classes: ClassBuilder;
+  conditional?: ReactNode;
+  hint?: string;
+  label: ReactNode;
 };
 
 export const Radio: FC<RadioProps> = ({
@@ -20,11 +20,7 @@ export const Radio: FC<RadioProps> = ({
   const ref = useRef<HTMLInputElement>(null);
   const conditionalId = `conditional-${id}`;
 
-  const isChecked = () => (
-    ref.current === null
-      ? defaultChecked
-      : ref.current.checked
-  );
+  const isChecked = () => (ref.current === null ? defaultChecked : ref.current.checked);
 
   return (
     <>
@@ -39,17 +35,23 @@ export const Radio: FC<RadioProps> = ({
           aria-controls={conditional ? conditionalId : undefined}
           aria-expanded={conditional ? !!isChecked() : undefined}
         />
-        <label htmlFor={id} className="govuk-label">{label}</label>
-        {hint && <div id={`${id}-hint`} className="govuk-hint">{hint}</div>}
-      </div>
-      { !conditional ? null : (
-          <div
-            id={conditionalId}
-            className={classes('conditional', isChecked() ? undefined : 'hidden')}
-          >
-            {conditional}
+        <label htmlFor={id} className="govuk-label">
+          {label}
+        </label>
+        {hint && (
+          <div id={`${id}-hint`} className="govuk-hint">
+            {hint}
           </div>
-      ) }
+        )}
+      </div>
+      {!conditional ? null : (
+        <div
+          id={conditionalId}
+          className={classes('conditional', isChecked() ? undefined : 'hidden')}
+        >
+          {conditional}
+        </div>
+      )}
     </>
   );
 };

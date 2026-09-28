@@ -4,21 +4,17 @@ import '../assets/FileUpload.scss';
 
 export type FileUploadProps = {
   /** Error message */
-  error?: ReactNode
+  error?: ReactNode;
   /** Hint */
-  hint?: ReactNode
+  hint?: ReactNode;
   /** Label */
-  label: ReactNode
+  label: ReactNode;
   /** HTML name */
-  name: string
+  name: string;
 };
 
-export const FileUpload: FC<FileUploadProps> = ({
-}) => {
-
-  return (
-    <>FileUpload needs reimplementing</>
-  );
+export const FileUpload: FC<FileUploadProps> = ({}) => {
+  return <>FileUpload needs reimplementing</>;
 };
 
 FileUpload.displayName = 'FileUpload';

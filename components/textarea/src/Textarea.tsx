@@ -49,9 +49,7 @@ export const Textarea: FC<TextareaProps> = ({
         };
 
   return (
-    <div
-      className="govuk-fieldset"
-    >
+    <div className="govuk-fieldset">
       <textarea
         {...attrs}
         aria-describedby={describedBy}

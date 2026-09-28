@@ -4,16 +4,17 @@ import { CrownLogo } from './CrownLogo';
 
 import '../assets/Header.scss';
 
-export type HeaderProps = StandardProps & HTMLAttributes<HTMLDivElement> & {
-  /** Maximum width of the contents in px units (-1 for full width) */
-  maxContentsWidth?: number
-  /** Organisation link URL */
-  organisationHref?: string
-  /** Service link URL */
-  serviceHref?: string
-  /** Service link text */
-  serviceName?: string
-};
+export type HeaderProps = StandardProps &
+  HTMLAttributes<HTMLDivElement> & {
+    /** Maximum width of the contents in px units (-1 for full width) */
+    maxContentsWidth?: number;
+    /** Organisation link URL */
+    organisationHref?: string;
+    /** Service link URL */
+    serviceHref?: string;
+    /** Service link text */
+    serviceName?: string;
+  };
 
 export const Header: FC<HeaderProps> = ({
   classBlock,
@@ -37,9 +38,7 @@ export const Header: FC<HeaderProps> = ({
         <div className={classes('logo')}>
           <a href={logoHref} className="govuk-link">
             {logo}
-            {!serviceName ? null : (
-              <span className={classes('product-name')}>{serviceName}</span>
-            )}
+            {!serviceName ? null : <span className={classes('product-name')}>{serviceName}</span>}
           </a>
         </div>
       </div>

@@ -4,22 +4,17 @@ import '../assets/TextInput.scss';
 
 export type TextInputProps = {
   /** Error message */
-  error?: ReactNode
+  error?: ReactNode;
   /** Hint */
-  hint?: ReactNode
+  hint?: ReactNode;
   /** Label */
-  label: ReactNode
+  label: ReactNode;
   /** HTML name */
-  name: string
+  name: string;
 };
 
-export const TextInput: FC<TextInputProps> = ({
-}) => {
-  return (
-    <>
-      text-input needs reimplementing
-    </>
-  );
+export const TextInput: FC<TextInputProps> = ({}) => {
+  return <>text-input needs reimplementing</>;
 };
 
 TextInput.displayName = 'TextInput';

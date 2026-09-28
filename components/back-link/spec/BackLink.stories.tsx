@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Panel } from '@not-govuk/panel';
-import {BackLink, BackLinkProps} from '../src/BackLink';
+import { BackLink, BackLinkProps } from '../src/BackLink';
 
 const meta = {
   title: 'Back link',
   component: BackLink,
   parameters: {
     chromatic: { viewports: [320, 320] },
-    description: 'A component to help users navigate back one page.'
+    description: 'A component to help users navigate back one page.',
   },
   args: {
     href: '#',
-  }
+  },
 } satisfies Meta<typeof BackLink>;
 
 export default meta;
@@ -20,34 +20,34 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    href: '#'
-  }
+    href: '#',
+  },
 };
 
 export const Standard: Story = {
-  args: {}
+  args: {},
 };
 
 export const DarkBackgrounds: Story = {
   args: {
-    variant: "inverse"
+    variant: 'inverse',
   },
-  render: ({...props}: BackLinkProps) => (
+  render: ({ ...props }: BackLinkProps) => (
     <Panel classModifiers="interruption">
       <BackLink {...props} />
     </Panel>
-  )
+  ),
 };
 
 export const CustomText: Story = {
   args: {
-    children: 'Yn ôl'
-  }
+    children: 'Yn ôl',
+  },
 };
 
 export const NoHRef: Story = {
   name: 'No HRef',
   args: {
-    href: undefined
-  }
+    href: undefined,
+  },
 };
