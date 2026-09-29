@@ -6,7 +6,7 @@ describe('BackLink', () => {
   describe('when given a href', () => {
     describe('and a text property', () => {
       beforeEach(async () => {
-        render(h(BackLink, { href: '/back', text: 'Reverse' }));
+        render(h(BackLink, { href: '/back', children: 'Reverse' }));
       });
 
       it('is a link', async () => expect(screen.getByRole('link')).toBeInTheDocument());
@@ -31,7 +31,7 @@ describe('BackLink', () => {
 
   describe('when NOT given a href', () => {
     beforeEach(async () => {
-      render(h(BackLink, { id: 'back' }));
+      render(h(BackLink, { id: 'back', href: '#' }));
     });
 
     it('is a link', async () => expect(screen.getByRole('link')).toBeInTheDocument());

@@ -1,8 +1,9 @@
-import { ComponentProps, FC } from 'react';
-import { A } from '@not-govuk/link';
+import { FC } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
-export type LinkProps = ComponentProps<typeof A>;
+export type LinkProps = {
+  children?: React.ReactNode;
+};
 
 export type ItemLinkProps = LinkProps &
   StandardProps & {
@@ -23,9 +24,9 @@ export const ItemLink: FC<ItemLinkProps> = ({
     <li
       className={classes('item', [...classModifiers, current ? 'current' : undefined], className)}
     >
-      <A {...attrs} className={classes('link')}>
+      <a {...attrs} className={classes('link')}>
         {children}
-      </A>
+      </a>
     </li>
   );
 };

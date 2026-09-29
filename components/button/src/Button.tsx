@@ -1,130 +1,66 @@
-import { ButtonHTMLAttributes, ComponentProps, FC, Fragment, ReactNode } from 'react';
-import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { A } from '@not-govuk/link';
-
 import '../assets/Button.scss';
+import { FC, PropsWithChildren } from 'react';
 
-type CommonButtonProps = StandardProps & {
-  children?: ReactNode;
-  start?: boolean;
-};
-type AnchorButtonProps = CommonButtonProps & ComponentProps<typeof A>;
-type ButtonButtonProps = CommonButtonProps & ButtonHTMLAttributes<HTMLButtonElement>;
-export type ButtonProps = AnchorButtonProps | ButtonButtonProps;
-
-const isAnchorProps = (v: ButtonProps): v is AnchorButtonProps => 'href' in v;
-const isButtonProps = (v: ButtonProps): v is ButtonButtonProps => !isAnchorProps(v);
-
-const defaultClassBlock = 'govuk-button';
-
-export const AnchorButton: FC<AnchorButtonProps> = ({
-  children,
-  classBlock,
-  classModifiers: _classModifiers = [],
-  draggable = 'false',
-  role = 'button',
-  start = false,
-  ...attrs
-}) => {
-  const classModifiers = [
-    start ? 'start' : undefined,
-    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers]),
-  ];
-
-  return (
-    <A
-      data-module={defaultClassBlock}
-      {...attrs}
-      classBlock={classBlock || defaultClassBlock}
-      classModifiers={classModifiers}
-      draggable={draggable}
-      role={role}
-    >
-      {children}
-    </A>
-  );
+type BaseProps = {
+  id?: string;
 };
 
-export const ButtonButton: FC<ButtonButtonProps> = ({
+type StartButtonProps = BaseProps & {
+  variant: 'start';
+  href: string;
+  disabled?: never;
+  preventDoubleClick?: never;
+};
+
+type OtherButtonProps = BaseProps & {
+  variant?: 'default' | 'secondary' | 'warning' | 'inverse';
+  href?: never;
+  disabled?: boolean;
+  preventDoubleClick?: boolean;
+};
+
+type ButtonProps = StartButtonProps | OtherButtonProps;
+
+export const Button: FC<PropsWithChildren<ButtonProps>> = ({
   children,
-  classBlock,
-  classModifiers: _classModifiers = [],
-  className,
+  id,
+  variant = 'default',
   disabled = false,
-  start = false,
-  type = 'submit',
-  ...attrs
+  href,
+  preventDoubleClick,
 }) => {
-  const classModifiers = [
-    start ? 'start' : undefined,
-    ...(Array.isArray(_classModifiers) ? _classModifiers : [_classModifiers]),
-  ];
-  const classes = classBuilder(defaultClassBlock, classBlock, classModifiers, className);
+  const classes = ['govuk-button', variant !== 'default' ? `govuk-button--${variant}` : undefined]
+    .filter(Boolean)
+    .join(' ');
 
-  return (
+  return variant === 'start' ? (
+    <a href={href} role="button" draggable="false" className={classes} data-module="govuk-button">
+      {children}
+      <svg
+        className="govuk-button__start-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="17.5"
+        height="19"
+        viewBox="0 0 33 40"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+      </svg>
+    </a>
+  ) : (
     <button
-      aria-disabled={disabled ? 'true' : undefined}
-      data-module={defaultClassBlock}
+      id={id}
+      type="submit"
+      className={classes}
       disabled={disabled}
-      type={type}
-      {...attrs}
-      className={classes()}
+      aria-disabled={disabled}
+      data-module="govuk-button"
+      data-prevent-double-click={preventDoubleClick}
     >
       {children}
     </button>
   );
 };
-
-export const Button: FC<ButtonProps> = ({ children: _children, ...props }) => {
-  const classes = classBuilder(
-    defaultClassBlock,
-    props.classBlock,
-    props.classModifiers,
-    props.className,
-  );
-  const children = (
-    <Fragment>
-      {!(props.start && typeof _children !== 'string') ? _children : <span>{_children}</span>}
-      {!props.start ? null : (
-        <svg
-          className={classes('start-icon')}
-          xmlns="http://www.w3.org/2000/svg"
-          width="17.5"
-          height="19"
-          viewBox="0 0 33 40"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-        </svg>
-      )}
-    </Fragment>
-  );
-
-  if (isAnchorProps(props)) {
-    return <AnchorButton {...props}>{children}</AnchorButton>;
-  } else if (isButtonProps(props)) {
-    return <ButtonButton {...props}>{children}</ButtonButton>;
-  } else {
-    // This should be unreachable, but TypeScript requires it
-    return <Fragment></Fragment>;
-  }
-};
-
-export const StartButton: FC<AnchorButtonProps> = ({ children = 'Start now', ...props }) => (
-  <Button {...props} start>
-    {children}
-  </Button>
-);
-
-export const SubmitButton: FC<ButtonButtonProps> = ({ children, ...props }) => (
-  <Button {...props} type="submit">
-    {children}
-  </Button>
-);
-
-Button.displayName = 'Button';
-StartButton.displayName = 'StartButton';
-SubmitButton.displayName = 'SubmitButton';
 
 export default Button;

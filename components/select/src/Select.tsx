@@ -1,6 +1,5 @@
 import { FC, SelectHTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { FormGroup } from '@not-govuk/form-group';
 
 import '../assets/Select.scss';
 
@@ -72,15 +71,7 @@ export const Select: FC<SelectProps> = ({
         : defaultValuePre[0];
 
   return (
-    <FormGroup
-      id={id}
-      fieldId={fieldId}
-      label={label}
-      hint={hint}
-      hintId={hintId}
-      error={error}
-      errorId={errorId}
-    >
+    <div className="govuk-form-group">
       <select
         {...attrs}
         aria-describedby={describedBy}
@@ -96,7 +87,7 @@ export const Select: FC<SelectProps> = ({
           </option>
         ))}
       </select>
-    </FormGroup>
+    </div>
   );
 };
 

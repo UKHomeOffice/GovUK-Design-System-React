@@ -1,7 +1,6 @@
 import type { Route } from './+types/result';
-import { A } from '@not-govuk/components';
 import { useLocation } from '@react-foundry/router';
-import { siteTitle } from '../config';
+import { siteTitle } from '~/config';
 
 export const title = 'Result';
 const description = 'The result of filling in the Form component example';
@@ -55,10 +54,7 @@ export default function Result() {
       <div className="govuk-grid-column-two-thirds">
         <h1>Form complete</h1>
         <p>Hello {user}!</p>
-        <p>
-          Please fill out the <A href="/components/form">examples of the `Form` component</A> to
-          alter this page.
-        </p>
+        <p>Change the example inputs to alter this page.</p>
       </div>
       <div className="govuk-grid-column-two-thirds">
         <h2>Result</h2>

@@ -1,13 +1,11 @@
-import { FC, Fragment, HTMLAttributes, ReactNode, createElement as h } from 'react';
+import { FC, Fragment, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { Link, LinkProps } from '@not-govuk/link';
-import { WidthContainer } from '@not-govuk/width-container';
 import { CrownLogo } from './CrownLogo';
 import { OGLLogo } from './OGLLogo';
 
 import '../assets/Footer.scss';
 
-type Link = LinkProps & {
+type Link = {
   /** Text of the link */
   text: string;
 };
@@ -63,7 +61,6 @@ export const Footer: FC<FooterProps> = ({
     [...classModifiers, department],
     className,
   );
-  const A = (props: LinkProps) => h(Link, { classBlock: classes('link'), ...props });
   const contentLicence =
     _contentLicence ||
     (!govUK ? null : (
@@ -71,12 +68,13 @@ export const Footer: FC<FooterProps> = ({
         <OGLLogo focusable="false" className={classes('licence-logo')} height="17" width="41" />
         <span className={classes('license-description')}>
           All content is available under the{' '}
-          <A
+          <a
             href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
             rel="license"
+            className="govuk-link"
           >
             Open Government Licence v3.0
-          </A>
+          </a>
           , except where otherwise stated
         </span>
       </Fragment>
@@ -84,7 +82,7 @@ export const Footer: FC<FooterProps> = ({
 
   return (
     <div {...attrs} className={classes()}>
-      <WidthContainer maxWidth={maxContentsWidth}>
+      <div className="govuk-width-container">
         {!govUK ? null : (
           <CrownLogo focusable="false" className={classes('crown')} height="30" width="32" />
         )}
@@ -104,7 +102,9 @@ export const Footer: FC<FooterProps> = ({
                   <ul className={classes('list', columns ? `columns-${columns}` : undefined)}>
                     {items.map(({ text, ...linkAttrs }, i2) => (
                       <li key={i2} className={classes('list-item')}>
-                        <A {...linkAttrs}>{text}</A>
+                        <a {...linkAttrs} className="govuk-link">
+                          {text}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -125,7 +125,9 @@ export const Footer: FC<FooterProps> = ({
                   <ul className={classes('inline-list')}>
                     {meta.map(({ text, ...linkAttrs }, i) => (
                       <li key={i} className={classes('inline-list-item')}>
-                        <A {...linkAttrs}>{text}</A>
+                        <a {...linkAttrs} className="govuk-link">
+                          {text}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -136,17 +138,17 @@ export const Footer: FC<FooterProps> = ({
             </div>
             {!govUK ? null : (
               <div className={classes('meta-item')}>
-                <A
+                <a
                   className={classes('copyright-logo')}
                   href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
                 >
                   © Crown copyright
-                </A>
+                </a>
               </div>
             )}
           </div>
         )}
-      </WidthContainer>
+      </div>
     </div>
   );
 };

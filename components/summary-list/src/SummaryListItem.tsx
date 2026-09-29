@@ -1,6 +1,5 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { Anchor, AnchorList } from '@react-foundry/anchor-list';
-import { A } from '@not-govuk/link';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 
 export type Action = Anchor;
@@ -39,7 +38,9 @@ export const SummaryListItem: FC<SummaryListItemProps> = ({
       {actions.length === 0 ? null : (
         <dd className={classes('actions')}>
           {actions.length === 1 ? (
-            <A {...firstActionProps}>{firstActionChildren || firstActionText}</A>
+            <a className="govuk-link" {...firstActionProps}>
+              {firstActionChildren || firstActionText}
+            </a>
           ) : (
             <AnchorList items={actions} classBlock={classes('actions-list')} />
           )}

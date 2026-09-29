@@ -1,8 +1,7 @@
 'use client';
 
 import { FC, InputHTMLAttributes, ReactNode, useState } from 'react';
-import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { FormGroup } from '@not-govuk/form-group';
+import { classBuilder, StandardProps } from '@react-foundry/component-helpers';
 import { Radio } from './Radio';
 
 import '../assets/Radios.scss';
@@ -60,7 +59,6 @@ export const Radios: FC<RadiosProps> = ({
 }) => {
   const classes = classBuilder('govuk-radios', classBlock, classModifiers, className);
   const id = _id || attrs.name;
-  const hintId = `${id}-hint`;
   const setState = useState({})[1];
   const forceUpdate = () => setState({});
   const withUpdate =
@@ -73,40 +71,45 @@ export const Radios: FC<RadiosProps> = ({
   const onChange = withUpdate(_onChange);
 
   return (
-    <FormGroup id={id} label={label} hint={hint} hintId={hintId} error={error}>
-      <div className={classes()}>
-        {options.map((v, i) => {
-          if (isOption(v)) {
-            const optionId = `${id}-radio-${i}`;
-            const { selected, ...rest } = v;
-            const defaultChecked =
-              defaultValue === undefined
-                ? selected
-                : Array.isArray(defaultValue)
-                  ? defaultValue.includes(v.value)
-                  : defaultValue === v.value;
+    <div className="govuk-form-group">
+      <fieldset className="govuk-fieldset">
+        <legend className="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 className="govuk-fieldset__heading">Where do you live?</h1>
+        </legend>
+        <div className={classes()}>
+          {options.map((v, i) => {
+            if (isOption(v)) {
+              const optionId = `${id}-radio-${i}`;
+              const { selected, ...rest } = v;
+              const defaultChecked =
+                defaultValue === undefined
+                  ? selected
+                  : Array.isArray(defaultValue)
+                    ? defaultValue.includes(v.value)
+                    : defaultValue === v.value;
 
-            return (
-              <Radio
-                {...rest}
-                {...attrs}
-                classes={classes}
-                defaultChecked={defaultChecked}
-                id={optionId}
-                key={i}
-                onChange={onChange}
-              />
-            );
-          } else {
-            return (
-              <div className={classes('divider')} key={i}>
-                {v}
-              </div>
-            );
-          }
-        })}
-      </div>
-    </FormGroup>
+              return (
+                <Radio
+                  {...rest}
+                  {...attrs}
+                  classes={classes}
+                  defaultChecked={defaultChecked}
+                  id={optionId}
+                  key={i}
+                  onChange={onChange}
+                />
+              );
+            } else {
+              return (
+                <div className={classes('divider')} key={i}>
+                  {v}
+                </div>
+              );
+            }
+          })}
+        </div>
+      </fieldset>
+    </div>
   );
 };
 

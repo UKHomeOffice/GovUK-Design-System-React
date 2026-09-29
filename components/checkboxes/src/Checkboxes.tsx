@@ -1,6 +1,5 @@
 import { FC, InputHTMLAttributes, ReactNode } from 'react';
-import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { FormGroup } from '@not-govuk/form-group';
+import { classBuilder, StandardProps } from '@react-foundry/component-helpers';
 import { Checkbox } from './Checkbox';
 
 import '../assets/Checkboxes.scss';
@@ -59,11 +58,13 @@ export const Checkboxes: FC<CheckboxesProps> = ({
 }) => {
   const classes = classBuilder('govuk-checkboxes', classBlock, classModifiers, className);
   const id = _id || attrs.name;
-  const hintId = `${id}-hint`;
 
   return (
-    <FormGroup id={id} label={label} hint={hint} hintId={hintId} error={error}>
-      <div className={classes()}>
+    <div className="govuk-form-group">
+      <fieldset className="govuk-fieldset" aria-describedby="nationality-hint">
+        <legend className="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 className="govuk-fieldset__heading">What is your nationality?</h1>
+        </legend>
         {options.map((v, i) => {
           if (isOption(v)) {
             const optionId = `${id}-checkbox-${i}`;
@@ -93,8 +94,8 @@ export const Checkboxes: FC<CheckboxesProps> = ({
             );
           }
         })}
-      </div>
-    </FormGroup>
+      </fieldset>
+    </div>
   );
 };
 

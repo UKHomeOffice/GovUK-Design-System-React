@@ -1,52 +1,46 @@
-'use client';
-
-import { ComponentProps, FC, ReactNode } from 'react';
-import { classBuilder } from '@react-foundry/component-helpers';
-import { A } from '@not-govuk/link';
-import { useNavigate } from '@react-foundry/router';
-
 import '../assets/BackLink.scss';
+import { MouseEventHandler, PropsWithChildren, Ref } from 'react';
 
-export type BackLinkProps = ComponentProps<typeof A> & {
-  children?: ReactNode;
-  /** The location to link to */
-  href?: string;
-  /** The text of the link */
-  text?: string;
-  /** The title of the link */
-  title?: string;
+type BaseProps = {
+  id?: string;
+  variant?: 'default' | 'inverse';
+  ref?: Ref<HTMLAnchorElement>;
 };
 
-export const BackLink: FC<BackLinkProps> = ({
-  children,
-  classBlock,
-  classModifiers,
-  className,
-  href,
-  text: _text,
-  ...attrs
-}) => {
-  const defaultClassBlock = 'govuk-back-link';
-  const classes = classBuilder(defaultClassBlock, classBlock, classModifiers, className);
-  const navigate = useNavigate();
-  const text = _text || children || 'Back';
-  const goBack = () => navigate && navigate(-1);
+type ActionProps = BaseProps & {
+  onClick: MouseEventHandler<HTMLAnchorElement>;
+  href?: never;
+};
 
-  return href ? (
-    <A
-      {...attrs}
-      classBlock={classBlock || defaultClassBlock}
-      classModifiers={classModifiers}
-      className={className}
-      href={href}
-    >
-      {text}
-    </A>
-  ) : (
-    <a {...attrs} className={classes()} href="#" onClick={goBack}>
-      {text}
+type LinkProps = BaseProps & {
+  onClick?: never;
+  href: string;
+};
+
+export type BackLinkProps = ActionProps | LinkProps;
+
+export const BackLink = ({
+  children,
+  id,
+  href,
+  ref,
+  onClick,
+  variant = 'default',
+}: PropsWithChildren<BackLinkProps>) => {
+  const classes = [
+    'govuk-back-link',
+    variant === 'inverse' ? 'govuk-back-link--inverse' : undefined,
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  return (
+    <a id={id} href={href ? href : '#'} className={classes} onClick={onClick} ref={ref}>
+      {children ?? 'Back'}
     </a>
   );
 };
+
+BackLink.displayName = 'BackLink';
 
 export default BackLink;

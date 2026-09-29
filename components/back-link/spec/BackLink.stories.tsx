@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Panel } from '@not-govuk/panel';
-import { BackLink } from '../src/BackLink';
+import { BackLink, BackLinkProps } from '../src/BackLink';
 
 const meta = {
   title: 'Back link',
@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    text: 'Back',
+    href: '#',
   },
 };
 
@@ -30,9 +30,9 @@ export const Standard: Story = {
 
 export const DarkBackgrounds: Story = {
   args: {
-    classModifiers: 'inverse',
+    variant: 'inverse',
   },
-  render: ({ ...props }) => (
+  render: ({ ...props }: BackLinkProps) => (
     <Panel classModifiers="interruption">
       <BackLink {...props} />
     </Panel>
@@ -41,7 +41,7 @@ export const DarkBackgrounds: Story = {
 
 export const CustomText: Story = {
   args: {
-    text: 'Yn ôl',
+    children: 'Yn ôl',
   },
 };
 

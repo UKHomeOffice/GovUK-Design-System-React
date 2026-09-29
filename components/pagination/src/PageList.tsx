@@ -1,6 +1,4 @@
 import { FC, Fragment, HTMLAttributes, ReactNode } from 'react';
-import { A } from '@not-govuk/link';
-import { VisuallyHidden } from '@not-govuk/visually-hidden';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
 import { ItemEllipsis, ItemEllipsisProps } from './ItemEllipsis';
 import { ItemLink, ItemLinkProps } from './ItemLink';
@@ -46,7 +44,7 @@ const PageListComponent: FC<PageListProps> = ({
     labelText: prevLabelText,
     text: prevText = (
       <Fragment>
-        Previous<VisuallyHidden> page</VisuallyHidden>
+        Previous<span className={'govuk-visually-hidden'}> page</span>
       </Fragment>
     ),
     ...prevAttrs
@@ -55,7 +53,7 @@ const PageListComponent: FC<PageListProps> = ({
     labelText: nextLabelText,
     text: nextText = (
       <Fragment>
-        Next<VisuallyHidden> page</VisuallyHidden>
+        Next<span className={'govuk-visually-hidden'}> page</span>
       </Fragment>
     ),
     ...nextAttrs
@@ -91,7 +89,7 @@ const PageListComponent: FC<PageListProps> = ({
     <nav {...attrs} className={classes()} aria-label={landmarkLabel}>
       {!previous ? null : (
         <div className={classes('prev')}>
-          <A className={classes('link')} {...prevAttrs} rel="prev">
+          <a className={classes('link')} {...prevAttrs} rel="prev">
             {prevArrow}
             <span
               className={classes(
@@ -103,17 +101,17 @@ const PageListComponent: FC<PageListProps> = ({
             </span>
             {!blockLevel || !prevLabelText ? null : (
               <Fragment>
-                <VisuallyHidden>:</VisuallyHidden>
+                <span className={'govuk-visually-hidden'}>:</span>
                 <span className={classes('link-label')}>{prevLabelText}</span>
               </Fragment>
             )}
-          </A>
+          </a>
         </div>
       )}
       {!children ? null : <ul className={classes('list')}>{children}</ul>}
       {!next ? null : (
         <div className={classes('next')}>
-          <A className={classes('link')} {...nextAttrs} rel="next">
+          <a className={classes('link')} {...nextAttrs} rel="next">
             {!blockLevel ? null : nextArrow}
             <span
               className={classes(
@@ -125,12 +123,12 @@ const PageListComponent: FC<PageListProps> = ({
             </span>
             {!blockLevel || !nextLabelText ? null : (
               <Fragment>
-                <VisuallyHidden>:</VisuallyHidden>
+                <span className="govuk-visually-hidden">:</span>
                 <span className={classes('link-label')}>{nextLabelText}</span>
               </Fragment>
             )}
             {blockLevel ? null : nextArrow}
-          </A>
+          </a>
         </div>
       )}
     </nav>

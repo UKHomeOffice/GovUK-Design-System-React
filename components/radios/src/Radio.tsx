@@ -1,7 +1,5 @@
-import { FC, Fragment, InputHTMLAttributes, ReactNode, useRef } from 'react';
+import { FC, InputHTMLAttributes, ReactNode, useRef } from 'react';
 import { ClassBuilder } from '@react-foundry/component-helpers';
-import { Hint } from '@not-govuk/hint';
-import { Label } from '@not-govuk/label';
 
 export type RadioProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'label'> & {
   classes: ClassBuilder;
@@ -25,7 +23,7 @@ export const Radio: FC<RadioProps> = ({
   const isChecked = () => (ref.current === null ? defaultChecked : ref.current.checked);
 
   return (
-    <Fragment>
+    <>
       <div className={classes('item')}>
         <input
           {...attrs}
@@ -37,13 +35,13 @@ export const Radio: FC<RadioProps> = ({
           aria-controls={conditional ? conditionalId : undefined}
           aria-expanded={conditional ? !!isChecked() : undefined}
         />
-        <Label htmlFor={id} className={classes('label')}>
+        <label htmlFor={id} className="govuk-label">
           {label}
-        </Label>
+        </label>
         {hint && (
-          <Hint id={`${id}-hint`} className={classes('hint')}>
+          <div id={`${id}-hint`} className="govuk-hint">
             {hint}
-          </Hint>
+          </div>
         )}
       </div>
       {!conditional ? null : (
@@ -54,7 +52,7 @@ export const Radio: FC<RadioProps> = ({
           {conditional}
         </div>
       )}
-    </Fragment>
+    </>
   );
 };
 

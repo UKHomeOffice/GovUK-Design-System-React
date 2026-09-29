@@ -42,7 +42,6 @@
   "dependencies": {
     "@not-govuk/button-group": "workspace:^",
     "@not-govuk/sass-base": "workspace:^",
-    "@not-govuk/width-container": "workspace:^",
     "@react-foundry/component-helpers": "^0.5.4",
     "govuk-frontend": "^6.5.1"
   },
@@ -61,7 +60,6 @@
   },
   "devDependencies": {
     "@not-govuk/button": "workspace:*",
-    "@not-govuk/link": "workspace:*",
     "@not-govuk/tag": "workspace:*",
     "@react-foundry/component-test-helpers": "0.5.4",
     "@types/react": "19.3.0",

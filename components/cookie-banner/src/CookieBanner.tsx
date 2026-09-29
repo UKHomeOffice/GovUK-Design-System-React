@@ -1,14 +1,10 @@
-import { ComponentProps, FC, HTMLAttributes, ReactNode } from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import { ButtonGroup } from '@not-govuk/button-group';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { WidthContainer } from '@not-govuk/width-container';
 
 import '../assets/CookieBanner.scss';
 
-export type Message = Omit<
-  ComponentProps<typeof WidthContainer>,
-  'children' | 'classBlock' | 'className' | 'classModifiers' | 'maxContentsWidth'
-> & {
+export type Message = {
   /** Heading for the message */
   heading?: ReactNode;
   /** Content of the message */
@@ -37,7 +33,7 @@ export const CookieBanner: FC<CookieBannerProps> = ({
   const classes = classBuilder('govuk-cookie-banner', classBlock, classModifiers, className);
 
   const content = messages.map(({ actions, content, heading, ...attrs }, i) => (
-    <WidthContainer key={i} {...attrs} maxWidth={maxContentsWidth} className={classes('message')}>
+    <div key={i} {...attrs} className="govuk-width-container">
       <div className="govuk-grid-row">
         <div className="govuk-grid-column-two-thirds">
           {!heading ? null : (
@@ -47,7 +43,7 @@ export const CookieBanner: FC<CookieBannerProps> = ({
         </div>
       </div>
       <ButtonGroup>{actions}</ButtonGroup>
-    </WidthContainer>
+    </div>
   ));
 
   return (

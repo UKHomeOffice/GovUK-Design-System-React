@@ -61,7 +61,6 @@
   "devDependencies": {
     "@not-govuk/checkboxes": "workspace:*",
     "@not-govuk/date-input": "workspace:*",
-    "@not-govuk/page": "workspace:*",
     "@not-govuk/text-input": "workspace:*",
     "@react-foundry/component-test-helpers": "0.5.4",
     "@types/react": "19.3.0",

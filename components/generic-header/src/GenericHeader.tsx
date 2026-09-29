@@ -1,7 +1,5 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StandardProps, classBuilder } from '@react-foundry/component-helpers';
-import { A } from '@not-govuk/link';
-import { WidthContainer } from '@not-govuk/width-container';
 import { CoatLogo } from './CoatLogo';
 
 import '../assets/GenericHeader.scss';
@@ -100,21 +98,21 @@ export const GenericHeader: FC<GenericHeaderProps> = ({
 
   return (
     <div {...attrs} className={classes()}>
-      <WidthContainer maxWidth={maxContentsWidth} className={classes('container')}>
+      <div className="govuk-width-container">
         <div className={classes('logo')}>
-          <A href={organisationHref} classBlock={classes('homepage-link')}>
+          <a href={organisationHref} className="govuk-link">
             {logo}
             {!organisationText ? null : (
               <span className={classes('logotype-text')}>{organisationText}</span>
             )}
-          </A>
+          </a>
           {!serviceName ? null : (
-            <A href={serviceHref} classBlock={classes('product-link')}>
+            <a href={serviceHref} className="govuk-link">
               {serviceName}
-            </A>
+            </a>
           )}
         </div>
-      </WidthContainer>
+      </div>
     </div>
   );
 };
